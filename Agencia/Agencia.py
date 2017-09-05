@@ -1,47 +1,51 @@
 class Agencia:
     # Clase para representar una agencia de carros.
 
-    def __init__(self, nombre, concesionaria, direccion, rfc):
+    def __init__(self, nombre_agencia, concesionaria, direccion, rfc):
         # Inicializa atributos para describir la agencia.
-        self.nombre = nombre
+        self.nombre_agencia = nombre_agencia
         self.concesionaria = concesionaria
         self.direccion = direccion
         self.rfc = rfc
 
-    def getNombre(self):
+    def get_nombre_agencia(self):
         # Regresa el nombre de la agencia.
-        return self.nombre
+        return self.nombre_agencia
 
-    def setNombre(self, nombre):
+    def set_nombre_agencia(self, nombre_agencia):
         # Asigna un nombre a la agencia.
-        self.nombre = nombre
+        self.nombre_agencia = nombre_agencia
 
-    def getConcesionaria(self):
+    def get_concesionaria(self):
         # Regresa el nombre de la concesionaria.
         return self.concesionaria
 
-    def setConcesionaria(self, concesionaria):
+    def set_concesionaria(self, concesionaria):
         # Asigna un nombre a la concesionaria.
         self.concesionaria = concesionaria
 
-    def getDireccion(self):
+    def get_direccion(self):
         # Regresa la dirección.
         return self.direccion
 
-    def setDireccion(self, direccion):
+    def set_direccion(self, direccion):
         # Asigna otra dirección.
         self.direccion = direccion
 
-    def getRFC(self):
+    def get_rfc(self):
         # Regresa la dirección.
         return self.rfc
 
-    def setRFC(self, rfc):
+    def set_rfc(self, rfc):
         # Asigna otro RFC.
         self.rfc = rfc
 
-    def getInfoAgencia(self):
+    def get_info_agencia(self):
         # Regresa la información de una agencia.
-        info = "Agencia: {}\nConcesionaria: {}\nDirección: {}\nRFC: {}"
-            .format(self.nombre, self.concesionaria, self.direccion, self.rfc)
+        info = "Agencia: {}\nConcesionaria: {}\nDirección: {}\nRFC: {}".format(self.nombre_agencia,
+        self.concesionaria, self.direccion, self.rfc)
         return(info)
+
+mi_agencia = Agencia('Rivero Motors', 'Chevrolet', 'Miguel Alemán 5400 Col. Torres de Lindavista',
+'SHDFS238RY28')
+print(mi_agencia.get_info_agencia())

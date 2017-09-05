@@ -7,7 +7,7 @@ class Automovil(Vehiculo):
     puertas, equipado, rendimiento, carroceria, existencia=1):
         # Heredamos los atributos de 'Vehiculo'.
         super().__init__(modelo, color, transmision, motor, cilindros, sku)
-        # Definimos los atributos particulares a un automóvil.
+        # Definimos los atributos particulares de un automóvil.
         self.puertas = puertas
         self.equipado = equipado
         self.rendimiento = rendimiento

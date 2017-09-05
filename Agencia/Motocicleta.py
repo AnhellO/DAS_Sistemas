@@ -7,7 +7,7 @@ class Motocicleta(Vehiculo):
     tipo, centimetros_cubicos, existencia=1):
         # Heredamos los atributos de 'Vehiculo'.
         super().__init__(modelo, color, transmision, motor, cilindros, sku)
-        # Definimos los atributos particulares a una motocicleta.
+        # Definimos los atributos particulares de una motocicleta.
         self.tipo = tipo
         self.centimetros_cubicos = centimetros_cubicos
 
