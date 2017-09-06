@@ -46,6 +46,9 @@ class Agencia:
         self.concesionaria, self.direccion, self.rfc)
         return(info)
 
+
+'''
 mi_agencia = Agencia('Rivero Motors', 'Chevrolet', 'Miguel Alemán 5400 Col. Torres de Lindavista',
 'SHDFS238RY28')
 print(mi_agencia.get_info_agencia())
+'''

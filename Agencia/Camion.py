@@ -40,6 +40,8 @@ class Camion(Vehiculo):
         return info
 
 
+'''
 mi_camion = Camion('Scania R730', 'Rojo', 'Scania GRSO905R',
 'Scania DC16 500 16Litre 90° V8', 6, 'SCA-R730-01', 2, '19 toneladas')
 print(mi_camion.get_info_camion())
+'''

@@ -33,6 +33,9 @@ class Cliente(Persona):
         return info
 
 
+
+'''
 new_cliente = Cliente('Juan', 'Perez', 'Gómez', 'M', 28,
 'Los Álamos 412 Col. Bosques del Pedregal', '844-123-45-67', 1)
 print(new_cliente.get_info_cliente())
+'''

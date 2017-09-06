@@ -40,6 +40,8 @@ class Motocicleta(Vehiculo):
         return info
 
 
+'''
 mi_moto = Motocicleta('Ducati Monster 1200S 2017', 'Negro', 'Cadena',
 'Testastretta 11° L-Twin', 4, 'DUC-MON-1200S-01', 'Urbana', 1198)
 print(mi_moto.get_info_motocicleta())
+'''

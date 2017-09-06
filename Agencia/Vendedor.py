@@ -1,5 +1,5 @@
 from Persona import Persona
-# To-do: -> Agencia
+from Vehiculo import Vehiculo
 
 class Vendedor(Persona):
     # Clase para representar a un vendedor.
@@ -54,8 +54,10 @@ class Vendedor(Persona):
         return info
 
 
+'''
 new_vendedor = Vendedor('Juan', 'Perez', 'Gómez', 'M', 28,
 'Los Álamos 412 Col. Bosques del Pedregal', '844-123-45-67', 1)
 print(new_vendedor.get_info_vendedor())
 new_vendedor.incrementa_autos_vendidos()
 print(new_vendedor.cumplio_meta())
+'''

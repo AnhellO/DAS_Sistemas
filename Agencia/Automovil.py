@@ -60,8 +60,10 @@ class Automovil(Vehiculo):
         return info
 
 
+'''
 mi_auto = Automovil('Ford Focus S 2017', 'Rojo', 'Automático', '2.0L',
 '4', 'FRD-FC-S-17', 5, True, 15, 'Hatchback')
 print(mi_auto.get_info_automovil())
 mi_auto.set_transmision("Manual")
 print(mi_auto.get_info_automovil())
+'''

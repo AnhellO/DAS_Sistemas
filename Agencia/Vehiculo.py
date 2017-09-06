@@ -81,8 +81,10 @@ class Vehiculo:
         return info
 
 
+'''
 mi_vehiculo = Vehiculo('Ford Focus S 2017', 'Plata', 'Automático', '2.0L', 3, 'F-FocS-2017')
 mi_vehiculo.color = 'Rojo'
 mi_vehiculo.decrementa_existencia()
 mi_vehiculo.decrementa_existencia()
 print(mi_vehiculo.get_info_vehiculo())
+'''
