@@ -34,8 +34,8 @@ class Camion(Vehiculo):
         self.color, self.ejes)
         info += "Transmisión: {}\nMotor: {}\nCilindros: {}\n".format(self.transmision,
         self.motor, self.cilindros)
-        info += "Capacidad: {}\nSKU: {}\nExistencia: {}\n".format(self.capacidad,
-        self.sku, self.existencia)
+        info += "Capacidad: {}\nSKU: {}\n".format(self.capacidad,
+        self.sku)
 
         return info
 

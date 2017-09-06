@@ -34,8 +34,8 @@ class Motocicleta(Vehiculo):
         self.color, self.tipo)
         info += "Transmisión: {}\nMotor: {}\nCilindros: {}\n".format(self.transmision,
         self.motor, self.cilindros)
-        info += "CC: {}\nSKU: {}\nExistencia: {}\n".format(self.centimetros_cubicos,
-        self.sku, self.existencia)
+        info += "CC: {}\nSKU: {}\n".format(self.centimetros_cubicos,
+        self.sku)
 
         return info
 

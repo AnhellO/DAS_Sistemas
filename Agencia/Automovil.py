@@ -54,8 +54,7 @@ class Automovil(Vehiculo):
         self.motor, self.cilindros)
         info += "Equipado: {}\nSKU: {}\nRendimiento: {}km/L\n".format(self.equipado,
         self.sku, self.rendimiento)
-        info += "Carrocería: {}\nExistencia: {}\n".format(self.carroceria,
-        self.existencia)
+        info += "Carrocería: {}\n".format(self.carroceria)
 
         return info
 
