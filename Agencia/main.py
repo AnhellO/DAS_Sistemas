@@ -1,5 +1,8 @@
 import Agencia, Automovil, Motocicleta, Camion, Vendedor, Cliente
 
+# Clase main (operaciones)
+
+
 # Listas para trabajar en runtime.
 
 autos = []
@@ -11,6 +14,10 @@ motos_vendidas = []
 camiones_vendidos = []
 
 cartera_clientes = []
+lista_vendedores = []
+
+log = []
+
 
 # Dummy data.
 
@@ -50,47 +57,54 @@ def cargar_datos_camiones():
 def venta_auto(modelo):
     found = False
     for item in autos:
-        if modelo.lower() in item.modelo.lower() and item.existencia > 0:
-            item.decrementa_existencia()
-            autos_vendidos.append(item)
+        if modelo.lower() in item.modelo.lower():
             found = True
-            print("Auto comprado: \n{}".format(item.get_info_automovil()))
-            print("Existencias restantes: {}\n".format(item.get_existencia()))
-            break
-        if item.existencia < 1:
-            print("\nExistencias agotadas!\n")
+            if item.existencia > 0:
+                item.decrementa_existencia()
+                autos_vendidos.append(item)
+                print("\nAuto comprado: \n{}".format(item.get_info_automovil()))
+                print("Existencias restantes: {}\n".format(item.get_existencia()))
+                break
+            else:
+                print("Ya no hay {} disponibles.".format(item.get_modelo()))
+                break
     if found == False:
         print("Lo sentimos, el modelo que busca no está en el catálogo.\n")
 
 def venta_moto(modelo):
     found = False
     for item in motos:
-        if modelo.lower() in item.modelo.lower() and item.existencia > 0:
-            item.decrementa_existencia()
-            motos_vendidas.append(item)
+        if modelo.lower() in item.modelo.lower():
             found = True
-            print("Motocicleta comprada: \n{}".format(item.get_info_motocicleta()))
-            print("Existencias restantes: {}\n".format(item.get_existencia()))
-            break
-        if item.existencia < 1:
-            print("\nExistencias agotadas!\n")
+            if item.existencia > 0:
+                item.decrementa_existencia()
+                motos_vendidas.append(item)
+                print("Motocicleta comprada: \n{}".format(item.get_info_motocicleta()))
+                print("Existencias restantes: {}\n".format(item.get_existencia()))
+                break
+            else:
+                print("Ya no hay {} disponibles.".format(item.get_modelo()))
+                break
     if found == False:
         print("Lo sentimos, el modelo que busca no está en el catálogo.\n")
 
 def venta_camion(modelo):
     found = False
     for item in camiones:
-        if modelo.lower() in item.modelo.lower() and item.existencia > 0:
-            item.decrementa_existencia()
-            camiones_vendidos.append(item)
+        if modelo.lower() in item.modelo.lower():
             found = True
-            print("Camión comprado: \n{}".format(item.get_info_camion()))
-            print("Existencias restantes: {}\n".format(item.get_existencia()))
-            break
-        if item.existencia < 1:
-            print("\nExistencias agotadas!\n")
+            if item.existencia > 0:
+                item.decrementa_existencia()
+                camiones_vendidos.append(item)
+                print("Camión comprado: \n{}".format(item.get_info_camion()))
+                print("Existencias restantes: {}\n".format(item.get_existencia()))
+                break
+            else:
+                print("Ya no hay {} disponibles.".format(item.get_modelo()))
+                break
     if found == False:
         print("Lo sentimos, el modelo que busca no está en el catálogo.\n")
+
 
 
 def main():
@@ -99,11 +113,13 @@ def main():
     cargar_datos_autos()
     cargar_datos_motos()
     cargar_datos_camiones()
+    vendedor_actual = None
 
     print("\n[[Sistema de agencias {} para la marca {}]]\n".format(ag.get_nombre_agencia(),
     ag.get_concesionaria()))
+
     while True:
-        print("Especifique el tipo de usuario.")
+        print("\nEspecifique el tipo de usuario.")
         user = input("\t1. Cliente.\n\t2. Vendedor.\n\t3. Salir del programa.\n\t")
         if user == '3':
             break
@@ -153,6 +169,105 @@ def main():
                     venta_camion(modelo)
                 else:
                     print("Tipo de vehículo inválido.")
+
+            elif action == '3':
+                print("Registre sus datos.")
+                temp_cli = Cliente.Cliente('','','','','','','','')
+                aux = input("Nombre: ")
+                temp_cli.set_nombre(aux.title())
+                aux = input("Apellido Paterno: ")
+                temp_cli.set_apellido_paterno(aux.title())
+                aux = input("Apellido Materno: ")
+                temp_cli.set_apellido_materno(aux.title())
+                aux = input("Genero (M/F): ")
+                temp_cli.set_genero(aux.title())
+                aux = input("Edad: ")
+                temp_cli.set_edad(aux)
+                aux = input("Domicilio: ")
+                temp_cli.set_domicilio(aux.title())
+                aux = input("Teléfono (###-###-####): ")
+                temp_cli.set_telefono(aux)
+                aux = input("Email: ")
+                temp_cli.set_email(aux)
+
+                cartera_clientes.append(temp_cli)
+
+                print("\nCliente registrado:\n{}\n".format(temp_cli.get_info_cliente()))
+
+            else:
+                break
+
+        while user == '2':
+            print("¿Qué desea hacer?")
+            act_string = "\t1. Registrar vendedor.\n\t2. Vender vehículo.\n\t"
+            act_string += "3. Ver cartera de clientes.\n\t4. Ver lista de vendedores.\n\t5. Consultar meta.\n\t6. Salir\n\t"
+            action = input(act_string)
+
+            if action == '1':
+                print("Registre sus datos.")
+                temp_ven = Vendedor.Vendedor('','','','','','','','')
+                aux = input("Nombre: ")
+                temp_ven.set_nombre(aux.title())
+                aux = input("Apellido Paterno: ")
+                temp_ven.set_apellido_paterno(aux.title())
+                aux = input("Apellido Materno: ")
+                temp_ven.set_apellido_materno(aux.title())
+                aux = input("Genero (M/F): ")
+                temp_ven.set_genero(aux.title())
+                aux = input("Edad: ")
+                temp_ven.set_edad(aux)
+                aux = input("Domicilio: ")
+                temp_ven.set_domicilio(aux.title())
+                aux = input("Teléfono (###-###-####): ")
+                temp_ven.set_telefono(aux)
+                aux = input("Años de experiencia: ")
+                temp_ven.set_experiencia(aux)
+
+                lista_vendedores.append(temp_ven)
+                if vendedor_actual == None:
+                    vendedor_actual = temp_ven
+                    print("\n{} {} fue asignado como el vendedor actual.".format(vendedor_actual.get_nombre(),
+                    vendedor_actual.get_apellido_paterno()))
+
+                print("\nVendedor registrado:\n{}\n".format(temp_ven.get_info_vendedor()))
+
+            elif action == '2':
+                if vendedor_actual == None:
+                    print("Debe registrarse como vendedor primero.")
+                else:
+                    print("Hola {}, ¿qué tipo de vehículo venderá hoy?".format(vendedor_actual.get_nombre()))
+                    opt = input("\t1. Automóvil.\n\t2. Motocicleta.\n\t3. Camión.\n\t")
+                    if opt == '1':
+                        modelo = input("Teclee el modelo del automóvil que desea vender.\n\t")
+                        venta_auto(modelo)
+                        vendedor_actual.incrementa_vehiculos_vendidos()
+                    elif opt == '2':
+                        modelo = input("Teclee el modelo de la motocicleta que desea vender.\n\t")
+                        venta_moto(modelo)
+                        vendedor_actual.incrementa_vehiculos_vendidos()
+                    elif opt == '3':
+                        modelo = input("Teclee el modelo del camión que desea vender.\n\t")
+                        venta_camion(modelo)
+                        vendedor_actual.incrementa_vehiculos_vendidos()
+                    else:
+                        print("Tipo de vehículo inválido.")
+
+            elif action == '3':
+                print("\n[[[Cartera de clientes]]]\n")
+                print('-------------------------------------------')
+                for item in cartera_clientes:
+                    print(item.get_info_cliente())
+                    print('-------------------------------------------')
+
+            elif action == '4':
+                print("\n[[[Lista de vendedores]]]\n")
+                print('-------------------------------------------')
+                for item in lista_vendedores:
+                    print(item.get_info_vendedor())
+                    print('-------------------------------------------')
+
+            elif action == '5':
+                print(vendedor_actual.cumplio_meta())
 
             else:
                 break

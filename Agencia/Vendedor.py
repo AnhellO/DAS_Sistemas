@@ -5,39 +5,39 @@ class Vendedor(Persona):
     # Clase para representar a un vendedor.
 
     def __init__(self, nombre, apellido_paterno, apellido_materno, genero, edad,
-    domicilio, telefono, id_vendedor):
+    domicilio, telefono, experiencia):
         # Heredamos los atributos de 'Persona'.
         super().__init__(nombre, apellido_paterno, apellido_materno, genero, edad,
         domicilio, telefono)
         # Definimos los atributos propios de un vendedor.
-        self.id_vendedor = id_vendedor
-        self.autos_vendidos = 0
+        self.experiencia = experiencia
+        self.vehiculos_vendidos = 0
 
-    def get_id_vendedor(self):
-        # Regresa el id del vendedor.
+    def get_experiencia(self):
+        # Regresa los años de experiencia del vendedor.
         return self.id_vendedor
 
-    def set_id_vendedor(self, id_vendedor):
-        # Asigna un id al vendedor.
-        self.id_vendedor = id_vendedor
+    def set_experiencia(self, experiencia):
+        # Asigna años de experiencia al vendedor.
+        self.experiencia = experiencia
 
-    def get_autos_vendidos(self):
-        # Regresa la cantidad de autos vendidos.
-        return self.autos_vendidos
+    def get_vehiculos_vendidos(self):
+        # Regresa la cantidad de vehículos vendidos.
+        return self.vehiculos_vendidos
 
-    def incrementa_autos_vendidos(self):
-        # Incrementa por uno los autos vendidos.
-        self.autos_vendidos += 1
+    def incrementa_vehiculos_vendidos(self):
+        # Incrementa por uno los vehiculos_vendidos vendidos.
+        self.vehiculos_vendidos += 1
 
     def cumplio_meta(self):
         # Determina si el vendedor cumplió la meta.
 
-        if self.autos_vendidos >= 1:
+        if self.vehiculos_vendidos >= 3:
             goal_info = "El vendedor cumplió la meta establecida."
-            goal_info += "\nAutos vendidos: {}".format(self.autos_vendidos)
+            goal_info += "\nVehículos vendidos: {}".format(self.vehiculos_vendidos)
         else:
-            goal_info = "El vendedor no cumplió la meta establecida."
-            goal_info += "\nAutos vendidos: {}".format(self.autos_vendidos)
+            goal_info = "El vendedor no ha cumplido la meta establecida."
+            goal_info += "\nVehículos vendidos: {}".format(self.vehiculos_vendidos)
 
         return goal_info
 
@@ -48,8 +48,8 @@ class Vendedor(Persona):
         self.apellido_paterno, self.apellido_materno)
         info += "Genero: {}\nEdad: {}\nDomicilio: {}\n".format(self.genero,
         self.edad, self.domicilio)
-        info += "Teléfono: {}\nId del vendedor: {}\nAutos vendidos: {}".format(self.telefono,
-        self.id_vendedor, self.autos_vendidos)
+        info += "Teléfono: {}\nAños de experiencia: {}\nVehículos vendidos: {}".format(self.telefono,
+        self.experiencia, self.vehiculos_vendidos)
 
         return info
 
@@ -58,6 +58,6 @@ class Vendedor(Persona):
 new_vendedor = Vendedor('Juan', 'Perez', 'Gómez', 'M', 28,
 'Los Álamos 412 Col. Bosques del Pedregal', '844-123-45-67', 1)
 print(new_vendedor.get_info_vendedor())
-new_vendedor.incrementa_autos_vendidos()
+new_vendedor.incrementa_vehiculos_vendidos()
 print(new_vendedor.cumplio_meta())
 '''
