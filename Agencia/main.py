@@ -1,10 +1,8 @@
-import Agencia, Automovil, Motocicleta, Camion, Vendedor, Cliente
+import Agencia, Automovil, Motocicleta, Camion, Vendedor, Cliente, time
 
 # Clase main (operaciones)
 
-
 # Listas para trabajar en runtime.
-
 autos = []
 motos = []
 camiones = []
@@ -16,11 +14,11 @@ camiones_vendidos = []
 cartera_clientes = []
 lista_vendedores = []
 
+# Utilizada para los reportes.
 log = []
 
 
-# Dummy data.
-
+# Funciones para cargar dummy data.
 def cargar_datos_autos():
     x = Automovil.Automovil('Chevrolet Aveo 2017', 'Rojo', 'Automático', '2.0L',
     '4', 'CHE-AV-S-01', 5, True, 15, 'Sedán')
@@ -54,6 +52,8 @@ def cargar_datos_camiones():
     'Scania DC16 500 16Litre 90° V8', 6, 'SCA-B165-01', 2, '17 toneladas')
     camiones.append(x)
 
+
+# Operaciones compra/venta.
 def venta_auto(modelo):
     found = False
     for item in autos:
@@ -62,7 +62,8 @@ def venta_auto(modelo):
             if item.existencia > 0:
                 item.decrementa_existencia()
                 autos_vendidos.append(item)
-                print("\nAuto comprado: \n{}".format(item.get_info_automovil()))
+                log.append("[{}] - Un {} ({}) fue vendido.".format(time.ctime(), item.get_modelo(), item.get_sku()))
+                print("\nAuto vendido: \n{}".format(item.get_info_automovil()))
                 print("Existencias restantes: {}\n".format(item.get_existencia()))
                 break
             else:
@@ -79,7 +80,8 @@ def venta_moto(modelo):
             if item.existencia > 0:
                 item.decrementa_existencia()
                 motos_vendidas.append(item)
-                print("Motocicleta comprada: \n{}".format(item.get_info_motocicleta()))
+                log.append("[{}] - Un {} ({}) fue vendido.".format(time.ctime(), item.get_modelo(), item.get_sku()))
+                print("\nMotocicleta vendida: \n{}".format(item.get_info_motocicleta()))
                 print("Existencias restantes: {}\n".format(item.get_existencia()))
                 break
             else:
@@ -96,7 +98,8 @@ def venta_camion(modelo):
             if item.existencia > 0:
                 item.decrementa_existencia()
                 camiones_vendidos.append(item)
-                print("Camión comprado: \n{}".format(item.get_info_camion()))
+                log.append("[{}] - Un {} ({}) fue vendido.".format(time.ctime(), item.get_modelo(), item.get_sku()))
+                print("\nCamión vendido: \n{}".format(item.get_info_camion()))
                 print("Existencias restantes: {}\n".format(item.get_existencia()))
                 break
             else:
@@ -106,7 +109,7 @@ def venta_camion(modelo):
         print("Lo sentimos, el modelo que busca no está en el catálogo.\n")
 
 
-
+# Función principal, despliega menú del usuario y llama a otras funciones diversas.
 def main():
     ag = Agencia.Agencia('Rivero Motors', 'Chevrolet',
     'Miguel Alemán 5400 Col. Torres de Lindavista', 'SHDFS238RY28')
@@ -118,43 +121,63 @@ def main():
     print("\n[[Sistema de agencias {} para la marca {}]]\n".format(ag.get_nombre_agencia(),
     ag.get_concesionaria()))
 
+    # Loop principal del menú.
     while True:
         print("\nEspecifique el tipo de usuario.")
         user = input("\t1. Cliente.\n\t2. Vendedor.\n\t3. Salir del programa.\n\t")
+        # Opción para terminar el programa.
         if user == '3':
             break
 
+        # Menú de usuario Cliente.
         while user == '1':
             print("¿Qué desea hacer?")
             action = input("\t1. Ver catálogo de vehículos.\n\t2. Comprar vehículo.\n\t3. Registrarse como cliente.\n\t4. Salir.\n\t")
 
+            # -> Catálogo de vehículos.
             if action == '1':
                 print("¿Qué tipo de vehículos desea ver?")
                 opt = input("\t1. Automóvil.\n\t2. Motocicleta.\n\t3. Camión.\n\t")
+
                 if opt == '1':
-                    print("\n[[[Catálogo {} 2017]]]\n".format(ag.get_concesionaria()))
-                    print('-------------------------------------------')
-                    for item in autos:
-                        print(item.get_info_automovil())
-                        print("Existencias: {}".format(item.get_existencia()))
+                    if len(autos) == 0:
+                        print("El catálogo de autos está vacío.")
+                    else:
+                        print("\n[[[Catálogo {} 2017]]]\n".format(ag.get_concesionaria()))
                         print('-------------------------------------------')
+                        for item in autos:
+                            print(item.get_info_automovil())
+                            print("Existencias: {}".format(item.get_existencia()))
+                            print('-------------------------------------------')
+                        log.append("[{}] - El catálogo de automóviles fue accesado.".format(time.ctime()))
+
                 elif opt == '2':
-                    print("\n[[[Catálogo Motos 2017]]]\n")
-                    print('-------------------------------------------')
-                    for item in motos:
-                        print(item.get_info_motocicleta())
-                        print("Existencias: {}".format(item.get_existencia()))
+                    if len(motos) == 0:
+                        print("El catálogo de motos está vacío.")
+                    else:
+                        print("\n[[[Catálogo Motos 2017]]]\n")
                         print('-------------------------------------------')
+                        for item in motos:
+                            print(item.get_info_motocicleta())
+                            print("Existencias: {}".format(item.get_existencia()))
+                            print('-------------------------------------------')
+                        log.append("[{}] - El catálogo de motocicletas fue accesado.".format(time.ctime()))
+
                 elif opt == '3':
-                    print("\n[[[Catálogo Camiones 2017]]]\n")
-                    print('-------------------------------------------')
-                    for item in camiones:
-                        print(item.get_info_camion())
-                        print("Existencias: {}".format(item.get_existencia()))
+                    if len(camiones) == 0:
+                        print("El catálogo de camiones está vacío.")
+                    else:
+                        print("\n[[[Catálogo Camiones 2017]]]\n")
                         print('-------------------------------------------')
+                        for item in camiones:
+                            print(item.get_info_camion())
+                            print("Existencias: {}".format(item.get_existencia()))
+                            print('-------------------------------------------')
+                        log.append("[{}] - El catálogo de camiones fue accesado.".format(time.ctime()))
                 else:
                     print("Catálogo inválido.")
 
+            # -> Comprar vehículo.
             elif action == '2':
                 print("¿Qué tipo de vehículo desea comprar?")
                 opt = input("\t1. Automóvil.\n\t2. Motocicleta.\n\t3. Camión.\n\t")
@@ -170,6 +193,7 @@ def main():
                 else:
                     print("Tipo de vehículo inválido.")
 
+            # -> Registrarse como cliente.
             elif action == '3':
                 print("Registre sus datos.")
                 temp_cli = Cliente.Cliente('','','','','','','','')
@@ -192,17 +216,25 @@ def main():
 
                 cartera_clientes.append(temp_cli)
 
+                log.append("[{}] - {} {} fue añadido a la cartera de clientes.".format(time.ctime(),
+                temp_cli.get_nombre(), temp_cli.get_apellido_paterno()))
+
                 print("\nCliente registrado:\n{}\n".format(temp_cli.get_info_cliente()))
 
             else:
                 break
 
+        # Menú de usuario Vendedor.
         while user == '2':
             print("¿Qué desea hacer?")
             act_string = "\t1. Registrar vendedor.\n\t2. Vender vehículo.\n\t"
-            act_string += "3. Ver cartera de clientes.\n\t4. Ver lista de vendedores.\n\t5. Consultar meta.\n\t6. Salir\n\t"
+            act_string += "3. Ver cartera de clientes.\n\t4. Ver lista de vendedores.\n\t"
+            act_string += "5. Consultar meta.\n\t6. Imprimir reporte de actividades.\n\t"
+            act_string += "7. Salir.\n\t"
             action = input(act_string)
 
+            # -> Registrar vendedor.
+            # Es necesario que esté registrado para vender vehículos.
             if action == '1':
                 print("Registre sus datos.")
                 temp_ven = Vendedor.Vendedor('','','','','','','','')
@@ -224,13 +256,18 @@ def main():
                 temp_ven.set_experiencia(aux)
 
                 lista_vendedores.append(temp_ven)
+                log.append("[{}] - {} {} fue registrado como vendedor.".format(time.ctime(),
+                temp_ven.get_nombre(), temp_ven.get_apellido_paterno()))
                 if vendedor_actual == None:
                     vendedor_actual = temp_ven
                     print("\n{} {} fue asignado como el vendedor actual.".format(vendedor_actual.get_nombre(),
                     vendedor_actual.get_apellido_paterno()))
+                    log.append("[{}] - {} {} fue asignado como el vendedor actual.".format(time.ctime(),
+                    vendedor_actual.get_nombre(), vendedor_actual.get_apellido_paterno()))
 
                 print("\nVendedor registrado:\n{}\n".format(temp_ven.get_info_vendedor()))
 
+            # -> Venta de vehículos.
             elif action == '2':
                 if vendedor_actual == None:
                     print("Debe registrarse como vendedor primero.")
@@ -252,26 +289,45 @@ def main():
                     else:
                         print("Tipo de vehículo inválido.")
 
+            # -> Consultar cartera de clientes.
             elif action == '3':
-                print("\n[[[Cartera de clientes]]]\n")
-                print('-------------------------------------------')
-                for item in cartera_clientes:
-                    print(item.get_info_cliente())
+                if len(cartera_clientes) == 0:
+                    print("\nLa cartera de clientes está vacía.\n")
+                else:
+                    log.append("[{}] - La cartera de clientes fue accesada.".format(time.ctime()))
+                    print("\n[[[Cartera de clientes]]]\n")
                     print('-------------------------------------------')
+                    for item in cartera_clientes:
+                        print(item.get_info_cliente())
+                        print('-------------------------------------------')
 
+            # -> Consultar lista de vendedores.
             elif action == '4':
-                print("\n[[[Lista de vendedores]]]\n")
-                print('-------------------------------------------')
-                for item in lista_vendedores:
-                    print(item.get_info_vendedor())
+                if len(lista_vendedores) == 0:
+                    print("La lista de vendedores está vacía.")
+                else:
+                    log.append("[{}] - La lista de vendedores fue accesada.".format(time.ctime()))
+                    print("\n[[[Lista de vendedores]]]\n")
                     print('-------------------------------------------')
+                    for item in lista_vendedores:
+                        print(item.get_info_vendedor())
+                        print('-------------------------------------------')
 
+            # -> Consultar meta.
             elif action == '5':
                 print(vendedor_actual.cumplio_meta())
+                log.append("[{}] - {} consultó su meta de ventas.".format(time.ctime(), vendedor_actual.get_nombre()))
+
+            # -> Imprimir reporte.
+            elif action == '6':
+                print('-------------------------------------------')
+                for item in log:
+                    print(item)
+                print('-------------------------------------------')
 
             else:
                 break
-
+    # (ง ͠° ͟ل͜ ͡°)ง
     print("Fin del programa.")
 
 

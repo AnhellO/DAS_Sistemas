@@ -33,11 +33,11 @@ class Vendedor(Persona):
         # Determina si el vendedor cumplió la meta.
 
         if self.vehiculos_vendidos >= 3:
-            goal_info = "El vendedor cumplió la meta establecida."
-            goal_info += "\nVehículos vendidos: {}".format(self.vehiculos_vendidos)
+            goal_info = "\nEl vendedor cumplió la meta establecida."
+            goal_info += "\nVehículos vendidos: {}\n".format(self.vehiculos_vendidos)
         else:
-            goal_info = "El vendedor no ha cumplido la meta establecida."
-            goal_info += "\nVehículos vendidos: {}".format(self.vehiculos_vendidos)
+            goal_info = "\nEl vendedor no ha cumplido la meta establecida."
+            goal_info += "\nVehículos vendidos: {}\n".format(self.vehiculos_vendidos)
 
         return goal_info
 
