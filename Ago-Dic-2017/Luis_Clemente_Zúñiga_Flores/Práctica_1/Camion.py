@@ -16,36 +16,36 @@ class Camion(Vehiculo):
         self.__potencia = potencia
         self.__capacidad = capacidad        
         
-    def estableceEjes(self, ejes):
+    def setEjes(self, ejes):
         self.__ejes = ejes        
     
-    def obtenEjes(self):        
+    def getEjes(self):        
         return self.__ejes
     
-    def establecePotencia(self, potencia):
+    def setPotencia(self, potencia):
         self.__potencia = potencia
     
-    def obtenPotencia(self):
+    def getPotencia(self):
         return self.__potencia
     
-    def estableceCapacidad(self, capacidad):
+    def setCapacidad(self, capacidad):
         self.__capacidad = capacidad
     
-    def obtenCapacidad(self):
+    def getCapacidad(self):
         return self.__capacidad
   
     def datosDeCamion(self):
         datos_camion = 'Camión.\n'
-        datos_camion+= 'Marca: ' + self.obtenMarca()       
-        datos_camion+= '\nModelo: ' + self.obtenModelo()       
-        datos_camion+= '\nColor: ' + self.obtenColor()        
-        datos_camion+= '\nMotor: ' + self.obtenMotor()
-        datos_camion+= '\nTransmisión: ' + self.obtenTransmision()       
-        datos_camion+= '\nSKU: ' + self.devuelveSku()
-        datos_camion+= '\nEjes: ' + self.obtenEjes()
-        datos_camion+= '\nPotencia: ' + self.obtenPotencia()
-        datos_camion+= '\nCapacidad: ' + self.obtenCapacidad()        
-        datos_camion+= '\nCantidad: ' + str(self.obtenExistencias())                
-        datos_camion+= '\nPrecio: ' + str(self.devuelvePrecio())        
+        datos_camion+= 'Marca: ' + self.getMarca()       
+        datos_camion+= '\nModelo: ' + self.getModelo()       
+        datos_camion+= '\nColor: ' + self.getColor()        
+        datos_camion+= '\nMotor: ' + self.getMotor()
+        datos_camion+= '\nTransmisión: ' + self.getTransmision()       
+        datos_camion+= '\nSKU: ' + self.getSku()
+        datos_camion+= '\nEjes: ' + self.getEjes()
+        datos_camion+= '\nPotencia: ' + self.getPotencia()
+        datos_camion+= '\nCapacidad: ' + self.getCapacidad()        
+        datos_camion+= '\nCantidad: ' + str(self.getExistencias())                
+        datos_camion+= '\nPrecio: ' + str(self.getPrecio())        
         return datos_camion
 

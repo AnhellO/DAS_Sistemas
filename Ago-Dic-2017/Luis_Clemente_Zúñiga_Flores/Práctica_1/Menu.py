@@ -20,7 +20,7 @@ class CompraVenta:
         print('Configuración inicial.')
         nomAgencia = input('Nombre de la agencia: ')
         direccion = input('Dirección de la agencia: ')
-        nombre = input('Nombre de la sesión: ')
+        nombre = input('Nombre del administrador: ')
         agencia = Agencia(nomAgencia,direccion)
         os.system('cls')
         print('#'*80)
@@ -40,7 +40,7 @@ class CompraVenta:
 
                 elif cmd=='agencia':
                     print('*'*80)
-                    print('Agencia de automóviles ' + agencia.obtenNombre() + ' [versión 0.0 2017]\n' + agencia.obtenDireccion())
+                    print('Agencia de automóviles ' + agencia.getNombre() + ' [versión 0.0 2017]\n' + agencia.getDireccion())
                     print('*'*80)
 
                 elif cmd=='cls' or cmd=='clear':
@@ -56,14 +56,14 @@ class CompraVenta:
                 elif cmd=='agencianombre':
                     try:
                         nuevoAgencia = args[0]
-                        agencia.estableceNombre(nuevoAgencia)
+                        agencia.setNombre(nuevoAgencia)
                     except:
                         print('Falta el nombre de la agencia')
 
                 elif cmd=='agenciadireccion':
                     try:
                         nuevaDireccion = args[0]
-                        agencia.estableceDireccion(nuevaDireccion)
+                        agencia.setDireccion(nuevaDireccion)
                     except:
                         print('Falta la dirección de la agencia')
 
@@ -84,19 +84,27 @@ class CompraVenta:
                 elif cmd=='empleado':
                     try:
                         nomEmpleado, paternoEmp, maternoEmp, edadEmp, genEmp, dirEmp, telEmp = args
-                        numEmp = agencia.devuelveEmpleados()+1
+                        numEmp = agencia.getEmpleados()+1
                         empleado = Empleado(nomEmpleado,paternoEmp,maternoEmp,edadEmp,genEmp,dirEmp,telEmp,int(numEmp))
                         agencia.aumentaEmpleados(empleado)
                         print('Empleado nuevo en el sistema')
 
                     except:
                         print('error al agregar empleado')
+                
+                #eliminar empleado
+                elif cmd=='del':
+                    try:
+                        if args[0] == 'empleado':
+                            agencia.bajaEmpleado(int(args[1]))
+                    except Exception as inst:
+                        print(inst)                
 
                 #agregar cliente
                 elif cmd=='cliente':
                     try:
                         nomCliente, paternoCli, maternoCli, edadCli, genCli, dirCli, telCli = args
-                        numCli = agencia.devuelveClientes()+1
+                        numCli = agencia.getClientes()+1
                         cliente = Cliente(nomCliente, paternoCli, maternoCli, edadCli, genCli, dirCli, telCli,int(numCli))
                         agencia.aumentaClientes(cliente)
                         print('Cliente nuevo en el sistema')
@@ -111,7 +119,7 @@ class CompraVenta:
                             
                             if args[0] == 'auto':
                                 auto, marca,modelo,color,motor,trans,puertas,equipado,kml,cantidad,precio = args                                
-                                automovil = Automovil(marca,modelo,color,motor,trans,puertas,equipado,kml,int(cantidad),precio)
+                                automovil = Automovil(marca,modelo,color,motor,trans,puertas,equipado,kml,int(cantidad),precio)                                
                                 agencia.altaAuto(automovil)
                                 print('Automóvil agregado al sistema')
                                 
@@ -158,10 +166,10 @@ class CompraVenta:
                         elif len(args) == 2:
                             arg1, arg2 = args
                             if arg1 == 'empleado':
-                                print(agencia.devuelveEmpleado(arg2))
+                                print(agencia.getEmpleado(arg2))
 
                             elif arg1 == 'cliente':
-                                print(agencia.devuelveCliente(arg2))                   
+                                print(agencia.getCliente(arg2))                   
                     except:
                         print('argumentos incompletos')              
                 

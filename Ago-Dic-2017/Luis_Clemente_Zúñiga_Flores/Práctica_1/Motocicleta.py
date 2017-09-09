@@ -12,22 +12,22 @@ class Motocicleta(Vehiculo):
         super().__init__(marca,modelo,color,motor,trans,cantidad,precio)
         self.__centimetrosCubicos = cc          
     
-    def estableceCentrimetrosCubicos(self, cc):
+    def setCentrimetrosCubicos(self, cc):
         self.__centimetrosCubicos = cc
         
-    def obtenCentimetrosCubicos(self):
+    def getCentimetrosCubicos(self):
         return self.__centimetrosCubicos
         
     def datosDeMoto(self):
         datos_moto = 'Motocicleta.\n'
-        datos_moto+= 'Marca: ' + self.obtenMarca()
-        datos_moto+= '\nModelo: ' + self.obtenModelo()
-        datos_moto+= '\nColor: ' + self.obtenColor()
-        datos_moto+= '\nMotor: ' + self.obtenMotor()
-        datos_moto+= '\nTransmisión: ' + self.obtenTransmision()       
-        datos_moto+= '\nSKU: ' + self.devuelveSku()
-        datos_moto+= '\nCentímetros Cúbicos (cc): ' + self.obtenCentimetrosCubicos()       
-        datos_moto+= '\nCantidad: ' + str(self.obtenExistencias())
-        datos_moto+= '\nPrecio: ' + str(self.devuelvePrecio())        
+        datos_moto+= 'Marca: ' + self.getMarca()
+        datos_moto+= '\nModelo: ' + self.getModelo()
+        datos_moto+= '\nColor: ' + self.getColor()
+        datos_moto+= '\nMotor: ' + self.getMotor()
+        datos_moto+= '\nTransmisión: ' + self.getTransmision()       
+        datos_moto+= '\nSKU: ' + self.getSku()
+        datos_moto+= '\nCentímetros Cúbicos (cc): ' + self.getCentimetrosCubicos()       
+        datos_moto+= '\nCantidad: ' + str(self.getExistencias())
+        datos_moto+= '\nPrecio: ' + str(self.getPrecio())        
         return datos_moto
 

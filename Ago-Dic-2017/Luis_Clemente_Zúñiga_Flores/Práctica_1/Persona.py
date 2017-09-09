@@ -23,45 +23,45 @@ class Persona:
         self.__telefono = telefono
         
    
-    def estableceNombre(self, nombre):
+    def setNombre(self, nombre):
         self.__nombre = nombre
         
-    def obtenNombre(self):
+    def getNombre(self):
         return self.__nombre
     
-    def estableceApellidoPaterno(self, paterno):
+    def setApellidoPaterno(self, paterno):
         self.__apellidoPaterno = paterno
       
-    def obtenApellidoPaterno(self):
+    def getApellidoPaterno(self):
         return self.__apellidoPaterno
     
-    def estableceApellidoMaterno(self, materno):
+    def setApellidoMaterno(self, materno):
         self.__apellidoMaterno = materno
     
-    def obtenApellidoMaterno(self):
+    def getApellidoMaterno(self):
         return self.__apellidoMaterno
         
-    def estableceDireccion(self, direccion):
+    def setDireccion(self, direccion):
         self.__direccion = direccion
 
     
-    def obtenDireccion(self):
+    def getDireccion(self):
         return self.__direccion
         
-    def estableceTelefono(self, telefono):
+    def setTelefono(self, telefono):
         self.__telefono = telefono
-    def obtenTelefono(self):
+    def getTelefono(self):
         return self.__telefono
         
-    def estableceEdad(self, edad):
+    def setEdad(self, edad):
         self.__edad = edad
     
-    def obtenEdad(self):
+    def getEdad(self):
         return self.__edad
         
-    def estableceGenero(self, genero):
+    def setGenero(self, genero):
         self.__genero = genero
         
-    def obtenGenero(self):
+    def getGenero(self):
         return self.__genero
 

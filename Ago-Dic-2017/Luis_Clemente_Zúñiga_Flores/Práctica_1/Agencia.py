@@ -30,16 +30,16 @@ class Agencia:
     
     #Operaciones para Agencia
     
-    def estableceNombre(self, nombre):       
+    def setNombre(self, nombre):       
         self.__nombre = nombre
 
-    def obtenNombre(self):
+    def getNombre(self):
         return self.__nombre
     
-    def estableceDireccion(self,direccion):
+    def setDireccion(self,direccion):
         self.__direccion = direccion
 
-    def obtenDireccion(self):
+    def getDireccion(self):
         return self.__direccion
     
     #Operaciones de compra y venta
@@ -47,21 +47,24 @@ class Agencia:
     def ventaCamion(self,vendedor,comprador,sku):
         self.__dict_ventas={'vendedor': vendedor, 'comprador': comprador, 'sku': sku}
         self.__lista_ventas.append(self.__dict_ventas)
-        self.bajaCamion(self.searchCamion(sku))        
+        
+        
+        
+        self.bajaCamion(self.buscaCamion(sku))        
        
     
-    #Bug en esta función con el self.bajaAuto --> bajaAuto() ---> reduceExistencias()
+    
     def ventaAuto(self,vendedor,comprador,sku):
         self.__dict_ventas={'vendedor': vendedor, 'comprador': comprador, 'sku': sku}
         self.__lista_ventas.append(self.__dict_ventas)
-        self.bajaAuto(self.searchAuto(sku))
+        self.bajaAuto(self.buscaAuto(sku))
         
     
     
     def ventaMoto(self,vendedor,comprador,sku):
         self.__dict_ventas={'vendedor': vendedor, 'comprador': comprador, 'sku': sku}
         self.__lista_ventas.append(self.__dict_ventas)
-        self.bajaMoto(self.searchMoto(sku))
+        self.bajaMoto(self.buscaMoto(sku))
         
     def imprimeVentas(self):
         for i in self.__lista_ventas:
@@ -79,9 +82,9 @@ class Agencia:
         for i in self.__camiones:
             print(i.datosDeCamion())
 
-    def searchCamion(self,sku):
+    def buscaCamion(self,sku):
         for i in self.__camiones:
-            if sku == i.devuelveSku():
+            if sku == i.getSku():
                 return i
                 break
                 
@@ -94,16 +97,15 @@ class Agencia:
         for i in self.__autos:
             print(i.datosDeAuto())
     
-    #Bug con el método reduceExistencias() <-- ventaAuto()
-    #'NoneType' object has no attribute 'reduceExistencias'
+    
     def bajaAuto(self,auto):
         auto.reduceExistencias()  
-        print('baja auto')
+        
        
     
-    def searchAuto(self,sku):
-        for i in self.__camiones:
-            if sku == i.devuelveSku():
+    def buscaAuto(self,sku):
+        for i in self.__autos:
+            if sku == i.getSku():
                 return i
                 break
     
@@ -119,36 +121,51 @@ class Agencia:
     def bajaMoto(self, moto):
         moto.reduceExistencias()
         
-    def searchMoto(self, sku):
+    def buscaMoto(self, sku):
         for i in self.__motos:
-            if sku == i.devuelveSku():
+            if sku == i.getSku():
                 return i
                 break
                 
     #Operaciones sobre clientes y empleados
+    #Empleados   
     
-    def bajaCliente(self, numeroDeCliente):
-        self.__clientes[int(numeroDeCliente)-1] = None
         
     def bajaEmpleado(self, numeroDeEmpleado):
-       self.__empleados[int(numeroDeEmpleado)-1] = None        
+        self.__empleados.pop(numeroDeEmpleado-1)
+        #self.__empleados.append(None)
+        self.__numeroDeEmpleados-=1
+        #print(self.__empleados)        
 
     def aumentaEmpleados(self,empleado):
         self.__empleados.append(empleado)
+        #self.__empleados.insert(self.__numeroDeEmpleados,empleado)
         self.__numeroDeEmpleados+=1
+        
 
-    def devuelveEmpleado(self,cant):
+    def getEmpleado(self,cant):
         print(cant)
         return self.__empleados[int(cant)-1].datosDeEmpleado()
 
-    def devuelveEmpleados(self):
+    def getEmpleados(self):
         return self.__numeroDeEmpleados
 
     def imprimeEmpleados(self):
         for i in self.__empleados:
             print(i.datosDeEmpleado())
+            
+    def buscaEmpleados(self, numEmpleado):
+        for i in self.__empleados:
+            if i.getEmpleado() == numEmpleado:
+                return True
+                break
+            else: return False            
 
-    def devuelveCliente(self, cant):
+    #clientes
+    def bajaCliente(self, numeroDeCliente):
+        self.__clientes[int(numeroDeCliente)-1] = None
+    
+    def getCliente(self, cant):
         return self.__clientes[int(cant)-1].datosDeCliente()
 
     def aumentaClientes(self,cliente):
@@ -159,7 +176,7 @@ class Agencia:
         for i in self.__clientes:
             print(i.datosDeCliente())
 
-    def devuelveClientes(self):
+    def getClientes(self):
         return self.__numeroDeClientes
  
             

@@ -18,45 +18,45 @@ class Automovil(Vehiculo):
             self.__equipado = False
         self.__kilometrosPorLitro = kml    
         
-    def establecePuertas(self, puertas):
+    def getPuertas(self, puertas):
         self.__puertas = puertas 
     
-    def obtenPuertas(self):
+    def getPuertas(self):
         return self.__puertas        
         
-    def estableceEquipado(self, equipado):
+    def getEquipado(self, equipado):
         if equipado == 'si' or equipado == 'sí':
             self.__equipado = True
         else:
             self.__equipado = False
 
-    def obtenEquipado(self):
+    def getEquipado(self):
         return self.__equipado
     
-    def estableceKmLitro(self, kmLitro):
+    def getKmLitro(self, kmLitro):
         self.__kilometrosPorLitro = kmLitro
         
-    def obtenKmLitro(self):
+    def getKmLitro(self):
         return self.__kilometrosPorLitro   
 
     def datosDeAuto(self):
         equipado = ""
-        if self.obtenEquipado() == True:
+        if self.getEquipado() == True:
             equipado = "sí"
         else:
             equipado = "no"            
         datos_auto = 'Automóvil.\n'
-        datos_auto+= 'Marca: ' + self.obtenMarca()
-        datos_auto+= '\nModelo: ' + self.obtenModelo()
-        datos_auto+= '\nColor: ' + self.obtenColor()
-        datos_auto+= '\nMotor: ' + self.obtenMotor()
-        datos_auto+= '\nTransmisión: ' + self.obtenTransmision()
-        datos_auto+= '\nPuertas: ' + self.obtenPuertas()
+        datos_auto+= 'Marca: ' + self.getMarca()
+        datos_auto+= '\nModelo: ' + self.getModelo()
+        datos_auto+= '\nColor: ' + self.getColor()
+        datos_auto+= '\nMotor: ' + self.getMotor()
+        datos_auto+= '\nTransmisión: ' + self.getTransmision()
+        datos_auto+= '\nPuertas: ' + self.getPuertas()
         datos_auto+= '\nEquipado: ' + equipado 
-        datos_auto+= '\nKilómetros por litro: ' + self.obtenKmLitro()
-        datos_auto+= '\nSKU: ' + self.devuelveSku()
-        datos_auto+= '\nCantidad: ' + str(self.obtenExistencias())
-        datos_auto+= '\nPrecio: ' + str(self.devuelvePrecio())        
+        datos_auto+= '\nKilómetros por litro: ' + self.getKmLitro()
+        datos_auto+= '\nSKU: ' + self.getSku()
+        datos_auto+= '\nCantidad: ' + str(self.getExistencias())
+        datos_auto+= '\nPrecio: ' + str(self.getPrecio())        
         return datos_auto
         
 

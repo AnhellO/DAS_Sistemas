@@ -22,57 +22,57 @@ class Vehiculo:
         self.__transmision = transmision
         self.__existencia = existencia
         self.__precio = precio
-        self.estableceSku()    
+        self.setSku()    
         
-    def estableceMarca(self, marca):
+    def setMarca(self, marca):
         self.__marca = marca       
     
-    def obtenMarca(self):
+    def getMarca(self):
         return self.__marca
         
-    def estableceModelo(self, modelo):
+    def setModelo(self, modelo):
         self.__modelo = modelo        
     
-    def obtenModelo(self):
+    def getModelo(self):
         return self.__modelo
         
-    def estableceSku(self):
+    def setSku(self):
         self.__sku = self.__marca[0:3] + self.__modelo + self.__motor[0:3] + self.__transmision[0:3] + self.__color
           
-    def devuelveSku(self):
+    def getSku(self):
         return self.__sku.lower()
            
-    def estableceColor(self, color):
+    def setColor(self, color):
         self.__color = color        
     
-    def obtenColor(self):
+    def getColor(self):
         return self.__color
         
-    def estableceMotor(self, motor):
+    def setMotor(self, motor):
         self.__motor = motor        
     
-    def obtenMotor(self):
+    def getMotor(self):
         return self.__motor
         
-    def estableceTransmision(self, transmision):
+    def setTransmision(self, transmision):
         self.__transmision = transmision       
     
-    def obtenTransmision(self):
+    def getTransmision(self):
         return self.__transmision        
       
-    def estableceExistencias(self, existencias):
+    def setExistencias(self, existencias):
         self.__existencia = existencias
     
-    def obtenExistencias(self):
+    def getExistencias(self):
         return self.__existencia
     
     def reduceExistencias(self):
         self.__existencia-=1
             
-    def establecePrecio(self,precio):
+    def setPrecio(self,precio):
         self.__precio = precio
         
-    def devuelvePrecio(self):
+    def getPrecio(self):
         return self.__precio
         
     

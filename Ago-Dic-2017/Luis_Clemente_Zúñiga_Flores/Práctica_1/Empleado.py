@@ -11,30 +11,30 @@ class Empleado(Persona):
         self.__numeroDeEmpleado = numEmp
 
     # Operations
-    def estableceNumeroDeEmpleado(self, numEmp):
+    def setNumeroDeEmpleado(self, numEmp):
        self.__numeroDeEmpleado = numEmp
 
-    def obtenNumeroDeEmpleado(self):
+    def getNumeroDeEmpleado(self):
         return self.__numeroDeEmpleado
 
     def datosDeEmpleado(self):
         datos_empleado = 'Datos del empleado:\n'
         datos_empleado+= 'Nombre:\n'
-        datos_empleado+= super(Empleado,self).obtenNombre()
+        datos_empleado+= super(Empleado,self).getNombre()
         datos_empleado+= ' '
-        datos_empleado+= super(Empleado,self).obtenApellidoPaterno()
+        datos_empleado+= super(Empleado,self).getApellidoPaterno()
         datos_empleado+= ' '
-        datos_empleado+= super(Empleado,self).obtenApellidoMaterno() + '\n'
+        datos_empleado+= super(Empleado,self).getApellidoMaterno() + '\n'
         datos_empleado+= 'Número de empleado:\n'
-        datos_empleado+= str(self.obtenNumeroDeEmpleado()) + '\n'
+        datos_empleado+= str(self.getNumeroDeEmpleado()) + '\n'
         datos_empleado+= 'Edad:\n'
-        datos_empleado+= super(Empleado,self).obtenEdad() + '\n'
+        datos_empleado+= super(Empleado,self).getEdad() + '\n'
         datos_empleado+= 'Dirección:\n'
-        datos_empleado+= super(Empleado,self).obtenDireccion() + '\n'
+        datos_empleado+= super(Empleado,self).getDireccion() + '\n'
         datos_empleado+= 'Género:\n'
-        datos_empleado+= super(Empleado,self).obtenGenero() + '\n'
+        datos_empleado+= super(Empleado,self).getGenero() + '\n'
         datos_empleado+= 'Teléfono:\n'
-        datos_empleado+= super(Empleado,self).obtenTelefono() + '\n'	
+        datos_empleado+= super(Empleado,self).getTelefono() + '\n'	
         return datos_empleado
 
 
