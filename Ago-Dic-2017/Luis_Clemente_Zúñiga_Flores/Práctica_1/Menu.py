@@ -90,15 +90,7 @@ class CompraVenta:
                         print('Empleado nuevo en el sistema')
 
                     except:
-                        print('error al agregar empleado')
-                
-                #eliminar empleado
-                elif cmd=='del':
-                    try:
-                        if args[0] == 'empleado':
-                            agencia.bajaEmpleado(int(args[1]))
-                    except Exception as inst:
-                        print(inst)                
+                        print('error al agregar empleado')                           
 
                 #agregar cliente
                 elif cmd=='cliente':

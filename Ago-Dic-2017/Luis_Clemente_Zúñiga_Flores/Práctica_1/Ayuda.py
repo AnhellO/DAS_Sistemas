@@ -29,12 +29,7 @@ class Ayuda:
         print('\t<<auto>> [\'marca\' \'modelo\' \'color\' \'motor\' \'trans.\' \'puertas\' \n\t\t\t\'equipado <si> <no>\' \'km/l\' \'cantidad\' \'precio\']')
         print('\t\tAgrega un automóvil al sistema\n')
         print('\t<<moto>> [\'marca\' \'modelo\' \'color\' \'motor\' \'trans.\' \'cc\' \'cantidad\' \'precio\']')
-        print('\t\tAgrega una motocicleta al sistema\n')
-        print('ELIMINAR EMPLEADOS, CLIENTES O PRODUCTOS (Not yet implemented)\n')
-        print('<<del>>')
-        print('\n\t<<empleado>> [\'número de empleado\'] Elimina un empleado del sistema\n')
-        print('\n\t<<cliente>> [\'número de cliente\'] Elimina un cliente del sistema\n')
-        print('\n\t[\'sku\'] Elimina el producto del sistema\n')              
+        print('\t\tAgrega una motocicleta al sistema\n')                  
         print('='*80)
         
     def imprimeAyudaConsultar(self):

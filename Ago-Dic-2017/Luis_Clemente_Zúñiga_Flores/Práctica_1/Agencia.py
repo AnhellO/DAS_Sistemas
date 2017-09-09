@@ -133,15 +133,11 @@ class Agencia:
         
     def bajaEmpleado(self, numeroDeEmpleado):
         self.__empleados.pop(numeroDeEmpleado-1)
-        #self.__empleados.append(None)
         self.__numeroDeEmpleados-=1
-        #print(self.__empleados)        
 
     def aumentaEmpleados(self,empleado):
-        self.__empleados.append(empleado)
-        #self.__empleados.insert(self.__numeroDeEmpleados,empleado)
-        self.__numeroDeEmpleados+=1
-        
+        self.__empleados.append(empleado)        
+        self.__numeroDeEmpleados+=1        
 
     def getEmpleado(self,cant):
         print(cant)
