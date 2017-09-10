@@ -11,6 +11,6 @@ class Vendedor(Persona):
     def setIDVendedor(self,idVendedor):
         self.idVendedor = idVendedor
 
-Vendedor1 = ('Carlos','Guerrero','Jaramillo','Masculino','31','saltillo 2000','8446795248','01')
-Vendedor2 = ('Eduardo','Carranza','Lopez','Masculino','29','oceania','8447532159','02')
-Vendedor3 = ('Alejandra','Montoya','Silva','Femenino','30','landin','8447845153','03')
+Vendedor1 = Vendedor('Carlos','Guerrero','Jaramillo','Masculino','31','saltillo 2000','8446795248','01')
+Vendedor2 = Vendedor('Eduardo','Carranza','Lopez','Masculino','29','oceania','8447532159','02')
+Vendedor3 = Vendedor('Alejandra','Montoya','Silva','Femenino','26','landin','8447845153','03')

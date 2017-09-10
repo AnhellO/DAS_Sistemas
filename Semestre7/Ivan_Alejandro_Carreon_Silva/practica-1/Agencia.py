@@ -18,4 +18,7 @@ class Agencia:
     def setEmail(self,email):
         self.email = email
 
-Sagencia = ('El Horizonte \n S.A. de C.V.','Balcones de buenavista #193','elhorizonte@outlook.com')
+    def ventaVehiculo(self,Cliente,Vehiculo,Vendedor):
+        return Cliente+" "+Vehiculo+" "+Vendedor
+
+Sagencia = Agencia('El Horizonte \n S.A. de C.V.','Balcones de buenavista #193','elhorizonte@outlook.com')

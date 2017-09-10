@@ -50,7 +50,12 @@ class Vehiculo:
     def getSku(self):
         return self.sku
 
+    def setExistencia(self,existencia):
+        self.existencia = existencia
+    def getExistencia(self):
+        return self.existencia
+
     def incrementaExist(self,n):
-        self.sku = n
+        self.existencia = n
     def decrementaExist(self,n):
-        self.sku = n
+        self.existencia = n
