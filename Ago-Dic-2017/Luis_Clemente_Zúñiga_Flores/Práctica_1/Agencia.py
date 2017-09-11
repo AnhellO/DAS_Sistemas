@@ -45,27 +45,36 @@ class Agencia:
     #Operaciones de compra y venta
     
     def ventaCamion(self,vendedor,comprador,sku):
-        self.__dict_ventas={'vendedor': vendedor, 'comprador': comprador, 'sku': sku}
-        self.__lista_ventas.append(self.__dict_ventas)
-        
-        
-        
-        self.bajaCamion(self.buscaCamion(sku))        
-       
+        if self.buscaCamion(sku).getExistencias() > 0:
+            self.__dict_ventas={'vendedor': vendedor, 'comprador': comprador, 'sku': sku}
+            self.__lista_ventas.append(self.__dict_ventas)        
+            self.bajaCamion(self.buscaCamion(sku))
+            print('Un camion con sku ' + sku + ' ha sido vendido')
+        else:
+            print('Existencias agotadas.\nPor favor consulte el catálogo de existencias.')
     
     
     def ventaAuto(self,vendedor,comprador,sku):
-        self.__dict_ventas={'vendedor': vendedor, 'comprador': comprador, 'sku': sku}
-        self.__lista_ventas.append(self.__dict_ventas)
-        self.bajaAuto(self.buscaAuto(sku))
+        if self.buscaAuto(sku).getExistencias() > 0:
+            self.__dict_ventas={'vendedor': vendedor, 'comprador': comprador, 'sku': sku}
+            self.__lista_ventas.append(self.__dict_ventas)
+            self.bajaAuto(self.buscaAuto(sku))
+            print('Un automóvil con sku ' + sku + ' ha sido vendido')
+        else:
+           print('Existencias agotadas.\n Por favor consulte el catálogo de existencias.')
         
     
     
     def ventaMoto(self,vendedor,comprador,sku):
-        self.__dict_ventas={'vendedor': vendedor, 'comprador': comprador, 'sku': sku}
-        self.__lista_ventas.append(self.__dict_ventas)
-        self.bajaMoto(self.buscaMoto(sku))
         
+        if self.buscaMoto(sku).getExistencias() > 0:
+            self.__dict_ventas={'vendedor': vendedor, 'comprador': comprador, 'sku': sku}
+            self.__lista_ventas.append(self.__dict_ventas)
+            self.bajaMoto(self.buscaMoto(sku))
+            print('Una motocicleta con sku ' + sku + ' ha sido vendida')
+        else:
+            print('Existencias agotadas.\n Por favor consulte el catálogo de existencias.')
+            
     def imprimeVentas(self):
         for i in self.__lista_ventas:
             print (i) 
@@ -73,15 +82,21 @@ class Agencia:
     #operaciones para camiones    
     def altaCamion(self,camion):
         self.__camiones.append(camion)
-        self.__totalCamiones+=1
-        
+        self.__totalCamiones = camion.getExistencias()
+                
     def bajaCamion(self,camion):
         camion.reduceExistencias()
+        self.__totalCamiones-=1
     
     def imprimeCamiones(self):
         for i in self.__camiones:
             print(i.datosDeCamion())
 
+    def agregaCamion(self, sku, cantidad):
+       if sku == self.buscaCamion(sku).getSku():
+               self.buscaCamion(sku).aumentaExistencias(int(cantidad))
+               self.__totalCamiones += int(cantidad)
+               
     def buscaCamion(self,sku):
         for i in self.__camiones:
             if sku == i.getSku():
@@ -91,7 +106,7 @@ class Agencia:
     #operaciones para autos                    
     def altaAuto(self,auto):
         self.__autos.append(auto)
-        self.__totalAutos+=1
+        self.__totalAutos = auto.getExistencias()
     
     def imprimeAutos(self):
         for i in self.__autos:
@@ -99,10 +114,14 @@ class Agencia:
     
     
     def bajaAuto(self,auto):
-        auto.reduceExistencias()  
-        
-       
+        auto.reduceExistencias()
+        self.__totalAutos-=1      
     
+    def agregaAuto(self,sku,cantidad):
+        if sku == self.buscaAuto(sku).getSku():
+               self.buscaAuto(sku).aumentaExistencias(int(cantidad))
+               self.__totalAutos += int(cantidad)           
+            
     def buscaAuto(self,sku):
         for i in self.__autos:
             if sku == i.getSku():
@@ -112,14 +131,20 @@ class Agencia:
     #Operaciones para motos
     def altaMoto(self,moto):
         self.__motos.append(moto)
-        self.__totalMotos+=1
+        self.__totalMotos = moto.getExistencias()
         
+    def agregaMoto(self, sku, cantidad):
+        if sku == self.buscaMoto(sku).getSku():
+               self.buscaMoto(sku).aumentaExistencias(int(cantidad))
+               self.__totalMotos += int(cantidad)
+               
     def imprimeMotocicletas(self):
         for i in self.__motos:
             print(i.datosDeMoto())
                 
     def bajaMoto(self, moto):
         moto.reduceExistencias()
+        self.__totalMotos-=1
         
     def buscaMoto(self, sku):
         for i in self.__motos:

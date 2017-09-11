@@ -21,7 +21,7 @@ class Ayuda:
         print('\n  Ej: empleado Cosme Fulanito Pérez 40 masculino \'Av. Siempreviva #100\'\n\t 555-666-777')         
         print('\n<<empleado>> [\'nombre\' \'ap. paterno\' \'ap. materno\' \'edad\' \'género\' \'dirección\' \n\t\t\'teléfono\']')
         print('\t\tAgrega un empleado al sistema\n')
-        print('<<cliente>> [\'nombre\' \'ap. paterno\' \'ap. materno\' \'edad\' \'dirección\' \n\t\t\'teléfono\']')
+        print('<<cliente>> [\'nombre\' \'ap. paterno\' \'ap. materno\' \'edad\' \'género\' \'dirección\' \n\t\t\'teléfono\']')
         print('\t\tAgrega un cliente al sistema\n')       
         print('<<vehiculo>>')
         print('\t<<camion>> [\'marca\' \'modelo\' \'color\' \'motor\' \'trans.\' \'ejes\' \'potencia\' \n\t\t\t\'capacidad\' \'cantidad\' \'precio\']')       

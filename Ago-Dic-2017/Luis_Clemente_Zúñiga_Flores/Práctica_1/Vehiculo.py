@@ -66,6 +66,9 @@ class Vehiculo:
     def getExistencias(self):
         return self.__existencia
     
+    def aumentaExistencias(self, cantidad):
+        self.__existencia+=cantidad
+        
     def reduceExistencias(self):
         self.__existencia-=1
             

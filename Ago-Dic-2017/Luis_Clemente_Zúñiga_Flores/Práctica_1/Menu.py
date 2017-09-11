@@ -103,9 +103,54 @@ class CompraVenta:
 
                     except:
                         print('error al agregar cliente')
+                        
+                        
+                #Agregar vehículo existente en el sistema (con sku)
+                
+                elif cmd == 'agrega':
+                    
+                    try:
+                        if args[0] == 'auto':
+                        
+                            try:
+                                agencia.agregaAuto(args[1], args[2])
+                                
+                                print('Auto(s) agregado(s) con éxito.')                                            
+                            
+                            except IndexError as ie:	
 
-                #agregar vehículo
-                elif cmd=='vehiculo':
+                                print('Error al agregar automóvil.')  
+                                
+                     
+                        if args[0] == 'moto':
+                            
+                            try:
+                                
+                                agencia.agregaMoto(args[1], args[2]) 
+                                
+                                print('Motocicleta(s) agregada(s) con éxito.')
+								                   
+                            except IndexError as ie:
+								
+                                print('Error al agregar motocicleta(s).')
+                        if args[0] == 'camion':
+                            
+                            try:
+                                
+                                agencia.agregaCamion(args[1], args[2]) 
+                                
+                                print('Camione(s) agregado(s) con éxito.')
+								                   
+                            except IndexError as ie:
+								
+                                print('Error al agregar Camión(es).')
+                                                          
+                    except Exception as inst:
+						
+                        print(inst)
+                                                    
+                #agregar vehículo no existente en el sistema                
+                elif cmd == 'vehiculo':
                     try:
                         if len(args)==11:
                             
@@ -162,8 +207,8 @@ class CompraVenta:
 
                             elif arg1 == 'cliente':
                                 print(agencia.getCliente(arg2))                   
-                    except:
-                        print('argumentos incompletos')              
+                    except Exception as inst:
+                        print(inst)              
                 
                 #Operaciones de venta
                 elif cmd == 'venta':
@@ -171,15 +216,15 @@ class CompraVenta:
                         vehiculo, vendedor, cliente, sku = args                    
                         if vehiculo == 'camion':
                             agencia.ventaCamion(vendedor,cliente,sku)
-                            print('Un camion con sku ' + sku + ' ha sido vendido')
+                            
                         
                         if vehiculo == 'auto':
                             agencia.ventaAuto(vendedor,cliente,sku)
-                            print('Un automóvil con sku ' + sku + ' ha sido vendido')
+                            
                         
                         if vehiculo == 'moto':
                             agencia.ventaMoto(vendedor,cliente,sku)
-                            print('Una motocicleta con sku ' + sku + ' ha sido vendida')
+                            
                     except Exception as inst:
                         print(inst)                
                 else:
