@@ -45,6 +45,10 @@ class Vehiculo:
         return "Hay {0} {1} {2} disponibles.".format(self.existencia,
                                             self.marca, self.modelo)
 
+    # Metodo getNumExistencia() regresa existencia
+    def getNumExistencia(self):
+        return self.existencia
+
     # incrementaExist aumenta la existencia del vehiculo
     def incrementaExist(self, mas):
         self.existencia = mas

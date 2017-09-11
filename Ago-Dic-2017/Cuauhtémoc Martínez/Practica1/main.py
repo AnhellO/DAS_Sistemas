@@ -69,7 +69,13 @@ while (opcion != 0):
     print("7: Reportes.")
     print("0: Salir.")
 
-    opcion = int(input(""))
+    cond = input("")
+    if cond == "":
+        print ("Favor de seleccionar una opcion")
+        input("Pulse Enter para continuar")
+        opcion = 10
+    else:
+        opcion = int(cond)
 
     # Opcion 1 crea un submenú para saber que tipo de vehiculo quieres ver
     if opcion == 1 :
@@ -78,7 +84,13 @@ while (opcion != 0):
         print("2: Camiones.")
         print("3: Motocicletas.")
 
-        op = int(input(""))
+        cond = input("")
+        if cond == "":
+            print ("Favor de seleccionar una opcion")
+            input("Pulse Enter para continuar")
+            op = 10
+        else:
+            op = int(cond)
 
         # En caso 1 se imprimen los datos de los todos los
         # Automoviles usando el metodo informeAutomovil
@@ -89,7 +101,7 @@ while (opcion != 0):
             print(Aut3.informeAutomovil() + "\n" + "="*80)
             print(Aut4.informeAutomovil() + "\n" + "="*80)
             print(Aut5.informeAutomovil() + "\n" + "="*80)
-            input("Pulse 5 para continuar: ")
+            input("Pulse Enter para continuar")
 
         # En caso 2 se imprimen los datos de los todos los
         # Camiones usando el metodo informeCamion
@@ -100,7 +112,7 @@ while (opcion != 0):
             print(Cam3.informeCamion() + "\n" + "="*80)
             print(Cam4.informeCamion() + "\n" + "="*80)
             print(Cam5.informeCamion() + "\n" + "="*80)
-            input("Pulse 5 para continuar: ")
+            input("Pulse Enter para continuar")
 
         # En caso 3 se imprimen los datos de los todas las
         # Motocicletas usando el metodo informeMotocicleta
@@ -111,7 +123,7 @@ while (opcion != 0):
             print(Moto3.informeMotocicleta() + "\n" + "="*80)
             print(Moto4.informeMotocicleta() + "\n" + "="*80)
             print(Moto5.informeMotocicleta() + "\n" + "="*80)
-            input("Pulse 5 para continuar: ")
+            input("Pulse Enter para continuar")
 
     # Opcion 2 crea un submenú para saber que tipo de vehiculo quieres ver
     elif opcion == 2:
@@ -120,7 +132,13 @@ while (opcion != 0):
         print("2: Camiones.")
         print("3: Motocicletas.")
 
-        op = int(input(""))
+        cond = input("")
+        if cond == "":
+            print ("Favor de seleccionar una opcion")
+            input("Pulse Enter para continuar")
+            op = 10
+        else:
+            op = int(cond)
 
         # En caso 1 se imprime la existencia de cada automovil
         # usando el metodo getExistencia
@@ -131,7 +149,7 @@ while (opcion != 0):
             print(Aut3.getExistencia())
             print(Aut4.getExistencia())
             print(Aut5.getExistencia())
-            input("\nPulse 5 para continuar: ")
+            input("\nPulse Enter para continuar")
 
         # En caso 2 se imprime la existencia de cada camion
         # usando el metodo getExistencia
@@ -142,7 +160,7 @@ while (opcion != 0):
             print(Cam3.getExistencia())
             print(Cam4.getExistencia())
             print(Cam5.getExistencia())
-            input("\nPulse 5 para continuar: ")
+            input("\nPulse Enter para continuar")
 
         # En caso 3 se imprime la existencia de cada motocicleta
         # usando el metodo getExistencia
@@ -153,7 +171,7 @@ while (opcion != 0):
             print(Moto3.getExistencia())
             print(Moto4.getExistencia())
             print(Moto5.getExistencia())
-            input("\nPulse 5 para continuar: ")
+            input("\nPulse Enter para continuar")
 
     # Opcion 3 crea un submenú para saber que tipo de vehiculo quieres vender
     elif opcion == 3:
@@ -162,7 +180,13 @@ while (opcion != 0):
         print("2: Camion.")
         print("3: Motocicleta.")
 
-        op = int(input(""))
+        cond = input("")
+        if cond == "":
+            print ("Favor de seleccionar una opcion")
+            input("Pulse Enter para continuar")
+            op = 10
+        else:
+            op = int(cond)
 
         # Un submenu para cada caso
         if op == 1:
@@ -173,43 +197,69 @@ while (opcion != 0):
             print("4: {0} {1}".format(Aut4.getMarca(), Aut4.getModelo()))
             print("5: {0} {1}".format(Aut5.getMarca(), Aut5.getModelo()))
 
-            op2 = int(input(""))
+            cond = input("")
+            if cond == "":
+                print ("Favor de seleccionar una opcion")
+                input("Pulse Enter para continuar")
+                op2 = 10
+            else:
+                op2 = int(cond)
 
             if op2 == 1:
-                venta = agencia.ventaVehiculo((Cl3.getNombre() + " " + Cl3.getApellidoPaterno() + " " + Cl3.getApellidoMaterno()),
-                        (Aut1.getMarca() + " " + Aut1.getModelo()),
-                        (Vend1.getNombre() + " " + Vend1.getApellidoPaterno() + " " + Vend1.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Aut1.existencia) - 1
-                Aut1.decrementaExist(menos)
+                if int(Aut1.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Aut1.getMarca(), Aut1.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl3.getNombre() + " " + Cl3.getApellidoPaterno() + " " + Cl3.getApellidoMaterno()),
+                            (Aut1.getMarca() + " " + Aut1.getModelo()),
+                            (Vend1.getNombre() + " " + Vend1.getApellidoPaterno() + " " + Vend1.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Aut1.existencia) - 1
+                    Aut1.decrementaExist(menos)
             elif op2 == 2:
-                venta = agencia.ventaVehiculo((Cl5.getNombre() + " " + Cl5.getApellidoPaterno() + " " + Cl5.getApellidoMaterno()),
-                        (Aut2.getMarca() + " " + Aut2.getModelo()),
-                        (Vend2.getNombre() + " " + Vend2.getApellidoPaterno() + " " + Vend2.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Aut2.existencia) - 1
-                Aut2.decrementaExist(menos)
+                if int(Aut2.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Aut2.getMarca(), Aut2.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl5.getNombre() + " " + Cl5.getApellidoPaterno() + " " + Cl5.getApellidoMaterno()),
+                            (Aut2.getMarca() + " " + Aut2.getModelo()),
+                            (Vend2.getNombre() + " " + Vend2.getApellidoPaterno() + " " + Vend2.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Aut2.existencia) - 1
+                    Aut2.decrementaExist(menos)
             elif op2 == 3:
-                venta = agencia.ventaVehiculo((Cl4.getNombre() + " " + Cl4.getApellidoPaterno() + " " + Cl4.getApellidoMaterno()),
-                        (Aut3.getMarca() + " " + Aut3.getModelo()),
-                        (Vend3.getNombre() + " " + Vend3.getApellidoPaterno() + " " + Vend3.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Aut3.existencia) - 1
-                Aut3.decrementaExist(menos)
+                if int(Aut3.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Aut3.getMarca(), Aut3.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl4.getNombre() + " " + Cl4.getApellidoPaterno() + " " + Cl4.getApellidoMaterno()),
+                            (Aut3.getMarca() + " " + Aut3.getModelo()),
+                            (Vend3.getNombre() + " " + Vend3.getApellidoPaterno() + " " + Vend3.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Aut3.existencia) - 1
+                    Aut3.decrementaExist(menos)
             elif op2 == 4:
-                venta = agencia.ventaVehiculo((Cl2.getNombre() + " " + Cl2.getApellidoPaterno() + " " + Cl2.getApellidoMaterno()),
-                        (Aut4.getMarca() + " " + Aut4.getModelo()),
-                        (Vend4.getNombre() + " " + Vend4.getApellidoPaterno() + " " + Vend4.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Aut4.existencia) - 1
-                Aut4.decrementaExist(menos)
+                if int(Aut4.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Aut4.getMarca(), Aut4.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl2.getNombre() + " " + Cl2.getApellidoPaterno() + " " + Cl2.getApellidoMaterno()),
+                            (Aut4.getMarca() + " " + Aut4.getModelo()),
+                            (Vend4.getNombre() + " " + Vend4.getApellidoPaterno() + " " + Vend4.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Aut4.existencia) - 1
+                    Aut4.decrementaExist(menos)
             elif op2 == 5:
-                venta = agencia.ventaVehiculo((Cl3.getNombre() + " " + Cl3.getApellidoPaterno() + " " + Cl3.getApellidoMaterno()),
-                        (Aut5.getMarca() + " " + Aut5.getModelo()),
-                        (Vend5.getNombre() + " " + Vend5.getApellidoPaterno() + " " + Vend5.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Aut5.existencia) - 1
-                Aut5.decrementaExist(menos)
+                if int(Aut5.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Aut5.getMarca(), Aut5.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl3.getNombre() + " " + Cl3.getApellidoPaterno() + " " + Cl3.getApellidoMaterno()),
+                            (Aut5.getMarca() + " " + Aut5.getModelo()),
+                            (Vend5.getNombre() + " " + Vend5.getApellidoPaterno() + " " + Vend5.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Aut5.existencia) - 1
+                    Aut5.decrementaExist(menos)
 
         elif op == 2:
             print("\n"*25 + "¿Qué camion deseas comprar?")
@@ -219,42 +269,68 @@ while (opcion != 0):
             print("4: {0} {1}".format(Cam4.getMarca(), Cam4.getModelo()))
             print("5: {0} {1}".format(Cam5.getMarca(), Cam5.getModelo()))
 
-            op2 = int(input(""))
+            cond = input("")
+            if cond == "":
+                print ("Favor de seleccionar una opcion")
+                input("Pulse Enter para continuar")
+                op2 = 10
+            else:
+                op2 = int(cond)
 
             if op2 == 1:
-                venta = agencia.ventaVehiculo((Cl4.getNombre() + " " + Cl4.getApellidoPaterno() + " " + Cl4.getApellidoMaterno()),
-                        (Cam1.getMarca() + " " + Cam1.getModelo()),
-                        (Vend5.getNombre() + " " + Vend5.getApellidoPaterno() + " " + Vend5.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Cam1.existencia) - 1
-                Cam1.decrementaExist(menos)
+                if int(Cam1.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Cam1.getMarca(), Cam1.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl4.getNombre() + " " + Cl4.getApellidoPaterno() + " " + Cl4.getApellidoMaterno()),
+                            (Cam1.getMarca() + " " + Cam1.getModelo()),
+                            (Vend5.getNombre() + " " + Vend5.getApellidoPaterno() + " " + Vend5.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Cam1.existencia) - 1
+                    Cam1.decrementaExist(menos)
             elif op2 == 2:
-                venta = agencia.ventaVehiculo((Cl2.getNombre() + " " + Cl2.getApellidoPaterno() + " " + Cl2.getApellidoMaterno()),
-                        (Cam2.getMarca() + " " + Cam2.getModelo()),
-                        (Vend4.getNombre() + " " + Vend4.getApellidoPaterno() + " " + Vend4.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Cam2.existencia) - 1
+                if int(Cam2.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Cam2.getMarca(), Cam2.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl2.getNombre() + " " + Cl2.getApellidoPaterno() + " " + Cl2.getApellidoMaterno()),
+                            (Cam2.getMarca() + " " + Cam2.getModelo()),
+                            (Vend4.getNombre() + " " + Vend4.getApellidoPaterno() + " " + Vend4.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Cam2.existencia) - 1
             elif op2 == 3:
-                venta = agencia.ventaVehiculo((Cl5.getNombre() + " " + Cl5.getApellidoPaterno() + " " + Cl5.getApellidoMaterno()),
-                        (Cam3.getMarca() + " " + Cam3.getModelo()),
-                        (Vend3.getNombre() + " " + Vend3.getApellidoPaterno() + " " + Vend3.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Cam3.existencia) - 1
-                Cam3.decrementaExist(menos)
+                if int(Cam3.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Cam3.getMarca(), Cam3.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl5.getNombre() + " " + Cl5.getApellidoPaterno() + " " + Cl5.getApellidoMaterno()),
+                            (Cam3.getMarca() + " " + Cam3.getModelo()),
+                            (Vend3.getNombre() + " " + Vend3.getApellidoPaterno() + " " + Vend3.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Cam3.existencia) - 1
+                    Cam3.decrementaExist(menos)
             elif op2 == 4:
-                venta = agencia.ventaVehiculo((Cl3.getNombre() + " " + Cl3.getApellidoPaterno() + " " + Cl3.getApellidoMaterno()),
-                        (Cam4.getMarca() + " " + Cam4.getModelo()),
-                        (Vend2.getNombre() + " " + Vend2.getApellidoPaterno() + " " + Vend2.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Cam4.existencia) - 1
-                Cam4.decrementaExist(menos)
+                if int(Cam4.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Cam4.getMarca(), Cam4.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl3.getNombre() + " " + Cl3.getApellidoPaterno() + " " + Cl3.getApellidoMaterno()),
+                            (Cam4.getMarca() + " " + Cam4.getModelo()),
+                            (Vend2.getNombre() + " " + Vend2.getApellidoPaterno() + " " + Vend2.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Cam4.existencia) - 1
+                    Cam4.decrementaExist(menos)
             elif op2 == 5:
-                venta = agencia.ventaVehiculo((Cl1.getNombre() + " " + Cl1.getApellidoPaterno() + " " + Cl1.getApellidoMaterno()),
-                        (Cam5.getMarca() + " " + Cam5.getModelo()),
-                        (Vend1.getNombre() + " " + Vend1.getApellidoPaterno() + " " + Vend1.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Cam5.existencia) - 1
-                Cam5.decrementaExist(menos)
+                if int(Cam5.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Cam5.getMarca(), Cam5.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl1.getNombre() + " " + Cl1.getApellidoPaterno() + " " + Cl1.getApellidoMaterno()),
+                            (Cam5.getMarca() + " " + Cam5.getModelo()),
+                            (Vend1.getNombre() + " " + Vend1.getApellidoPaterno() + " " + Vend1.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Cam5.existencia) - 1
+                    Cam5.decrementaExist(menos)
 
         elif op == 3:
             print("\n"*25 + "¿Qué motocicleta deseas comprar?")
@@ -264,43 +340,69 @@ while (opcion != 0):
             print("4: {0} {1}".format(Moto4.getMarca(), Moto4.getModelo()))
             print("5: {0} {1}".format(Moto5.getMarca(), Moto5.getModelo()))
 
-            op2 = int(input(""))
+            cond = input("")
+            if cond == "":
+                print ("Favor de seleccionar una opcion")
+                input("Pulse Enter para continuar")
+                op2 = 10
+            else:
+                op2 = int(cond)
 
             if op2 == 1:
-                venta = agencia.ventaVehiculo((Cl2.getNombre() + " " + Cl2.getApellidoPaterno() + " " + Cl2.getApellidoMaterno()),
-                        (Moto1.getMarca() + " " + Moto1.getModelo()),
-                        (Vend3.getNombre() + " " + Vend3.getApellidoPaterno() + " " + Vend3.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Moto1.existencia) - 1
-                Moto1.decrementaExist(menos)
+                if int(Moto1.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Moto1.getMarca(), Moto1.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl2.getNombre() + " " + Cl2.getApellidoPaterno() + " " + Cl2.getApellidoMaterno()),
+                            (Moto1.getMarca() + " " + Moto1.getModelo()),
+                            (Vend3.getNombre() + " " + Vend3.getApellidoPaterno() + " " + Vend3.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Moto1.existencia) - 1
+                    Moto1.decrementaExist(menos)
             elif op2 == 2:
-                venta = agencia.ventaVehiculo((Cl4.getNombre() + " " + Cl4.getApellidoPaterno() + " " + Cl4.getApellidoMaterno()),
-                        (Moto2.getMarca() + " " + Moto2.getModelo()),
-                        (Vend4.getNombre() + " " + Vend4.getApellidoPaterno() + " " + Vend4.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Moto2.existencia) - 1
-                Moto2.decrementaExist(menos)
+                if int(Moto2.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Moto2.getMarca(), Moto2.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl4.getNombre() + " " + Cl4.getApellidoPaterno() + " " + Cl4.getApellidoMaterno()),
+                            (Moto2.getMarca() + " " + Moto2.getModelo()),
+                            (Vend4.getNombre() + " " + Vend4.getApellidoPaterno() + " " + Vend4.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Moto2.existencia) - 1
+                    Moto2.decrementaExist(menos)
             elif op2 == 3:
-                venta = agencia.ventaVehiculo((Cl3.getNombre() + " " + Cl3.getApellidoPaterno() + " " + Cl3.getApellidoMaterno()),
-                        (Moto3.getMarca() + " " + Moto3.getModelo()),
-                        (Vend1.getNombre() + " " + Vend1.getApellidoPaterno() + " " + Vend1.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Moto3.existencia) - 1
-                Moto3.decrementaExist(menos)
+                if int(Moto3.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Moto3.getMarca(), Moto3.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl3.getNombre() + " " + Cl3.getApellidoPaterno() + " " + Cl3.getApellidoMaterno()),
+                            (Moto3.getMarca() + " " + Moto3.getModelo()),
+                            (Vend1.getNombre() + " " + Vend1.getApellidoPaterno() + " " + Vend1.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Moto3.existencia) - 1
+                    Moto3.decrementaExist(menos)
             elif op2 == 4:
-                venta = agencia.ventaVehiculo((Cl5.getNombre() + " " + Cl5.getApellidoPaterno() + " " + Cl5.getApellidoMaterno()),
-                        (Moto4.getMarca() + " " + Moto4.getModelo()),
-                        (Vend5.getNombre() + " " + Vend5.getApellidoPaterno() + " " + Vend5.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Moto4.existencia) - 1
-                Moto4.decrementaExist(menos)
+                if int(Moto4.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Moto4.getMarca(), Moto4.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl5.getNombre() + " " + Cl5.getApellidoPaterno() + " " + Cl5.getApellidoMaterno()),
+                            (Moto4.getMarca() + " " + Moto4.getModelo()),
+                            (Vend5.getNombre() + " " + Vend5.getApellidoPaterno() + " " + Vend5.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Moto4.existencia) - 1
+                    Moto4.decrementaExist(menos)
             elif op2 == 5:
-                venta = agencia.ventaVehiculo((Cl2.getNombre() + " " + Cl2.getApellidoPaterno() + " " + Cl2.getApellidoMaterno()),
-                        (Moto5.getMarca() + " " + Moto5.getModelo()),
-                        (Vend2.getNombre() + " " + Vend2.getApellidoPaterno() + " " + Vend2.getApellidoMaterno()))
-                listaVenta.append(venta)
-                menos = int(Moto5.existencia) - 1
-                Moto5.decrementaExist(menos)
+                if int(Moto5.getNumExistencia()) == 0:
+                    print ("No hay {0} {1} disponibles por el momento.SRRY".format(Moto5.getMarca(), Moto5.getModelo()))
+                    input("Pulse Enter para continuar")
+                else:
+                    venta = agencia.ventaVehiculo((Cl2.getNombre() + " " + Cl2.getApellidoPaterno() + " " + Cl2.getApellidoMaterno()),
+                            (Moto5.getMarca() + " " + Moto5.getModelo()),
+                            (Vend2.getNombre() + " " + Vend2.getApellidoPaterno() + " " + Vend2.getApellidoMaterno()))
+                    listaVenta.append(venta)
+                    menos = int(Moto5.existencia) - 1
+                    Moto5.decrementaExist(menos)
 
     # Opcion 4 crea un submenú para saber que tipo de vehiculo quieres comprar
     elif opcion == 4:
@@ -309,7 +411,13 @@ while (opcion != 0):
         print("2: Camion.")
         print("3: Motocicleta.")
 
-        op = int(input(""))
+        cond = input("")
+        if cond == "":
+            print ("Favor de seleccionar una opcion")
+            input("Pulse Enter para continuar")
+            op = 10
+        else:
+            op = int(cond)
 
         # Un submenu para cada caso
         if op == 1:
@@ -444,7 +552,7 @@ while (opcion != 0):
         print(Cl3.informeCliente() + "\n" + "="*80)
         print(Cl4.informeCliente() + "\n" + "="*80)
         print(Cl5.informeCliente() + "\n" + "="*80)
-        input("Pulse 5 para continuar ")
+        input("Pulse Enter para continuar")
 
     # Opcion 6 muestra los datos de los vendedores
     # usando el metodo informeVendedor
@@ -455,7 +563,7 @@ while (opcion != 0):
         print(Vend3.informeVendedor() + "\n" + "="*80)
         print(Vend4.informeVendedor() + "\n" + "="*80)
         print(Vend5.informeVendedor() + "\n" + "="*80)
-        input("Pulse 5 para continuar ")
+        input("Pulse Enter para continuar")
 
     # Opcion 7 muestra un submenu para saber que tipo de reporte deseas ver
     elif opcion == 7:
@@ -463,7 +571,13 @@ while (opcion != 0):
         print("1: Compras.")
         print("2: Ventas.")
 
-        op = int(input(""))
+        cond = input("")
+        if cond == "":
+            print ("Favor de seleccionar una opcion")
+            input("Pulse Enter para continuar")
+            op = 10
+        else:
+            op = int(cond)
 
         # Opcion 1 muestra los datos de listaCompra
         if op == 1:
@@ -471,7 +585,7 @@ while (opcion != 0):
             for x in range(len(listaCompra)):
                 print("Compra {0}:\n{1}".format(x+1,listaCompra[x]))
                 print("="*80)
-            input("Pulse 5 para continuar ")
+            input("Pulse Enter para continuar")
 
         # Opcion 2 muestra los datos de listaVenta
         elif op == 2:
@@ -479,4 +593,4 @@ while (opcion != 0):
             for x in range(len(listaVenta)):
                 print("Venta {0}:\n{1}".format(x+1,listaVenta[x]))
                 print("="*80)
-            input("Pulse 5 para continuar ")
+            input("Pulse Enter para continuar")
