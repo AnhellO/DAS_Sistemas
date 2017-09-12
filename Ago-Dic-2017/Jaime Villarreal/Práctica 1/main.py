@@ -251,8 +251,13 @@ def ver_lista_vendedores():
 
 # -> Consultar meta.
 def consultar_meta():
-    print(vendedor_actual.cumplio_meta())
-    log.append("[{}] - {} consultó su meta de ventas.".format(time.ctime(), vendedor_actual.get_nombre()))
+    global vendedor_actual
+    if vendedor_actual is not None:
+        print(vendedor_actual.cumplio_meta())
+        log.append("[{}] - {} consultó su meta de ventas.".format(time.ctime(),
+        vendedor_actual.get_nombre()))
+    else:
+        print("\nNo hay un vendedor actual asignado.\n")
 
 # -> Imprimir reporte.
 def imprimir_reporte():
