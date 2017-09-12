@@ -26,7 +26,8 @@ class Motocicleta(Vehiculo):
         datos_moto+= '\nMotor: ' + self.getMotor()
         datos_moto+= '\nTransmisión: ' + self.getTransmision()       
         datos_moto+= '\nSKU: ' + self.getSku()
-        datos_moto+= '\nCentímetros Cúbicos (cc): ' + self.getCentimetrosCubicos()       
+        datos_moto+= '\nCentímetros Cúbicos (cc): ' + \
+            self.getCentimetrosCubicos()       
         datos_moto+= '\nCantidad: ' + str(self.getExistencias())
         datos_moto+= '\nPrecio: ' + str(self.getPrecio())        
         return datos_moto

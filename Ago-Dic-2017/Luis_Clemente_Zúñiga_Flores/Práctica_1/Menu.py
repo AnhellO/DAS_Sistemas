@@ -24,7 +24,8 @@ class CompraVenta:
         agencia = Agencia(nomAgencia,direccion)
         os.system('cls')
         print('#'*80)
-        print('Agencia de automóviles ' + nomAgencia + ' [versión 0.0 2017]\n' + direccion)
+        print('Agencia de automóviles ' + nomAgencia + ' [versión 0.0 2017]\n'\
+            + direccion)
         print('#'*80)
         print('Para obtener ayuda, escriba `ayuda` o `help`.')
         print('Para salir escriba `salir` o `exit`')
@@ -40,7 +41,8 @@ class CompraVenta:
 
                 elif cmd=='agencia':
                     print('*'*80)
-                    print('Agencia de automóviles ' + agencia.getNombre() + ' [versión 0.0 2017]\n' + agencia.getDireccion())
+                    print('Agencia de automóviles ' + agencia.getNombre() + \
+                        ' [versión 0.0 2017]\n' + agencia.getDireccion())
                     print('*'*80)
 
                 elif cmd=='cls' or cmd=='clear':
@@ -83,9 +85,11 @@ class CompraVenta:
                 #agregar empleado
                 elif cmd=='empleado':
                     try:
-                        nomEmpleado, paternoEmp, maternoEmp, edadEmp, genEmp, dirEmp, telEmp = args
+                        nomEmpleado, paternoEmp, maternoEmp, edadEmp, genEmp, \
+                            dirEmp, telEmp = args
                         numEmp = agencia.getEmpleados()+1
-                        empleado = Empleado(nomEmpleado,paternoEmp,maternoEmp,edadEmp,genEmp,dirEmp,telEmp,int(numEmp))
+                        empleado = Empleado(nomEmpleado,paternoEmp,maternoEmp,\
+                            edadEmp,genEmp,dirEmp,telEmp,int(numEmp))
                         agencia.aumentaEmpleados(empleado)
                         print('Empleado nuevo en el sistema')
 
@@ -95,9 +99,11 @@ class CompraVenta:
                 #agregar cliente
                 elif cmd=='cliente':
                     try:
-                        nomCliente, paternoCli, maternoCli, edadCli, genCli, dirCli, telCli = args
+                        nomCliente, paternoCli, maternoCli, edadCli, genCli, \
+                            dirCli, telCli = args
                         numCli = agencia.getClientes()+1
-                        cliente = Cliente(nomCliente, paternoCli, maternoCli, edadCli, genCli, dirCli, telCli,int(numCli))
+                        cliente = Cliente(nomCliente, paternoCli, maternoCli,\
+                            edadCli, genCli, dirCli, telCli,int(numCli))
                         agencia.aumentaClientes(cliente)
                         print('Cliente nuevo en el sistema')
 
@@ -117,7 +123,7 @@ class CompraVenta:
                                 
                                 print('Auto(s) agregado(s) con éxito.')                                            
                             
-                            except IndexError as ie:	
+                            except IndexError as ie:    
 
                                 print('Error al agregar automóvil.')  
                                 
@@ -129,9 +135,9 @@ class CompraVenta:
                                 agencia.agregaMoto(args[1], args[2]) 
                                 
                                 print('Motocicleta(s) agregada(s) con éxito.')
-								                   
+                                                   
                             except IndexError as ie:
-								
+                                
                                 print('Error al agregar motocicleta(s).')
                         if args[0] == 'camion':
                             
@@ -140,13 +146,13 @@ class CompraVenta:
                                 agencia.agregaCamion(args[1], args[2]) 
                                 
                                 print('Camione(s) agregado(s) con éxito.')
-								                   
+                                                   
                             except IndexError as ie:
-								
+                                
                                 print('Error al agregar Camión(es).')
                                                           
                     except Exception as inst:
-						
+                        
                         print(inst)
                                                     
                 #agregar vehículo no existente en el sistema                
@@ -155,22 +161,30 @@ class CompraVenta:
                         if len(args)==11:
                             
                             if args[0] == 'auto':
-                                auto, marca,modelo,color,motor,trans,puertas,equipado,kml,cantidad,precio = args                                
-                                automovil = Automovil(marca,modelo,color,motor,trans,puertas,equipado,kml,int(cantidad),precio)                                
+                                auto, marca,modelo,color,motor,trans,puertas,\
+                                    equipado,kml,cantidad,precio = args                                
+                                automovil = Automovil(marca,modelo,color,motor,\
+                                    trans,puertas,equipado,kml,int(cantidad),\
+                                        precio)                                
                                 agencia.altaAuto(automovil)
                                 print('Automóvil agregado al sistema')
                                 
                             elif args[0] == 'camion':
-                                camion, marca, modelo,color,motor,trans,ejes,potencia,capacidad,cantidad,precio = args                                
-                                camion = Camion(marca,modelo,color,motor,trans,str(ejes),str(potencia),str(capacidad),int(cantidad),precio)
+                                camion, marca, modelo,color,motor,trans,ejes,\
+                                    potencia,capacidad,cantidad,precio = args                                
+                                camion = Camion(marca,modelo,color,motor,trans,\
+                                    str(ejes),str(potencia),str(capacidad),int\
+                                    (cantidad),precio)
                                 agencia.altaCamion(camion)
                                 print('Camión agregado al sistema')
 
                         elif len(args)==9:
                             
                             if args[0] == 'moto':
-                                moto, marca, modelo, color, motor, trans, cc, cantidad,precio = args
-                                motocicleta = Motocicleta(marca,modelo,color,motor,trans,cc,int(cantidad),precio)                                
+                                moto, marca, modelo, color, motor, trans, cc,\
+                                    cantidad,precio = args
+                                motocicleta = Motocicleta(marca,modelo,color,\
+                                    motor,trans,cc,int(cantidad),precio)                                
                                 agencia.altaMoto(motocicleta)
                                 print('Moto agregada al sistema')
                             

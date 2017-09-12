@@ -7,7 +7,8 @@ class Cliente(Persona):
     __numeroDeCliente = ""  # (String)
 
     # Operations
-    def __init__(self,nombre,paterno,materno,edad,genero,direccion,telefono,numCli):
+    def __init__(self,nombre,paterno,materno,edad,genero,direccion,telefono,\
+        numCli):
         super().__init__(nombre,paterno,materno,edad,genero,direccion,telefono)
         self.__numeroDeCliente = numCli
 

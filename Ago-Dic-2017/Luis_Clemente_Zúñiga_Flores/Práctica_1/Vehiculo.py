@@ -1,6 +1,6 @@
 
 class Vehiculo:
-    """Abstract class Vehiculo
+    """class Vehiculo
     """
     # Attributes:
     __marca = ""  # (String) 
@@ -14,7 +14,8 @@ class Vehiculo:
     
     # Operations
     
-    def __init__(self, marca, modelo, color, motor, transmision, existencia, precio):
+    def __init__(self, marca, modelo, color, motor, transmision, existencia, \
+        precio):
         self.__marca = marca
         self.__modelo = modelo
         self.__color = color
@@ -37,7 +38,8 @@ class Vehiculo:
         return self.__modelo
         
     def setSku(self):
-        self.__sku = self.__marca[0:3] + self.__modelo + self.__motor[0:3] + self.__transmision[0:3] + self.__color
+        self.__sku = self.__marca[0:3] + self.__modelo + self.__motor[0:3] + \
+            self.__transmision[0:3] + self.__color
           
     def getSku(self):
         return self.__sku.lower()

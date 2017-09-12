@@ -6,7 +6,8 @@ class Empleado(Persona):
     # Attributes:
     __numeroDeEmpleado = 0
 
-    def __init__(self,nombre,paterno,materno,edad,genero,direccion,telefono,numEmp):
+    def __init__(self,nombre,paterno,materno,edad,genero,direccion,telefono,\
+        numEmp):
         super().__init__(nombre,paterno,materno,edad,genero,direccion,telefono)
         self.__numeroDeEmpleado = numEmp
 

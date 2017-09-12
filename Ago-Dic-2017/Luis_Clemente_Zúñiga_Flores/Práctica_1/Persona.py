@@ -1,6 +1,6 @@
 
 class Persona:
-    """Abstract class Persona
+    """class Persona
     """
     # Attributes:
     __nombre = ""  # (String) 

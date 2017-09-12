@@ -10,7 +10,8 @@ class Camion(Vehiculo):
     
     # Operations    
   
-    def __init__(self, marca, modelo,color,motor,trans,ejes,potencia,capacidad,cantidad,precio):
+    def __init__(self, marca, modelo,color,motor,trans,ejes,potencia,capacidad,\
+        cantidad,precio):
         super().__init__(marca,modelo,color,motor,trans,cantidad,precio)
         self.__ejes = ejes
         self.__potencia = potencia
