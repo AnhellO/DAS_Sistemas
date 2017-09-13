@@ -2,7 +2,7 @@ class Ayuda:
     def imprimeAyuda(self):
         print('='*80)
         print('''\
-        \t\tCONOCER SOBRE:
+        CONOCER SOBRE:
 1.Agregar/Eliminar (Clientes, Empleados,Productos).
 2.Consultar.
 3.Compraventa.\
@@ -23,7 +23,7 @@ class Ayuda:
         print('''\
             AGREGAR EMPLEADOS, CLIENTES O PRODUCTOS.
             
-<<comando>> [\'argumentos\'] Nota: Todos los argumentos son obligatorios')
+<<comando>> [\'argumentos\'] Nota: Todos los argumentos son obligatorios.
 
 Ej: empleado Cosme Fulanito Pérez 40 masculino \'Av. Siempreviva #100\'
              555-666-777         
