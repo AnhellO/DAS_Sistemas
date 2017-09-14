@@ -67,7 +67,14 @@ while (opcion != 0):
         print(mm)
         print("=" * 80)
     elif gato == 3:
-        print('Estamos trabajando en eso :v')
+        vv = Sagencia.ventaVehiculo( (Cliente3.getNombre()+" "+Cliente3.getApellidoPaterno()+" "+Cliente3.getApellidoMaterno()+"\n" ),(camion2.getMarca()+" "+camion2.getModelo()+"\n" ),(Vendedor2.getNombre() )+" "+(Vendedor2.getApellidoPaterno()+" "+Vendedor2.getApellidoMaterno() ) )
+        print(vv)
+        print("=" * 80)
+        cc = Sagencia.ventaVehiculo( (Cliente1.getNombre()+" "+Cliente1.getApellidoPaterno()+" "+Cliente1.getApellidoMaterno()+"\n" ),(Carro3.getMarca()+" "+Carro3.getModelo()+"\n" ),(Vendedor3.getNombre() )+" "+(Vendedor3.getApellidoPaterno()+" "+Vendedor3.getApellidoMaterno() ) )
+        print(cc)
+        print("=" * 80)
+        mm = Sagencia.ventaVehiculo( (Cliente2.getNombre()+" "+Cliente2.getApellidoPaterno()+" "+Cliente2.getApellidoMaterno()+"\n" ),(Moto1.getMarca()+" "+Moto1.getModelo()+"\n" ),(Vendedor1.getNombre() )+" "+(Vendedor1.getApellidoPaterno()+" "+Vendedor1.getApellidoMaterno() ) )
+        print(mm)
         print("=" * 80)
     elif gato == 4:
         print(cl +"\n"+ cl2 +"\n"+ cl3)
