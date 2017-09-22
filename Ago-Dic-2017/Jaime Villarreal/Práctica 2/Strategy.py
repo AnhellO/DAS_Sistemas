@@ -54,7 +54,7 @@ class Paladin(Strategy):
         print("Puedo utilizar armaduras medianas y algunas capas.")
 
     def level_up(self):
-        print("Level up: +15 HP / +5 Mana / +20 Capacidad")
+        print("Level up: +10 HP / +10 Mana / +20 Capacidad")
 
 
 class Sorcerer(Strategy):
