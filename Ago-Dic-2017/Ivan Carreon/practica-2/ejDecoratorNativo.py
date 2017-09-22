@@ -1,11 +1,11 @@
 def decorator(f):
     def wrapper():
-        return '<Hola> \n' + f() + '\n<Pinsheputita>'
+        return '<Los compas> \n' + f() + '\n<Que siempre la cotorrean>'
     return wrapper
 
 @decorator
 def díHola():
-    return 'Que hongos prro? :v'
+    return 'Un tremendo saludote :v'
 
 #print(díHola())
 
