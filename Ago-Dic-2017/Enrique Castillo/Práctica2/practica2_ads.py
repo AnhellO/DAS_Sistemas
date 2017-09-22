@@ -3,7 +3,7 @@ import abc
 class comprar_pizza(metaclass=abc.ABCMeta):
     #Template method
     def pedir_pizza(self):
-        self.eleir_masa()
+        self.elegir_masa()
         self.pedir_ingredientes()
         self.pagar()
 
@@ -51,4 +51,4 @@ def main():
     pizza2.pedir_pizza()
 
 if __name__ == "__main__":
-    main()    
+    main()
