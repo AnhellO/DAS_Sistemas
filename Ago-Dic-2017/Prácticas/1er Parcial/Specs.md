@@ -42,13 +42,15 @@
 
 - ¿Qué es un patrón de diseño de software?
 - Mencione el objetivo de los patrones de diseño creacionales
-- Mencione 3 patrones creacionales y sus objetivos (que buscan solucionar)
+- Mencione 1 patrón creacional y sus objetivos (que buscan solucionar)
 - Mencione el objetivo de los patrones de diseño estructurales
-- Mencione 3 patrones estructurales y sus objetivos (que buscan solucionar)
+- Mencione 1 patrón estructural y sus objetivos (que buscan solucionar)
 - Mencione el objetivo de los patrones de diseño de comportamiento
-- Mencione 3 patrones de comportamiento y sus objetivos (que buscan solucionar)
+- Mencione 1 patrón de comportamiento y sus objetivos (que buscan solucionar)
 
 #### Práctico
+
+Implemente cualquiera de las dos opciones siguientes (a libertad):
 
 - Implemente el patrón Simple Factory o el patrón Factory Method para crear múltiples objetos de las clases implementadas en la Parte 1
 - Supongamos que la empresa que manufactura a los Electrodomésticos de la parte 1 decidió hacer robots a sus nuevas creaciones sin perder su funcionalidad original. Agrega esta "nueva funcionalidad" de robot a las clases utilizando el patrón Decorador
