@@ -72,8 +72,8 @@ class television(electrodomestico):
     def get_num_canales(self):
         return self.num_canales
 
-    def encender(self):
-        print('estoy encendida')
+    def ver_cable(self):
+        print('estoy viendo cable')
 
 class refrigerador(electrodomestico):
     def __init__(self,marca,color,modelo,tamano,fecha,peso):
@@ -100,7 +100,7 @@ if __name__ == '__main__':
     print(electrodomestico1.get_potencia())
     print(electrodomestico1.lavar())
     print(electrodomestico2.get_num_canales())
-    print(electrodomestico2.encender())
+    print(electrodomestico2.ver_cable())
     print(electrodomestico3.get_peso())
     print(electrodomestico3.enfriar())
     print(electrodomestico1.get_marca())
