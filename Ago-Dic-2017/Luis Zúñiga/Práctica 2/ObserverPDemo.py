@@ -16,7 +16,7 @@ observador = HexObserver(sujeto)
 
 for x in range(20, 0, -1):
     os.system('cls')
-    r = random.randint(0,100)
+    r = random.randint(0,1000)
     sujeto.setState(sujeto,r)    
     time.sleep(2)
 
