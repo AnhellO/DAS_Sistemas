@@ -45,7 +45,7 @@ class Main:
                     break
 
                 elif cmd=='cls' or cmd=='clear':
-                    os.system('cls')
+                    os.system('clear')
 
                 elif cmd=='pwd':
                     os.system('echo %cd%')
