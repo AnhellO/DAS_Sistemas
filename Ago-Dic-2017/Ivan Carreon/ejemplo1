@@ -1,24 +1,8 @@
-p = 0
-cp = 0
-c = 0
-n = 0
+n = 1
 h = 0
-h1 = input('Primer numero: ')
-h2 = input('Segundo numero: ')
-if h1 > h2:
-    n = h2
-    h = h1
-else:
-    n = h1
-    h = h2
-while n < h:
+while n < 100:
+    if n%3 == 0:
+        print n,
+        h += 1
     n += 1
-    if n == h:
-        break
-    c += 1
-    print n,
-    if n%2 == 0:
-        cp += 1
-        p += n
-print '\nEntre % i y %i hay %i numeros siendo %i pares' % (h1, h2, c, cp)
-print 'La suma de los pares es %i' % p
+print ('\nEntre 1 y 100 hay %i numeros multiplos de 3' % h)
