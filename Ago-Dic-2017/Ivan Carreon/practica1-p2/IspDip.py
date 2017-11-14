@@ -26,39 +26,58 @@ class Dan(Peleador, PeleadorCuerpoCuerpo):
         self.espiritu = espiritu
 
     def getPower(self):
-        print('Poder: {}Kg'.format(self.espiritu.getPoder() ))
+        print("Poder: {}Kg".format(self.espiritu.getPoder() ))
 
     def prepararseluchar(self):
-        print('*El luchador se prepara para el combate*')
+        print("*El luchador se prepara para el combate*")
 
     def ataquefisico(self):
-        print('Ataque más poderoso: \n Atacar con todo lo que se pueda... hasta con la silla :v')
+        print("Ataque más poderoso: \n Atacar con todo lo que se pueda... hasta con la silla :v")
 
 class Dhalsim(Peleador,PeleadorDistancia):
     def __init__(self,espiritu):
         self.espiritu = espiritu
 
     def getPower(self):
-        print('Poder: {}Kg'.format(self.espiritu.getPoder() ))
+        print("Poder: {}Kg".format(self.espiritu.getPoder() ))
 
     def prepararseluchar(self):
-        print('*El combatiente se prepara para luchar*')
+        print("*El combatiente se prepara para luchar*")
 
     def atacaquedistacia(self):
-        print('Ataque más poderoso: \n Yoga Fire!!')
+        print("Ataque más poderoso: \n Yoga Fire!!")
 
 class Ryu(Peleador,PeleadorDistancia,PeleadorCuerpoCuerpo):
     def __init__(self,espiritu):
         self.espiritu = espiritu
 
     def getPower(self):
-        print('Poder: {}Kg'.format(self.espiritu.getPoder() ))
+        print("Poder: {}Kg".format(self.espiritu.getPoder() ))
 
     def prepararseluchar(self):
-        print('*El peleador se prepara meditando antes del encuentro*')
+        print("*El peleador se prepara meditando antes del encuentro*")
 
     def atacaquedistacia(self):
-        print('Ataque más poderoso: \n Shinku Hadouken!!!!!!!!!!!!!!!!')
+        print("Ataque más poderoso: \nShinku Hadouken!!!!!!!!!!!!!!!!")
 
     def ataquefisico(self):
-        print('Ataque más poderoso: \n Shin Shoriuken!　と　Shinku Tatsumaki Senpukyaku!')
+        print("Ataque mas poderoso: \nShin Shoriuken!\nShinku Tatsumaki Senpukyaku!")
+
+if __name__ == '__main__':
+    powah = Poder()
+    d = Dan(powah)
+    dh = Dhalsim(powah)
+    r = Ryu(powah)
+
+    d.prepararseluchar()
+    d.ataquefisico()
+    d.getPower()
+
+    dh.prepararseluchar()
+    dh.atacaquedistacia()
+    dh.getPower()
+
+    r.prepararseluchar()
+    r.atacaquedistacia()
+    r.ataquefisico()
+    r.getPower()
