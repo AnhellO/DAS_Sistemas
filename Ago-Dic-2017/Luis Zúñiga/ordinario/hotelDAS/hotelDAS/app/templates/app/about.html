@@ -1,0 +1,439 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+
+<div id="content">
+<h1 class="title">Modelo Vista Controlador</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Síntesis de la arquitectura</a></li>
+<li><a href="#sec-2">2. Historia y background del patrón MVC</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Modelo</a></li>
+<li><a href="#sec-2-2">2.2. Vista</a></li>
+<li><a href="#sec-2-3">2.3. Controlador</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Objetivos</a></li>
+<li><a href="#sec-4">4. Pros y contras</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Ventajas</a></li>
+<li><a href="#sec-4-2">4.2. Desventajas</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Similitudes con otros patrones arquitecturales</a>
+<ul>
+<li><a href="#sec-5-1">5.1. MVC y MVVM (Model-View-ViewModel)</a></li>
+<li><a href="#sec-5-2">5.2. MVC y SOA (Service Oriented Architecture)</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Frameworks que proporcionan la implementación de MVC</a>
+<ul>
+<li><a href="#sec-6-1">6.1. Javascript</a></li>
+<li><a href="#sec-6-2">6.2. PHP</a></li>
+<li><a href="#sec-6-3">6.3. Java</a></li>
+<li><a href="#sec-6-4">6.4. Python</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. Ejemplos de aplicación</a>
+<ul>
+<li><a href="#sec-7-1">7.1. CarTrack</a></li>
+<li><a href="#sec-7-2">7.2. FlickrXplorer</a></li>
+<li><a href="#sec-7-3">7.3. Instagram </a></li>
+<li><a href="#sec-7-4">7.4. Pinterest </a></li>
+<li><a href="#sec-7-5">7.5. CommunityWalk</a></li>
+<li><a href="#sec-7-6">7.6. BigCartel</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Síntesis de la arquitectura</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+El Modelo Vista Controlador es un patrón de arquitectura de Software que se distingue, entre otras cosas, por la estructura que otorga a las aplicaciones al
+mantener independientes los datos, la lógica que los manipula, y la interfaz que los muestra al usuario. Este patrón ha ganado fama en los últimos años sobre
+todo con la aparición de numerosos frameworks de desarrollo web, debido a que esta arquitectura permite un ciclo de vida más adecudado para las aplicaciones, además
+de facilitar el mantenimiento y la reutilización de código, pero sobre todo, la separación de sus conceptos y componentes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Historia y background del patrón MVC</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+El Modelo Vista Controlador fue creado por <a href="https://en.wikipedia.org/wiki/Trygve_Reenskaug">Trygve Reenskaug</a> en los años 1978/1979. Como él mismo menciona en la recopilación
+de sus reportes originales, "MVC was conceived as a general solution to the problem of users controlling a large and complex data set"<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>,
+dándonos con ello una idea muy clara de la problemática que dio origen a MVC.
+</p>
+
+<p>
+Una de sus primeras implementaciones exitosas fue en la biblioteca de clases de Smalltalk-80, hecho que dio lugar a un artículo en 
+ el cual se formalizó el concepto de Modelo Vista Controlador. El nombre original que Reenskaug le dio a este patrón fue "Thing-Model-View-Editor" (Cosa-
+Modelo-Vista-Editor" con lo cual el científico computacional enmarcaba la intención de separar la información de los métodos utilizados para manipularla.
+En ese mismo paper el autor nos ofrece las definiciones de dichos componentes, las cuales enumeraremos para realizar un acercamiento histórico al patrón MVC.
+</p>
+
+<ul class="org-ul">
+<li>Thing: "Something that is of interest to the user. It could be concrete, like a house or an integrated circuit.
+It could be abstract, like a new idea or opinions about a paper. It could be a whole, like a computer, or a part, like a circuit element." 
+</li>
+
+<li>Model: "A model is an active representation of an abstraction in the form of data in a computing system".
+</li>
+
+<li>View: "To any given Model there is attached one or more Views, each View being capable of showing or more pictorial representations of the Model on the screen and on hardcopy. A view is also able to perform such operations upon the Model that is reasonabely associated with that view".
+</li>
+
+<li>Editor: "An editor is an interface between a user and one or more views. Ir provides the user with a suitable command system, for example in the form of menus that may change dynamically according to the current context. It providesthe Views with the  necessary coordination and command messages".
+</li>
+</ul>
+
+<p>
+Como acabamos de observar, las anteriores definiciones ponen de relieve el contexto histórico sobre el que nació el Modelo Vista Controlador. En primer lugar el hecho de que a fines de los
+años 70 del siglo pasado no existía todavía una idea convencional de Interfaz Gráfica de Usuario (IGU, por sus siglas en inglés), tanto así que Reenskaug distigue "Vista" de "Editor",
+siendo que hoy día (algo que el mismo Reenskaug después simplificó) notamos ambos aspectos bajo el rubro de Vista. A continuación analizaremos con un poco más de detalle los componentes de 
+esta arquitectura.
+</p>
+</div>
+
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Modelo</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Siguiendo con Reenskaug, nos dice que los modelos "[&#x2026;] are represented in the computer as a collection of data together with the methods necessary to process these data".<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup> Un modelo
+es, en este sentido, un bloque de información autoconsistente, que junto con otros modelos conforma un proyecto cualquiera. En otras palabras, dada cierta problemática de la vida real, ésta
+es dividida en modelos, mismos que atienden un aspecto específico de esa problemática, y en su conjunto la resuelven. Esto permite la reusabilidad del código, admeás de la portabilidad del
+mismo hacia otras problemáticas parecidas o incluso distintas, ya que un modelo resuelve un problema tan particular que puede presentarse en proyectos de la más diversa índole.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Vista</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+"A view is  a (visual) representation of its model."<sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup> Dentro de este concepto cabe resaltar que Reenskaug mismo encierra entre paréntesis el que sea
+visual o no dicha representación, esto es, una vista no necesariamente tiene que ser una representación gráfica, sino que "vista" aquí indica que se trata de un "filtro de presentación".
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Controlador</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+"A controller is the link between a user and the system".<sup><a id="fnr.4" name="fnr.4" class="footref" href="#fn.4">4</a></sup> El controlador provee al usuario las herramientas necesarias para interactuar con la aplicación, sobre todo los mecanismos
+para ingresar datos y tomar decisiones de acuerdo a las opciones que les sean mostradas en las vistas. Algunas de sus características clave son:
+</p>
+
+<ul class="org-ul">
+<li>Proporcionar al usuario los medios de salida (output) con menús y otros medios para insertar comandos y datos.
+</li>
+<li>Recibe las salidas del sistema (outputs) las traduce en mensajes apropiados al usuario y pasa los mensajes a una o más vistas, dependiendo del caso.
+</li>
+</ul>
+
+<p>
+Restricciones y advertencias a considerar:
+</p>
+
+<ul class="org-ul">
+<li>Un controlador nunca debe sustituir a las vistas.
+</li>
+<li>Una vista nunca debe "conocer" acerca de las entradas que proporciona el usuario, es decir, al ser sólo un filtro de presentación, no los manipula ni decide cuál es el dato que va a mostrar.
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Objetivos</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Como ya mencionamos, el MVC fue concebido para lidiar con el tratamiento de grandes cantidades de información, pero con respecto al usuario y las aplicaciones reales en que este patrón puede
+aportar su estructura, su objetivo primordial es el de dar soporte a los modelos mentales  de los usuaios acerca del espacio de información relevante para ellos, y permitirles inspeccionar
+y editar dicha información. Bajo este rubro, el modelo incorpora la capa de dominio y persistencia, es pocas palabras, es la que guarda los datos e indica el cómo se estructuran.
+</p>
+
+<p>
+Por otra parte, la vista aquí funge como la encargada de presentar la interfaz al usuario; por ejemplo, en un sistema web, esto es lo que se hace con HTML, aunque pueden existir otro tipo
+de vistas. En este nivel se hacen operaciones simples como if, ciclos, formateos, etc. El controlador escucha los cambios en la vista y los envía al modelo, el cual a su vez devuelve los 
+datos al controlador, y éste nuevamente a la vista.
+</p>
+
+<p>
+Un controlador en cierta forma debe tener un registro de la relación entre ordenes que le pueden llegar y la lógica de negocio que le corresponde (Es como una operadora de teléfono que recibe una petición y une dos líneas).
+</p>
+
+
+
+<div id="fig:-mvc" class="figure">
+<p><img src="./mvc001.jpg" alt="mvc001.jpg" />
+</p>
+<p><span class="figure-number">Figure 1:</span> Diagrama del Modelo Vista Controlador</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Pros y contras</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Ventajas</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>La implementación se realiza de forma modular.
+</li>
+<li>Sus vistas muestran información actualizada siempre. El programador no debe preocuparse de solicitar que las vistas se actualicen, ya que este proceso es realizado automáticamente por el modelo de la aplicación.
+</li>
+<li>Cualquier modificación que afecte al dominio, como aumentar métodos o datos contenidos, implica una modificación sólo en el modelo y las interfaces del mismo con las vistas, no todo el mecanismo de comunicación y de actualización entre modelos.
+</li>
+<li>Las modificaciones a las vistas no afectan al modelo de dominio, simplemente se modifica la representación de la información, no su tratamiento.
+</li>
+<li>MVC está demostrando ser un patrón de diseño bien elaborado pues las aplicaciones que lo implementan presentan una extensibilidad y una mantenibilidad únicas comparadas con otras aplicaciones basadas en otros patrones.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Desventajas</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>Para desarrollar una aplicación bajo el patrón de diseño MVC es necesario una mayor dedicación en los tiempos iniciales del desarrollo. Normalmente el patrón exige al programador desarrollar un mayor número de clases que, en otros entornos de desarrollo, no son necesarias. Sin embargo, esta desventaja es muy relativa ya que posteriormente, en la etapa de mantenimiento de la aplicación, una aplicación MVC es mucho más sostenible, extensible y modificable que una aplicación que no lo implementa.
+</li>
+<li>MVC requiere la existencia de una arquitectura inicial sobre la que se deben construir clases e interfaces para modificar y comunicar los módulos de una aplicación. Esta arquitectura inicial debe incluir, por lo menos, un mecanismo de eventos para poder proporcionar las notificaciones que genera el modelo de aplicación; una clase Modelo, otra clase Vista y una clase Controlador genéricas que realicen todas las tareas de comunicación, notificación y actualización que serán luego transparentes para el desarrollo de la aplicación.
+</li>
+<li>MVC es un patrón de diseño orientado a objetos por lo que su implementación es sumamente costosa y difícil en lenguajes que no siguen este paradigma.
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Similitudes con otros patrones arquitecturales</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> MVC y MVVM (Model-View-ViewModel)</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Mientras que MVC es un patrón que define en qué bloques (o capas) lógicos vamos a estructurar nuestra aplicación (Modelo, Vista y Controlador), asimismo detallar las responsabilidades
+exactas de cada capa y la forma que tienen de relacionarse entre sí, MVVM busca separar lo mayor posible la interfaz del usuario de la capa logíca, en este caso, del modelo
+de datos. Este patrón arquitectural fue creado por Microsoft en 2005 para acompañar su nueva tecnología de interfaces gráficas llamada WPF (Windows Presentation
+Foundation) la cual mezcla las características de una aplicación de escritorio y las de una aplicación web.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> MVC y SOA (Service Oriented Architecture)</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+SOA y MVC pueden coexistir pacíficamente. Como se observa, SOA es una abstracción de mayor nivel de cómo el software debería interactuar entre sí, mientras que MVC es una abstracción de nivel ligeramente inferior que hace que sea más fácil escribir aplicaciones reutilizables.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Frameworks que proporcionan la implementación de MVC</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Javascript</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>Backbone.js
+</li>
+<li>Angularjs
+</li>
+<li>Ember
+</li>
+<li>Knockout
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> PHP</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>Laravel
+</li>
+<li>Symfony
+</li>
+<li>CodeIgniter
+</li>
+<li>CakePHP
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> Java</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li>Spring MVC
+</li>
+<li>ActFramework
+</li>
+<li>Spring-boot
+</li>
+<li>Play2
+</li>
+<li>Ninja
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> Python</h3>
+<div class="outline-text-3" id="text-6-4">
+<ul class="org-ul">
+<li>Django
+</li>
+<li>TurboGear
+</li>
+<li>web2py
+</li>
+<li>Flask
+</li>
+<li>Pylons
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Ejemplos de aplicación</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> CarTrack</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>CarTrackr es una aplicación de ejemplo que utiliza el patrón de repositorio e inyección de dependencias mediante Unity Application Block. Su autor, Maarten Balliauw lo desarrolló como ejemplo para varias demos y presentaciones. En esencia se trata de una aplicación para llevar el control de gastos de cualquier automovil. 
+</li>
+<li>Framework: ASP.NET MVC 
+</li>
+<li>Lenguaje: Lenguajes de la plataforma .NET
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> FlickrXplorer</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>Se trata de una iniciativa de código abierto consistente en una aplicación que muestra una herramienta de exploración y búsqueda de fotografías entre millones de ellas en Flickr. La aplicación se ha desarrollado utilizando JQuery, ASP.Net MVC y LINQ. 
+</li>
+<li>Framework: ASP .NET MVC
+</li>
+<li>Lenguaje: Lenguajes de la plataforma .NET
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> Instagram </h3>
+<div class="outline-text-3" id="text-7-3">
+<ul class="org-ul">
+<li>El desarrollo de Instagram se inició en San Francisco, cuando Kevin Systrom y Mike Krieger optaron por centrar sus múltiples funciones HTML5 check-in Burbn en un proyecto de fotografía móvil. El producto fue lanzado en el Apple App Store el 6 de octubre de 2010 bautizado como Instagram
+</li>
+<li>Framework: Django. 
+</li>
+<li>Lenguaje: Python.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7-4" class="outline-3">
+<h3 id="sec-7-4"><span class="section-number-3">7.4</span> Pinterest </h3>
+<div class="outline-text-3" id="text-7-4">
+<ul class="org-ul">
+<li>Pinterest permite a los usuarios, guardar y clasificar por categorías, imágenes en diferentes tableros. Pueden también seguir a otros usuarios con los mismos gustos e intereses. Las categorías populares son viajes, coches, películas, humor, diseño para el hogar, deportes, moda y arte.
+</li>
+<li>Framework: Django.
+</li>
+<li>Lenguaje: Python.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7-5" class="outline-3">
+<h3 id="sec-7-5"><span class="section-number-3">7.5</span> CommunityWalk</h3>
+<div class="outline-text-3" id="text-7-5">
+<ul class="org-ul">
+<li>permite añadir meta información a mapas de Google 
+</li>
+<li>Framework: Ruby on Rails. 
+</li>
+<li>Lenguaje: Ruby 
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7-6" class="outline-3">
+<h3 id="sec-7-6"><span class="section-number-3">7.6</span> BigCartel</h3>
+<div class="outline-text-3" id="text-7-6">
+<ul class="org-ul">
+<li>Tienda online con integración para PayPal
+</li>
+<li>Framework: Ruby on rails.
+</li>
+<li>Lenguaje: Ruby.
+
+<p>
+
+</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footnotes"/>
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+Trygve Reenskaug, "The Original MVC reports", University of Oslo, 2007.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+idem, p. 2.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
+idem, p. 12.
+</p></div>
+
+<div class="footdef"><sup><a id="fn.4" name="fn.4" class="footnum" href="#fnr.4">4</a></sup> <p class="footpara">
+idem, p. 13.
+</p></div>
+
+</div>
+</div>
+{% endblock %}
