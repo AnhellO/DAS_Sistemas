@@ -61,6 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\templates\app\about.html" />
+    <Content Include="app\templates\app\cliente_detail.html" />
+    <Content Include="app\templates\app\listaclientes.html" />
     <Content Include="app\templates\app\muestrareservacion.html" />
     <Content Include="app\templates\app\registracliente.html" />
     <Content Include="app\templates\app\reservacion.html" />

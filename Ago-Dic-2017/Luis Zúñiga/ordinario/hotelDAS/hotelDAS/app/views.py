@@ -12,10 +12,8 @@ from django.http import HttpResponseRedirect
 from django.views.generic.detail import DetailView
 from django.views.generic import ListView
 from app.models import *
-
 import locale
 import django.utils.encoding as _
-#from django.utils.translation import ugettext_lazy as _
 
 locale.setlocale( locale.LC_ALL, 'English_United States.1252' )
 
@@ -33,17 +31,33 @@ def home(request):
 
 def contact(request):
     """Renders the contact page."""
+    
     assert isinstance(request, HttpRequest)
     return render(
         request,
         'app/contact.html',
         {
+            
             'title':'Contact',
             'message':'Your contact page.',
             'year':datetime.now().year,
            
         }
     )
+
+def listaclientes(request):
+    clientes = Cliente.objects.all()
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/listaclientes.html',
+        {
+            'clientes': clientes,
+            'year':datetime.now().year,
+           
+        }
+    )
+
 
 def about(request):
     """Renders the about page."""
@@ -135,6 +149,17 @@ def reserva(request):
             }
             
        )
+
+def cliente_detail(request,tcredito):
+    print(tcredito)
+    try:
+        cliente = Cliente.objects.get(tcredito=tcredito)
+    except(Cliente.DoesNotExist):
+        raise Http404('El cliente no existe')
+    return render(request, 'app/cliente_detail.html',{
+        'cliente' : cliente,        
+        })
+
 
 
 def muestraReservacion(request):

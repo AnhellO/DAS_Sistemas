@@ -122,12 +122,13 @@ input[type="checkbox"].input-validation-error {
 /*Jumbotron*/
 
 .jumbotron {
-    position: relative;    
+    position: relative;
     margin-top: 70px !important;
-    background: #eee;
+    /*background: #eee;*/
     margin-top: 23px;
     text-align: center;
     margin-bottom: 0 !important;
+    background-image: url("./uadec.jpg");
 }
 
 .container-fluid {

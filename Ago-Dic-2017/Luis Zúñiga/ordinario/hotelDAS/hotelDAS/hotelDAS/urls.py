@@ -20,7 +20,9 @@ urlpatterns = [
     url(r'^registracliente',app.views.registracliente, name = 'registracliente'),
     url(r'^$', app.views.home, name='home'),
     url(r'^contact$', app.views.contact, name='contact'),
+    url(r'^listaclientes$', app.views.listaclientes, name ='listaclientes'),
     url(r'^about', app.views.about, name='about'),
+    url(r'^clientes/(?P<tcredito>\d+)', app.views.cliente_detail, name='cliente_detail' ),
     url(r'^login/$',
         django.contrib.auth.views.login,
         {
