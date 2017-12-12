@@ -1,0 +1,62 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+	<h4>Filtrar por:</h4>
+	<form method="get">
+	<p>
+	Nombre: &nbsp{{ filter.form.nombres }} &nbsp
+	Apellido: &nbsp {{ filter.form.apellidos }} &nbsp
+	Email: &nbsp{{ filter.form.email }} &nbsp;&nbsp;
+	<button class="btn btn-success" type="submit">Filtrar</button>
+	</p>
+	</form>
+	<table class="table table-bordered">
+	<thead>
+		<tr>
+			<td>id</td>
+			<td>Nombres</td>
+			<td>Apellidos</td>
+			<td>Fecha de Nacimiento</td>
+			<td>Email</td>
+			<td>Hotel</td>
+			<td>Acciones</td>
+		</tr>
+
+	</thead>
+	<tbody>
+		{% if filter.qs %}
+		{% for usuario in filter.qs %}
+		<tr>
+			<td>{{ usuario.id }}</td>
+			<td>{{ usuario.nombres }}</td>
+			<td>{{ usuario.apellidos }}</td>
+			<td>{{ usuario.fecha_nacimiento }}</td>
+			<td>{{ usuario.email }}</td>
+			<td>{{ usuario.hotel_hospedaje }}</td>
+			<td>
+				<a class="btn btn-primary" href="{% url 'usuarios:usuario_mostrar' usuario.id %}">Ver</a>
+				<a class="btn btn-primary" href="{% url 'usuarios:usuario_editar' usuario.id %}">Editar</a>
+				<a class="btn btn-danger" href="{% url 'usuarios:usuario_eliminar' usuario.id %}">Eliminar</a>
+			</td>
+		</tr>
+		{% endfor %}
+
+		{% else %}
+		<h1>No hay registros de usuarios</h1>
+		{% endif %}
+	</tbody>
+</table>
+<ul class="pager">
+	<li>
+		{% if page_obj.has_previous %}
+       	 <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+		{% endif %}
+        </li>
+	<li>
+		{% if page_obj.has_next %}
+     	 <a href="?page={{ page_obj.next_page_number }}">Next</a>
+    	{% endif %}
+    </li>
+</ul>
+
+{% endblock %}
