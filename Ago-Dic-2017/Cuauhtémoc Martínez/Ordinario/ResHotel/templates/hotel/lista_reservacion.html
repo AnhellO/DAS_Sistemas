@@ -1,0 +1,51 @@
+{% extends 'base/base.html' %}
+
+{% block title %} Lista de Reservaciones {% endblock %}
+{% block header %}
+<center>
+  <h4>RESERVACIONES</h4>
+</center>
+{% endblock %}
+
+{% block content %}
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Cliente</th>
+      <th>Habitacion</th>
+      <th>Fecha de Reservacion</th>
+      <th>Forma de pago</th>
+      <th>Numero de Personas</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if reservaciones %}
+    {% for reservacion in reservaciones %}
+    <tr>
+      <td>{{ reservacion.id }}</td>
+      <td>{{ reservacion.cliente.Nombre }} {{ reservacion.cliente.ApellidoPaterno }} {{ reservacion.cliente.ApellidoMaterno }}</td>
+      <td>{{ reservacion.habitacion.Nombre }}</td>
+      <td>{{ reservacion.FechaReservacion }}</td>
+      {% if reservacion.formaPago == 'T' %}
+      <td>Tarjeta</td>
+      {% else %}
+      <td>Efectivo</td>
+      {% endif %}
+      <td>{{ reservacion.numPersonas }}</td>
+      <td>
+        <a class = 'btn btn-primary' href="{% url 'editar_reservacion' reservacion.id %}">Editar</a>
+        <a class = 'btn btn-danger' href="{% url 'eliminar_reservacion' reservacion.id %}">Eliminar</a>
+      </td>
+    </tr>
+    {% endfor %}
+
+    {% else %}
+    <h1>No hay reservaciones</h1>
+
+    {% endif %}
+  </tbody>
+</table>
+
+{% endblock %}
