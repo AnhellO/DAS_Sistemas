@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<p><strong>Id: </strong>{{ object.id }} </p>
+<p><strong>Nombres: </strong>{{ object.nombre }} </p>
+
+<a class= "btn btn-success" href="{% url 'sucursales:sucursal_listar' %}">Ok</a>
+<a class= "btn btn-primary" href="{% url 'sucursales:sucursal_editar' object.id%}">Editar</a>
+<a class="btn btn-danger" href="{% url 'sucursales:sucursal_eliminar' object.id %}">Eliminar</a>
+
+{% endblock %}
