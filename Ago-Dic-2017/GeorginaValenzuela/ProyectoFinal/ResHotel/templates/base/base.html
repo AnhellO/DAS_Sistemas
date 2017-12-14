@@ -1,0 +1,75 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://bootswatch.com/3/journal/bootstrap.min.css">
+  <link rel="stylesheet" href="https://bootswatch.com/3/journal/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href='http://i1.kym-cdn.com/photos/images/newsfeed/000/856/279/b47.png' rel='shortcut icon' type='image/png'>
+  <!-- <link href='https://vignette.wikia.nocookie.net/villanos/images/f/fa/Memes.png/revision/latest?cb=20160214040647&path-prefix=es' rel='shortcut icon' type='image/png'> -->
+  <title>{% block title %} {% endblock %}</title>
+</head>
+
+  <body>
+  {% block navbar %}
+    <div class="bs-docs-section clearfix">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="bs-component">
+            <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="{% url 'index' %}">Inicio</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Clientes <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu"> <li><a href="{% url 'crear_cliente' %}">Registrar</a></li>
+                        <li><a href="{% url 'ver_cliente' %}">Ver</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Habitaciones<span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="{% url 'ver_habitacion' %}">Ver Habitaciones</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reservaciones<span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="{% url 'crear_reservacion' %}">Solicitar Reservacion</a></li>
+                        <li><a href="{% url 'ver_reservacion' %}">Ver Reservaciones</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Opciones<span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="{% url 'ee' %}">Salir</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+ {% endblock %}﻿
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+<script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
