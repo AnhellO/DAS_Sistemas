@@ -1,0 +1,32 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="container">
+  <h2>Datos del cliente</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido paterno</th>
+        <th>Apellido materno</th>
+        <th>Número de tarjeta de crédito</th>
+        <th>Dirección</th>
+        <th>Correo electrónico</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ cliente.nombre|capfirst}}</td>
+        <td>{{ cliente.paterno|capfirst }}</td>
+        <td>{{ cliente.materno|capfirst }}</td>
+        <td>{{ cliente.tcredito|capfirst }}</td>
+        <td>{{ cliente.direccion}}</td>
+        <td>{{ cliente.email }}</td>     
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+{% endblock %}
