@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<p><strong>Id: </strong>{{ object.id }} </p>
+<p><strong>Nombres: </strong>{{ object.nombres }} </p>
+<p><strong>Apellidos: </strong>{{ object.apellidos }} </p>
+<p><strong>Fecha de Nacimiento: </strong>{{ object.fecha_nacimiento }} </p>
+<p><strong>Email: </strong>{{ object.email }} </p>
+<p><strong>Hotel: </strong>{{ object.hotel_hospedaje }} </p>
+
+<a class= "btn btn-success" href="{% url 'usuarios:usuario_listar' %}">Ok</a>
+<a class= "btn btn-primary" href="{% url 'usuarios:usuario_editar' object.id%}">Editar</a>
+<a class="btn btn-danger" href="{% url 'usuarios:usuario_eliminar' object.id %}">Eliminar</a>
+
+{% endblock %}
