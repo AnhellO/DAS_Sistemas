@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+Registrar
+{% endblock %}
+
+{% block header %}
+<center>
+<h2>Nueva reservacion</h2>
+</center>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <center>
+  <button type="submit" class="btn btn-success">Guardar</button>
+  </center>
+</form>
+{% endblock %}
