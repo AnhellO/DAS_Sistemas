@@ -1,0 +1,49 @@
+{% extends 'base/base.html' %}
+
+{% block title %} Lista de Clientes {% endblock %}
+{% block header %}
+<center>
+  <h4>CLIENTES</h4>
+</center>
+{% endblock %}
+
+{% block content %}
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Apellido Paterno</th>
+      <th>Apellido Materno</th>
+      <th>Fecha de Nacimiento</th>
+      <th>Telefono</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if clientes %}
+    {% for cliente in clientes %}
+    <tr>
+      <td>{{ cliente.id }}</td>
+      <td>{{ cliente.Nombre }}</td>
+      <td>{{ cliente.ApellidoPaterno }}</td>
+      <td>{{ cliente.ApellidoMaterno }}</td>
+      <td>{{ cliente.FechaNacimiento }}</td>
+      <td>{{ cliente.Telefono }}</td>
+      <td>{{ cliente.Email }}</td>
+      <td>
+        <a class = 'btn btn-primary' href="{% url 'editar_cliente' cliente.id %}">Editar</a>
+        <a class = 'btn btn-danger' href="{% url 'eliminar_cliente' cliente.id %}">Eliminar</a>
+      </td>
+    </tr>
+    {% endfor %}
+
+    {% else %}
+    <h1>No hay clientes registrados</h1>
+
+    {% endif %}
+  </tbody>
+</table>
+
+{% endblock %}
