@@ -17,25 +17,15 @@ class Administrador(Usuario):
     def __init__(self, nombre, apellido, email, edad, ciudad):
         super().__init__(nombre, apellido, email, edad, ciudad)
         self.privileg = Privilegios()
-        self.privileg.privilegios = ["Puedes agregar una publicación", "Puedes borrar una publicación", 
-                       "Puedes prohibir una publicación"]        
-    
-    '''def mostrar_privilegios(self):
-        for x in (self.privilegios):
-            print(x)'''
 
 class Privilegios():
-    def __init__(self, privilegios=[]):
-        self.privilegios = privilegios
+    def __init__(self):
+        self.privilegios = ["Puedes agregar una publicación", "Puedes borrar una publicación", 
+                            "Puedes prohibir una publicación"]
 
     def mostrar_privilegios(self):
         for x in (self.privilegios):
             print(x)
 
-#user = Usuario("Luis", "Carielo", "luis@carielo.com", 34, "Saltillo")
-#user.describe_usuario()
-#user.usuario_saludos()
-#admin = Administrador("Luis", "Carielo", "luis@carielo.com", 34, "Saltillo")
-#admin.mostrar_privilegios()
 mis_privilegios = Administrador("Luis", "Carielo", "luis@carielo.com", 34, "Saltillo")
 mis_privilegios.privileg.mostrar_privilegios()
