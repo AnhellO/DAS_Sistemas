@@ -20,13 +20,16 @@ restaurante = Restaurant(' La Marea ', ' Mariscos ')
 restaurante.describe_restaurant()
 restaurante.open_restaurant()
 
+##################################################################################
+##################################################################################
+
 class IceCreamStand(Restaurant):
 
     def __init__(self, name, cuisine_type,):
         super().__init__(name, cuisine_type)
         self.flavors = []
 
-    def List_flavors(self):
+    def list_flavors(self):
 
         print("\nEstos son los sabores de helados:")
         for flavor in self.flavors:
@@ -35,4 +38,4 @@ class IceCreamStand(Restaurant):
 Helados = IceCreamStand("Helados doña Yolis", "Helados")
 Helados.flavors = ["vainilla", "chocolate", "fresa", "napolitano"]
 Helados.describe_restaurant()
-Helados.List_flavors()
+Helados.list_flavors()
