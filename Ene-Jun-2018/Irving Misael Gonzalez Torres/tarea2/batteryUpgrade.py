@@ -36,6 +36,7 @@ class Battery():
        
         self.battery_size = battery_size
 
+
     def describe_battery(self):
         print("This car has a " + str(self.battery_size) + "-kWh battery.")
 
@@ -68,6 +69,7 @@ class ElectricCar(Car):
 
         super().__init__(make, model, year)
         self.battery = Battery()
+
 
 
 print("creando un nuevo carro electrico y checando la bateria")
