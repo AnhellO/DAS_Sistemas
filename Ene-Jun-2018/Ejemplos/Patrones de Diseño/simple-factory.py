@@ -3,12 +3,12 @@ from abc import ABC, abstractmethod
 class Instrumento(object):
 
     def __init__(self, **atributos):
-        self.tipo = atributos['tipo']
-        self.madera = atributos['madera']
-        self.color = atributos['color']
+        self.tipo = atributos.get('tipo')
+        self.madera = atributos.get('madera')
+        self.color = atributos.get('color')
 
     @abstractmethod
-    def suena_instrumento(self):
+    def imprime_atributos(self):
         pass
 
 
@@ -16,40 +16,54 @@ class Guitarra(Instrumento):
 
     def __init__(self, **atributos):
         atributos['tipo'] = 'cuerdas'
-        super().__init__(atributos)
-        self.orientacion = atributos['orientacion']
-        self.cuerdas = atributos['cuerdas']
+        super().__init__(**atributos)
+        self.orientacion = atributos.get('orientacion')
+        self.cuerdas = atributos.get('cuerdas', 6)
 
-    def suena_instrumento(self):
-        print('Wiriwiriwu')
+    def imprime_atributos(self):
+        return 'Tipo: {}\nCuerdas: {}\nMadera: {}\nColor: {}\nOrientacion: {}\n'.format(
+            self.tipo,
+            self.cuerdas,
+            self.madera,
+            self.color,
+            self.orientacion
+        )
 
 
 class Bateria(Instrumento):
 
     def __init__(self, **atributos):
         atributos['tipo'] = 'percusion'
-        print(atributos)
-        super().__init__(atributos)
-        self.piezas = piezas
+        super().__init__(**atributos)
+        self.piezas = atributos.get('piezas')
 
-    def suena_instrumento(self):
-        print('Tupa tupa ba dum tsss!')
+    def imprime_atributos(self):
+        return 'Tipo: {}\nPiezas: {}\nMadera: {}\nColor: {}\n'.format(
+            self.tipo,
+            self.piezas,
+            self.madera,
+            self.color
+        )
+
 
 class InstrumentosFactory():
 
     @staticmethod
-    def crea_instrumento(madera, color, orientacion, cuerdas, piezas, instrumento='guitarra'):
+    def crea_instrumento(**atributos):
+        instrumento = atributos.get('instrumento')
         if instrumento.lower() == 'guitarra':
-            return Guitarra(madera, color, orientacion, cuerdas)
+            return Guitarra(**atributos)
         elif instrumento.lower() == 'bateria':
-            return Bateria(madera, color, piezas)
+            return Bateria(**atributos)
         else:
             print('El instrumento {} no existe'.format(instrumento))
 
+
+
 bateria = Bateria(madera='roble', color='rojo', piezas=15)
-guitarra = Bateria(madera='nogal', color='verde', cuerdas=6)
+guitarra = Guitarra(madera='nogal', color='verde', cuerdas=7, orientacion='zurdo')
 
-print(bateria.suena_instrumento())
-print(guitarra.suena_instrumento())
+print(bateria.imprime_atributos())
+print(guitarra.imprime_atributos())
 
-#print(InstrumentosFactory.crea_instrumento('maple', 'rojo', 'zurdo', ).suena_instrumento())
+print(InstrumentosFactory.crea_instrumento(instrumento='guitarra', madera='maple', color='rojo', orientacion='zurdo').imprime_atributos())
