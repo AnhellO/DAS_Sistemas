@@ -1,7 +1,7 @@
 from __future__ import print_function
 from abc import ABCMeta, abstractmethod
 
-
+# Producto
 class Car(object):
     def __init__(self, wheels=4, seats=4, color="Black"):
         self.wheels = wheels
@@ -9,11 +9,10 @@ class Car(object):
         self.color = color
 
     def __str__(self):
-        return "This is a {0} car with {1} wheels and {2} seats.".format(
-            self.color, self.wheels, self.seats
-        )
+        return "Este es un carro de color {0} con {1} llantas y {2} asientos.".format(self.color, self.wheels, self.seats)
 
 
+#Clase Builder (abstracta)
 class Builder:
     __metaclass__ = ABCMeta
 
@@ -32,7 +31,10 @@ class Builder:
     @abstractmethod
     def get_result(self):
         pass
-        class CarBuilder(Builder):
+
+
+#Concrete Builder
+class CarBuilder(Builder):
     def __init__(self):
         self.car = Car()
 
@@ -48,14 +50,14 @@ class Builder:
     def get_result(self):
         return self.car
 
-
+#Director
 class CarBuilderDirector(object):
     @staticmethod
     def construct():
         builder = CarBuilder()
         builder.set_wheels(8)
         builder.set_seats(4)
-        builder.set_color("Red")
+        builder.set_color("Rojo")
         return builder.get_result()
 
 
