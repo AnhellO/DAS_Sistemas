@@ -39,4 +39,4 @@
 ## Puntos Extra
 
 * Menos W.E.T. y más D.R.Y.
-* Implementa el patrón FactoryMethod sobre el ejercicio práctico 1 para crear objetos empleado
+* Implementa el patrón FactoryMethod sobre el ejercicio práctico 2 para crear diferentes objetos layout
