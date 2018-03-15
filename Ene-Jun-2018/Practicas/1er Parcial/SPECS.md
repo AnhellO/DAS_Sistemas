@@ -28,8 +28,8 @@
 
 ## Parte Práctica
 
-* Suponga que tiene un sistema de archivos tipo UNIX: http://math.uprm.edu/~luis/courses/unix/images/jerarquia.gif. El funcionamiento de este tipo de sistema de archivos es comúnmente representado por medio de un árbol jerárquico. Cada directorio puede contener 0 o varios directorios, pero también 0 o varios archivos. El principal objetivo es moverse a través del sistema de archivos de manera sencilla, mientras se puede tener ubicado cada archivo a través de una ruta
-  * Implemente el patrón Composite en python para dar solución a este ejemplo
+* Suponga que tiene un sistema de archivos tipo [UNIX](http://math.uprm.edu/~luis/courses/unix/images/jerarquia.gif). El funcionamiento de este tipo de sistema de archivos es comúnmente representado por medio de un árbol jerárquico. Cada directorio puede contener 0 o varios directorios, pero también 0 o varios archivos. El principal objetivo es moverse a través del sistema de archivos de manera sencilla, mientras se puede tener ubicado cada archivo a través de una ruta
+  * Implemente el patrón Composite en python para ilustrar este ejemplo
   * Agregue los respectivos diagramas UML de clases que reflejen la solución
 
 * Suponga que se está construyendo una librería de clases para representar componentes de GUI. Se ha decidido que en vez de que un programador defina la posición de los componentes GUI (Button, List, Dialog, etcétera) sobre una ventana, se incluyan manejadores de disposición de componentes (layout manager), cada uno de los cuales distribuye un conjunto dado de componentes gráficos de acuerdo a algún esquema de distribución: horizontalmente, verticalmente, en varias filas, en forma de una matriz, etcétera. Debe ser posible cambiar en tiempo de ejecución la distribución elegida inicialmente. Suponga que la clase Panel (Cliente) es la que representa a un contenedor de componentes gráficos, diseña una solución para introducir en la librería los manejadores de componentes (layouts)
