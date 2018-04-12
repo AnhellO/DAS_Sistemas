@@ -1,8 +1,8 @@
 trees = {}
-
+cas={}
 cases = int(input())
 
-vacio = input().split("\n")
+vacio = input()
 
 for x in range(cases):
 
@@ -28,10 +28,13 @@ for x in range(cases):
         todos += 1
 
    
-    if x<(num_casos-1):
+    if x<(cases-1):
         print("")
 
 
-for arbol, porciento in sorted(trees.items()):
-    porciento=100+(porciento/todos-1)*100
-    print("%s %.4f" %(arbol,porciento))
+    for arbol, porciento in sorted(trees.items()):
+        porciento = 100+(porciento/todos-1)*100
+        cas[x]=("%s %.4f" %(arbol,porciento)+"\n")
+    
+for x in cas:
+    print(cas[x])
