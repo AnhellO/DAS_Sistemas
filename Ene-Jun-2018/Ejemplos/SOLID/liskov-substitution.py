@@ -53,6 +53,8 @@ class GrupoMusical(Grupo):
         propiedades = super().getPropiedades()
         return (propiedades + "Género: {}\nLogo: {}\n").format(self.genero, self.logo)
 
+    def retornaX(self):
+        return 'X!'
 
 class GrupoBaile(Grupo):
 
@@ -81,4 +83,7 @@ grupos.append(grupoMusical)
 grupos.append(grupoBaile)
 
 for grupo in grupos:
-    print(grupo.getPropiedades())
+    if type(grupo) is GrupoMusical:
+        print(grupo.retornaX())
+    else:
+        print(type(grupo))
