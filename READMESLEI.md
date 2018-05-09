@@ -10,10 +10,10 @@
   - Like this
   - And this
 
-l. shopping list
-   l. thing one
-   l. thing two
-   l. thing whatever
+1. shopping list
+   1. thing one
+   1. thing two
+   1. thing whatever
 
 ## Well, thats all for today
 
