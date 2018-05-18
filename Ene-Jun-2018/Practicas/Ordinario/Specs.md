@@ -39,6 +39,12 @@
 - Página(s) Web
   - Uso de HTML para el rendereo de los datos en la(s) página(s) web (recomendado Jinja)
   - Mínimo una página que despliegue la(s) tabla(s) HTML
+- Documentación
+  - Agregar diagramas para:
+    - Modelos (diagramas de clase)
+    - Aplicación (diagrama de componentes)
+    - DB (diagrama entidad-relación)
+  - Descripción y especificaciones del funcionamiento de la app en un README.md (todo en formato MarkDown), así como las herramientas utilizadas y las referencias que hayan consultado durante el desarrollo del proyecto. Pueden incluir los diagramas aquí también
 
 ## Puntos Extra (Calificación Final)
 
