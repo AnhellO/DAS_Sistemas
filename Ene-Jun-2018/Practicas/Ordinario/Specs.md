@@ -44,7 +44,7 @@
     - Modelos (diagramas de clase)
     - Aplicación (diagrama de componentes)
     - DB (diagrama entidad-relación)
-  - Descripción y especificaciones del funcionamiento de la app en un README.md (todo en formato MarkDown), así como las herramientas utilizadas y las referencias que hayan consultado durante el desarrollo del proyecto. Pueden incluir los diagramas aquí también
+  - Descripción y especificaciones del funcionamiento de la app en un `README.md` (todo en formato MarkDown), así como las herramientas utilizadas y las referencias que hayan consultado durante el desarrollo del proyecto. Pueden incluir los diagramas aquí.
 
 ## Puntos Extra (Calificación Final)
 
