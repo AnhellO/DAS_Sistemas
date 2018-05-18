@@ -8,7 +8,7 @@ class Usuarios(Model):
     edad = IntegerField()
 
     class Meta:
-        database = db # This model uses the "people.db" database.
+        database = db # This model uses the "DAS.db" database.
 
     def __str__(self):
         return "Nombre:{}\nEdad:{}\n".format(self.nombre, self.edad)
