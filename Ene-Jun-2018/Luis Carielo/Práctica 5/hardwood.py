@@ -31,11 +31,12 @@ for x in range(num_casos):
         #se agrega una unidad al 100%
         cien_porciento+=1
 
-    #condición para imprimir un salto de línea cuando muestre la salida
-    if x<num_casos-1:
-        print("")
+	#ciclo para mostrar la salida
+    for arbol, porciento in sorted(trees.items()):
+    	porciento=100+(porciento/cien_porciento-1)*100
+    	print("%s %.4f" %(arbol,porciento))
 
-#ciclo para mostrar la salida
-for arbol, porciento in sorted(trees.items()):
-    porciento=100+(porciento/cien_porciento-1)*100
-    print("%s %.4f" %(arbol,porciento))
+	#condición para imprimir un salto de línea cuando muestre la salida
+    if x<num_casos-1:
+    	print("")
+
