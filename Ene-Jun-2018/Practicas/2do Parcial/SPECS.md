@@ -20,7 +20,36 @@
 
 ## Parte Práctica
 
+1. Para el siguiente ejemplo de código:
+
+```python
+import json
+
+class Report:
+
+    def getTitle(self):
+        return 'Title!'
+
+    def getDate(self):
+        return '2018-05-23'
+
+    def getContents(self):
+        return {
+        	'title': self.getTitle(),
+        	'date': self.getDate()
+        }
+
+    def formatJson(self):
+    	return json.dumps(self.getContents())
+
+report = Report()
+print(report.getContents())
+```
+
+* Refactoriza implementando el `Single Responsibility Principle`
+* Explica el porqué de tus cambios
 
 ## Puntos Extra
 
 * Menos W.E.T. y más D.R.Y.
+* Implementa un breve ejemplo del `Dependency Inversion Principle` utilizando el módulo de [python-dependency-injector](https://github.com/ets-labs/python-dependency-injector) utilizando instrumentos musicales como objetos
