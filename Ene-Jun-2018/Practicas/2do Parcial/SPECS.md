@@ -49,6 +49,43 @@ print(report.getContents())
 * Refactoriza implementando el `Single Responsibility Principle`
 * Explica el porqué de tus cambios
 
+2. Para el siguiente ejemplo de código:
+
+```python
+class Programmer:
+
+    def code(self):
+        return 'I am Coding!'
+
+
+class Tester:
+
+    def test(self):
+        return 'I am Testing!'
+
+
+class ProjectManagement:
+
+    def process(self, worker):
+        if isinstance(worker, Programmer):
+        	return worker.code()
+        elif isinstance(worker, Tester):
+        	return worker.test()
+        else:
+        	return 'Hey there!, Something went wrong :C'
+
+programmer = Programmer()
+tester = Tester()
+
+project = ProjectManagement()
+
+print(project.process(programmer))
+print(project.process(tester))
+```
+
+* Refactoriza implementando el `Open-Closed Principle`
+* Explica el porqué de tus cambios
+
 ## Puntos Extra
 
 * Menos W.E.T. y más D.R.Y.
