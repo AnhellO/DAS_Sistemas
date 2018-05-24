@@ -1,3 +1,4 @@
+"""
 import json
 
 class Report:
@@ -19,11 +20,13 @@ class Report:
 
 report = Report()
 print(report.getContents())
+"""
 
 
 ###################################################################################################
 ###################################################################################################
 ###################################################################################################
+
 import json
 
 class Title:
@@ -35,8 +38,8 @@ class Date:
         return "2018-05-23"
 
 class Contents:
-    def getContents(self):
-        return {"title:" self.getTitle(), "date:" self.getDate}
+    def getContents(self, title="titulo", date="2018-05-23"):
+        return "title:{}\ndate:{}".format(title, date)
 
 class Json:
     return json.dumps(self.getContents())
