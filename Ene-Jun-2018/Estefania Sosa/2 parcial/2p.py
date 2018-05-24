@@ -1,7 +1,7 @@
 import sqlite3
 
 def main():
-    conexion = sqlite3.connect('bd.db')
+    conexion = sqlite3.connect('2p.db')
     cursor = conexion.cursor()
 
     #crear tabla VIDEOJUEGO
