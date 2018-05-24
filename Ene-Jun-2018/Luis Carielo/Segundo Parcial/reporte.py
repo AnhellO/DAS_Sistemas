@@ -33,28 +33,31 @@ class Title:
     def getTitle(self):
         return "Title"
 
+    def Json(self):
+        return json.dumps(self.getTitle())
+
 class Date:
     def getDate(self):
         return "2018-05-23"
+
+    def Json(self):
+        return json.dumps(self.getDate())
 
 class Contents:
     def getContents(self, title="titulo", date="2018-05-23"):
         return "title:{}\ndate:{}".format(title, date)
 
-class Json:
-    return json.dumps(self.getContents())
+    def Json(self):
+        return json.dumps(self.getContents())
 
 titulo = Title()
-print(getTitle())
+print(titulo.getTitle())
 
 fecha = Date()
-print(getDate())
+print(fecha.getDate())
 
 contenido = Contents()
-print(getContents())
-
-yeison = Json()
-print(yeison)
+print(contenido.getContents())
 
 """
 Separé las funcionalidades en clases para que las peticiones sean más sencillas de implementar y
