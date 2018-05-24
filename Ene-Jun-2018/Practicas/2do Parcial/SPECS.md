@@ -86,6 +86,11 @@ print(project.process(tester))
 * Refactoriza implementando el `Open-Closed Principle`
 * Explica el porqué de tus cambios
 
+3. Crea un pequeño script en python` que haga lo siguiente con `SQLite`:
+* Crear una DB y conectarse a ella
+* Crear dos tablas en esa DB, una de `Consolas` y otra de `Videojuegos`. Las columnas de cada tabla son a elección propia, pero deben de ser mínimo 3
+* Realizar al menos una vez cada una de las operaciones `CRUD` para cada tabla. Hay que imprimir los resultados después de que cada operación fue aplicada (en caso de `DELETE`, algo que demuestre que el row se borró, en caso de `UPDATE`, el registro actualizado, etc.)
+
 ## Puntos Extra
 
 * Menos W.E.T. y más D.R.Y.
