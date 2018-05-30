@@ -2,7 +2,7 @@ from peewee import *
 
 db = SqliteDatabase('Libreria_db.db')
 
-class Libros(Model):
+class cLibros(Model):
 	id_libro = PrimaryKeyField(null=False)
 	nombre_libro = TextField()
 	autor_libro = ForeignKeyField(Autores, related_name="autor_detalle")
@@ -14,7 +14,7 @@ class Libros(Model):
 	def __str__(self):
 		return "Libro: {} {}\nAutor: {} {}\nEditorial: {}".format(self.id_libro, self.nombre_libro, self.autor_libro.nombre_autor, self.editorial_libro.editorial)
 
-class Autores(Model):
+class cAutores(Model):
 	id_autor = PrimaryKeyField(null=False)
 	nombre_autor = TextField()
 	apellidos_autor = TextField()
@@ -25,7 +25,7 @@ class Autores(Model):
 	def __str__(self):
 		return "ID:{}\nAutor:{} {}\nApellido:{}".format(self.id_autor, self.nombre_autor, self.apellidos_autor )
 
-class Consultas(Model):
+class cEditoriales(Model):
 	id_editorial =PrimaryKeyField(null=False)
 	editorial = TextField()
 	pais_editorial =TextField()
@@ -42,13 +42,13 @@ class CRUDPanel:
 	def insert_row(model, **datos):
 		model = model.lower()
 
-		if model == 'libros':
+		if model == 'cLibros':
 			return Doctores.create(**datos)
 
-		if model == 'autores':
+		if model == 'cAutores':
 			return Pacientes.create(**datos)
 
-		if model == 'editoriales':
+		if model == 'cEditoriales':
 			return Consultas.create(**datos)
 
 		else:
@@ -59,17 +59,17 @@ class CRUDPanel:
 	def select_row(model, *ids):
 		model = model.lower()
 		
-		if model == 'libros':
+		if model == 'cLibros':
 			if ids:
 				return [str(lib) for lib in Libros.select().where(*ids)]
 			return [str(lib) for lib in Libros.select()]
 
-		if model == 'autores':
+		if model == 'cAutores':
 			if ids:
 				return [str(aut) for aut in Autores.select().where(*ids)]
 			return [str(aut) for aut in Autores.select()]
 
-		if model == 'editoriales':
+		if model == 'cEditoriales':
 			if ids:
 				return [str(ed) for ed in Editoriales.select().where(*ids)]
 			return [str(ed) for ed in Editoriales.select()]
@@ -82,13 +82,13 @@ class CRUDPanel:
 	def update_row(model, *condicion, **datos):
 		model = model.lower()
 
-		if model == 'libros':
+		if model == 'cLibros':
 			return Libros.update(**datos).where(*condicion).execute()
 
-		if model == 'autores':
+		if model == 'cAutores':
 			return Autores.update(**datos).where(*condicion).execute()
 
-		if model == 'editoriales':
+		if model == 'cAditoriales':
 			return Editoriales.update(**datos).where(*condicion).execute()
 
 		else:
