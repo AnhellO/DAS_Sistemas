@@ -1,9 +1,9 @@
-from peewee import *
 
-db = SqliteDatabase('consultas_db.db')
+
+db = SqliteDatabase('LIBRERIA.db')
 
 #------------------------------ INSERTAR REGISTRO(S) A libros -------------------------------------#
-print(CRUDPanel.insert_row('Libros',nombre_libro="Cien años de soledad",nombre_autor="Gabriel ",editorial_libro=" Harper, Jonathan Cape"))
+print(CRUDPanel.insert_row('LIBROS',nombre_libro="Cien años de soledad",nombre_autor="Gabriel ",editorial_libro=" Harper, Jonathan Cape"))
 print(CRUDPanel.insert_row('Libros'nombre_libro="El señor de los anillos",nombre_autor="J. R. R",editorial_libro="George allen & uniwin"))
 print(CRUDPanel.insert_row('Libros',nombre_libro="1984",nombre_autor="George",editorial_libro="Secker and Warburg"))
 print(CRUDPanel.insert_row('Libros',nombre_libro="Un mundo feliz",nombre_autor="Aldous Huxley",editorial_libro="Edhasa"))

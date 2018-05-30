@@ -205,7 +205,7 @@ ins_lib99=Autores.create(id_autor="99",nombre_autor="Elsa",apellido_autor="Moran
 ins_lib100=Autores.create(id_autor="100",nombre_autor="Aldous",apellido_autor="Huxley")
 
 ########################### INSERTAR Editoriales #################################
-ins_ed1=Editoriales.create(id_editorial="1",editorial=" Harper, Jonathan Cape",pais_editrial="Reino Unido")
+ins_ed1=Editoriales.create(id_editorial="1",editorial="Harper, Jonathan Cape",pais_editrial="Reino Unido")
 ins_ed2=Editoriales.create(id_editorial="2",editorial="George Allen & Unwin",pais_editrial="Reino Unido")
 ins_ed3=Editoriales.create(id_editorial="3",editorial="Secker and Warburg",pais_editrial="Reino Unido")
 ins_ed4=Editoriales.create(id_editorial="4",editorial="Edhasa",pais_editrial="Reino Unido")
