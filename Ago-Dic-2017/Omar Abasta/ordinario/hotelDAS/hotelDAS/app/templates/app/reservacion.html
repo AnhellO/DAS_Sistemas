@@ -1,0 +1,18 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h3>{{ message }}</h3>
+
+    <div class="container">
+        <div class="col-md-12">
+            <form class = "form-style"  method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Agregar" />
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<center>
+ <form method="post">
+   {% csrf_token %}
+   <h3>¿Deseas eliminar la habitacion {{habitacion.Nombre}}?</h3>
+   <button class="btn btn-danger" type="submit">Eliminar</button>
+   <a class = "btn btn-default" href="{% url 'ver_habitacion' %}">Cancelar</a>
+ </form>
+ </center>
+{% endblock %}
