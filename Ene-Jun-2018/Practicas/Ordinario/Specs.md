@@ -49,8 +49,8 @@
 ## Puntos Extra (Calificación Final)
 
 * Menos W.E.T. y más D.R.Y.
-* Un solid principle más aparte del requerido
-* Un patrón de diseño más aparte del requerido
+* Un solid principle implementado
+* Un patrón de diseño implementado
 * Uso de un servidor remoto, CSS y/o JSS
 
 ## Referencias
