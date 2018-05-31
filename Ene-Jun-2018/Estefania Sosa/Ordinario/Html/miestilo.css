@@ -1,0 +1,12 @@
+
+body {
+    color: pink;
+	background-color: black;
+	margin: 10px;
+	padding: 25px;
+}
+p {
+    font-size: 12px;
+    line-height: 14px;
+    color: black;
+}
