@@ -29,5 +29,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+    #cursor.execute("INSERT INTO AUTOR (ID_AUTOR,NOMBRE,APELLIDO) VALUES(1,'YO','SOSA')")
+    #print(cursor.execute("SELECT * FROM AUTOR"))
+
 
  
