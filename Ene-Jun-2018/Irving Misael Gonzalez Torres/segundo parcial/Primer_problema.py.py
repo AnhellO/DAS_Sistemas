@@ -1,12 +1,11 @@
 class Report:
 
-    """docstring for Banda"""
     def __init__(self, **args):
         self.title = args.get('title')
         self.date = args.get('date')
 
 class Content:
-    """docstring for Impresor"""
+    
     def __init__(self, objeto = None):
         self.objetos = {}
 
