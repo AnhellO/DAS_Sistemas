@@ -5,8 +5,8 @@ baseD = SqliteDatabase('LIBRERIA.db')
 
 class AUTOR(Model):
     ID_AUTOR = PrimaryKeyField(null=False)
-    NOMBRE = TextField(null=False)
-    APELLIDO = TextField(null=False)
+    NOMBRE = TextField()
+    APELLIDO = TextField()
 
 
     class Meta:
@@ -48,18 +48,16 @@ class CRUDManager:
 	def store(model, **data):
 
 		model = model.lower()
-		print(model)
-		print(data)
 
 		if model == 'autor':
 			return AUTOR.create(**data)
-		elif model == 'editorial':
-			return EDITORIAL.create(**data)
-		elif model == 'libro':
-			return LIBRO.create(**data)
+		if model == 'ceditorial':
+			return Editorial.create(**data)
+		elif model == 'clibro':
+			return Libro.create(**data)
 		else:
 			return 'Modelo no existe'
-'''
+
 	@staticmethod
 	def select(model, *ids):
 		model = model.lower()
@@ -99,16 +97,14 @@ class CRUDManager:
 			return LIBRO.update(**data).where(*condicion).execute()
 		else:
 			return 'Modelo no existe'
-'''
-#CY = AUTOR.create('AUTOR','NOMBRE'='Infinity War','APELLIDO'='HYU')
-print(CRUDManager.store('AUTOR',ID_AUTOR=9,NOMBRE = 'esa',APELLIDO = 'quienHGHHHHsoy'))
-#print(AUTOR.select().where(AUTOR.ID_AUTOR==1).get())
+
+#c = AUTOR.create('AUTOR','NOM'='Infinity War','APELLIDO'='HYU')
+print(CRUDManager.store('AUTOR',ID_AUTOR=5,NOMBRE = 'ana',APELLIDO = 'quien'))
 
 #print(CRUDManager.store('EDITORIAL',ID_EDITORIAL=7,NOMBRE_EDITORIAL= 'MEX',PAIS = 'CHULULA'))
 
 #print(CRUDManager.store('LIBRO',ID_LIBRO=1,TITULO = 'GERRA',AUTOR_LIBRO = 'ana',EDITORIAL_LIBRO='MEX'))
 #l = LIBRO.select().where(LIBRO.TITULO == 'GERRA').get()
-
 
 '''
 print(CRUDManager.store(	'AUTOR',ID_AUTOR=	899	,	NOMBRE=	   '  	Nikolai	     '	,APELLIDO='ANONIMO'))
