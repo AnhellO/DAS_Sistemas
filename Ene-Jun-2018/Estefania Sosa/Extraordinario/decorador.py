@@ -1,23 +1,23 @@
-import abc
+from abc import ABC, abstractmethod
 
-''' el patron decorados agrega un al principal por lo que en cada clase 
+''' el patron decorados agrega un al principal por lo que en cada clase
 se agrega un decoracion diferente mediante las llamadas ala clase text y decorados '''
-class TextRenderer(metaclass=abc.ABCMeta):
+class TextRenderer(ABC):
 
     def __init__(self, text):
         self._text = text
 
-    @abc.abstractmethod
+    @abstractmethod
     def render(self):
         pass
 
 
-class Decorator(TextRenderer,metaclass=abc.ABCMeta):
+class Decorator(TextRenderer,ABC):
 
     def __init__(self, text):
         self._text = text
 
-    @abc.abstractmethod
+    @abstractmethod
     def render(self):
         return self._text
 
@@ -41,18 +41,20 @@ class DecoratorSubrayado(Decorator):
         return '<b><u><i>{}</i></u></b>'.format(self._text)
 
 class prueba(TextRenderer):
-    
+
     def __init__(self, text):
         self._text = text
 
 
     def render(self):
-        pass
+        return '{}'.format(self._text)
 
 def main():
 
-    inicio = prueba('III')
+    inicio = prueba("hello, pipol!")
+    inicio.render()
     decorado = DecoratorResaltado(inicio)
+    print(decorado.render())
     decorado2 = DecoratorCursiva(decorado)
     decorado3 = DecoratorSubrayado(decorado2)
     decorado3.render()
@@ -62,6 +64,7 @@ def main():
 
     #cursiva = DecoratorCursiva()
     #concrete_decorator_b.operation()
+
 
 
 if __name__ == "__main__":
