@@ -23,31 +23,28 @@ def p_decorate_aplicando(func):
    return func_wrapper
 
 class TextRenderer(object):
-    def __init__(self):
-        self.tn = "¡Texto normal!"
-        self.tr = "¡Texto Resaltado!"
-        self.trs = "¡Texto Resaltado y Subrayado!"
-        self.ap = "¡Aplicando todos los formatos!"
+    def __init__(self, texto):
+      self._texto = texto
 
 
     @p_decorate_textonormal
     def get_textosolo(self):
-        return self.tn
+        return self._texto
 
     @p_decorate_textoresultado
     def get_textoresultado(self):
-    	return self.tr
+    	return self._texto
 
     @p_decorate_textoreusltadoysub
     def get_textoresultadoysub(self):
-    	return self.trs
+    	return self._texto
 
     @p_decorate_aplicando
     def get_aplicando(self):
-    	return self.ap
+    	return self._texto
 
 if __name__ == '__main__':
-	my_textrender = TextRenderer()
+	my_textrender = TextRenderer("hello, pipol!")
 
 	print (my_textrender.get_textosolo())
 	print (my_textrender.get_textoresultado())
