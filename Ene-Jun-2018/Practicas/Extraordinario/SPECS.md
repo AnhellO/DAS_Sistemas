@@ -7,7 +7,7 @@
 
 1. Para el ejemplo de código en el archivo [decorator.py](decorator.py):
 
-* Implementa la funcionalidad necesaria para que el texto también pueda ser impreso de las siguientes maneras en HTML:
+* Implementa la funcionalidad necesaria (utilizando el patrón de diseño `Decorador`) para que el texto también pueda ser impreso de las siguientes maneras en HTML:
   * Resaltado: `<b>Texto</b>`
   * Cursiva: `<i>Texto</i>`
   * Subrayado: `<u>Texto</u>`
@@ -19,6 +19,7 @@
     <b><u>¡Texto Resaltado y Subrayado!</u></b>
     <b><u><i>¡Aplicando todos los formatos!</i></u></b>
   ```
+  * Basta con imprimir el texto a consola (ningún archivo HTML tiene que ser generado)
 * Explica la lógica implementada detrás de tu enfoque
 
 2. Para el ejemplo de código en el archivo [prisoner.py](prisoner.py):
