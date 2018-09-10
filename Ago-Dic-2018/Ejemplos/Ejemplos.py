@@ -42,5 +42,79 @@ print(miNuevaListilla)
 print(miListilla)
 
 miTupla = (1, 2, 3)
-miTupla[1] = []
+# Aquí falla ehhh -> miTupla[1] = []
 print(miTupla)
+
+# Sumatoria de Gauss y Números triangulares
+# (N * (N + 1)) / 2
+# print(int((3 * (3 + 1)) / 2))
+
+# Listas comprimidas
+print([2 ** i for i in range(0, 10)])
+
+frase = "Hola Buenas noches A!!!"
+print([i.upper() for i in frase if i in 'AEIOUaeiou'])
+
+# Diccionarios
+diccionario = {
+    'llave': 'valor'
+}
+
+elDiccionario = {
+    'A': [
+        'aguacate',
+        'armadura',
+        'avanzar'
+    ],
+    'E': [
+        'enfermo',
+        'error',
+        'elote'
+    ],
+    'I': [
+        'información',
+        'imagen',
+        'invisible'
+    ],
+    'O': [
+        'oreja',
+        'oso',
+        'olor'
+    ],
+    'U': [
+        'umbral',
+        'unicornio',
+        'uva'
+    ]
+}
+
+# Recorre los elementos del diccionario
+for llave, valor in elDiccionario.items():
+    print("Llave {} => Valor {}".format(llave, valor))
+
+# Recorre las tuplas que devuelve la función items()
+for llave in elDiccionario.items():
+    print(llave)
+
+# Recorre las llaves ordenadas e imprime el elemento[llave]
+for llave in sorted(elDiccionario.keys()):
+    print(elDiccionario[llave])
+
+
+def formatea(item):
+    if isinstance(item, list):
+        listaCopia = item[:]
+        listaCopia.append('agregao')
+        return "Una copia diferente -> {}".format(listaCopia)
+
+    return "Acá lo regresamos formateado -> {}".format(item)
+
+miLista = [1, 2]
+print(formatea(miLista))
+print(miLista)
+miLista2 = [3, 4]
+print(formatea(miLista2))
+print(miLista2)
+
+print(formatea('String'))
+print(formatea(64361349713976972364691))
