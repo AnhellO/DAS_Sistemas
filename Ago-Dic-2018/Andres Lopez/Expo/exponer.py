@@ -58,7 +58,6 @@ class LightSwitchClient(object):
         else:
             print("Argumento 'ON' o 'OFF' es requerido")
 
-# Execute if this file is run as a script and not imported as a module
 if __name__ == "__main__":
     light_switch = LightSwitchClient()
     print("Prueba de ON.")
