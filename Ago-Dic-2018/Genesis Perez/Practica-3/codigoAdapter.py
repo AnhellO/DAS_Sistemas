@@ -1,5 +1,6 @@
 # Example #1: Language Translator
 
+#Adaptee: Incompatible interface # 1
 class EnglishSpeaker:
         def responseToGreeting(self):
                 return "Hello to you too!"
