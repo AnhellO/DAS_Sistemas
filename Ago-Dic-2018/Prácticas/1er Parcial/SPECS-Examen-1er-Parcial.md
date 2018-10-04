@@ -44,6 +44,15 @@
   * Puedes utilizar los iteradores nativos de Python :wink:
   * Explica la lógica implementada detrás de tu enfoque
 
-#### Ejercicio 4
+#### Puntos extra sobre el parcial (1 punto por ejercicio extra :wink:)
 
-:wink:
+* Implementa el patrón de diseño `Factory Method` sobre la creación de objetos del **Ejercicio 1**
+* Para el ejemplo de código en el archivo [builder.py](builder.py), implementa la funcionalidad necesaria utilizando el patrón de diseño `Builder` para poder crear hochos y burguers al gusto del comenzal :smile:
+  * Ejemplo:
+    * Para una burguer vegetariana:
+   		``` python
+   		Preparamamos el pan!
+   		Agregamos las verduras!
+   		Agregamos los condimentos!
+   		La hacemos combo!
+   		```
