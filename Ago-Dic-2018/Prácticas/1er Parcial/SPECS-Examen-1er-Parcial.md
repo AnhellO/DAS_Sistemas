@@ -26,7 +26,7 @@
 * Para el ejemplo de código en el archivo [iterator.py](iterator.py):
   * Implementa la funcionalidad necesaria utilizando el patrón de diseño `Iterator`:
     * Para poder eliminar estaciones de radio del contenedor `Estaciones`
-    * Para poder recorrer/iterar la lista de estaciones de radio por medio del ciclo `for` comentado
+    * Para poder recorrer/iterar la lista de estaciones de radio por medio del ciclo `for` comentado en el ejemplo de código
   * Ejemplo:
     * Antes de borrar:
 	    ``` python
