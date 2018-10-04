@@ -1,4 +1,3 @@
-import math
 # Es necesario convertir n a entero para la operación porque de entrada
 # lo maneja como un string
 n = int(input('Define N: '))
