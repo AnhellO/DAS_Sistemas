@@ -12,18 +12,38 @@
 #### Ejercicio 2
 
 * Para el ejemplo de código en el archivo [decorator.py](decorator.py):
-  * Implementa la funcionalidad necesaria, utilizando el patrón de diseño `Decorador`, para que se le pueda agregar leche, vainilla, y/o canela al cafecito, y para que se pueda modificar su precio original en base a los ingredientes agregados. Ejemplo:
+  * Implementa la funcionalidad necesaria utilizando el patrón de diseño `Decorador` para que se le pueda agregar leche, vainilla, y/o canela al cafecito, y para que se pueda modificar su precio original en base a los ingredientes agregados
+  * Ejemplo:
     * `Cafecito! con Vainilla! A solo 32 pesitos!`
     * `Cafecito! con Leche! A solo 28 pesitos!`
     * `Cafecito! con Canela! A solo 30 pesitos!`
     * `Cafecito! con Leche! con Canela! A solo 33 pesitos!`
-  * Puedes utilizar los decoradores nativos de Python ;)
+  * Puedes utilizar los decoradores nativos de Python :wink:
   * Explica la lógica implementada detrás de tu enfoque
 
 #### Ejercicio 3
 
-;)
+* Para el ejemplo de código en el archivo [iterator.py](iterator.py):
+  * Implementa la funcionalidad necesaria utilizando el patrón de diseño `Iterator`:
+    * Para poder eliminar estaciones de radio del contenedor `Estaciones`
+    * Para poder recorrer/iterar la lista de estaciones de radio por medio del ciclo `for` comentado
+  * Ejemplo:
+    * Antes de borrar:
+	    ``` python
+	    89.9
+	    101.2
+	    102.3
+	    100.4
+	    ```
+	* Después de borrar `x` elemento:
+		``` python
+	    101.2
+	    102.3
+	    100.4
+		```
+  * Puedes utilizar los iteradores nativos de Python :wink:
+  * Explica la lógica implementada detrás de tu enfoque
 
 #### Ejercicio 4
 
-;)
+:wink:
