@@ -23,11 +23,15 @@ class Command(object):
 
 class TurnOnCommand(Command):
     """Comando para encender la luz"""
+    def __str__(self):
+        retun self._obj.turn_on()
     def execute(self):
         self._obj.turn_on()
 
 class TurnOffCommand(Command):
     """Comando para apagar la luz"""
+    def __str__(self):
+        retun  self._obj.turn_off()
     def execute(self):
         self._obj.turn_off()
 
@@ -58,7 +62,6 @@ class LightSwitchClient(object):
         else:
             print("Argumento 'ON' o 'OFF' es requerido")
 
-# Execute if this file is run as a script and not imported as a module
 if __name__ == "__main__":
     light_switch = LightSwitchClient()
     print("Prueba de ON.")
