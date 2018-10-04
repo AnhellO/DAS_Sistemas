@@ -118,3 +118,23 @@ print(miLista2)
 
 print(formatea('String'))
 print(formatea(64361349713976972364691))
+
+
+class Gato:
+
+    def __init__(self, nombre='', colorOjos='', color=''):
+        self.nombre = nombre
+        self.colorOjos = colorOjos
+        self.color = color
+
+    def __str__(self):
+        return 'Gatito: {}\nColor: {}\nOjos: {}'.format(self.nombre, self.color, self.colorOjos)
+
+gatito_1 = Gato('Micifus', 'verdes', 'verde')
+print(gatito_1)
+
+gatito_2 = Gato('Salem', 'cafes')
+print(gatito_2)
+
+gatito_3 = Gato()
+print(gatito_3)
