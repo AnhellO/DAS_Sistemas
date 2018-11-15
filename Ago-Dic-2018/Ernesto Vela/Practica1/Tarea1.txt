@@ -1,0 +1,25 @@
+Con tus propias palabras, indica la función de los siguientes comandos de git:
+
+git status:
+Te mostrara los archivos modificados, sin o con seguimiento, no confirmados, que se encuentran en tu working directory
+
+git add:
+Añade el contenido de tu working directory al area donde se hace el commit
+
+git commit:
+Identifica los cambios hechos en tu working directory, pero no los sube, solo de manera local
+ 
+git pull:
+Descarga archivos desde otro repositorio y despues los conbima con los tuyos
+
+git push:
+Checa los archivos que tu base local tiene, que no estan en otro repositorio, y los sube a dicho repo
+
+git log:
+Muestra el historial de la rama en la que te encuentras
+
+git tag:
+Pone un marcador permanente a un punto especifico en el historial
+
+git checkout:
+Se usa para cambiar de rama y checar el contenido de tu working directory
