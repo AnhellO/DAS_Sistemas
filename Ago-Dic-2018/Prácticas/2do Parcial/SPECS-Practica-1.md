@@ -90,7 +90,7 @@ print(project.process(tester))
 * Refactoriza implementando el `Open-Closed Principle`
 * Explica el porqué de tus cambios
 
-### Referencias
+## Referencias
 
 * [https://github.com/dboyliao/SOLID](https://github.com/dboyliao/SOLID)
 * [https://medium.com/web-engineering-vox/how-to-write-solid-code-that-doesnt-suck-2a3416623d48](https://medium.com/web-engineering-vox/how-to-write-solid-code-that-doesnt-suck-2a3416623d48)
