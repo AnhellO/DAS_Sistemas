@@ -9,7 +9,7 @@ cursor = db.cursor()
 for i in range(0,234):
 	ids.append(i)
 	i+=1
-    #print(ids)
+	
 	url = 'https://api.punkapi.com/v2/beers/'+ str(i)
 	request = requests.get(url)
 	
