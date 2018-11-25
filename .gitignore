@@ -2,3 +2,8 @@ __pycache__
 *.db
 virtual/
 archivitos-de-cache/
+archivitos-de-html/
+bin/
+include/
+lib/
+pip-selfcheck.json
