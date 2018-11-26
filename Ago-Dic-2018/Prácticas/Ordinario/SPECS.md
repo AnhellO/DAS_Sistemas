@@ -16,7 +16,7 @@
   * Agregar diagramas para:
     * Clases (diagramas de clase)
     * DB (diagrama entidad-relación)
-  * Descripción y especificaciones del funcionamiento de la app en un `README.md` (todo en formato MarkDown`), así como las herramientas utilizadas y las referencias que hayan consultado durante el desarrollo del proyecto. Pueden incluir los diagramas aquí en el archivo `.md`.
+  * Descripción y especificaciones del funcionamiento de la app en un `README.md` (todo en formato `MarkDown`), así como las herramientas utilizadas y las referencias que hayan consultado durante el desarrollo del proyecto. Pueden incluir los diagramas aquí en el archivo `.md`.
 
 ## Puntos Extra (Calificación Final)
 
