@@ -1,20 +1,20 @@
-# Reporte Taller de DOCKER!! 
+# Reporte Taller de DOCKER!!
 
 ### ¿Que es docker?
 
-Docker es un proyecto de código abierto 
-que automatiza el despliegue de aplicaciones 
-dentro de contenedores de software, proporcionando 
-una capa adicional de abstracción y automatización 
-de virtualización de aplicaciones 
+Docker es un proyecto de código abierto
+que automatiza el despliegue de aplicaciones
+dentro de contenedores de software, proporcionando
+una capa adicional de abstracción y automatización
+de virtualización de aplicaciones
 en múltiples sistemas operativos.
 
 ## ¿Que ventajas nos da docker?
 
-Docker desbloquea el potencial de una organización 
-al dar a los desarrolladores y al departamento 
+Docker desbloquea el potencial de una organización
+al dar a los desarrolladores y al departamento
 de TI la libertad de crear, administrar y proteger
-aplicaciones críticas para los negocios, sin el temor 
+aplicaciones críticas para los negocios, sin el temor
 de la tecnología o la infraestructura de bloqueo.
 
 ## Lo que aprendi en el taller.
@@ -28,18 +28,18 @@ los distintos recursos que nos proporciona.
 ### Comandos que aprendi
 
 - Docker version : saber con que version de docker contavamos.
-- Docker ps -a : saber que contenedores habian estan 
+- Docker ps -a : saber que contenedores habian estan
                  o habia sido puestos en ejecucion.
 - Docker images : poder ver con que imagenes contabamos
 - Docker history : observar modificaciones y fecha de las imagenes.
 
- ## ¿Que es una imagen en docker?
- 
+# Que es una imagen en docker
+
  Una imagen es una especie de plantilla
- una captura del estado de un contenedor. 
- Las imágenes se utilizan para crear 
+ una captura del estado de un contenedor.
+ Las imágenes se utilizan para crear
  contenedores, y nunca cambian.
- 
+
 
 # Reporte de conferencia Click It!!
 
