@@ -5,9 +5,9 @@
 - Desarrolla los ejemplos de código en tu computadora, y envíalos al repositorio de la materia, siguiendo los [lineamientos de contribución del repositorio](https://github.com/AnhellO/DAS_Sistemas#contributing). La carpeta en este caso tendría que llamarse `../Extraordinario/..`
 - Total Práctico: 100%
 
-#### Patrones de Diseño
+#### 1. Patrones de Diseño
 
-1. Para el ejemplo de código en el archivo [facade.py](facade.py):
+Para el ejemplo de código en el archivo [facade.py](facade.py):
 
 * Supongamos que necesitamos poder correr múltiples suites de tests para una nueva app que estamos desarrollando. Estas suites de tests pueden ser de diferentes tipos (unitarios, de regresión, de integración, etcétera). Implementa la funcionalidad necesaria utilizando el patrón de diseño `Facade` para que se puedan ejecutar todas estas suites de tests juntas, o bien, en grupos específicos (testsuite de integración y regresión, tests suites unitarios y de integración, etcétera). Ejemplos:
 * Ejecutando juntos las suites de tests unitarios y de integración:
@@ -53,15 +53,15 @@ Testsuite finalizada
 ```
 * Explica la lógica implementada detrás de tu enfoque
 
-#### S.O.L.I.D.
+#### 2. S.O.L.I.D.
 
-2. Parte del ejemplo de código en el archivo [figuras.py](figuras.py). A pesar de que un cuadrado es también un rectángulo, pero con todos sus lados iguales (matemáticamente hablando):
+Parte del ejemplo de código en el archivo [figuras.py](figuras.py). A pesar de que un cuadrado es también un rectángulo, pero con todos sus lados iguales (matemáticamente hablando):
 
 * ¿Qué mejoras y abstracciones podemos implementar para que el código sea más mantenible y cumpla con el `Liskov Substitution Principle`?
 * Implementa nueva funcionalidad para que ahora sea posible manejar círculos.
 * Agrega nueva funcionalidad a la clase `GeneradorGraficos` para poder dibujar los 3 tipos de figura (rectángulo, cuadrado y círculo) tomando en cuenta su área, y ahora también su perímetro
 * Explica el porqué de tus cambios
 
-#### Arquitectura
+#### 3. Arquitectura
 
-3. Crea una base de datos utilizando `SQLite 3` y python 3`, en la que consturyas 3 tablas diferentes, pero con relaciones entre sí. Inserta al menos 50 elementos en cada una de estas 3 tablas. Puedes hacerlo utilizando alguna API, o generando datos ficticios que se lean de un archivo por separado. Al final, imprime todos los elementos insertados por medio del mismo script de python. Puntos extras si lo haces utilizando la siguiente API: [https://lyricsovh.docs.apiary.io/#](https://lyricsovh.docs.apiary.io/#) :wink:
+Crea una base de datos utilizando `SQLite 3` y python 3`, en la que consturyas 3 tablas diferentes, pero con relaciones entre sí. Inserta al menos 50 elementos en cada una de estas 3 tablas. Puedes hacerlo utilizando alguna API, o generando datos ficticios que se lean de un archivo por separado. Al final, imprime todos los elementos insertados por medio del mismo script de python. Puntos extras si lo haces utilizando la siguiente API: [https://lyricsovh.docs.apiary.io/#](https://lyricsovh.docs.apiary.io/#) :wink:
