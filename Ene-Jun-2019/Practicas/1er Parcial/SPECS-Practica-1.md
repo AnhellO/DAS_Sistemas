@@ -13,3 +13,10 @@ Del libro `Python Crash Course` resolver los siguientes ejercicios:
 * Capítulo 9 (Clases)
   * Ejercicios: `9-6`, `9-7`, `9-8`, y `9-9`
   * Páginas 178
+
+## Requisitos
+* Enviar la práctica siguiendo los lineamientos del repositorio: [https://github.com/AnhellO/DAS_Sistemas/blob/development/README.md](https://github.com/AnhellO/DAS_Sistemas/blob/development/README.md)
+
+## Deadline
+
+* `2019-02-10`
