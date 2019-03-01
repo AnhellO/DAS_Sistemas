@@ -35,7 +35,7 @@
 
 #### Ejercicio 4
 
-* Para el ejemplo de código en el archivo [stategy.py](stategy.py):
+* Para el ejemplo de código en el archivo [strategy.py](strategy.py):
   * Implementa la funcionalidad necesaria utilizando el patrón de diseño `Strategy` para que se puedan jugar los 4 niveles del videojuego con los tres diferentes personajes **en una sola ejecución** del programa
   * Ejemplo para un personaje:
     * `Jugamos nivel 1 con Bowser: Fire!`
