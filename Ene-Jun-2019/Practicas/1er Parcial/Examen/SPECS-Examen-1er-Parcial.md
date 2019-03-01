@@ -6,6 +6,7 @@
 * Cada ejercicio deberá estar en una carpeta por separado, es decir `../Primer Parcial/Ejercicio 1/..`
 * Las pruebas de tus ejercicios (es decir, los objetos que instancies y las pruebas que hagas) deberán de estar dentro de la clase `main` para cada ejercicio
 * No es necesario leer un input/entrada desde la consola (terminal), pero puedes hacerlo si así gustas
+* **NO** envíes tu pull request ni hagas commit de tu código hasta la hora límite (`12:00pm` de hoy `Febrero 28, 2019`) para evitar que este sea copiado :wink:
 
 ## Ejercicios
 
