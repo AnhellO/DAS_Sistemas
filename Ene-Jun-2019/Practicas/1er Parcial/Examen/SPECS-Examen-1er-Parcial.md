@@ -4,6 +4,8 @@
 
 * Desarrolla los ejemplos de código en tu computadora, y envíalos al repositorio de la materia, siguiendo los [lineamientos de contribución del repositorio](https://github.com/AnhellO/DAS_Sistemas#contributing). La carpeta del examen tendrá que llamarse `../Primer Parcial/..`
 * Cada ejercicio deberá estar en una carpeta por separado, es decir `../Primer Parcial/Ejercicio 1/..`
+* Las pruebas de tus ejercicios (es decir, los objetos que instancies y las pruebas que hagas) deberán de estar dentro de la clase `main` para cada ejercicio
+* No es necesario leer un input/entrada desde la consola (terminal), pero puedes hacerlo si así gustas
 
 ## Ejercicios
 
