@@ -1,4 +1,4 @@
-# Engineering Activity 2019-02-14 - Code Golf
+# Python Practical Activity - Code Golf
 
 ## What does "Code Golf" stands for?
 
