@@ -1,6 +1,7 @@
 # Code Golf Challenges/Exercises
 
-You can begin by checking the following folder if you haven't done so yet :wink:: https://github.com/AnhellO/DAS_Sistemas/tree/development/Ene-Jun-2019/Ejemplos/Code%20Golf
+You can begin by checking the following folder if you haven't done so yet :wink:
+* https://github.com/AnhellO/DAS_Sistemas/tree/development/Ene-Jun-2019/Ejemplos/Code%20Golf
 
 ## Goal
 
@@ -16,7 +17,7 @@ You can begin by checking the following folder if you haven't done so yet :wink:
 ### 1.- Counting vowels
 
 ### Challenge
-* Simple task, count the number of vowels on the current file (yes, this Markdown file you are reading right now :smiley:), and output the results using the following format:
+* Simple task, count the number of vowels on the current file (yes, this Markdown file you are reading right now), and output the results using the following format:
 
 ```
 A: 10
