@@ -4,11 +4,13 @@
 
 * Aprender a utilizar más la habilidad de scripting de `Python` a través de la creación de una sencilla aplicación basada en línea de comandos
 * Aprender a manejar más las librerías externas/de-terceros de `Python`
+  * [`argparse`](https://docs.python.org/3/library/argparse.html)
+  * [`python-slugify`](https://github.com/un33k/python-slugify)
 
 ## Preparaciones
 
 * Si no tienes `pip`, instálalo en tu máquina local
-* Una vez que tengas `pip` funcionando, instala el siguiente paquete: https://github.com/un33k/python-slugify
+* Una vez que tengas `pip` funcionando, instala el siguiente paquete: [`python-slugify`](https://github.com/un33k/python-slugify)
 
 ## Especificaciones
 
