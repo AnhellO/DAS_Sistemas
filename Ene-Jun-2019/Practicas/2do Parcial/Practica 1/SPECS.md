@@ -1,4 +1,4 @@
-# Code Golf Challenges/Exercises
+# Práctica 1 - Code Golf Challenges/Exercises
 
 You can begin by checking the following folder if you haven't done so yet :wink:
 * https://github.com/AnhellO/DAS_Sistemas/tree/development/Ene-Jun-2019/Ejemplos/Code%20Golf
