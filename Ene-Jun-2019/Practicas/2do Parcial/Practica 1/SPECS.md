@@ -8,6 +8,7 @@ You can begin by checking the following folder if you haven't done so yet :wink:
 * Learn better & deeper the `Python` language
 * Learn about what "code golf" is, and the funny it can be
 * Solve the proposed challenges with the less number of characters possible in your code. Who knows, maybe you can win something if you are the better at this :wink:
+* You can't copy/paste & print the output from the `txt` file directly. Don't try to be that clever :wink:
 
 ## Specs
 
@@ -80,7 +81,7 @@ U: 10
 }
 ```
 
-Let's print them each one, on a separated line, alphabetically sorted in descending order by the state code, and with the following format:
+Let's print them each one on a separated line, alphabetically sorted in descending order by the state code, and following the following format:
 ```
 ...
 COA es el código ISO 3166-2 para el estado de Coahuila
