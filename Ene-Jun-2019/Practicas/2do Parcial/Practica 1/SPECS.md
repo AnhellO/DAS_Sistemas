@@ -90,3 +90,10 @@ COA es el código ISO 3166-2 para el estado de Coahuila
 
 #### Output file
 * [`states.txt`](states.txt)
+
+## Requirements
+* Send the practice following the repository guidelines at: [https://github.com/AnhellO/DAS_Sistemas/blob/development/README.md](https://github.com/AnhellO/DAS_Sistemas/blob/development/README.md)
+
+## Deadline
+
+* `2019-05-02`
