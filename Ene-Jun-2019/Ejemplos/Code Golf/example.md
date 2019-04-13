@@ -32,7 +32,7 @@
 
 For each of your code solutions, you should compare the generated output against the respective challenge text file. 
 
-You can use the following CLI command to perform the comparison: `diff output-file.txt <(php your-script-file.php);stat -f %z your-script-file.php`
+If you own a Linux based OS, you can use the following CLI command to perform the comparison: `diff output-file.txt <(php your-script-file.php);stat -f %z your-script-file.php`
 
 No differences should be spotted by the command above.
 
