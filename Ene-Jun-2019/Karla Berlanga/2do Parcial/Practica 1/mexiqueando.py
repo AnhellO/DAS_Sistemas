@@ -8,4 +8,4 @@ for i in range(48,79):
 d[s[79].split(':')[0][2:5]] = [s[79].split(':')[1][2:(len(s[79].split(':')[1])-2)]]
 r=sorted(d.items(), key=operator.itemgetter(0))
 r.reverse()
-for i in r: print(i[0].upper(),'es el código ISO 3166-2 para el estado de',i[1][0].capitalize())
+for i in r: print(i[0].upper(),'es el código ISO 3166-2 para el estado de',i[1][0].title())
