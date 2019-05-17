@@ -29,7 +29,7 @@
 
 * Partiendo del archivo JSON que generaste en el ejercicio anterior:
   * Modela y crea una base de datos en `SQLite` que se encargue de almacenar los usuarios existentes en el archivo JSON
-  * Crea un script en `python` que lea y procese el archivo JSON resultante para insertar los usuarios obtenidos desde la API en la base de datos
+  * Crea un nuevo script en `python` que lea y procese el archivo JSON resultante para insertar los usuarios obtenidos desde la API en la base de datos
 
 #### Ejercicio 4
 
@@ -38,3 +38,4 @@
   2. Contar cuantas mujeres existen al final en la base de datos
   3. Contar cuantos hombres existen al final en la base de datos
   4. Obtener todos usuarios existentes en la base de datos mostrando solamente su nombre completo, su email, y su dirección
+* Crea un archivo `.sql` con las consultas resultantes
