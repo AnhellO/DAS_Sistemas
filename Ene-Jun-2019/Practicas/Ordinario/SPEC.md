@@ -1,5 +1,9 @@
 # Ordinario
 
+## Objetivo
+
+Crear una especie de campaña de marketing por email que sugiera y/o recomiende animes y mangas a usuarios suscritos a una lista de correo electrónico
+
 ## Especificaciones
 
 * Desarrolla los ejemplos de código en tu computadora, y envíalos al repositorio de la materia, siguiendo los [lineamientos de contribución del repositorio](https://github.com/AnhellO/DAS_Sistemas#contributing). La carpeta del examen tendrá que llamarse `../Ordinario/..`
