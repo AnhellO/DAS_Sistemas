@@ -142,7 +142,7 @@ que seran necesarios para esta tercera parte """
 class Chimp():
     def __init__(self):
         #Se inicializa el cliente con la api generada en la pagina web y nuestro usuario
-        self.client = MailChimp(mc_api='591cd04cce86613128dc359476d8ac99-us20', mc_user='kberlanga')
+        self.client = MailChimp(mc_api='se_omite_por_seguridad', mc_user='kberlanga')
 
     def createCampaing(self):
         #Se defien este método para crear campañas que nos servirán para hacer marketing
@@ -318,18 +318,18 @@ h1,h2,h3{
         """}
 
     #Se genera el archivo HTML
-    fileHTML(data)
+    #fileHTML(data)
     mc = Chimp()
     #Se crea una campaña
-    mc.createCampaing()
+    #mc.createCampaing()
     #Se imprime, para verificar que se haya creado
-    print(mc.getCampaings())
+    #print(mc.getCampaings())
     #Se carga el contenido
-    mc.content('2ffbe77ed4',data)
+    #mc.content('392602a712',data)
     #Se envía un test de prueba
-    mc.test('2ffbe77ed4',{"test_emails":["karla_berlanga28@hotmail.com"],"send_type":"html"})
+    #mc.test('2ffbe77ed4',{"test_emails":["karla_berlanga28@hotmail.com"],"send_type":"html"})
     #Se envía la campaña
-    mc.send('2ffbe77ed4')
+    #print(mc.send('392602a712'))
 
 
 if __name__ == '__main__':

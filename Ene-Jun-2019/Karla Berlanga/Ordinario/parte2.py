@@ -6,7 +6,7 @@ proporciona el paquete mailchimp3 para poder conectarse a la API de MailChimp ""
 class Chimp():
     def __init__(self):
         #Se inicializa el cliente con la api generada en la pagina web y nuestro usuario
-        self.client = MailChimp(mc_api='591cd04cce86613128dc359476d8ac99-us20', mc_user='kberlanga')
+        self.client = MailChimp(mc_api='se_omite_por_seguridad', mc_user='kberlanga')
 
     def getAudiences(self):
         #En este método llamamos las audiencias/listas que tenemos en nuestra cuenta
