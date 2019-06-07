@@ -5,7 +5,7 @@
 * Desarrolla los ejemplos de código en tu computadora, y envíalos al repositorio de la materia, siguiendo los [lineamientos de contribución del repositorio](https://github.com/AnhellO/DAS_Sistemas#contributing). La carpeta del examen tendrá que llamarse `../Extraordinario/..`
 * Las pruebas de tus ejercicios (es decir, los objetos que instancies y las pruebas que hagas) deberán de estar dentro de la función `main` para cada ejercicio
 * No es necesario leer un input/entrada desde la consola (terminal), pero puedes hacerlo si así gustas
-* **NO** envíes tu pull request hasta la hora límite (`05:00am` del `Junio 2, 2019`) para evitar que este sea copiado :wink:
+* **NO** envíes tu pull request hasta la hora límite (`04:00am` de `Junio 7, 2019`) para evitar que este sea copiado :wink:
 
 ## Ejercicios
 
@@ -53,4 +53,4 @@ Para el ejemplo de código en el archivo [ocp.py](ocp.py):
 
 #### Deadline
 
-* `2019-06-07 03:00am`
+* `2019-06-07 04:00am`
