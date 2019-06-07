@@ -15,7 +15,7 @@
 
 Para el ejemplo de código en el archivo [composite.py](composite.py):
 
-* Implementa la funcionalidad necesaria utilizando el patrón de diseño [Composite`](https://sourcemaking.com/design_patterns/composite) para que sea posible crear una interfaz gráfica sencilla que contenga múltiples componentes, como sucedería en una GUI real.
+* Implementa la funcionalidad necesaria utilizando el patrón de diseño [`composite`](https://sourcemaking.com/design_patterns/composite) para que sea posible crear una interfaz gráfica sencilla que contenga múltiples componentes, como sucedería en una GUI real.
   * Algunos componentes pueden contener otros componentes, pero también hay componentes que no pueden/tengan que contener más componentes
   * Deberás de tomar la siguiente [imagen de ejemplo](https://semantic-ui.com/images/examples/login.png) como caso de prueba para tu implementación del patrón `composite`
   * Ejemplo:
@@ -39,8 +39,8 @@ Para el ejemplo de código en el archivo [ocp.py](ocp.py):
 * Analiza y refactoriza el código para utilizar el `Open/Closed Principle` de manera correcta
 * Explica la lógica implementada detrás de tu enfoque
 * Con base en el código/enfoque original y en los cambios que realizaste, contesta a las siguientes preguntas (puedes contestarlas con comentarios dentro de tu código):
-  * ¿Qué pasaría si quisieramos sumar las áreas de otros tipos de figuras?
-  * ¿Qué tendríamos que hacer para ahora poder sumar volúmenes además de las áreas?
+  * ¿Qué sucedería si quisieramos sumar las áreas de otros tipos de figuras?
+  * ¿Qué tendríamos que hacer para poder sumar volúmenes además de áreas?
 
 #### Ejercicio 3
 
