@@ -53,7 +53,7 @@ def main():
                     </tr>
                 </thead>"""
     for pais in list_of_paises:
-        string_html += "<tbody><tr><td>"+pais['name']+"<img class='img-thumbnail' src='" + pais['flag'] + "' width='300' height='300'> </td><td style='text-align:justify' class='texto'><b>Capital:</b> " + pais['capital'] + "<br><b>Region:</b> " + pais['region'] + "<br><b>Lenguajes:</b> " + pais['languages'] + "</td></tr>"
+        string_html += "<tbody><tr><td>"+pais['name']+"<img class='img-thumbnail' src='" + pais['flag'] + "' width='300' height='300'> </td><td style='text-align:justify' class='texto'><b>Capital:</b> " + pais['capital'] + "</td><td style='text-align:justify' class='texto'><b>Region:</b> " + pais['region'] + "</td><td style='text-align:justify' class='texto'><b>Lenguajes:</b> " + pais['languages'] + "</td></tr>"
 
     string_html += """</tbody></table><br><br><br><table align="center" style="width:80%" class="table table-striped">
     <thead style="background-color:indigo; color:white;" class="thead-black">
