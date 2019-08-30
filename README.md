@@ -32,4 +32,4 @@ Repositorio para las prácticas y proyectos de la materia de Diseño y Arquitect
 
 ## Acknowledgments
 
-- Ninguno... por el momento `>:O`
+- Ninguno... por el momento `:O`
