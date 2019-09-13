@@ -1,0 +1,26 @@
+git status:
+te espesifica todos los archivos nuevos o modificados que se deben confirmar
+
+git add:
+lo agrea al apartado para realizar el commit
+
+git commit:
+registra una copia del archivo en el repositorio pero no en github
+ 
+git pull:
+descarga los archivos del repositorio de otra persona y los gusrda
+en tu compu e incorpora los cambios
+
+git push:
+sube los archivos a github
+
+git log:
+te lista todos los commits
+
+git diff:
+muestra las diferencias entre el continente de las ramas
+
+git branch:
+enumera todas las ramas en el repositorio actual
+
+
