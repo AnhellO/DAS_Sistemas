@@ -6,7 +6,7 @@ from changingGuestList import sorryICant
 from guestList import inviteguests
 from random import randint 
 
-def inviteMoreGuests(list_guests,guestCant,guestReplace,list_newGuests,):
+def inviteMoreGuests(list_guests,guestCant,guestReplace,list_newGuests):
 
 	sorryICant(list_guests,guestCant,guestReplace)
 	print("Hi everyone, just now I just found a bigger dinner table")
