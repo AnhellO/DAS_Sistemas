@@ -16,7 +16,7 @@ suertudos = [
     'VELA TORRALBA ERNESTO'
 ]
 
-rand = random.sample(range(0, 13), 13)
+rand = random.sample(range(0, len(suertudos)), len(suertudos))
 
 for i in rand:
     print('Acá va un suertudo >:D...')
