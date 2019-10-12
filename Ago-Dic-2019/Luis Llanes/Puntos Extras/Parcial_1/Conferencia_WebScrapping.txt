@@ -1,0 +1,146 @@
+Parsing o web Scrapping
+
+Que es un webScrapping?
+
+	- Variedad de metodos para recolectar informacion de internet
+	- Se realiza generalmente con programas o scripts
+	- Se busca simular el comportamiento de un humano
+
+
+Historia:
+
+	- Rastreador web 
+	- Extraccion manual 
+	- Hojas de Calculo 
+	- Herramientas para descargar de sitios
+	- The Wayback Machine
+	- Servicios de Web Scrapping
+	- Web Scrapping basado en inteligencia artificial
+
+
+Legalidad
+
+	- Terminos de uso
+	- Aviso Legal
+	- Tema controversial. Depende de las leyes de cada pais
+
+
+	
+Uso de Web Scrapping
+
+	- Comparadores de monitoreo como:
+		* Kayak
+		* Trivago
+	
+	- Mineria de datos
+
+	- Extraccion de entradas en un blog
+
+
+Como se realiza
+
+	- Scripts (Expresiones regulares y librerias)
+	
+	- Frameworks(Scrapy,Request)
+
+	- Herramientas especializadas (import.io)
+
+	- Extensiones
+
+
+Aspectos a considerar
+	
+	- Frecuencia de extraccion 
+
+	- Monto de datos a extraer y recursos disponibles
+
+	- Accesibilidad al origen de datos
+
+	
+Obstaculos:
+	
+	- Sesiones de navegacion:
+		Requiere usuario y contraseña
+
+	- Uso de JavaScript
+
+	- Bloqueo
+
+	
+Soluciones:
+	
+	- Crear un usuario para acceder a la pagina
+
+	- Usar un Framework o herramienta basada en JavaScript
+
+	- Pool de IP's, servicios de resolucion de CAPTCHA, computer vision
+
+
+Que ocurre:
+	
+	Get:	Solucion GET simple
+
+	Post:	Emular un navegador
+
+		
+Patron
+	
+	Seccion de caracteres que se repite y tiene la misma estructura
+	Un molde de una secuencia de caracteres
+
+
+Expresiones Regulares:
+	
+	Crean patrones utilizados para encontrar determinada combinacion de caracteres dentro de una cadena de texto
+
+
+Para que se usa en justia??
+
+	Cada corte tiene su pagina web
+	crear scripts para que de forma automatizada extraer de todas las cortes lo casos de interes
+	En la pagina de justia se puede encontrar distintos casos por ejemplo
+	
+
+Por que es importante en general?
+
+	- Obtener listados de inmuebles en venta
+	
+	- Reunir direcciones de correo electronico o telefonos
+	
+	- Reunir reviews de productos de la competencia
+	
+	- Extraer informacion de redes sociales
+	
+	- Obtener cantidades masivas de datos fines de investigacion
+	
+	- Generar listas de perfiles de personas (reclutamiento)
+
+
+Para que me sirve a mi??
+
+	- Tener datos cuando inicie un sitio web desde cero
+
+	- Monitoreo el momento en que se abre la venta de boletos en alguna pagina
+
+	- Monitorear el precio de un producto 
+
+	- Conseguir trabajo
+
+
+Ejemplo practico
+	
+	Situacion:Un dia estamos comiendo con una persona que esta triste y nos comenta que tiene mucha tarea,
+	para que no se despeguen de la compu,
+	Entramos a google, sale wikipedia y es chingos de info
+
+		Creamos un programita que extraega los datos de ahi, visite las otras paginas de enlace
+		si es lo que ocupamos, sacamos el contenido que necesitamos, quitamos lo que no,
+		y ya directo a word con una libreria
+
+
+Link Relativo y Link Absoluto
+	En el ejemplo, la pagina de wikipedia tenia links, pero estos solo eran relativos,
+	pero pues en el programa se ocupan links absolutos para que funcione bien
+
+	link relativo viene siendo cuando faltan cosas de la url, haciendolos mas breves y eso,
+	y el link absoluto cuando ya esta completo, el protocolo, servidor, ruta, y todo eso
