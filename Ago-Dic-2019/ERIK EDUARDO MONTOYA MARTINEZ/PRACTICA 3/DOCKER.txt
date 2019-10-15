@@ -1,0 +1,14 @@
+DOCKER
+Docker es una herramienta de código abierto que automatiza y permite crear contenedores para ejecutar procesos de manera aislada de otros con el fin de mejorar el uso de la infraestructura y también permite implementar aplicaciones rápidamente, se ponía el ejemplo del desarrollo de un cuerpo humano creándole características como funciones (respiración, movimiento, etc.).
+El sistema es muy similar a las máquinas virtuales, los contenedores virtualizan el sistema operativo de un servidor con el fin de que cada uno de estos trabaje con una versión distinta de software.
+Docker nos permite tener un control de cada fase de nuestro proyecto, los agrupamos en el contenedor y los almacenamos en el disco duro.
+Con Docker, podemos trabajar con múltiples contenedores que comparte un mismo núcleo y a cada uno restringir la CPU que puede consumir. 
+Gracias a esto, podemos trabajar con diferentes aplicaciones.
+También el expositor comento el funcionamiento de los contenedores, utilizando el kernel del pc y las características que se tienen, al cual también tú le podías asignar el tamaño de recursos con los cuales podría trabajar.
+Usando Dockers, evitamos tener que descargar y almacenar gran número de librerías. Puesto que podremos desarrollar cada aplicación en contenedores independientes. Esta tarea reduce al mismo tiempo los residuos que se pueden haber creado durante el desarrollo y el propio desarrollo lo ejecutamos en unas condiciones óptimas ya que Docker nos permite trabajar en cualquier entorno.
+Un gran punto a tener en cuenta es que a la hora de desplegar un contenedor, trabajaremos que el sistema que hayamos definido nosotros, al cual le añadiremos la paquetería que consideremos necesaria y también podemos recurrir a versiones anteriores que se quedan almacenadas, para corregir errores o retroceder después de una modificación.
+Otro punto fue la seguridad, ya que se decía que "son y no son" seguros, por el hecho de que los usuarios requieren de los privilegios, los usuarios tienen acceso a los procesos y a donde se están almacenando, por lo también se vuelve vulnerable. 
+También da la facilidad de crear un contenedor con un servidor de Linux y puedes llevarlo a cualquiera otra distribución de Windows y Linux.
+También pueden ejercitarse en sistemas de la nube como Microsoft Azure.
+Muchas de las más grandes empresas del mundo utilizan este servicio para su funcionamiento, tal como Netflix, Disney, Spotify, PayPal.
+
