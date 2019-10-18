@@ -37,7 +37,7 @@
 * Para el ejemplo de código en el archivo [proxy.py](proxy.py):
   * Implementa la funcionalidad necesaria utilizando el patrón de diseño `Proxy` para que sea posible llevar a cabo las operaciones de la clase `Calculadora` por medio del proxy
     * `division()`: valida la división entre `0`
-    * `numerosPrimos()`: permite que sea posible obtener más números primos en base a una `memoria` dinámica dentro del objecto `Proxy`
+    * `numerosPrimos()`: permite que sea posible obtener más números primos en base a una `memoria` dinámica dentro del objeto `Proxy`
 
 ## Puntos extra sobre el parcial (1 por ejercicio extra :wink:)
 
