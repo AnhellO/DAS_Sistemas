@@ -18,7 +18,7 @@
   * Crea la función `main` en la cual instancies y juegues con al menos 5 objetos diferentes (en total) para cada una de las clases pedidas anteriormente
   * Crea una función dentro de tu test principal la cual reciba como parámetros una lista de objetos tipo vehículo y un tipo en específico (ya sea 'marítimo', 'terrestre' o 'aéreo'), y devuelva una nueva lista filtrada con los objetos del tipo especificado en el segundo parámetro
 
-#### Ejercicio 2 - Command Pattern
+#### Ejercicio 2 - Pattern Command
 
 * Para el ejemplo de código en el archivo [command.py](command.py):
   * Implementa la funcionalidad necesaria utilizando el patrón de diseño `Command` para poder llevar a cabo cada de unas de las acciones de la televisión por medio de la clase `ControlRemoto`
@@ -26,13 +26,13 @@
     * `Encendida!`
   * De acuerdo al patrón de diseño `Command`, debemos de tener la posibilidad de deshacer la acción realizada. Implementa la funcionalidad necesaria para poder deshacer cada acción llevada a cabo con la televisión
 
-#### Ejercicio 3
+#### Ejercicio 3 - Adapter Command
 
 * Para el ejemplo de código en el archivo [adapter.py](adapter.py):
   * Implementa la funcionalidad necesaria utilizando el patrón de diseño `Adapter` a nivel de objetos, de tal manera que podamos adaptar (valga la redundancia) cada uno de los diferentes enchufes para poder cargar instancias de la clase `Smartphone`
   * Salida esperada: `Voltaje: 5V -- Cargando...`
 
-#### Ejercicio 4
+#### Ejercicio 4 - Proxy Command
 
 * Para el ejemplo de código en el archivo [proxy.py](proxy.py):
   * Implementa la funcionalidad necesaria utilizando el patrón de diseño `Proxy` para que sea posible llevar a cabo las operaciones de la clase `Calculadora` por medio del proxy
