@@ -14,6 +14,13 @@ class Smartphone(object):
             print('Voltaje: {}V -- Cargando...'.format(voltaje_entrante))
 
 
+
+class Adapter(Smartphone):
+    def request(self):
+
+          self.__init__()
+          self._carga(5)
+
 class Enchufe(object):
     """docstring for Enchufe"""
     voltaje_de_salida = None
@@ -26,10 +33,8 @@ class EnchufeAmericano(Enchufe):
     """docstring for EnchufeAmericano"""
     voltaje_de_salida = 110
 
-class EnchufeAdaptadorEur(EnchufeEuropeo):
-    voltaje_de_salida=5
-
-
-
 smartphone = Smartphone()
-smartphone.carga(EnchufeAdaptadorEur(EnchufeEuropeo)) # Mestoy quemando :C!!!
+#smartphone.carga(EnchufeEuropeo) # Mestoy quemando :C!!!
+
+adapter=Adapter()
+adapter.request()
