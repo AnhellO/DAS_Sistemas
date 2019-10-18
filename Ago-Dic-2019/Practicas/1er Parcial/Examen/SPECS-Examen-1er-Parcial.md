@@ -28,12 +28,18 @@
 
 #### Ejercicio 3
 
-* Coming soon...
+* Para el ejemplo de código en el archivo [adapter.py](adapter.py):
+  * Implementa la funcionalidad necesaria utilizando el patrón de diseño `Adapter` a nivel de objetos, de tal manera que podamos adaptar (valga la redundancia) cada uno de los diferentes enchufes para poder cargar instancias de la clase `Smartphone`
+  * Salida esperada: `Voltaje: 5V -- Cargando...`
 
 #### Ejercicio 4
 
-* Coming soon...
+* Para el ejemplo de código en el archivo [proxy.py](proxy.py):
+  * Implementa la funcionalidad necesaria utilizando el patrón de diseño `Proxy` para que sea posible llevar a cabo las operaciones de la clase `Calculadora` por medio del proxy
+    * `division()`: valida la división entre `0`
+    * `numerosPrimos()`: permite que sea posible obtener más números primos en base a una `memoria` dinámica dentro del objecto `Proxy`
 
 ## Puntos extra sobre el parcial (1 por ejercicio extra :wink:)
 
-* Implementa tus soluciones de manera simple y sencilla por medio del estilo `syntactic sugar` de Python
+* Implementa tus soluciones de manera simple y sencilla por medio del estilo `syntactic sugar` de Python (listas comprimidas, diccionarios, `map`, argument unpacking, etc.)
+* Implementa el patrón de diseño `Builder` para poder crear instancias complejas de los diferentes tipos de `Vehiculo` del ejercicio 1
