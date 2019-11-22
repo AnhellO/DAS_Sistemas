@@ -42,7 +42,7 @@
 <table>
   <thead>
     <tr>
-      <th rowspan="3">ID</th>
+      <th>ID</th>
       <th>Artista</th>
       <th>Discos</th>
     </tr>
@@ -51,9 +51,11 @@
     <tr>
       <td>Id-1</td>
       <td>Audioslave</td>
-      <td>Out of Exile</td>
-      <td>Audioslave</td>
-      <td>Revelations</td>
+      <td rowspan="3">
+        Out of Exile<br/>
+        Audioslave<br/>
+        Revelations<br/>
+      </td>
     </tr>
     <tr>
       ...
