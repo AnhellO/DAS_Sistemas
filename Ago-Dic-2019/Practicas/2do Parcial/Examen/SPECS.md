@@ -18,10 +18,10 @@
 * Los datos consumidos deberán de ser guardados en una base de datos de `SQLite`. Los datos que deberás de obtener son los siguientes:
   * Todas las bandas cuyo `area.name = "Los Angeles"`
   * Las bandas deben de tener `tags` con la palabra `rock` y/o `metal` incluído en el `name` del tag
-  * Para cada una de las bandas deberas de almacenar los discos que lanzaron exclusivamente en los `US` (`country = "US"`)
+  * Debes de almacenar al menos 5 campos extras aparte del nombre de la banda en una tabla llamada `artistas` o similar
+  * Para cada una de las bandas deberas de almacenar los discos que lanzaron exclusivamente en los `US` (`country = "US"`), en otra tabla por separado a la de `artistas`
 
 #### Ejercicio 2 - Jugando con los datos
-
 
 
 #### Ejercicio 3 - Mostrando los datos
