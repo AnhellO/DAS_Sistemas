@@ -17,7 +17,7 @@
   * Ejemplo de endpoint de la API -> [`http://musicbrainz.org/ws/2/artist/020bfbb4-05c3-4c86-b372-17825c262094?fmt=json`](http://musicbrainz.org/ws/2/artist/020bfbb4-05c3-4c86-b372-17825c262094?fmt=json)
 * Los datos consumidos deberán de ser guardados en una base de datos de `SQLite`. Los datos que deberás de obtener son los siguientes:
   * Todas las bandas cuyo `area.name = "Los Angeles"`
-  * Las bandas deben de tener `tags` con la palabra `rock` y/o `metal` incluído en el name
+  * Las bandas deben de tener `tags` con la palabra `rock` y/o `metal` incluído en el `name` del tag
   * Para cada una de las bandas deberas de almacenar los discos que lanzaron exclusivamente en los `US` (`country = "US"`)
 
 #### Ejercicio 2 - Jugando con los datos
