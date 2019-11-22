@@ -24,11 +24,51 @@
 
 #### Ejercicio 2 - Jugando con los datos
 
-
+* En un archivo de `Python` por separado crea una clase llamada [`ORM`](https://stackoverflow.com/q/1279613/2946413), la cual nos permita acceder a cualquiera de las tablas creadas a partir del ejercicio anterior. La clase ORM nos debe de dar la posibilidad de llevar a cabo las siguientes rutinas;
+  * Obtener los datos de todos los artistas
+  * Obtener los datos de uno o varios artistas
+  * Obtener todos los discos de uno o varios artistas
+  * Obtener discos específicos de uno o varios artistas por medio de:
+    * id
+    * título del disco
+  * Contar cuantos artistas existen en la base de datos
+  * Contar cuantos discos tiene `X` artista
+  * Obtener todos los artistas cuyos `tags` incluyan un tag en específico pasado como parámetro, es decir `parameter_tag in tags`
+* Deberás de demostrar la funcionalidad de las rutinas requeridas anteriomente a través de la función `main`
 
 #### Ejercicio 3 - Mostrando los datos
 
-
-
+* Crea un script nuevo en `Python`, el cual genere un archivo `HTML` que contenga una `<table>` la cual agrupe a todos los artistas de la BD y sus respectivos discos de la siguiente manera:
+<table>
+  <thead>
+    <tr>
+      <th rowspan="3">ID</th>
+      <th rowspan="3">Artista</th>
+      <th>Discos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Id-1</td>
+      <td>Audioslave</td>
+      <td>Out of Exile</td>
+      <td>Audioslave</td>
+      <td>Revelations</td>
+    </tr>
+    <tr>
+      <!-- Otro artista... -->
+    </tr>
+    <tr>
+      <!-- Otro artista más... -->
+    </tr>
+    <tr>
+      <!-- Más artistas... -->
+    </tr>
+  </tbody>
+</table>
+* Recuerda que el `rowspan` puede ser variable :wink:
+* Puedes visualizar el archivo HTML abriéndolo directamente en tu navegador web
 
 ## Puntos extra sobre el parcial (1 por ejercicio extra :wink:)
+
+* Utilizar [`SQLAlchemy`](https://github.com/sqlalchemy/sqlalchemy) o [`Peewee`](https://github.com/coleifer/peewee) como ORM para las rutinas de `SQL` que necesitan llevarse a cabo en los ejercicios
