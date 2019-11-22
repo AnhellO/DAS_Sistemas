@@ -52,9 +52,9 @@
       <td>Id-1</td>
       <td>Audioslave</td>
       <td rowspan="3">
-        Out of Exile<br/>
-        Audioslave<br/>
-        Revelations<br/>
+        - Out of Exile<br/>
+        - Audioslave<br/>
+        - Revelations<br/>
       </td>
     </tr>
     <tr>
@@ -65,8 +65,6 @@
     </tr>
   </tbody>
 </table>
-
-* Recuerda que el `rowspan` puede ser variable :wink:
 * Puedes visualizar el archivo HTML abriéndolo directamente en tu navegador web
 
 ## Puntos extra sobre el parcial (1 por ejercicio extra :wink:)
