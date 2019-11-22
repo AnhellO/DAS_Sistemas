@@ -43,7 +43,7 @@
   <thead>
     <tr>
       <th rowspan="3">ID</th>
-      <th rowspan="3">Artista</th>
+      <th>Artista</th>
       <th>Discos</th>
     </tr>
   </thead>
@@ -56,16 +56,14 @@
       <td>Revelations</td>
     </tr>
     <tr>
-      <!-- Otro artista... -->
+      ...
     </tr>
     <tr>
-      <!-- Otro artista más... -->
-    </tr>
-    <tr>
-      <!-- Más artistas... -->
+      ...
     </tr>
   </tbody>
 </table>
+
 * Recuerda que el `rowspan` puede ser variable :wink:
 * Puedes visualizar el archivo HTML abriéndolo directamente en tu navegador web
 
