@@ -57,12 +57,6 @@
         - Revelations<br/>
       </td>
     </tr>
-    <tr>
-      ...
-    </tr>
-    <tr>
-      ...
-    </tr>
   </tbody>
 </table>
 * Puedes visualizar el archivo HTML abriéndolo directamente en tu navegador web
