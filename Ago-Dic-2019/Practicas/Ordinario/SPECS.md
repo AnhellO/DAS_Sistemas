@@ -3,16 +3,14 @@
 ## Especificaciones
 
 * Desarrolla los ejemplos de código en tu computadora, y envíalos al repositorio de la materia, siguiendo los [lineamientos de contribución del repositorio](https://github.com/AnhellO/DAS_Sistemas#contributing). La carpeta del examen tendrá que llamarse `../Ordinario/..`
-* Cada ejercicio deberá estar en una carpeta por separado, es decir `../Ordinario/..`
-* Las pruebas de tus ejercicios (es decir, los objetos que instancies y las pruebas que hagas) deberán de estar dentro de la función `main` para cada ejercicio
-* Incluye los archivos de tus bases de datos `.db` dentro del pull request final
-* **NO** envíes tu pull request ni hagas commit de tu proyecto hasta la hora límite (`20:00` del Domingo `1ero de Diciembre, 2019`) para evitar que este sea copiado :wink:
+* Incluye los archivos de tus bases de datos `.db` y los archivos `.html` generados dentro del pull request final
+* **NO** envíes tu pull request ni hagas commit de tu proyecto hasta la hora límite (`20:00` del Domingo `1º de Diciembre, 2019`) para evitar que este sea copiado :wink:
 
 ## Ejercicios
 
 #### Parte 1
 
-* Crea un script en `Python` que consuma datos de la siguiente API [`https://rickandmortyapi.com/`](https://rickandmortyapi.com/)
+* Crea un script en `Python` que consuma datos de la siguiente API: [`https://rickandmortyapi.com/`](https://rickandmortyapi.com/)
 * Los datos consumidos deberán de ser guardados en una base de datos de `SQLite` de la siguiente manera
   * Guardar cada uno de los `characters` en una tabla de `personajes` o `characters`, con todos los campos posibles
   * Guardar cada una de los `locations` en una tabla de `locaciones` o `locations`, con todos los campos posibles
@@ -24,13 +22,13 @@
 
 * Con otro script nuevo en `Python`, y utilizando [`SQLAlchemy`](https://github.com/sqlalchemy/sqlalchemy) o [`Peewee`](https://github.com/coleifer/peewee) como `ORM`:
   * Genera un archivo estático `index.html`, el cual contenga un enlace a cada una de las entidades/tablas en la base de datos
-  * Para cada una de las entidades también deberás de generar un archivo de índice `.html`, el cual ahora lista cada una de las filas/registros existentes para esa entidad
+  * Para cada una de las entidades también deberás de generar un archivo de índice `.html`, el cual ahora liste cada una de las filas/registros existentes para esa entidad
   * Para finalizar, para cada registro existente ahora deberás de generar un archivo `.html` el cual contenga la información específica de ese registro
-  * Puedes revisar el directorio de [`ejemplo`](ejemplo/) como base para llevar a cabo los puntos anteriores
+  * Puedes tomar el directorio de [`ejemplo`](ejemplo/) como base para llevar a cabo los puntos anteriores
 
 #### Parte 3
 
-* Crea otro script nuevo en `Python`, el cual haga exactamento lo mismo que en la **Parte 2**, pero ahora generando las páginas dinámicamente ([estático vs dinámico](http://cefire.edu.gva.es/file.php/1/Comunicacion_y_apertura/B3_PaginaWeb/pgina_web_esttica_vs_dinmica.html))
+* Crea una pequeña app/script en `Python`, el cual haga exactamente lo mismo que en la **Parte 2**, pero ahora generando las páginas dinámicamente, es decir, sin crear archivos `.html` -> ([estático vs dinámico](http://cefire.edu.gva.es/file.php/1/Comunicacion_y_apertura/B3_PaginaWeb/pgina_web_esttica_vs_dinmica.html))
   * Para este paso puedes utilizar cualquier herramienta o librería externa que te sea útil
 
 ## Recursos
