@@ -71,6 +71,7 @@ class dbartistas():
 #print("----------------------------------------------------")
 #pprint.pprint(a['artist-list'][2]['tag-list'])
 #b = musicbrainzngs.search_recordings(country="US", limit= 1)
+
 class dbDiscos():
     def getdiscos(diccionario):
         musicbrainzngs.set_useragent('musicbrainzngs', '2.0')
@@ -172,15 +173,15 @@ def main():
     dbArt.agregar()
     dbArt.seleccionar()
 
-    dbdisc = dbDiscos()
-    dbdisc.creacion_tabla_discos()
-    dbdisc.agregar_discos()
-    dbdisc.creacion_tabla_discos()
-    dbdisc.get_nombres()
-    db.getdiscos()
+    #dbdisc = dbDiscos()
+    #dbdisc.creacion_tabla_discos()
+    #dbdisc.agregar_discos()
+    #dbdisc.creacion_tabla_discos()
+    #dbdisc.get_nombres()
+    #db.getdiscos()
 
-    html = htmlDiscos()
-    html.htmlprint()
+    #html = htmlDiscos()
+    #html.htmlprint()
 
 
 if __name__ == "__main__":
