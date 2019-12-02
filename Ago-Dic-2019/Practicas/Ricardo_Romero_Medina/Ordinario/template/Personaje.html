@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <form action="http://127.0.0.1:5000/Personaje" method="GET">
+        </form>
+    <table>
+        <thead>
+            <td>Id</td>
+            <td>Nombre</td>
+            <td>Status</td>
+            <td>Species</td>
+            <td>Origin</td>
+            <td>Type</td>
+            <td>Location</td>
+            <td>id_locacion</td>
+            <td>Episode</td>
+            <td>id_episodio</td>
+            <td>Url</td>
+        </thead>
+        {% for row in lineas %}
+            <tr>
+                <td>{{row['Id']}}</td>
+                <td>{{row['Nombre']}}</td>
+                <td>{{row['Status']}}</td>
+                <td>{{row['Species']}}</td>
+                <td>{{row['Origin']}}</td>
+                <td>{{row['Type']}}</td>
+                <td>{{row['Location']}}</td>
+                <td>{{row['id_locacion']}}</td>
+                <td>{{row['Episode']}}</td>
+                <td>{{row['id_episodio']}}</td>
+                <td>{{row['Url']}}</td>
+            </tr>
+        {% endfor %}   
+    </table>
+</body>
+</html>
