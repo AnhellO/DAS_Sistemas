@@ -1,0 +1,1133 @@
+database.db
+Conectado a SQLite
+
+obteniendo 100 artistas diferentes de 'Los Angeles' 'Metal' o 'Rock' ... <<<<<<<<<< 
+
+
+obtenido, Limpiando base de datos.. <<<<<<<<<< 
+ 
+
+Limpia y almacenando.. <<<<<<<<<< 
+
+
+Almacenados <<<<<<<<<< 
+
+
+obteniendo de la base de datos e imprimiendo... <<<<<<<<<< 
+
+[('Los Angeles', '1948-12-03', 'Ozzy Osbourne', 'male', 'Person', 100, 3906), ('Los Angeles', 'EMPTY', 'Fear Factory', 'EMPTY', 'EMPTY', 97, 3907), ('Los Angeles', '1967-08-21', 'Serj Tankian', 'male', 'Person', 94, 3908), ('Los Angeles', '1957-11-26', 'Top Jimmy Page', 'male', 'Person', 90, 3909), ('Los Angeles', '1942-03-09', 'John Cale', 'male', 'Person', 90, 3910), ('Los Angeles', 'EMPTY', 'Filter', 'EMPTY', 'EMPTY', 89, 3911), ('Los Angeles', '1970-03-05', 'John Frusciante', 'male', 'Person', 88, 3912), ('Los Angeles', 'EMPTY', 'My Ruin', 'EMPTY', 'EMPTY', 87, 3913), ('Los Angeles', '1963-02-19', 'Seal', 'male', 'Person', 87, 3914), ('Los Angeles', 'EMPTY', '16', 'EMPTY', 'EMPTY', 87, 3915), ('Los Angeles', 'EMPTY', 'Yellowcard', 'EMPTY', 'EMPTY', 86, 3916), ('Los Angeles', 'EMPTY', 'Socionic', 'EMPTY', 'EMPTY', 86, 3917), ('Los Angeles', 'EMPTY', 'Sasquatch', 'EMPTY', 'EMPTY', 85, 3918), ('Los Angeles', 'EMPTY', 'Solar Haze', 'EMPTY', 'EMPTY', 85, 3919), ('Los Angeles', 'EMPTY', 'No Age', 'EMPTY', 'EMPTY', 84, 3920), ('Los Angeles', 'EMPTY', 'Faith and the Muse', 'EMPTY', 'EMPTY', 84, 3921), ('Los Angeles', '1948-01-16', 'John Carpenter', 'male', 'Person', 83, 3922), ('Los Angeles', 'EMPTY', 'Behold! The Monolith', 'EMPTY', 'EMPTY', 83, 3923), ('Los Angeles', 'EMPTY', 'Mississippi Sludge', 'EMPTY', 'EMPTY', 83, 3924), ('Los Angeles', 'EMPTY', 'Sisters ov the Blackmoon', 'EMPTY', 'EMPTY', 83, 3925), ('Los Angeles', 'EMPTY', 'Zig Zags', 'EMPTY', 'EMPTY', 82, 3926), ('Los Angeles', 'EMPTY', 'Two Steps From Hell', 'EMPTY', 'EMPTY', 82, 3927), ('Los Angeles', '1946-05-07', 'Thelma Houston', 'female', 'Person', 82, 3928), ('Los Angeles', '1984-09-09', 'Austin Wintory', 'male', 'Person', 82, 3929), ('Sherman Oaks, Los Angeles', '1947-12-31', 'Burton Cummings', 'male', 'Person', 82, 3930), ('Los Angeles', 'EMPTY', 'Nova Cycle', 'EMPTY', 'EMPTY', 82, 3931), ('Los Angeles', 'EMPTY', 'The Crystal Method', 'EMPTY', 'EMPTY', 82, 3932), ('Los Angeles', 'EMPTY', 'The Crashtones', 'EMPTY', 'EMPTY', 82, 3933), ('Los Angeles', 'EMPTY', 'Witches of God', 'EMPTY', 'EMPTY', 81, 3934), ('Los Angeles', 'EMPTY', 'Witherfall', 'EMPTY', 'EMPTY', 81, 3935), ('Los Angeles', 'EMPTY', 'Sweet Eve', 'EMPTY', 'EMPTY', 81, 3936), ('Los Angeles', 'EMPTY', 'Scars on Broadway', 'EMPTY', 'EMPTY', 81, 3937), ('Los Angeles', 'EMPTY', 'Wand', 'EMPTY', 'EMPTY', 81, 3938), ('Los Angeles', '1983-03-02', 'Deuce', 'male', 'Person', 81, 3939), ('Los Angeles', 'EMPTY', 'Act of Defiance', 'EMPTY', 'EMPTY', 81, 3940), ('Los Angeles', 'EMPTY', 'Nokturne', 'EMPTY', 'EMPTY', 81, 3941), ('Los Angeles', 'EMPTY', 'The Rare Breed', 'EMPTY', 'EMPTY', 81, 3942), ('Los Angeles', 'EMPTY', 'Chokebore', 'EMPTY', 'EMPTY', 81, 3943), ('Los Angeles', '1946-12-05', 'Andy Kim', 'male', 'Person', 81, 3944), ('Los Angeles', 'EMPTY', 'Yidhra', 'EMPTY', 'EMPTY', 81, 3945), ('Los Angeles', '1961-07-26', 'Keiko Matsui', 'female', 'Person', 81, 3946), ('Los Angeles', '1965-05-11', 'Greg Dulli', 'male', 'Person', 81, 3947), ('Los Angeles', '1975-03-27', 'Skee-Lo', 'male', 'Person', 81, 3948), ('Los Angeles', '1978-11-10', 'Diplo', 'male', 'Person', 80, 3949), ('Los Angeles', 'EMPTY', 'The Regrettes', 'EMPTY', 'EMPTY', 80, 3950), ('Los Angeles', 'EMPTY', 'The Ultras', 'EMPTY', 'EMPTY', 80, 3951), ('Los Angeles', '1988-04-28', 'Emma Hewitt', 'female', 'Person', 80, 3952), ('Los Angeles', 'EMPTY', 'DJ Nu‐Mark', 'EMPTY', 'EMPTY', 80, 3953), ('Los Angeles', '1975-04-06', 'Leigh Bardugo', 'female', 'Person', 80, 3954), ('Los Angeles', 'EMPTY', 'Level', 'EMPTY', 'EMPTY', 80, 3955), ('Los Angeles', 'EMPTY', 'The Pierces', 'EMPTY', 'EMPTY', 80, 3956), ('Los Angeles', '1970-02-03', 'Richie Kotzen', 'male', 'Person', 80, 3957), ('Los Angeles', '1944-10-29', 'Denny Laine', 'male', 'Person', 80, 3958), ('Los Angeles', '1975-03-27', 'Fergie', 'female', 'Person', 80, 3959), ('Los Angeles', 'EMPTY', 'Dead End Sky', 'EMPTY', 'EMPTY', 80, 3960), ('Los Angeles', 'EMPTY', 'Echosmith', 'EMPTY', 'EMPTY', 80, 3961), ('Los Angeles', 'EMPTY', 'Sweetwater', 'EMPTY', 'EMPTY', 80, 3962), ('Los Angeles', 'EMPTY', 'Worldview', 'EMPTY', 'EMPTY', 80, 3963), ('Los Angeles', 'EMPTY', 'Deathkings', 'EMPTY', 'EMPTY', 80, 3964), ('Los Angeles', '1937-08-06', 'Charlie Haden', 'male', 'Person', 79, 3965), ('Los Angeles', 'EMPTY', 'Orgone', 'EMPTY', 'EMPTY', 79, 3966), ('Los Angeles', 'EMPTY', 'SelloRekT / LA Dreams', 'EMPTY', 'EMPTY', 79, 3967), ('Los Angeles', 'EMPTY', 'Android Lust', 'EMPTY', 'EMPTY', 79, 3968), ('Los Angeles', 'EMPTY', '3TEETH', 'EMPTY', 'EMPTY', 79, 3969), ('Los Angeles', 'EMPTY', 'Deadsy', 'EMPTY', 'EMPTY', 79, 3970), ('Los Angeles', '1962-12-11', 'Paul Haslinger', 'male', 'Person', 79, 3971), ('Los Angeles', 'EMPTY', 'The Zenith Passage', 'EMPTY', 'EMPTY', 79, 3972), ('Los Angeles', '1992-07-18', 'Bishop Briggs', 'female', 'Person', 79, 3973), ('Los Angeles', 'EMPTY', 'The Record Company', 'EMPTY', 'EMPTY', 79, 3974), ('Los Angeles', '1970', 'Sascha Dikiciyan', 'male', 'Person', 79, 3975), ('Los Angeles', '1978', 'Lord Time', 'male', 'Person', 79, 3976), ('Los Angeles', '1974-09-18', 'Xzibit', 'male', 'Person', 79, 3977), ('Los Angeles', '1962-08-18', 'Johnny Klimek', 'male', 'Person', 79, 3978), ('Los Angeles', 'EMPTY', 'Reign of Lies', 'EMPTY', 'EMPTY', 79, 3979), ('Los Angeles', '1963-12-11', 'Jon Brion', 'male', 'Person', 79, 3980), ('Los Angeles', 'EMPTY', 'Future Usses', 'EMPTY', 'EMPTY', 79, 3981), ('Los Angeles', 'EMPTY', 'Crowhurst', 'EMPTY', 'EMPTY', 79, 3982), ('Los Angeles', '1943-01-03', 'Van Dyke Parks', 'male', 'Person', 79, 3983), ('Los Angeles', '1955-06-23', 'Glenn Danzig', 'male', 'Person', 79, 3984), ('Los Angeles', '1965-11-27', 'Richard Cheese', 'male', 'Person', 78, 3985), ('Los Angeles', 'EMPTY', 'Swarvy', 'EMPTY', 'EMPTY', 78, 3986), ('Los Angeles', 'EMPTY', 'The Absurd', 'EMPTY', 'EMPTY', 78, 3987), ('Los Angeles', '1942-12-30', 'Michael Nesmith', 'male', 'Person', 78, 3988), ('Los Angeles', 'EMPTY', 'Van William', 'EMPTY', 'EMPTY', 78, 3989), ('Los Angeles', 'EMPTY', 'Funki Porcini', 'EMPTY', 'EMPTY', 78, 3990), ('Los Angeles', 'EMPTY', '9Electric', 'EMPTY', 'EMPTY', 78, 3991), ('Los Angeles', 'EMPTY', 'Welter In Thy Blood', 'EMPTY', 'EMPTY', 78, 3992), ('Los Angeles', 'EMPTY', 'Levitation Room', 'EMPTY', 'EMPTY', 78, 3993), ('Los Angeles', '1962-08-25', 'Vivian Campbell', 'male', 'Person', 78, 3994), ('Los Angeles', '1977', 'John Paesano', 'male', 'Person', 78, 3995), ('Los Angeles', '1958-10-22', 'Virgil Donati', 'male', 'Person', 78, 3996), ('Los Angeles', 'EMPTY', 'Joseph Trapanese', 'EMPTY', 'EMPTY', 78, 3997), ('Los Angeles', '1984-05-07', 'Gareth Coker', 'male', 'Person', 78, 3998), ('Los Angeles', '1973-06-23', 'Luciana', 'female', 'Person', 78, 3999), ('Los Angeles', 'EMPTY', 'Hour Glass', 'EMPTY', 'EMPTY', 78, 4000), ('Los Angeles', 'EMPTY', 'The Hidden Depths', 'EMPTY', 'EMPTY', 78, 4001), ('Los Angeles', 'EMPTY', 'clipping.', 'EMPTY', 'EMPTY', 78, 4002), ('Los Angeles', '1991', 'Koda', 'male', 'Person', 78, 4003), ('Los Angeles', 'EMPTY', 'Conjure One', 'EMPTY', 'EMPTY', 78, 4004), ('Los Angeles', 'EMPTY', 'Course of Nature', 'EMPTY', 'EMPTY', 78, 4005)]
+{[0][Los Angeles,1948-12-03,Ozzy Osbourne,male,Person,100]}
+{[1][Los Angeles,EMPTY,Fear Factory,EMPTY,EMPTY,97]}
+{[2][Los Angeles,1967-08-21,Serj Tankian,male,Person,94]}
+{[3][Los Angeles,1957-11-26,Top Jimmy Page,male,Person,90]}
+{[4][Los Angeles,1942-03-09,John Cale,male,Person,90]}
+{[5][Los Angeles,EMPTY,Filter,EMPTY,EMPTY,89]}
+{[6][Los Angeles,1970-03-05,John Frusciante,male,Person,88]}
+{[7][Los Angeles,EMPTY,My Ruin,EMPTY,EMPTY,87]}
+{[8][Los Angeles,1963-02-19,Seal,male,Person,87]}
+{[9][Los Angeles,EMPTY,16,EMPTY,EMPTY,87]}
+{[10][Los Angeles,EMPTY,Yellowcard,EMPTY,EMPTY,86]}
+{[11][Los Angeles,EMPTY,Socionic,EMPTY,EMPTY,86]}
+{[12][Los Angeles,EMPTY,Sasquatch,EMPTY,EMPTY,85]}
+{[13][Los Angeles,EMPTY,Solar Haze,EMPTY,EMPTY,85]}
+{[14][Los Angeles,EMPTY,No Age,EMPTY,EMPTY,84]}
+{[15][Los Angeles,EMPTY,Faith and the Muse,EMPTY,EMPTY,84]}
+{[16][Los Angeles,1948-01-16,John Carpenter,male,Person,83]}
+{[17][Los Angeles,EMPTY,Behold! The Monolith,EMPTY,EMPTY,83]}
+{[18][Los Angeles,EMPTY,Mississippi Sludge,EMPTY,EMPTY,83]}
+{[19][Los Angeles,EMPTY,Sisters ov the Blackmoon,EMPTY,EMPTY,83]}
+{[20][Los Angeles,EMPTY,Zig Zags,EMPTY,EMPTY,82]}
+{[21][Los Angeles,EMPTY,Two Steps From Hell,EMPTY,EMPTY,82]}
+{[22][Los Angeles,1946-05-07,Thelma Houston,female,Person,82]}
+{[23][Los Angeles,1984-09-09,Austin Wintory,male,Person,82]}
+{[24][Sherman Oaks, Los Angeles,1947-12-31,Burton Cummings,male,Person,82]}
+{[25][Los Angeles,EMPTY,Nova Cycle,EMPTY,EMPTY,82]}
+{[26][Los Angeles,EMPTY,The Crystal Method,EMPTY,EMPTY,82]}
+{[27][Los Angeles,EMPTY,The Crashtones,EMPTY,EMPTY,82]}
+{[28][Los Angeles,EMPTY,Witches of God,EMPTY,EMPTY,81]}
+{[29][Los Angeles,EMPTY,Witherfall,EMPTY,EMPTY,81]}
+{[30][Los Angeles,EMPTY,Sweet Eve,EMPTY,EMPTY,81]}
+{[31][Los Angeles,EMPTY,Scars on Broadway,EMPTY,EMPTY,81]}
+{[32][Los Angeles,EMPTY,Wand,EMPTY,EMPTY,81]}
+{[33][Los Angeles,1983-03-02,Deuce,male,Person,81]}
+{[34][Los Angeles,EMPTY,Act of Defiance,EMPTY,EMPTY,81]}
+{[35][Los Angeles,EMPTY,Nokturne,EMPTY,EMPTY,81]}
+{[36][Los Angeles,EMPTY,The Rare Breed,EMPTY,EMPTY,81]}
+{[37][Los Angeles,EMPTY,Chokebore,EMPTY,EMPTY,81]}
+{[38][Los Angeles,1946-12-05,Andy Kim,male,Person,81]}
+{[39][Los Angeles,EMPTY,Yidhra,EMPTY,EMPTY,81]}
+{[40][Los Angeles,1961-07-26,Keiko Matsui,female,Person,81]}
+{[41][Los Angeles,1965-05-11,Greg Dulli,male,Person,81]}
+{[42][Los Angeles,1975-03-27,Skee-Lo,male,Person,81]}
+{[43][Los Angeles,1978-11-10,Diplo,male,Person,80]}
+{[44][Los Angeles,EMPTY,The Regrettes,EMPTY,EMPTY,80]}
+{[45][Los Angeles,EMPTY,The Ultras,EMPTY,EMPTY,80]}
+{[46][Los Angeles,1988-04-28,Emma Hewitt,female,Person,80]}
+{[47][Los Angeles,EMPTY,DJ Nu‐Mark,EMPTY,EMPTY,80]}
+{[48][Los Angeles,1975-04-06,Leigh Bardugo,female,Person,80]}
+{[49][Los Angeles,EMPTY,Level,EMPTY,EMPTY,80]}
+{[50][Los Angeles,EMPTY,The Pierces,EMPTY,EMPTY,80]}
+{[51][Los Angeles,1970-02-03,Richie Kotzen,male,Person,80]}
+{[52][Los Angeles,1944-10-29,Denny Laine,male,Person,80]}
+{[53][Los Angeles,1975-03-27,Fergie,female,Person,80]}
+{[54][Los Angeles,EMPTY,Dead End Sky,EMPTY,EMPTY,80]}
+{[55][Los Angeles,EMPTY,Echosmith,EMPTY,EMPTY,80]}
+{[56][Los Angeles,EMPTY,Sweetwater,EMPTY,EMPTY,80]}
+{[57][Los Angeles,EMPTY,Worldview,EMPTY,EMPTY,80]}
+{[58][Los Angeles,EMPTY,Deathkings,EMPTY,EMPTY,80]}
+{[59][Los Angeles,1937-08-06,Charlie Haden,male,Person,79]}
+{[60][Los Angeles,EMPTY,Orgone,EMPTY,EMPTY,79]}
+{[61][Los Angeles,EMPTY,SelloRekT / LA Dreams,EMPTY,EMPTY,79]}
+{[62][Los Angeles,EMPTY,Android Lust,EMPTY,EMPTY,79]}
+{[63][Los Angeles,EMPTY,3TEETH,EMPTY,EMPTY,79]}
+{[64][Los Angeles,EMPTY,Deadsy,EMPTY,EMPTY,79]}
+{[65][Los Angeles,1962-12-11,Paul Haslinger,male,Person,79]}
+{[66][Los Angeles,EMPTY,The Zenith Passage,EMPTY,EMPTY,79]}
+{[67][Los Angeles,1992-07-18,Bishop Briggs,female,Person,79]}
+{[68][Los Angeles,EMPTY,The Record Company,EMPTY,EMPTY,79]}
+{[69][Los Angeles,1970,Sascha Dikiciyan,male,Person,79]}
+{[70][Los Angeles,1978,Lord Time,male,Person,79]}
+{[71][Los Angeles,1974-09-18,Xzibit,male,Person,79]}
+{[72][Los Angeles,1962-08-18,Johnny Klimek,male,Person,79]}
+{[73][Los Angeles,EMPTY,Reign of Lies,EMPTY,EMPTY,79]}
+{[74][Los Angeles,1963-12-11,Jon Brion,male,Person,79]}
+{[75][Los Angeles,EMPTY,Future Usses,EMPTY,EMPTY,79]}
+{[76][Los Angeles,EMPTY,Crowhurst,EMPTY,EMPTY,79]}
+{[77][Los Angeles,1943-01-03,Van Dyke Parks,male,Person,79]}
+{[78][Los Angeles,1955-06-23,Glenn Danzig,male,Person,79]}
+{[79][Los Angeles,1965-11-27,Richard Cheese,male,Person,78]}
+{[80][Los Angeles,EMPTY,Swarvy,EMPTY,EMPTY,78]}
+{[81][Los Angeles,EMPTY,The Absurd,EMPTY,EMPTY,78]}
+{[82][Los Angeles,1942-12-30,Michael Nesmith,male,Person,78]}
+{[83][Los Angeles,EMPTY,Van William,EMPTY,EMPTY,78]}
+{[84][Los Angeles,EMPTY,Funki Porcini,EMPTY,EMPTY,78]}
+{[85][Los Angeles,EMPTY,9Electric,EMPTY,EMPTY,78]}
+{[86][Los Angeles,EMPTY,Welter In Thy Blood,EMPTY,EMPTY,78]}
+{[87][Los Angeles,EMPTY,Levitation Room,EMPTY,EMPTY,78]}
+{[88][Los Angeles,1962-08-25,Vivian Campbell,male,Person,78]}
+{[89][Los Angeles,1977,John Paesano,male,Person,78]}
+{[90][Los Angeles,1958-10-22,Virgil Donati,male,Person,78]}
+{[91][Los Angeles,EMPTY,Joseph Trapanese,EMPTY,EMPTY,78]}
+{[92][Los Angeles,1984-05-07,Gareth Coker,male,Person,78]}
+{[93][Los Angeles,1973-06-23,Luciana,female,Person,78]}
+{[94][Los Angeles,EMPTY,Hour Glass,EMPTY,EMPTY,78]}
+{[95][Los Angeles,EMPTY,The Hidden Depths,EMPTY,EMPTY,78]}
+{[96][Los Angeles,EMPTY,clipping.,EMPTY,EMPTY,78]}
+{[97][Los Angeles,1991,Koda,male,Person,78]}
+{[98][Los Angeles,EMPTY,Conjure One,EMPTY,EMPTY,78]}
+{[99][Los Angeles,EMPTY,Course of Nature,EMPTY,EMPTY,78]}
+
+obteniendo (5) discos para cada artista (solo de eu) ... <<<<<<<<<< 
+
+
+obtenida, imprimiendo ... <<<<<<<<<< 
+
+
+guardando en base de datos ... <<<<<<<<<< 
+
+[Ozzy Osbourne,Diary of a Madman,US]
+[Ozzy Osbourne,No More Tears,US]
+[Ozzy Osbourne,Bark at the Moon,US]
+[Ozzy Osbourne,Blizzard of Ozz,US]
+[Ozzy Osbourne,Just Say Ozzy,US]
+[Fear Factory,Digimortal,US]
+[Fear Factory,Slave Labor EP,US]
+[Fear Factory,The Best of Fear Factory,US]
+[Fear Factory,Cars,US]
+[Fear Factory,Descent,US]
+[Serj Tankian,Harakiri,US]
+[Serj Tankian,Orca Symphony No. 1,US]
+[Serj Tankian,1915: Original Motion Picture Soundtrack,US]
+[Serj Tankian,Imperfect Harmonies,US]
+[Serj Tankian,Empty Walls,US]
+[Jimmy Page,The Jimmy Page Collection,GB]
+[Jimmy Page,Jimmy Page and Friends,EMPTY]
+[Jimmy Page,The Jimmy Page Collection: Have Guitar, Will Travel,US]
+[Top Jimmy Page,WalKing on The MOOn 79-11,US]
+[Top Jimmy Page,Songs,US]
+[John Cale,Caribbean Sunset,US]
+[John Cale,HoboSapiens,US]
+[John Cale,Even Cowgirls Get the Blues,US]
+[John Cale,Honi Soit,US]
+[John Cale,23 Solo Pieces for La Naissance de L'amour,US]
+[Filter,The Very Best Things: 1995–2008,US]
+[Filter,The Very Best Things: 1995–2008,US]
+[Filter,The Trouble With Angels,US]
+[Filter,The Trouble With Angels,US]
+[Filter,Where Do We Go From Here: The Remixes,US]
+[John Frusciante,The Empyrean,US]
+[John Frusciante,Inside of Emptiness,US]
+[John Frusciante,Estrus EP,US]
+[John Frusciante,To Record Only Water for Ten Days,US]
+[John Frusciante,The Empyrean,US]
+[My Ruin,A Prayer Under Pressure of Violent Anguish,US]
+[My Ruin,The Brutal Language,US]
+[My Ruin,Blasphemous Girl,US]
+[My Ruin,Speak & Destroy,US]
+[My Ruin,The Shape of Things to Come...,US]
+[Seal,Best 1991-2004,US]
+[Seal,Crazy,US]
+[Seal,Seal,US]
+[Seal,Seal,US]
+[Seal,Soul,US]
+[16,Crystal,US]
+[16,Curves That Kick,US]
+[16,Wash Me / Texas Tunnel,US]
+[16,Lifespan of a Moth,US]
+[16,Blaze of Incompetence,US]
+[Yellowcard,Paper Walls,US]
+[Yellowcard,Paper Walls,US]
+[Yellowcard,Where We Stand,US]
+[Yellowcard,For You, and Your Denial,US]
+[Yellowcard,2003-08-02: Vans Warped Tour: Park Place, Barrie, ON, Canada,US]
+[Socionic,Dividing Horizon,US]
+[Socionic,Dividing Horizon,US]
+[Socionic,Identity,US]
+[John Hartford,Aereo-Plain,US]
+[¡Forward, Russia!,Give Me a Wall,US]
+[Sasquatch,Sasquatch,US]
+[Sasquatch,II,US]
+[Sasquatch,III,US]
+[Sasquatch,IV,US]
+[Sasquatch,Maneuvers,XW]
+[Solar Haze,Solar Haze,XW]
+[Haze,In the End: 1978 - 1988,US]
+[Haze,3er round,ES]
+[Haze,Amor por un club,ES]
+[Haze,Deadhunters Are Back,ES]
+[No Age,Losing Feeling,US]
+[No Age,Slow Gag,US]
+[No Age,Teen Creeps,US]
+[No Age,Nouns,US]
+[No Age,Snares Like a Haircut,US]
+[Faith and the Muse,Live in Mainz, Germany - October 16th, 1997,US]
+[Faith and the Muse,Annwyn, Beneath the Waves,US]
+[Faith and the Muse,Evidence of Heaven,US]
+[Faith and the Muse,Evidence of Heaven,US]
+[Faith and the Muse,Evidence of Heaven,US]
+[John Carpenter,Prince of Darkness,US]
+[John Carpenter,Big Trouble in Little China,US]
+[John Carpenter,Anthology: Movie Themes 1974-1998,US]
+[John Carpenter,Halloween: Original Motion Picture Soundtrack,US]
+[John Carpenter,Halloween: The best of John Carpenter,US]
+[Behold! The Monolith,Behold! The Monolith,XW]
+[The Monolith,Here Comes the Monolith,US]
+[The Monolith,Here Comes the Monolith,XW]
+[The Monolith,Meet You at the Monolith,US]
+[Behold! The Monolith,Defender, Redeemist,US]
+[Mississippi Sludge,Biscuits & Slavery,SE]
+[Sludge,The Well,CH]
+[Sludge,Sweet Daisy,CH]
+[Sludge,Lava,DK]
+[Sludge,Yellow Acid Rain,DK]
+[Sisters ov the Blackmoon,Blood Cauldron,XW]
+[Ov,The Moon Is Down,US]
+[Blackmoon Graffiti,Echoes of My Tribe,EMPTY]
+[Blackmoon Spells,Boundaries of Sorrow,EMPTY]
+[Blackmoon Spells,Kalten Melancholie,EMPTY]
+[Zig Zags,Ripping Death B/W Riddle of Steel,US]
+[Zig Zags,Slime EP,US]
+[Zig Zags,Running out of Red,US]
+[Zig Zags,Zig Zags,US]
+[Zig Zags,They’ll Never Take Us Alive,US]
+[Two Steps From Hell,Archangel,US]
+[Two Steps From Hell,Invincible,US]
+[Two Steps From Hell,Christmas Medley,US]
+[Two Steps From Hell,Power of Darkness Anthology,US]
+[Two Steps From Hell,Battlecry Anthology,US]
+[Thelma Houston,Sunshower,US]
+[Thelma Houston,Ride to the Rainbow,US]
+[Thelma Houston,The Devil in Me,US]
+[Thelma Houston,Any Way You Like It,US]
+[Thelma Houston,Any Way You Like It,US]
+[Austin Wintory,The Banner Saga 3,US]
+[Austin Wintory,Transfiguration,US]
+[Austin Wintory,Assassin's Creed Syndicate: Original Game Soundtrack,US]
+[Austin Wintory,ABZÛ,US]
+[Austin Wintory,Tooth and Tail,US]
+[Burton Cummings,Woman Love,US]
+[Burton Cummings,Burton Cummings,US]
+[Burton Cummings,Plus Signs,US]
+[Burton Cummings,My Own Way to Rock,US]
+[Burton Cummings,The Best of Burton Cummings,CA]
+[Nova Cycle,Nova Cycle,XW]
+[Nova Cycle,Nova Cycle,PL]
+[Cycle,Roller Coaster,US]
+[Cycle,The Fall of a Demi-God,US]
+[Cycle,Rollercoaster,US]
+[The Crystal Method,The Crystal Method,US]
+[The Crystal Method,The Crystal Method,US]
+[The Crystal Method,The Crystal Method,EMPTY]
+[The Crystal Method,The Crystal Method,XE]
+[The Crystal Method,The Crystal Method,XW]
+[The Crashtones,Colorful of the Stereo,US]
+[The Crashtones,Revenge of the Crashtones,EMPTY]
+[The The,Mind Bomb,US]
+[The The,Soul Mining,US]
+[The The,Solitude,US]
+[Witches of God,The Blood of Others,US]
+[Soldier of God,Soldier of God,US]
+[Eyes of God,Eyes of God,US]
+[Witches of God,They Came To Kill,XW]
+[Witches of God,The Blood of Others,XW]
+[Witherfall,Nocturnes and Requiems,US]
+[Witherfall,Nocturnes and Requiems,US]
+[Witherfall,Nocturnes and Requiems,JP]
+[Witherfall,A Prelude to Sorrow,XW]
+[Witherfall,A Prelude to Sorrow,XE]
+[Sweet Eve,Shadow Over Me,US]
+[Sweet Eve,The Immortal Machine,US]
+[Eve,Ruff Ryders' First Lady,US]
+[Eve,Scorpion,US]
+[Eve,Eve-Olution,US]
+[Scars on Broadway,Scars on Broadway,US]
+[Scars on Broadway,Scars on Broadway,US]
+[Scars on Broadway,Scars on Broadway,US]
+[Scars on Broadway,Scars on Broadway,DE]
+[Scars on Broadway,Scars on Broadway,GB]
+[Wand,Ganglion Reef,US]
+[Wand,Plum,US]
+[Wand,"From a Capsule Underground",US]
+[Wand,Perfume,US]
+[Wand,Plum,US]
+[Deuce,Deuce,US]
+[Deuce,Nine Lives,US]
+[Deuce,Fallen Stone,US]
+[Deuce,Bitch This Is It,US]
+[Deuce,Nine Lives,US]
+[Defiance,A Decade of Defiance,EMPTY]
+[Act of Defiance,Birth and the Burial,US]
+[Act of Defiance,Birth and the Burial,US]
+[Act of Defiance,Old Scars, New Wounds,GB]
+[Act of Defiance,M.I.A.,XW]
+[Nokturne,Embracer of the Dark Ages,US]
+[Nokturne,Wargod Domination,US]
+[Nokturne,Curse of Nazarene,US]
+[Nokturne,Kruelty Kampaign,US]
+[John Hartford,Aereo-Plain,US]
+[The Shrine,Rare Breed,XE]
+[The Rare Breed,Beg, Borrow and Steal,US]
+[The Rare Breed,Looking for Today,XW]
+[Cloud 9ine KO,Rare Breed Society,US]
+[The BREED,Smunchiiez,XW]
+[Chokebore,Days of Nothing,US]
+[Chokebore,Black Black,US]
+[Chokebore,Throats to Hit / Nobody,US]
+[Chokebore,Anything Near Water,US]
+[Chokebore,A Taste for Bitters,US]
+[Andy Kim,Baby, I Love You,US]
+[Andy Kim,Greatest Hits 1968-1984,US]
+[Andy Kim,Andy Kim,US]
+[Andy Kim,It's Decided,XW]
+[Andy Kim,Andy Kim,CA]
+[Yidhra,Cult of Bathory,XW]
+[Yidhra,Hexed,XW]
+[Loretta Lynn,Just a Woman,US]
+[Temple of the Dog,Temple of the Dog,US]
+[Sede Vacante,In Nomine Peste Dominus,US]
+[Keiko Matsui,No Borders,US]
+[Keiko Matsui,Full Moon and the Shrine,US]
+[Keiko Matsui,Dream Walk,US]
+[Keiko Matsui,Deep Blue,US]
+[Keiko Matsui,Deep Blue,US]
+[Greg Dulli,Live at Triple Door,US]
+[Greg Dulli,Greg Dulli’s Amber Headlights,US]
+[Greg Dulli,Dangerous Highway: A Tribute to the Songs of Eddie Hinton, Volume 1,US]
+[Greg Dulli,2015-02-18: Live In New York, Bowery Ballroom, New York, NY,US]
+[Greg Dulli,Have Yourself a Merry Little Christmas,US]
+[Skee-Lo,I Wish,US]
+[Skee-Lo,I Wish,US]
+[Skee-Lo,I Wish,CH]
+[Skee-Lo,I Can't Stop,DE]
+[Skee-Lo,I Wish,DE]
+[Diplo,Florida,US]
+[Diplo,Express Yourself,US]
+[Diplo,Express Yourself,US]
+[Diplo,California (remixes),US]
+[Diplo,Revolution,US]
+[The Regrettes,Hey Now,US]
+[The Regrettes,California Friends,US]
+[The Regrettes,Attention Seeker,US]
+[The Regrettes,Poor Boy,US]
+[The Regrettes,Feel Your Feelings Fool!,US]
+[The Ultras,Surf-Pop-Sludge,US]
+[The Ultras,The Complete Handbook of Songwriting,US]
+[Ultras,Napoleon,XW]
+[ULTRAS,ULTRAS,XW]
+[Dick Dale, The Ultras, and Alpha 60,Rocket Jockey,US]
+[Emma Hewitt,Burn the Sky Down (The Remixes) (Extended Versions),XW]
+[Emma Hewitt,Miss You Paradise,XW]
+[Emma Hewitt,Burn the Sky Down,XW]
+[Emma Hewitt,Rewind,NL]
+[Emma Hewitt,2012-03-31: A State of Trance #550, "Den Bosch, The Netherlands, A State of Pink, Part 8: Emma Hewitt": Brabanthallen, Den Bosch, The Netherlands,EMPTY]
+[Slimkid3,Slimkid3 & DJ Nu-Mark,US]
+[Slimkid3,Slimkid3 & DJ Nu-Mark,US]
+[DJ Nu‐Mark,Broken Sunlight,US]
+[DJ Nu‐Mark,Hands On,US]
+[DJ Nu‐Mark,Take Me With You,US]
+[Leigh Bardugo,Das Lied der Krähen,DE]
+[Leigh Bardugo,Shadow and Bone,XW]
+[Leigh Bardugo,Das Gold der Krähen,DE]
+[Leigh Nash,Wishing for This,US]
+[Leigh Nash,Remixed,US]
+[Level,Level,US]
+[Level,Opale,JP]
+[Level,Aeus, Part 1,GB]
+[Level,Cycla,JP]
+[Level,Level,JP]
+[The Pierces,Thirteen Tales of Love and Revenge,US]
+[The Pierces,The Pierces,US]
+[The Pierces,The Pierces,US]
+[The Pierces,You'll Be Mine,GB]
+[The Pierces,Light of the Moon,EMPTY]
+[Richie Kotzen,Fever Dream,US]
+[Richie Kotzen,Break It All Down,US]
+[Richie Kotzen,Slow,US]
+[Richie Kotzen,Instrumental Collection,US]
+[Richie Kotzen,The Inner Galactic Fusion Experience,US]
+[Denny Laine,Ahh... Laine!,US]
+[Denny Laine,Japanese Tears,NL]
+[Denny Laine,Anyone Can Fly,GB]
+[Denny Laine,Holly Days,GB]
+[Denny Laine,Holly Days,FR]
+[Fergie,Fergalicious,US]
+[Fergie,The Dutchess: Deluxe,US]
+[Fergie,Double Dutchess,US]
+[Fergie,Double Dutchess,US]
+[Fergie,The Dutchess,US]
+[Dead End Sky,Always,US]
+[Dead End Sky,When You Fall,US]
+[Dead End Sky,Tomorrow Can't Wait,XW]
+[DEAD END,Ghost of Romance,US]
+[DEAD END,Shámbara,US]
+[Echosmith,Cool Kids,US]
+[Echosmith,Acoustic Dreams,US]
+[Echosmith,Talking Dreams,US]
+[Echosmith,Goodbye,US]
+[Echosmith,Talking Dreams,US]
+[Sweetwater,Cycles,US]
+[Sweetwater,Sweetwater,US]
+[Sweetwater,Just for You,US]
+[Sweetwater,Sweetwater,US]
+[Sweetwater Abilene,The Giant Ate the Rainbow,US]
+[Worldview,The Chosen Few,XW]
+[F.L.E.X,Let Me Go,US]
+[Billy Idol,Charmed Life,US]
+[Gary Moore,After Hours,US]
+[The Chieftains,Film Cuts,US]
+[Deathkings,Destroyer,XW]
+[Snoop Dogg,Ups and Downs / Bang Out,US]
+[Ismael Rivera y Sus Cachimbos,De Colores,US]
+[Artery Eruption,Gouging Out Eyes of Mutilated Infants,US]
+[Los Skarnales,Vatos rudos,US]
+[Charlie Haden,The Golden Number,US]
+[Charlie Haden,Not in Our Name,US]
+[Charlie Haden,Liberation Music Orchestra,US]
+[Charlie Haden,Closeness Duets,US]
+[Charlie Haden,Liberation Music Orchestra,US]
+[Orgone,The Killion Floor,US]
+[Orgone,Bacano,US]
+[Orgone,Cali Fever,US]
+[Orgone,Cali Fever,US]
+[Orgone,Killion Vaults,US]
+[SelloRekT / LA Dreams,Best of SelloRekT / LA Dreams 2013/2014,XW]
+[SelloRekT / LA Dreams,FlashBack 1986,US]
+[SelloRekT / LA Dreams,The Best of 2012/2013,US]
+[SelloRekT / LA Dreams,Scan Lines,US]
+[SelloRekT / LA Dreams,Avenue Electric,US]
+[Android Lust,Rarities, Demos & B-Sides,US]
+[Android Lust,Rarities, Demos & B-Sides,US]
+[Android Lust,The Human Animal,US]
+[Android Lust,Devour, Rise, and Take Flight,US]
+[Android Lust,Crater, Volume 1,US]
+[3TEETH,Dissolve (Seraphim System remix),US]
+[3TEETH,3TEETH,CA]
+[3TEETH,DEGRADE,XW]
+[3TEETH,ATROPHY,XW]
+[3TEETH,<shutdown.exe>,XW]
+[Deadsy,Deadsy,US]
+[Deadsy,Phantasmagore,US]
+[Deadsy,The Key to Gramercy Park / Mansion World,US]
+[Deadsy,Commencement,US]
+[Deadsy,Commencement,US]
+[Paul Haslinger,Underworld,US]
+[Paul Haslinger,Underworld: Rise of the Lycans,US]
+[Paul Haslinger,Need For Speed: Undercover (Original Videogame Soundtrack),US]
+[Paul Haslinger,Shoot 'em Up,US]
+[Paul Haslinger,Death Race: Original Motion Picture Soundtrack,US]
+[The Zenith Passage,Cosmic Dissonance,US]
+[The Zenith Passage,Solipsist,US]
+[The Zenith Passage,Solipsist,XW]
+[Zenith,Flowers Of Intelligence,US]
+[Zenith,The Flowers Of Intelligence,US]
+[Bishop Briggs,Be Your Love,US]
+[Bishop Briggs,Bishop Briggs,US]
+[Bishop Briggs,River,US]
+[Bishop Briggs,Wild Horses,US]
+[Bishop Briggs,Bishop Briggs,US]
+[The Record Company,On the Move,US]
+[The Record Company,Give It Back To You,US]
+[The Record Company,Feels So Good,US]
+[The Record Company,This Crooked City,US]
+[The Record Company,Don't Let Me Get Lonely,US]
+[Sascha Dikiciyan,Methods Of Destruction,DE]
+[Cris Velasco,Warhammer 40,000: Space Marine: The Soundtrack,US]
+[Cris Velasco,Hellgate: London: Soundtrack,US]
+[Cris Velasco,Hellgate: London: Official Game Soundtrack,US]
+[Sascha Dikiciyan,Mass Effect 3: Leviathan,XW]
+[Lord,A Personal Journey,AU]
+[Lord,Szemedben a csillagok,HU]
+[Lord,3.,HU]
+[Lord,Olcsó és ügyes,HU]
+[Lord,Big City Lights,HU]
+[Xzibit,Full Circle,US]
+[Xzibit,Restless,US]
+[Xzibit,Restless LP,US]
+[Xzibit,Weapons of Mass Destruction,US]
+[Xzibit,Man vs. Machine,US]
+[Klimek,Dedications,US]
+[Klimek,Movies Is Magic,US]
+[Klimek,Dedications,US]
+[Klimek,Milk & Honey,DE]
+[Klimek,Music to Fall Asleep,DE]
+[Drip of Lies,Drip of Lies,PL]
+[Reign of Lies,The New Empire,EMPTY]
+[Trail of Lies,W.A.R,US]
+[Structure of Lies,Structure of Lies / Misery Index,US]
+[End of Fashion,Book of Lies,AU]
+[Jon Brion,I ♥ Huckabees,US]
+[Jon Brion,Synecdoche, New York,US]
+[Jon Brion,2001-09-03: Bumbershoot Festival, Seattle, WA, USA,US]
+[Jon Brion,Punch-Drunk Love,US]
+[Jon Brion,Meaningless,US]
+[Future Usses,The Existential Haunting,XW]
+[The Evil Usses,Amateur Pro Wrestling,XW]
+[Future,Dirty Sprite,US]
+[Future,Astronaut Status,US]
+[Future,True Story,US]
+[Crowhurst,Crowhurst,US]
+[Crowhurst,The Lightbearer Trilogy,US]
+[Crowhurst,Total Collapse,XW]
+[Crowhurst,III,XW]
+[Crowhurst,NIHL,JP]
+[Van Dyke Parks,Idiosyncratic Path: The Best of Van Dyke Parks,GB]
+[Van Dyke Parks,Song Cycle,US]
+[Van Dyke Parks,Discover America,US]
+[Van Dyke Parks,Clang of the Yankee Reaper,US]
+[Van Dyke Parks,Moonlighting: Live at the Ash Grove,US]
+[Glenn Danzig,Black Aria,US]
+[Glenn Danzig,Black Aria,US]
+[Glenn Danzig,Who Killed Marilyn?,US]
+[Glenn Danzig,Black Aria II,US]
+[Danzig,Danzig 6:66: Satan's Child,US]
+[Richard Cheese,Viva la Vodka,US]
+[Richard Cheese,Dick at Nite,US]
+[Richard Cheese,Aperitif for Destruction,US]
+[Richard Cheese,Silent Nightclub,US]
+[Richard Cheese,Silent Nightclub,US]
+[Swarvy,Stunts Volumes 1-4,US]
+[Swarvy,Shadows Remixes,US]
+[Swarvy,Trillian,US]
+[Swarvy,Elderberry,XW]
+[Swarvy,Stunts Volumes 1-4,XW]
+[Absurd,Thuringian Pagan Madness,US]
+[Absurd,Facta Loquuntur,US]
+[Absurd,Asgardsrei,US]
+[Absurd,Facta Loquuntur,US]
+[Absurd,Asgardsrei,US]
+[Michael Nesmith,From a Radio Engine to the Photon Wing,US]
+[Michael Nesmith,Timerider: The Adventure of Lyle Swann,US]
+[Michael Nesmith,Rays,US]
+[Michael Nesmith,The Older Stuff (The Best of the Early Years),US]
+[Michael Nesmith,Tropical Campfires,US]
+[Van William,The Revolution EP,US]
+[Van William,The Revolution EP,US]
+[Van William,Countries,US]
+[Van William,When They Burn,GB]
+[Van William,Countries,XE]
+[Funki Porcini,Hed Phone Sex,US]
+[Funki Porcini,Love, Pussycats & Carwrecks,US]
+[Funki Porcini,Love, Pussycats & Carwrecks,GB]
+[Funki Porcini,Hed Phone Sex,GB]
+[Funki Porcini,Carwreck EP,GB]
+[9electric,The Damaged Ones,US]
+[9electric,Control,US]
+[9Electric,Megalith,US]
+[F.L.E.X,Let Me Go,US]
+[Billy Idol,Charmed Life,US]
+[Welter In Thy Blood,Through the Fields of Mourning,US]
+[Welter In Thy Blood,The Transference Of Misery,US]
+[Welter In Thy Blood,The Grim Visage Of Death,US]
+[Welter In Thy Blood,Todestrieb,IT]
+[Thy Blood,Thy Blood,EMPTY]
+[Levitation Room,Ethos,US]
+[Levitation Room,Ethos,XW]
+[Levitation Room,Minds of Our Own,XW]
+[Levitation Room,2025,XW]
+[levitation room,Headspace,XW]
+[Vivian Campbell,Two Sides of If,US]
+[Vivian,Don't Look Down,DE]
+[Vivian,Don't Look Down,EMPTY]
+[Vivian,Alive,EMPTY]
+[Vivian,Catch Me,EMPTY]
+[John Paesano,Maze Runner: The Scorch Trials,US]
+[John Paesano,Daredevil, Season 2: Original Soundtrack Album,FR]
+[John Paesano,Daredevil: Original Soundtrack Album,FR]
+[John Paesano,The Defenders: A Netflix Original Series: Original Soundtrack Album,FR]
+[John Paesano,Daredevil: Season 3: Original Soundtrack Album,XW]
+[Virgil Donati,In This Life,US]
+[Virgil Donati,In This Life,US]
+[Virgil Donati,Just Add Water,AU]
+[Virgil Donati,Stretch,AU]
+[Virgil Donati,The Dawn of Time,AU]
+[Joseph Trapanese,Insurgent (Original Motion Picture Score),US]
+[Joseph Trapanese,The Crew (Original Game Soundtrack),US]
+[Joseph Trapanese,Earth To Echo,US]
+[Joseph Trapanese,The Bannen Way Soundtrack,US]
+[Joseph Trapanese,TRON: Uprising,US]
+[Gareth Coker,Ori and the Blind Forest (Original Soundtrack),US]
+[Gareth Coker,Dog-Eared,US]
+[Gareth Coker,The Clockwork Sparrow,US]
+[Gareth Coker,Haven's Point,US]
+[Gareth Coker,Cab 57,US]
+[Luciana,You Only Talk in #hashtag,EMPTY]
+[Luciana,One by One (Remixes),EMPTY]
+[Luciana,If You Want,EMPTY]
+[Luciana,Yeah Yeah 2017,EMPTY]
+[Luciana,Tearing Down the Walls,EMPTY]
+[Glass Hour,Minute Hand,CA]
+[Glass Hour,Minute Hand,CA]
+[Hour Glass,Southbound,GB]
+[Hour Glass,The Hour Glass,GB]
+[The Hour Glass,Power of Love,US]
+[The Hidden Depths,EP,XW]
+[The Hidden Depths,EP,XW]
+[The Depths,From...,US]
+[The Depths,City of Blight,US]
+[Depths,Pizza Party,US]
+[clipping.,Forever,US]
+[clipping.,Splendor & Misery,US]
+[clipping.,Midcity,US]
+[clipping.,Ends,US]
+[clipping.,CLPPNG,US]
+[Koda,Movements,US]
+[Koda,Movements,US]
+[Koda,Waking,US]
+[KODA,Trust Your Love,US]
+[KODA,TAKE BACK,US]
+[Conjure One,Exilarch,US]
+[Conjure One,Conjure One,US]
+[Conjure One,Conjure One,US]
+[Conjure One,I Dream in Colour,US]
+[Conjure One,Tears From the Moon,US]
+[Course of Nature,Superkala,US]
+[Course of Nature,Damaged,US]
+[Course of Nature,Caught in the Sun,US]
+[Moods of Nature,Forces of Nature,EMPTY]
+[Freak of Nature,Freak of Nature,GB]
+
+>Almacenado, imprimiendo ... <<<<<<<<<< 
+
+{[0][1681,Ozzy Osbourne,Diary of a Madman]}
+{[1][1682,Ozzy Osbourne,No More Tears]}
+{[2][1683,Ozzy Osbourne,Bark at the Moon]}
+{[3][1684,Ozzy Osbourne,Blizzard of Ozz]}
+{[4][1685,Ozzy Osbourne,Just Say Ozzy]}
+{[5][1686,Fear Factory,Digimortal]}
+{[6][1687,Fear Factory,Slave Labor EP]}
+{[7][1688,Fear Factory,The Best of Fear Factory]}
+{[8][1689,Fear Factory,Cars]}
+{[9][1690,Fear Factory,Descent]}
+{[10][1691,Serj Tankian,Harakiri]}
+{[11][1692,Serj Tankian,Orca Symphony No. 1]}
+{[12][1693,Serj Tankian,1915: Original Motion Picture Soundtrack]}
+{[13][1694,Serj Tankian,Imperfect Harmonies]}
+{[14][1695,Serj Tankian,Empty Walls]}
+{[15][1696,Jimmy Page,The Jimmy Page Collection]}
+{[16][1697,Jimmy Page,Jimmy Page and Friends]}
+{[17][1698,Jimmy Page,The Jimmy Page Collection: Have Guitar, Will Travel]}
+{[18][1699,Top Jimmy Page,WalKing on The MOOn 79-11]}
+{[19][1700,Top Jimmy Page,Songs]}
+{[20][1701,John Cale,Caribbean Sunset]}
+{[21][1702,John Cale,HoboSapiens]}
+{[22][1703,John Cale,Even Cowgirls Get the Blues]}
+{[23][1704,John Cale,Honi Soit]}
+{[24][1705,John Cale,23 Solo Pieces for La Naissance de L'amour]}
+{[25][1706,Filter,The Very Best Things: 1995–2008]}
+{[26][1707,Filter,The Very Best Things: 1995–2008]}
+{[27][1708,Filter,The Trouble With Angels]}
+{[28][1709,Filter,The Trouble With Angels]}
+{[29][1710,Filter,Where Do We Go From Here: The Remixes]}
+{[30][1711,John Frusciante,The Empyrean]}
+{[31][1712,John Frusciante,Inside of Emptiness]}
+{[32][1713,John Frusciante,Estrus EP]}
+{[33][1714,John Frusciante,To Record Only Water for Ten Days]}
+{[34][1715,John Frusciante,The Empyrean]}
+{[35][1716,My Ruin,A Prayer Under Pressure of Violent Anguish]}
+{[36][1717,My Ruin,The Brutal Language]}
+{[37][1718,My Ruin,Blasphemous Girl]}
+{[38][1719,My Ruin,Speak & Destroy]}
+{[39][1720,My Ruin,The Shape of Things to Come...]}
+{[40][1721,Seal,Best 1991-2004]}
+{[41][1722,Seal,Crazy]}
+{[42][1723,Seal,Seal]}
+{[43][1724,Seal,Seal]}
+{[44][1725,Seal,Soul]}
+{[45][1726,16,Crystal]}
+{[46][1727,16,Curves That Kick]}
+{[47][1728,16,Wash Me / Texas Tunnel]}
+{[48][1729,16,Lifespan of a Moth]}
+{[49][1730,16,Blaze of Incompetence]}
+{[50][1731,Yellowcard,Paper Walls]}
+{[51][1732,Yellowcard,Paper Walls]}
+{[52][1733,Yellowcard,Where We Stand]}
+{[53][1734,Yellowcard,For You, and Your Denial]}
+{[54][1735,Yellowcard,2003-08-02: Vans Warped Tour: Park Place, Barrie, ON, Canada]}
+{[55][1736,Socionic,Dividing Horizon]}
+{[56][1737,Socionic,Dividing Horizon]}
+{[57][1738,Socionic,Identity]}
+{[58][1739,John Hartford,Aereo-Plain]}
+{[59][1740,¡Forward, Russia!,Give Me a Wall]}
+{[60][1741,Sasquatch,Sasquatch]}
+{[61][1742,Sasquatch,II]}
+{[62][1743,Sasquatch,III]}
+{[63][1744,Sasquatch,IV]}
+{[64][1745,Sasquatch,Maneuvers]}
+{[65][1746,Solar Haze,Solar Haze]}
+{[66][1747,Haze,In the End: 1978 - 1988]}
+{[67][1748,Haze,3er round]}
+{[68][1749,Haze,Amor por un club]}
+{[69][1750,Haze,Deadhunters Are Back]}
+{[70][1751,No Age,Losing Feeling]}
+{[71][1752,No Age,Slow Gag]}
+{[72][1753,No Age,Teen Creeps]}
+{[73][1754,No Age,Nouns]}
+{[74][1755,No Age,Snares Like a Haircut]}
+{[75][1756,Faith and the Muse,Live in Mainz, Germany - October 16th, 1997]}
+{[76][1757,Faith and the Muse,Annwyn, Beneath the Waves]}
+{[77][1758,Faith and the Muse,Evidence of Heaven]}
+{[78][1759,Faith and the Muse,Evidence of Heaven]}
+{[79][1760,Faith and the Muse,Evidence of Heaven]}
+{[80][1761,John Carpenter,Prince of Darkness]}
+{[81][1762,John Carpenter,Big Trouble in Little China]}
+{[82][1763,John Carpenter,Anthology: Movie Themes 1974-1998]}
+{[83][1764,John Carpenter,Halloween: Original Motion Picture Soundtrack]}
+{[84][1765,John Carpenter,Halloween: The best of John Carpenter]}
+{[85][1766,Behold! The Monolith,Behold! The Monolith]}
+{[86][1767,The Monolith,Here Comes the Monolith]}
+{[87][1768,The Monolith,Here Comes the Monolith]}
+{[88][1769,The Monolith,Meet You at the Monolith]}
+{[89][1770,Behold! The Monolith,Defender, Redeemist]}
+{[90][1771,Mississippi Sludge,Biscuits & Slavery]}
+{[91][1772,Sludge,The Well]}
+{[92][1773,Sludge,Sweet Daisy]}
+{[93][1774,Sludge,Lava]}
+{[94][1775,Sludge,Yellow Acid Rain]}
+{[95][1776,Sisters ov the Blackmoon,Blood Cauldron]}
+{[96][1777,Ov,The Moon Is Down]}
+{[97][1778,Blackmoon Graffiti,Echoes of My Tribe]}
+{[98][1779,Blackmoon Spells,Boundaries of Sorrow]}
+{[99][1780,Blackmoon Spells,Kalten Melancholie]}
+{[100][1781,Zig Zags,Ripping Death B/W Riddle of Steel]}
+{[101][1782,Zig Zags,Slime EP]}
+{[102][1783,Zig Zags,Running out of Red]}
+{[103][1784,Zig Zags,Zig Zags]}
+{[104][1785,Zig Zags,They’ll Never Take Us Alive]}
+{[105][1786,Two Steps From Hell,Archangel]}
+{[106][1787,Two Steps From Hell,Invincible]}
+{[107][1788,Two Steps From Hell,Christmas Medley]}
+{[108][1789,Two Steps From Hell,Power of Darkness Anthology]}
+{[109][1790,Two Steps From Hell,Battlecry Anthology]}
+{[110][1791,Thelma Houston,Sunshower]}
+{[111][1792,Thelma Houston,Ride to the Rainbow]}
+{[112][1793,Thelma Houston,The Devil in Me]}
+{[113][1794,Thelma Houston,Any Way You Like It]}
+{[114][1795,Thelma Houston,Any Way You Like It]}
+{[115][1796,Austin Wintory,The Banner Saga 3]}
+{[116][1797,Austin Wintory,Transfiguration]}
+{[117][1798,Austin Wintory,Assassin's Creed Syndicate: Original Game Soundtrack]}
+{[118][1799,Austin Wintory,ABZÛ]}
+{[119][1800,Austin Wintory,Tooth and Tail]}
+{[120][1801,Burton Cummings,Woman Love]}
+{[121][1802,Burton Cummings,Burton Cummings]}
+{[122][1803,Burton Cummings,Plus Signs]}
+{[123][1804,Burton Cummings,My Own Way to Rock]}
+{[124][1805,Burton Cummings,The Best of Burton Cummings]}
+{[125][1806,Nova Cycle,Nova Cycle]}
+{[126][1807,Nova Cycle,Nova Cycle]}
+{[127][1808,Cycle,Roller Coaster]}
+{[128][1809,Cycle,The Fall of a Demi-God]}
+{[129][1810,Cycle,Rollercoaster]}
+{[130][1811,The Crystal Method,The Crystal Method]}
+{[131][1812,The Crystal Method,The Crystal Method]}
+{[132][1813,The Crystal Method,The Crystal Method]}
+{[133][1814,The Crystal Method,The Crystal Method]}
+{[134][1815,The Crystal Method,The Crystal Method]}
+{[135][1816,The Crashtones,Colorful of the Stereo]}
+{[136][1817,The Crashtones,Revenge of the Crashtones]}
+{[137][1818,The The,Mind Bomb]}
+{[138][1819,The The,Soul Mining]}
+{[139][1820,The The,Solitude]}
+{[140][1821,Witches of God,The Blood of Others]}
+{[141][1822,Soldier of God,Soldier of God]}
+{[142][1823,Eyes of God,Eyes of God]}
+{[143][1824,Witches of God,They Came To Kill]}
+{[144][1825,Witches of God,The Blood of Others]}
+{[145][1826,Witherfall,Nocturnes and Requiems]}
+{[146][1827,Witherfall,Nocturnes and Requiems]}
+{[147][1828,Witherfall,Nocturnes and Requiems]}
+{[148][1829,Witherfall,A Prelude to Sorrow]}
+{[149][1830,Witherfall,A Prelude to Sorrow]}
+{[150][1831,Sweet Eve,Shadow Over Me]}
+{[151][1832,Sweet Eve,The Immortal Machine]}
+{[152][1833,Eve,Ruff Ryders' First Lady]}
+{[153][1834,Eve,Scorpion]}
+{[154][1835,Eve,Eve-Olution]}
+{[155][1836,Scars on Broadway,Scars on Broadway]}
+{[156][1837,Scars on Broadway,Scars on Broadway]}
+{[157][1838,Scars on Broadway,Scars on Broadway]}
+{[158][1839,Scars on Broadway,Scars on Broadway]}
+{[159][1840,Scars on Broadway,Scars on Broadway]}
+{[160][1841,Wand,Ganglion Reef]}
+{[161][1842,Wand,Plum]}
+{[162][1843,Wand,"From a Capsule Underground"]}
+{[163][1844,Wand,Perfume]}
+{[164][1845,Wand,Plum]}
+{[165][1846,Deuce,Deuce]}
+{[166][1847,Deuce,Nine Lives]}
+{[167][1848,Deuce,Fallen Stone]}
+{[168][1849,Deuce,Bitch This Is It]}
+{[169][1850,Deuce,Nine Lives]}
+{[170][1851,Defiance,A Decade of Defiance]}
+{[171][1852,Act of Defiance,Birth and the Burial]}
+{[172][1853,Act of Defiance,Birth and the Burial]}
+{[173][1854,Act of Defiance,Old Scars, New Wounds]}
+{[174][1855,Act of Defiance,M.I.A.]}
+{[175][1856,Nokturne,Embracer of the Dark Ages]}
+{[176][1857,Nokturne,Wargod Domination]}
+{[177][1858,Nokturne,Curse of Nazarene]}
+{[178][1859,Nokturne,Kruelty Kampaign]}
+{[179][1860,John Hartford,Aereo-Plain]}
+{[180][1861,The Shrine,Rare Breed]}
+{[181][1862,The Rare Breed,Beg, Borrow and Steal]}
+{[182][1863,The Rare Breed,Looking for Today]}
+{[183][1864,Cloud 9ine KO,Rare Breed Society]}
+{[184][1865,The BREED,Smunchiiez]}
+{[185][1866,Chokebore,Days of Nothing]}
+{[186][1867,Chokebore,Black Black]}
+{[187][1868,Chokebore,Throats to Hit / Nobody]}
+{[188][1869,Chokebore,Anything Near Water]}
+{[189][1870,Chokebore,A Taste for Bitters]}
+{[190][1871,Andy Kim,Baby, I Love You]}
+{[191][1872,Andy Kim,Greatest Hits 1968-1984]}
+{[192][1873,Andy Kim,Andy Kim]}
+{[193][1874,Andy Kim,It's Decided]}
+{[194][1875,Andy Kim,Andy Kim]}
+{[195][1876,Yidhra,Cult of Bathory]}
+{[196][1877,Yidhra,Hexed]}
+{[197][1878,Loretta Lynn,Just a Woman]}
+{[198][1879,Temple of the Dog,Temple of the Dog]}
+{[199][1880,Sede Vacante,In Nomine Peste Dominus]}
+{[200][1881,Keiko Matsui,No Borders]}
+{[201][1882,Keiko Matsui,Full Moon and the Shrine]}
+{[202][1883,Keiko Matsui,Dream Walk]}
+{[203][1884,Keiko Matsui,Deep Blue]}
+{[204][1885,Keiko Matsui,Deep Blue]}
+{[205][1886,Greg Dulli,Live at Triple Door]}
+{[206][1887,Greg Dulli,Greg Dulli’s Amber Headlights]}
+{[207][1888,Greg Dulli,Dangerous Highway: A Tribute to the Songs of Eddie Hinton, Volume 1]}
+{[208][1889,Greg Dulli,2015-02-18: Live In New York, Bowery Ballroom, New York, NY]}
+{[209][1890,Greg Dulli,Have Yourself a Merry Little Christmas]}
+{[210][1891,Skee-Lo,I Wish]}
+{[211][1892,Skee-Lo,I Wish]}
+{[212][1893,Skee-Lo,I Wish]}
+{[213][1894,Skee-Lo,I Can't Stop]}
+{[214][1895,Skee-Lo,I Wish]}
+{[215][1896,Diplo,Florida]}
+{[216][1897,Diplo,Express Yourself]}
+{[217][1898,Diplo,Express Yourself]}
+{[218][1899,Diplo,California (remixes)]}
+{[219][1900,Diplo,Revolution]}
+{[220][1901,The Regrettes,Hey Now]}
+{[221][1902,The Regrettes,California Friends]}
+{[222][1903,The Regrettes,Attention Seeker]}
+{[223][1904,The Regrettes,Poor Boy]}
+{[224][1905,The Regrettes,Feel Your Feelings Fool!]}
+{[225][1906,The Ultras,Surf-Pop-Sludge]}
+{[226][1907,The Ultras,The Complete Handbook of Songwriting]}
+{[227][1908,Ultras,Napoleon]}
+{[228][1909,ULTRAS,ULTRAS]}
+{[229][1910,Dick Dale, The Ultras, and Alpha 60,Rocket Jockey]}
+{[230][1911,Emma Hewitt,Burn the Sky Down (The Remixes) (Extended Versions)]}
+{[231][1912,Emma Hewitt,Miss You Paradise]}
+{[232][1913,Emma Hewitt,Burn the Sky Down]}
+{[233][1914,Emma Hewitt,Rewind]}
+{[234][1915,Emma Hewitt,2012-03-31: A State of Trance #550, "Den Bosch, The Netherlands, A State of Pink, Part 8: Emma Hewitt": Brabanthallen, Den Bosch, The Netherlands]}
+{[235][1916,Slimkid3,Slimkid3 & DJ Nu-Mark]}
+{[236][1917,Slimkid3,Slimkid3 & DJ Nu-Mark]}
+{[237][1918,DJ Nu‐Mark,Broken Sunlight]}
+{[238][1919,DJ Nu‐Mark,Hands On]}
+{[239][1920,DJ Nu‐Mark,Take Me With You]}
+{[240][1921,Leigh Bardugo,Das Lied der Krähen]}
+{[241][1922,Leigh Bardugo,Shadow and Bone]}
+{[242][1923,Leigh Bardugo,Das Gold der Krähen]}
+{[243][1924,Leigh Nash,Wishing for This]}
+{[244][1925,Leigh Nash,Remixed]}
+{[245][1926,Level,Level]}
+{[246][1927,Level,Opale]}
+{[247][1928,Level,Aeus, Part 1]}
+{[248][1929,Level,Cycla]}
+{[249][1930,Level,Level]}
+{[250][1931,The Pierces,Thirteen Tales of Love and Revenge]}
+{[251][1932,The Pierces,The Pierces]}
+{[252][1933,The Pierces,The Pierces]}
+{[253][1934,The Pierces,You'll Be Mine]}
+{[254][1935,The Pierces,Light of the Moon]}
+{[255][1936,Richie Kotzen,Fever Dream]}
+{[256][1937,Richie Kotzen,Break It All Down]}
+{[257][1938,Richie Kotzen,Slow]}
+{[258][1939,Richie Kotzen,Instrumental Collection]}
+{[259][1940,Richie Kotzen,The Inner Galactic Fusion Experience]}
+{[260][1941,Denny Laine,Ahh... Laine!]}
+{[261][1942,Denny Laine,Japanese Tears]}
+{[262][1943,Denny Laine,Anyone Can Fly]}
+{[263][1944,Denny Laine,Holly Days]}
+{[264][1945,Denny Laine,Holly Days]}
+{[265][1946,Fergie,Fergalicious]}
+{[266][1947,Fergie,The Dutchess: Deluxe]}
+{[267][1948,Fergie,Double Dutchess]}
+{[268][1949,Fergie,Double Dutchess]}
+{[269][1950,Fergie,The Dutchess]}
+{[270][1951,Dead End Sky,Always]}
+{[271][1952,Dead End Sky,When You Fall]}
+{[272][1953,Dead End Sky,Tomorrow Can't Wait]}
+{[273][1954,DEAD END,Ghost of Romance]}
+{[274][1955,DEAD END,Shámbara]}
+{[275][1956,Echosmith,Cool Kids]}
+{[276][1957,Echosmith,Acoustic Dreams]}
+{[277][1958,Echosmith,Talking Dreams]}
+{[278][1959,Echosmith,Goodbye]}
+{[279][1960,Echosmith,Talking Dreams]}
+{[280][1961,Sweetwater,Cycles]}
+{[281][1962,Sweetwater,Sweetwater]}
+{[282][1963,Sweetwater,Just for You]}
+{[283][1964,Sweetwater,Sweetwater]}
+{[284][1965,Sweetwater Abilene,The Giant Ate the Rainbow]}
+{[285][1966,Worldview,The Chosen Few]}
+{[286][1967,F.L.E.X,Let Me Go]}
+{[287][1968,Billy Idol,Charmed Life]}
+{[288][1969,Gary Moore,After Hours]}
+{[289][1970,The Chieftains,Film Cuts]}
+{[290][1971,Deathkings,Destroyer]}
+{[291][1972,Snoop Dogg,Ups and Downs / Bang Out]}
+{[292][1973,Ismael Rivera y Sus Cachimbos,De Colores]}
+{[293][1974,Artery Eruption,Gouging Out Eyes of Mutilated Infants]}
+{[294][1975,Los Skarnales,Vatos rudos]}
+{[295][1976,Charlie Haden,The Golden Number]}
+{[296][1977,Charlie Haden,Not in Our Name]}
+{[297][1978,Charlie Haden,Liberation Music Orchestra]}
+{[298][1979,Charlie Haden,Closeness Duets]}
+{[299][1980,Charlie Haden,Liberation Music Orchestra]}
+{[300][1981,Orgone,The Killion Floor]}
+{[301][1982,Orgone,Bacano]}
+{[302][1983,Orgone,Cali Fever]}
+{[303][1984,Orgone,Cali Fever]}
+{[304][1985,Orgone,Killion Vaults]}
+{[305][1986,SelloRekT / LA Dreams,Best of SelloRekT / LA Dreams 2013/2014]}
+{[306][1987,SelloRekT / LA Dreams,FlashBack 1986]}
+{[307][1988,SelloRekT / LA Dreams,The Best of 2012/2013]}
+{[308][1989,SelloRekT / LA Dreams,Scan Lines]}
+{[309][1990,SelloRekT / LA Dreams,Avenue Electric]}
+{[310][1991,Android Lust,Rarities, Demos & B-Sides]}
+{[311][1992,Android Lust,Rarities, Demos & B-Sides]}
+{[312][1993,Android Lust,The Human Animal]}
+{[313][1994,Android Lust,Devour, Rise, and Take Flight]}
+{[314][1995,Android Lust,Crater, Volume 1]}
+{[315][1996,3TEETH,Dissolve (Seraphim System remix)]}
+{[316][1997,3TEETH,3TEETH]}
+{[317][1998,3TEETH,DEGRADE]}
+{[318][1999,3TEETH,ATROPHY]}
+{[319][2000,3TEETH,<shutdown.exe>]}
+{[320][2001,Deadsy,Deadsy]}
+{[321][2002,Deadsy,Phantasmagore]}
+{[322][2003,Deadsy,The Key to Gramercy Park / Mansion World]}
+{[323][2004,Deadsy,Commencement]}
+{[324][2005,Deadsy,Commencement]}
+{[325][2006,Paul Haslinger,Underworld]}
+{[326][2007,Paul Haslinger,Underworld: Rise of the Lycans]}
+{[327][2008,Paul Haslinger,Need For Speed: Undercover (Original Videogame Soundtrack)]}
+{[328][2009,Paul Haslinger,Shoot 'em Up]}
+{[329][2010,Paul Haslinger,Death Race: Original Motion Picture Soundtrack]}
+{[330][2011,The Zenith Passage,Cosmic Dissonance]}
+{[331][2012,The Zenith Passage,Solipsist]}
+{[332][2013,The Zenith Passage,Solipsist]}
+{[333][2014,Zenith,Flowers Of Intelligence]}
+{[334][2015,Zenith,The Flowers Of Intelligence]}
+{[335][2016,Bishop Briggs,Be Your Love]}
+{[336][2017,Bishop Briggs,Bishop Briggs]}
+{[337][2018,Bishop Briggs,River]}
+{[338][2019,Bishop Briggs,Wild Horses]}
+{[339][2020,Bishop Briggs,Bishop Briggs]}
+{[340][2021,The Record Company,On the Move]}
+{[341][2022,The Record Company,Give It Back To You]}
+{[342][2023,The Record Company,Feels So Good]}
+{[343][2024,The Record Company,This Crooked City]}
+{[344][2025,The Record Company,Don't Let Me Get Lonely]}
+{[345][2026,Sascha Dikiciyan,Methods Of Destruction]}
+{[346][2027,Cris Velasco,Warhammer 40,000: Space Marine: The Soundtrack]}
+{[347][2028,Cris Velasco,Hellgate: London: Soundtrack]}
+{[348][2029,Cris Velasco,Hellgate: London: Official Game Soundtrack]}
+{[349][2030,Sascha Dikiciyan,Mass Effect 3: Leviathan]}
+{[350][2031,Lord,A Personal Journey]}
+{[351][2032,Lord,Szemedben a csillagok]}
+{[352][2033,Lord,3.]}
+{[353][2034,Lord,Olcsó és ügyes]}
+{[354][2035,Lord,Big City Lights]}
+{[355][2036,Xzibit,Full Circle]}
+{[356][2037,Xzibit,Restless]}
+{[357][2038,Xzibit,Restless LP]}
+{[358][2039,Xzibit,Weapons of Mass Destruction]}
+{[359][2040,Xzibit,Man vs. Machine]}
+{[360][2041,Klimek,Dedications]}
+{[361][2042,Klimek,Movies Is Magic]}
+{[362][2043,Klimek,Dedications]}
+{[363][2044,Klimek,Milk & Honey]}
+{[364][2045,Klimek,Music to Fall Asleep]}
+{[365][2046,Drip of Lies,Drip of Lies]}
+{[366][2047,Reign of Lies,The New Empire]}
+{[367][2048,Trail of Lies,W.A.R]}
+{[368][2049,Structure of Lies,Structure of Lies / Misery Index]}
+{[369][2050,End of Fashion,Book of Lies]}
+{[370][2051,Jon Brion,I ♥ Huckabees]}
+{[371][2052,Jon Brion,Synecdoche, New York]}
+{[372][2053,Jon Brion,2001-09-03: Bumbershoot Festival, Seattle, WA, USA]}
+{[373][2054,Jon Brion,Punch-Drunk Love]}
+{[374][2055,Jon Brion,Meaningless]}
+{[375][2056,Future Usses,The Existential Haunting]}
+{[376][2057,The Evil Usses,Amateur Pro Wrestling]}
+{[377][2058,Future,Dirty Sprite]}
+{[378][2059,Future,Astronaut Status]}
+{[379][2060,Future,True Story]}
+{[380][2061,Crowhurst,Crowhurst]}
+{[381][2062,Crowhurst,The Lightbearer Trilogy]}
+{[382][2063,Crowhurst,Total Collapse]}
+{[383][2064,Crowhurst,III]}
+{[384][2065,Crowhurst,NIHL]}
+{[385][2066,Van Dyke Parks,Idiosyncratic Path: The Best of Van Dyke Parks]}
+{[386][2067,Van Dyke Parks,Song Cycle]}
+{[387][2068,Van Dyke Parks,Discover America]}
+{[388][2069,Van Dyke Parks,Clang of the Yankee Reaper]}
+{[389][2070,Van Dyke Parks,Moonlighting: Live at the Ash Grove]}
+{[390][2071,Glenn Danzig,Black Aria]}
+{[391][2072,Glenn Danzig,Black Aria]}
+{[392][2073,Glenn Danzig,Who Killed Marilyn?]}
+{[393][2074,Glenn Danzig,Black Aria II]}
+{[394][2075,Danzig,Danzig 6:66: Satan's Child]}
+{[395][2076,Richard Cheese,Viva la Vodka]}
+{[396][2077,Richard Cheese,Dick at Nite]}
+{[397][2078,Richard Cheese,Aperitif for Destruction]}
+{[398][2079,Richard Cheese,Silent Nightclub]}
+{[399][2080,Richard Cheese,Silent Nightclub]}
+{[400][2081,Swarvy,Stunts Volumes 1-4]}
+{[401][2082,Swarvy,Shadows Remixes]}
+{[402][2083,Swarvy,Trillian]}
+{[403][2084,Swarvy,Elderberry]}
+{[404][2085,Swarvy,Stunts Volumes 1-4]}
+{[405][2086,Absurd,Thuringian Pagan Madness]}
+{[406][2087,Absurd,Facta Loquuntur]}
+{[407][2088,Absurd,Asgardsrei]}
+{[408][2089,Absurd,Facta Loquuntur]}
+{[409][2090,Absurd,Asgardsrei]}
+{[410][2091,Michael Nesmith,From a Radio Engine to the Photon Wing]}
+{[411][2092,Michael Nesmith,Timerider: The Adventure of Lyle Swann]}
+{[412][2093,Michael Nesmith,Rays]}
+{[413][2094,Michael Nesmith,The Older Stuff (The Best of the Early Years)]}
+{[414][2095,Michael Nesmith,Tropical Campfires]}
+{[415][2096,Van William,The Revolution EP]}
+{[416][2097,Van William,The Revolution EP]}
+{[417][2098,Van William,Countries]}
+{[418][2099,Van William,When They Burn]}
+{[419][2100,Van William,Countries]}
+{[420][2101,Funki Porcini,Hed Phone Sex]}
+{[421][2102,Funki Porcini,Love, Pussycats & Carwrecks]}
+{[422][2103,Funki Porcini,Love, Pussycats & Carwrecks]}
+{[423][2104,Funki Porcini,Hed Phone Sex]}
+{[424][2105,Funki Porcini,Carwreck EP]}
+{[425][2106,9electric,The Damaged Ones]}
+{[426][2107,9electric,Control]}
+{[427][2108,9Electric,Megalith]}
+{[428][2109,F.L.E.X,Let Me Go]}
+{[429][2110,Billy Idol,Charmed Life]}
+{[430][2111,Welter In Thy Blood,Through the Fields of Mourning]}
+{[431][2112,Welter In Thy Blood,The Transference Of Misery]}
+{[432][2113,Welter In Thy Blood,The Grim Visage Of Death]}
+{[433][2114,Welter In Thy Blood,Todestrieb]}
+{[434][2115,Thy Blood,Thy Blood]}
+{[435][2116,Levitation Room,Ethos]}
+{[436][2117,Levitation Room,Ethos]}
+{[437][2118,Levitation Room,Minds of Our Own]}
+{[438][2119,Levitation Room,2025]}
+{[439][2120,levitation room,Headspace]}
+{[440][2121,Vivian Campbell,Two Sides of If]}
+{[441][2122,Vivian,Don't Look Down]}
+{[442][2123,Vivian,Don't Look Down]}
+{[443][2124,Vivian,Alive]}
+{[444][2125,Vivian,Catch Me]}
+{[445][2126,John Paesano,Maze Runner: The Scorch Trials]}
+{[446][2127,John Paesano,Daredevil, Season 2: Original Soundtrack Album]}
+{[447][2128,John Paesano,Daredevil: Original Soundtrack Album]}
+{[448][2129,John Paesano,The Defenders: A Netflix Original Series: Original Soundtrack Album]}
+{[449][2130,John Paesano,Daredevil: Season 3: Original Soundtrack Album]}
+{[450][2131,Virgil Donati,In This Life]}
+{[451][2132,Virgil Donati,In This Life]}
+{[452][2133,Virgil Donati,Just Add Water]}
+{[453][2134,Virgil Donati,Stretch]}
+{[454][2135,Virgil Donati,The Dawn of Time]}
+{[455][2136,Joseph Trapanese,Insurgent (Original Motion Picture Score)]}
+{[456][2137,Joseph Trapanese,The Crew (Original Game Soundtrack)]}
+{[457][2138,Joseph Trapanese,Earth To Echo]}
+{[458][2139,Joseph Trapanese,The Bannen Way Soundtrack]}
+{[459][2140,Joseph Trapanese,TRON: Uprising]}
+{[460][2141,Gareth Coker,Ori and the Blind Forest (Original Soundtrack)]}
+{[461][2142,Gareth Coker,Dog-Eared]}
+{[462][2143,Gareth Coker,The Clockwork Sparrow]}
+{[463][2144,Gareth Coker,Haven's Point]}
+{[464][2145,Gareth Coker,Cab 57]}
+{[465][2146,Luciana,You Only Talk in #hashtag]}
+{[466][2147,Luciana,One by One (Remixes)]}
+{[467][2148,Luciana,If You Want]}
+{[468][2149,Luciana,Yeah Yeah 2017]}
+{[469][2150,Luciana,Tearing Down the Walls]}
+{[470][2151,Glass Hour,Minute Hand]}
+{[471][2152,Glass Hour,Minute Hand]}
+{[472][2153,Hour Glass,Southbound]}
+{[473][2154,Hour Glass,The Hour Glass]}
+{[474][2155,The Hour Glass,Power of Love]}
+{[475][2156,The Hidden Depths,EP]}
+{[476][2157,The Hidden Depths,EP]}
+{[477][2158,The Depths,From...]}
+{[478][2159,The Depths,City of Blight]}
+{[479][2160,Depths,Pizza Party]}
+{[480][2161,clipping.,Forever]}
+{[481][2162,clipping.,Splendor & Misery]}
+{[482][2163,clipping.,Midcity]}
+{[483][2164,clipping.,Ends]}
+{[484][2165,clipping.,CLPPNG]}
+{[485][2166,Koda,Movements]}
+{[486][2167,Koda,Movements]}
+{[487][2168,Koda,Waking]}
+{[488][2169,KODA,Trust Your Love]}
+{[489][2170,KODA,TAKE BACK]}
+{[490][2171,Conjure One,Exilarch]}
+{[491][2172,Conjure One,Conjure One]}
+{[492][2173,Conjure One,Conjure One]}
+{[493][2174,Conjure One,I Dream in Colour]}
+{[494][2175,Conjure One,Tears From the Moon]}
+{[495][2176,Course of Nature,Superkala]}
+{[496][2177,Course of Nature,Damaged]}
+{[497][2178,Course of Nature,Caught in the Sun]}
+{[498][2179,Moods of Nature,Forces of Nature]}
+{[499][2180,Freak of Nature,Freak of Nature]}
+
+>Fin ejercicio 1 ... <<<<<<<<<< 
+

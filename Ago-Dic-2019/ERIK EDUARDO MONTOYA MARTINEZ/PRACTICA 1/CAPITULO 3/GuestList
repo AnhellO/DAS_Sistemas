@@ -1,0 +1,56 @@
+"""Ejercicio 3.4"""
+Invitados=[]
+Invitados.append('Ciria Garcia')
+Invitados.append('Esperanza Zul')
+Invitados.append('Bryce Harper')
+
+Msj="Me gustaria mucho que usted " + Invitados[0].title() + " pudiera acompañarme esta noche a cenar."
+Msj1="Me encantaria poder compartir esta cena con mi abuela " + Invitados[1].title() + "."
+Msj2="Seria grandioso que nos acompañara esta noche " + Invitados[2].title() + "."
+print(Invitados)
+print(Msj)
+print(Msj1)
+print(Msj2)
+
+"""ejercicio 3.5"""
+print("--------------------------------------------------------------------------")
+print("Bryce Harper no podra asistir a la cena")
+Invitados[2]='Natalia Lafourcade'
+Msj2="Seria grandioso que nos acompañara esta noche " + Invitados[2].title() + "."
+print(Msj)
+print(Msj1)
+print(Msj2)
+
+"""ejercicio 3.6"""
+
+print("Hemos conseguido una mesa mas grande por lo que invitaremos a 3 personas mas")
+print("----------------------------------")
+Invitados.insert(0, 'Many Paquiao')
+Invitados.insert(2, 'Laura Pausini')
+Invitados.insert(5,'Jeremy Renner')
+
+Msj3="Me gustaria mucho que usted " + Invitados[0].title() + " pudiera acompañarme esta noche a cenar."
+Msj4="Me encantaria poder compartir esta cena con mi abuela " + Invitados[2].title() + "."
+Msj5="Seria grandioso que nos acompañara esta noche " + Invitados[5].title() + "."
+print(Invitados)
+print("----------------------")
+print(Msj3)
+print(Msj4)
+print(Msj5)
+
+
+""""ejericico 3.7"""
+print("-----------------------------------------------------")
+print("Se nos quebro la mesa banda, solo tenemos espacio para 2 invitados")
+
+popped_Invitados=Invitados
+Invitados.pop()
+print(Invitados.pop()+" lamentamos informarle que usted ya no esta invitad@")
+Invitados.pop()
+print(Invitados.pop()+" lamentamos informarle que usted ya no esta invitad@")
+print(Invitados)
+Invitados.pop()
+print(Invitados.pop()+" lamentamos informarle que usted ya no esta invitad@")
+print(Invitados)
+print("-------------------------------------------------")
+

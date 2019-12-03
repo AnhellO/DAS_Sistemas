@@ -1,0 +1,14 @@
+pip install pipenv
+pipenv install flask
+
+al crear las paginas html en la parte de htmls.py cambiar los href siguentes:
+
+file:///C:/Users/narut/Documents/ClaseDise%C3%B1o/Ordinario/indicePersonajes
+file:///C:/Users/narut/Documents/ClaseDise%C3%B1o/Ordinario/indiceLocaciones
+file:///C:/Users/narut/Documents/ClaseDise%C3%B1o/Ordinario/indiceEpisodios
+file:///C:/Users/narut/Documents/ClaseDise%C3%B1o/Ordinario/Personajes/Personaje
+file:///C:/Users/narut/Documents/ClaseDise%C3%B1o/Ordinario/Locaciones/Locacion
+file:///C:/Users/narut/Documents/ClaseDise%C3%B1o/Ordinario/Episodios/Episodio
+
+para que al crear los html pueda redirigir al siguente html con la informacion de lo
+que se desea ver

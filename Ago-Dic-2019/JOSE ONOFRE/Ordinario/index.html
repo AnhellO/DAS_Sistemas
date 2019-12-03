@@ -1,0 +1,54 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+</p>Esto es un mensaje de prueba</p>
+<link rel=stylesheet href="style.css">
+<h1>Información:</h1>
+<table>
+
+    <thead>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Status</td>
+    <td>Species</td>
+    <td>Type</td>
+    <td>Gender</td>
+    <td>OriginName</td>
+    <td>LocationName</td>
+    <td>LocationUrl</td>
+    <td>Image</td>
+    <td>Episode</td>
+    <td>Url</td>
+    <td>Created</td>
+    </thead>
+    {% for row in rows %}
+        <tr>
+            <td>{{row["id"]}}</td>
+            <td>{{row["name"]}}</td>
+            <td>{{row["status"]}}</td>
+            <td>{{row["species"]}}</td>
+            <td>{{row["type"]}}</td>
+            <td>{{row["gender"]}}</td>
+            <td>{{row["originName"]}}</td>
+            <td>{{row["locationName"]}}</td>
+            <td>{{row["locationUrl"]}}</td>
+            <td>{{row["image"]}}</td>
+            <td>{{row["episode"]}}</td>
+            <td>{{row["url"]}}</td>
+            <td>{{row["created"]}}</td>
+            
+        
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

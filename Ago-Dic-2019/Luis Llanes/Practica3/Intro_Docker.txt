@@ -1,0 +1,112 @@
+Docker:
+
+Es una tenologia usada para virtualizacion desarrollada por la comunidad y una empresa llamada docker
+
+basada en xe de linux
+
+Contenedor:
+	Forma de separar procesos de manera independiente, y estos tambien pueden ser agrupados en imagenes que despues seran
+	usadas para poder lanzar un container pero que al mismo tiempo pueden hacer uso de recursos del sistema como cpu, ram, kernel, etc.
+
+	Espacio virtual para empaquetar aplicaciones e independencias para ser lanzadas en otro lado
+
+	Virtualizacion: Generar una compu dentro de otra
+
+
+	A diferencia de una virtualizacion normal que tendria que emular cada aspecto dek sistema que se desea lanzar
+	Con docker se comparten ciertos recursos como el kernel, no se deben generar recursos virtuales, solo OS
+
+	(Se recomienda solo una aplicacion)
+
+	Ventaja:
+		Menos cosas para lanzarlo
+		Se encapsulan
+		
+	Imagen de docker:
+		Una imagen de docker es un conjunto de capas, cada una de estas se genera cada vez que realicemos algun
+		cambio a la imagen base que nos encontremos usando en ese momento
+
+		Para crear una imagen de docker se requiere un DockerFile: Receta de como va a funcionar
+	
+		(Texto)
+		Esto es posible gracias a ciertos comandos que son necesarios al momento de la construccion de una imagen de los cuales los mas importantes son:
+			-Maintainer
+			-From
+			-Add
+			-Copy
+			-Run
+			-Env
+			-EntryPoint
+			-CMD
+
+
+			(Mini Ejemplo de una persona... No recuerdo por que salio esto)(Como ir armando una imagen de docker)
+				* From:LAnatomia:1
+				* add conocimiento
+				* run: bash init respiracion
+				* add: cerebro
+				* add: personalidad
+				* add: defensed
+				* add: sistema nervioso
+				* add: sexo
+
+
+Por que usar docker?
+	Una de las razones para usar docker es porque permite la creacion de ambientes inmutables. Ademas de ser 
+	muy portable, y es muy facil de lanzar un container en caso de que se requiera uno mas o que el actual
+	falle. Por otra parte nos brindan seguridad al manejar una ambiente aislado
+	
+
+	Stateless: la aplicacion no guarda nada de informacion
+	    |
+	    --->   Cuando se usa Docker se trata de usar servicios externos para guardar informacion
+			Si se usa en containers, y este se cae, se puede perder toda la info, se va a reemplazar el container,
+			se regresa la app, pero no la info
+
+Es seguro?
+	El principal problema de docker es el mismo que le da su ventaja, ya que al usar secciones del kernel de host,
+	un ataque puede realizarse para ganar acceso al kernel principal
+	
+	Por eso debes asegurarse que los procesos corran en ambientes sin privilegios de root, para que en caso de un
+	ataque solo se tenga acceso a una seccion del contenedor y no a todo
+
+	----------------Un contenedor de docker es tan seguro como uno este dispuesto a crearlo-----------------
+
+Quienes usan docker? ejemplitos
+
+	IBM
+	Disney
+	Spotify
+	PayPal
+	ebay
+	ING
+	Google
+	Riot
+	Netflix
+	The New York Times
+	BBC News
+	mailgun
+	New Retic.
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
