@@ -1,0 +1,7 @@
+Numeros=list(range(1,21))
+print("Los ultimos 3 digitos de esta lista son:")
+print(Numeros[-3:])
+print("Los digitos de enm medio son: ")
+print(Numeros[9:12])
+print("Los digitos iniciales son:")
+print(Numeros[:3])
