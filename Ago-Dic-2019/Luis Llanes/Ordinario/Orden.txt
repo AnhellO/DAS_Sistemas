@@ -1,0 +1,23 @@
+La parte 1 de obtener los datos de la API:
+    DataBase.py
+    Personaje.py
+    Episodios.py
+    Locaciones.py
+    ObtenerLocaciones.py
+    ObtenerEpisodios.py
+    ObtenerPersonajes.py
+
+
+La parte 2, use peewee para leer de la base de datos y despues genere los index estaticos:
+    ORM.py
+    los index estan en las distintas carpetas, como index, y los finales nombrados por sus numeros de id
+
+La parte 3, hacer lo mismo que en la parte 2, pero sin generar ningun archivo html para lo cual use Flask:
+    Flask.py
+
+cosas que se deben instalar:
+    pip install Flask
+    pip install peewee
+
+
+este txt es mas que nada para mi por si ocupo algo de aqui y se me olvida algo :( xD
