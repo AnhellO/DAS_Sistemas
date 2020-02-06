@@ -14,3 +14,7 @@ Mejorar el manejo de las estructuras básicas de control y de flujo de Python
 
 * https://www.w3schools.com/python/ref_func_input.asp
 * https://www.w3schools.com/python/python_functions.asp
+
+## Deadline
+
+* `Domingo 9 de Febrero a las 12:00pm`
