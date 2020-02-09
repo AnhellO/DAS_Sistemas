@@ -32,4 +32,4 @@ Mejorar en el manejo básico de la POO en Python
 
 ## Deadline
 
-* `Doming 16 de Febrero a las 12:00pm`
+* `Domingo 16 de Febrero a las 12:00pm`
