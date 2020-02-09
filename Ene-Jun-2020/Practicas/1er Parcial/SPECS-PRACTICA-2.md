@@ -16,12 +16,15 @@ Mejorar en el manejo básico de la POO en Python
 #### Parte 2
 
 * Crea una clase `Empleado` que herede de la clase `Persona`
-  * La nueva clase `Empleado` deberá de tener dos nuevos propiedades, una que sea el `ID` o número de empleado, y otro que indique la posición que este desempeña
+  * La nueva clase `Empleado` deberá de tener dos nuevas propiedades, una que sea el `ID` o número de empleado, y otro que indique la posición que este desempeña
+  * Agregar constructor, `set`, `get` y `__str__` para la clase y sus propiedades
 
 #### Parte 3
 
 * Crea una nueva clase `Empresa`
   * La clase deberá de contener tres diferentes propiedades que representen las características de una empresa, y adicionalmente, un cuarto atributo que contenga al conjunto de empleados que trabajan en la empresa. Todos los elementos de este conjunto deben de ser del tipo `Empleado`, de la clase creada en la parte anterior
+  * Agregar constructor, `set`, `get` y `__str__` para la clase y sus propiedades
+    * El método `__str__` deberá de imprimir a todo el conjunto empleados que trabajan en la empresa
   * Agrega una función de clase que añada nuevos empleados al conjunto de empleados que forman parte de la empresa
   * Agrega una función de clase que busque si un empleado con `ID` igual a `X` trabaja en la empresa
   * Agrega una función de clase que nos devuelva solamente los `IDs` o números de empleado de todo el conjunto de empleados que trabajan en la empresa
