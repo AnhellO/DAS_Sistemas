@@ -24,6 +24,7 @@ Mejorar en el manejo básico de la POO en Python
   * La clase deberá de contener tres diferentes propiedades que representen las características de una empresa, y adicionalmente, un cuarto atributo que contenga al conjunto de empleados que trabajan en la empresa. Todos los elementos de este conjunto deben de ser del tipo `Empleado`, de la clase creada en la parte anterior
   * Agrega una función de clase que añada nuevos empleados al conjunto de empleados que forman parte de la empresa
   * Agrega una función de clase que busque si un empleado con `ID` igual a `X` trabaja en la empresa
+  * Agrega una función de clase que nos devuelva solamente los `IDs` o números de empleado de todo el conjunto de empleados que trabajan en la empresa
 
 ## Recursos
 
@@ -31,4 +32,4 @@ Mejorar en el manejo básico de la POO en Python
 
 ## Deadline
 
-* `Viernes 14 de Febrero a las 12:00pm`
+* `Viernes 14 de Febrero a las 11:59pm`
