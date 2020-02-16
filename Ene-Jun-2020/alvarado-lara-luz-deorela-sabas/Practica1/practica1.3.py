@@ -9,9 +9,8 @@ def potencias(n, m):
 print(potencias(n,m))
 
 #FUNCION CON CICLO FOR
-def potenciasFor(n, m):
-    potencia=[]
-    for x in range(m):
-        potencia.append(n ** x)
-    return potencia
-print(potenciasFor(n, m))
+def potenciasFor():
+    for i in range(m):
+        print((n ** i))
+
+potenciasFor()
