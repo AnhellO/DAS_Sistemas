@@ -10,7 +10,7 @@ animales = [
     Animal('ratón')
 ]
 
-def animal_sound(animales: list):
+def sonido_animal(animales: list):
     for animal in animales:
         if animal.nombre == 'león':
             print('roar')
@@ -18,4 +18,4 @@ def animal_sound(animales: list):
         elif animal.nombre == 'ratón':
             print('squeak')
 
-animal_sound(animales)
+sonido_animal(animales)
