@@ -1,4 +1,24 @@
+##Definimos el decorador
+def addCSS_DECORATOR(func):
+    def CSS(self, url: str, path: str, links: list, pars: list, title: str, typo: str):
+        if typo=='html':
+            cont=0
+            for i in pars:
+                i=i[:2] + " style=\"color:blue;text-align:center;\"" + i[2:]
+                pars[cont]=i
+                cont+=1
+            cont=0
+            for i in links:
+                i=i[:2] +  " style=\"color:blue;text-align:center;\"" + i[2:]
+                links[cont] = i
+                cont+=1
+        func(self, url, path, links, pars, title, typo)
+    return CSS
+
 class Page(object):
+    ##agregamos la funcionalidad al metodo de construccion para que se detecte
+    ##automaticamente si es un html y se agregue el css correspondiente.
+    @addCSS_DECORATOR 
     def __init__(self, url: str, path: str, links: list, pars: list, title: str, typo: str):
         self.url = url
         self.path = path
@@ -89,7 +109,7 @@ class Website(Page):
         r=""
         for i in pages:
             r+="\n"
-            r+=f"{i}"
+            r+="f{i}"
             r+="#########"
         return r
     def __str__(self):
@@ -102,29 +122,28 @@ class Website(Page):
             r+="\n"
         return r
 
-
 def buscador(web: Website , page: Page):
     if page in web.pages:
-        return "Pagina Encontrada."
+        return "Pagina encontrada"
     else:
-        return "Error 404"
+        return "Pagina no encontrada"
 
 def main():
     ##PRUEBA DE FUNCIONALIDAD DE LA CLASE "PAGE"##
-    links=["www.facebook.com","www.twitter.com"]
+    links=["<a>www.facebook.com</a>","<a>www.twitter.com</a>"]
     pars=["<p>Hola</p>",
           "<p>me</p>",  
           "<p>llamo así</p>"]
     pagina1=Page("github.com/emiliobg1997","/index.html",links,pars, "My repo","html")
 
 
-    links=["google.com","youtube.com"]
+    links=["<a>google.com</a>","<a>youtube.com</a>"]
     pars=["<p>Hola</p>",
           "<p>me</p>",  
           "<p>llamo asa</p>"]
-    pagina2=Page("github.com/lufergamo2502","/index.html",links,pars, "his repo","html")
-
-    links=["xda-devs.com","linkedin.com"]
+    pagina2=Page("github.com/lufergamo2502","/index.html",links,pars, "his repo","xml") 
+    ##EL DECORADOR NO FUNCIONARA ACÁ debido a que no es un html
+    links=["<a>xda-devs.com</a>","<a>linkedin.com</a>"]
     pars=["<p>Hola</p>",
           "<p>me</p>",  
           "<p>llamo ase</p>"]

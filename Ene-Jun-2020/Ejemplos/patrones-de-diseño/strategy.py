@@ -44,13 +44,13 @@ def main():
 	my_list = [i for i in range(0, 1000)]
 	quick_sorter = QuickSortConcreteStrategy()
 	context = SortContext(my_list)
-	# print(context.sort_context())
+	print(context.sort_context())
 
 	bubble_sorter = BubbleSortConcreteStrategy()
-	context.set_strategy(bubble_sorter)
+	#context.set_strategy(bubble_sorter)
 	# print(context.sort_context())
 	
-	print(context.sort_context())
+	#print(context.sort_context())
 
 
 if __name__ == '__main__':
