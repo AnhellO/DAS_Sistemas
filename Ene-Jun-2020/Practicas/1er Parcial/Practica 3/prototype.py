@@ -12,6 +12,9 @@ class Oveja(object):
 
 	def set_tipo(self, tipo):
 		self.tipo
-
 	def get_tipo(self):
 		return self.tipo
+	def __str__(self):
+		return f"Nombre:{self.nombre}\nTipo:{self.tipo}"
+
+	
