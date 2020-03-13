@@ -21,12 +21,22 @@
 
 * Implementa el patrón de diseño decorador sobre las clases y objetos del `Ejercicio 1` para que:
   * Decores objetos del tipo `Page`, de tal manera que si su formato es `HTML`, agregues `CSS` sobre las etiquetas de `HTML` que forman parte del contenido de la página (Recurso: https://www.w3.org/Style/Examples/011/firstcss.en.html)
+  * Ejemplo:
+    * Contenido no decorado: `<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>`
+    * Contenido decorado: `<p style="color:blue;text-align:center;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>`
 * Puedes implementar el patrón de diseño desde 0 con sus actores/clases propias, o bien, utilizar los decoradores nativos de Python
 
 #### Ejercicio 3
 
 * Crea un clase `Response`, que se encargué de servir objetos tipo `Page` creados en el `Ejercicio 1`
   * Implementa el patrón de diseño strategy junto a la clase `Response` para que esta pueda servir diferentes objetos `Page` en base a su tipo/formato (`HTML`, `XML`, `JSON`, etc.) (Recurso: https://en.wikipedia.org/wiki/Request%E2%80%93response)
+  * Ejemplo, evaluando `page.getTipo() == 'html'`:
+    ```
+    Response:
+    - Page: <url>
+    - Type: HTML
+    - Content: <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+    ```
 
 #### Ejercicio 4
 
