@@ -2,8 +2,8 @@
 
 ### Objetivo
 
-* Mejorar el aprendizaje y conocimiento sobre [contenedores de Linux](https://linuxcontainers.org/) y [Docker](https://www.docker.com/)
-* Involucrarse con la parte práctica de los primeros temas de Arquitectura de Software
+* Mejorar el aprendizaje y conocimiento sobre [contenedores de Linux](https://linuxcontainers.org/) y [Docker](https://www.docker.com/).
+* Involucrarse con la parte práctica de los primeros temas de Arquitectura de Software.
 
 ### Especificaciones
 
@@ -17,8 +17,8 @@
 
 ### Recursos
 
-* Tutoriales de Docker que ya se han compartido email y durantes las mismas clases
+* Tutoriales de Docker que ya se han compartido email y durantes las mismas clases.
 
 ### Deadline
 
-* `Domingo 5 de Abril a las 11:00pm`
+* `Domingo 5 de Abril a las 11:00pm`.
