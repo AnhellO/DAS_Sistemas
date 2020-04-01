@@ -7,7 +7,7 @@
 
 ### Especificaciones
 
-* Crear un fork del siguiente repositorio https://github.com/AnhellO/pokepy. Después de crear el fork, deberás clonar este a tu máquina local.
+* Crear un fork del siguiente repositorio https://github.com/AnhellO/pokepy. Después de crear el fork, deberás clonar éste a tu máquina local (es decir, tu propio fork del repositorio).
 * Deberás de modificar el código existente para que cumpla con los siguientes requisitos:
   * Agregar el soporte al código para mostrar todos los pokemon existentes en la [API](https://pokeapi.co/), no solamente los primeros 151 pokemon como está actualmente en el código.
   * Aparte del nombre y la imágen del pokemon, deberás de mostrar al menos `10` campos más de información para el pokemon en cuestión. Puedes utilizar los campos que tu quieras para cumplir con este requisito.
