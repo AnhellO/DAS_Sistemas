@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset='utf-8'/>
+        <title> Random Pokemon </title>
+        <style type="text/css">
+            body{
+                 background-image: linear-gradient(to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, 
+                 #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+                color: #fff;
+                background-repeat: no-repeat;
+                background-size: 100% 500%;
+            }
+            header{
+                text-align: center;
+                text-transform: uppercase;
+                font: inherit;
+                font-Weight: 500;
+                text-shadow: 2px 3px 0px #898999;
+                line-height: 1.2;
+                border: 0;
+                margin: 0 auto 35px;
+                font-size: 2em;
+            }
+            div.container{
+                max-width:1052px;
+                text-align:center;
+                margin: 100px auto;
+            }
+            nav{
+                float: right;
+                width: 150px;
+                border: 3px solid black;
+                margin-right: 170px;
+                margin-top: 60px;
+            }
+            table, th, td{
+                border: 3px solid black;
+                text-align: center;
+                float: center;
+                margin-right: 500px;
+                margin-left: 450px;
+                border-collapse: collapse;
+            }
+        </style>
+    <head>
+
+    <body>
+        <div class = "container">
+            <header>
+                <h2>Your random Pokemon:</h2>
+                <h3> {{pokemon.name}} </h3>
+            </header>
+        </div>
+       
+        <nav>
+            <ul>
+                <img src="{{ pokemon.image }}"  width="100" height="120"/>
+            </ul>
+        </nav>
+
+        
+            <table style="width: 30%">
+                <tr>
+                    <th style="background-color:#723055"> Key </th>
+                    <th style="background-color:#723055">  inf </th>
+                </tr>
+                <tr>
+                    <td> ID: </td>
+                    <td> {{pokemon.id}} </td>
+                </tr>
+                <tr>
+                    <td> Base Experience: </td>
+                    <td> {{pokemon.base_experience}} </td>
+                </tr>
+                <tr>
+                    <td> Ability: </td>
+                    <td> {{pokemon.abilities}} </td>
+                </tr>
+                <tr>
+                    <td> Weight: </td>
+                    <td> {{pokemon.weight}} </td>
+                </tr>
+                 <tr>
+                    <td> Height: </td>
+                    <td> {{pokemon.height}} </td>
+                </tr>
+                 <tr>
+                    <td> Order: </td>
+                    <td> {{pokemon.order}} </td>
+                </tr>
+                <tr>
+                    <td> Moves: </td>
+                    <td> {{pokemon.moves}} </td>
+                </tr>
+                <tr>
+                    <td> Held Items: </td>
+                    <td> {{pokemon.items}} </td>
+                </tr>
+                <tr>
+                    <td> Type: </td>
+                    <td> {{pokemon.type}} </td>
+                </tr>
+                <tr>
+                    <td> Location Area: </td>
+                    <td> {{pokemon.location_area_encounters}} </td>
+                </tr>
+                
+            </table>
+        
+</html>
