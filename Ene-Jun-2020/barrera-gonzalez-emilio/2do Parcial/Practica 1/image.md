@@ -2,8 +2,7 @@
 https://hub.docker.com/repository/docker/emiliobg1997/pokepy
 ## INSTRUCTIONS
    1. DOWNLOAD THE IMAGE:
-
-   > sudo docker pull emiliobg1997/pokepy:1.0
+      > sudo docker pull emiliobg1997/pokepy:1.0
 
    2. RUN THE IMAGE
        - Verify the download:
