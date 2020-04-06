@@ -36,5 +36,5 @@ https://hub.docker.com/repository/docker/emiliobg1997/pokepy
        - You can also choose a pokemon if you access: http://0.0.0.0:5000/POKEMON 
          change POKEMON to the name the monster of your choice (eg: http://0.0.0.0:5000/charizard)
        - Feel free to fork and add/delete features to the app. just make sure to give credits
-         to the original developer __anhellojz__
+         to the original developer __AnhellO__
 
