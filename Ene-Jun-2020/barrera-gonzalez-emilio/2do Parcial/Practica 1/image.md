@@ -2,6 +2,7 @@
 https://hub.docker.com/repository/docker/emiliobg1997/pokepy
 ## INSTRUCTIONS
    1. DOWNLOADING THE IMAGE:
+      
       Downloading the image is really simple.
       Open a terminal and enter the following line:
       - Linux:
