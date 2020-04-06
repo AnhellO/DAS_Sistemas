@@ -15,6 +15,7 @@ https://hub.docker.com/repository/docker/emiliobg1997/pokepy
    2. RUNNING THE IMAGE
        - Verify the download:
            First, let's see if the image was correctly downloaded.
+           
            Open a terminal and enter the following line:
            - Linux:
                > $ sudo docker images
