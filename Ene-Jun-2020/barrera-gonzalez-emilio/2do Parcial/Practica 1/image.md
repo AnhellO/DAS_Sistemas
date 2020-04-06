@@ -1,18 +1,18 @@
 ## LINK
 https://hub.docker.com/repository/docker/emiliobg1997/pokepy
-## Instrucciones
-   1. DESCARGA LA IMAGEN:
+## INSTRUCTIONS
+   1. DOWNLOAD THE IMAGE:
 
    > sudo docker pull emiliobg1997/pokepy:1.0
 
-   2. CORRER LA IMAGEN
-       - Verificar que la imagen este descargada:
+   2. RUN THE IMAGE
+       - Verify the download:
            > sudo docker images
-        - Correr la imagen
+       - Run the image
            > sudo docker run -it -p 5000:5000 emiliobg1997/pokepy:1.0
 
-   3. Enjoy:
-       - Abre tu navegador e ingresa a la url http://0.0.0.0:5000 y obten un Pokemon aleatorio
-       - Alternativamente, puedes escoger tu mismo un pokemon de la siguiente forma: http://0.0.0.0:5000/POKEMON
-        sustituyendo la palabra POKEMON por tu monstruo preferido (ej: http://0.0.0.0:5000/charizard)
+   3. ENJOY:
+       - Open your web browser and access the url http://0.0.0.0:5000 to get a random pokémon.
+       - You can also choose a pokemon if you access: http://0.0.0.0:5000/POKEMON 
+         change POKEMON to your monster of choice (eg: http://0.0.0.0:5000/charizard)
 
