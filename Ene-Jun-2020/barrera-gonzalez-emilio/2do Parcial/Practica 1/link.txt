@@ -1,1 +1,0 @@
-https://hub.docker.com/repository/docker/emiliobg1997/pokepy
