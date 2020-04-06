@@ -14,7 +14,7 @@ def index():
 @app.route('/<pokemn>')
 def param(pokemn):
     pokemon=api.getPokemon(pokemn)
-    return render_template('index.html', pokemn=pokemon)
+    return render_template('index.html', pokemon=pokemon)
 """
 
 if __name__ == "__main__":
