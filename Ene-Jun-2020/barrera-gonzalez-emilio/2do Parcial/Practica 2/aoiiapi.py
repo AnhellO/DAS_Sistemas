@@ -32,7 +32,7 @@ class aoiiAPI(object):
         return rvalue
 
     def getUnits(self):
-        uri=f'{self.ENDPOINT}/units'
+        uri=f'{self.ENDPOINT}units'
         r=requests.get(uri)
         data=r.json()
         rvalue=[]
@@ -78,7 +78,7 @@ class aoiiAPI(object):
         return rvalue
 
     def getUnit(self,num):
-        uri = f'https://age-of-empires-2-api.herokuapp.com/api/v1/unit/{num}'
+        uri = f'{self.ENDPOINT}unit/{num}'
         r=requests.get(uri)
         data=r.json()
         
@@ -122,3 +122,69 @@ class aoiiAPI(object):
         rvalue={'num':num, 'name':name, 'age':age,'cost_wood':cost_wood,'cost_gold':cost_gold,'cost_food':cost_food,"cost_stone":cost_stone,'hp':hp, 'attack_range': attack_range, 'attack':attack,'armor': armor, 'accuracy':accuracy}
         return rvalue
 
+    def getStructures(self):
+        uri=f'{self.ENDPOINT}structures'
+        r=requests.get(uri)
+        data=r.json()
+        rvalue=[]
+        for i in data['structures']:
+            num=i['id']
+            name=i['name']
+            age=i['age']
+            try:
+                cost_wood=i['cost']['Wood']
+            except:
+                cost_wood="FREE"
+            try:
+                cost_food=i['cost']['Food']
+            except:
+                cost_food="FREE"
+            try:
+                cost_gold=i['cost']['gold']
+            except:
+                cost_gold="FREE"
+            try:
+                cost_stone=i['cost']['Stone']
+            except:
+                cost_stone="FREE"
+            build_time=i['build_time']
+            hp=i['hit_points']
+            try:
+                armor=i['armor']
+            except:
+                armor="N/A"
+            dictionary={'num':num,'name':name,'age':age,'cost_wood':cost_wood,'cost_food':cost_food,'cost_gold':cost_gold,'cost_stone':cost_stone,'build_time':build_time,'hp':hp,'armor':armor}
+            rvalue.append(dictionary)
+        return rvalue
+
+    def getStructure(self,num):
+        uri=f'{self.ENDPOINT}structure/{num}'
+        r=requests.get(uri)
+        data=r.json()
+        num=data['id']
+        name=data['name']
+        age=data['age']
+        try:
+            cost_wood=data['cost']['Wood']
+        except:
+            cost_wood='FREE'
+        try:
+            cost_food=data['cost']['Food']
+        except:
+            cost_food='FREE'
+        try:
+            cost_gold=data['cost']['Gold']
+        except:
+            cost_gold='FREE'
+        try:
+            cost_stone=data['cost']['Stone']
+        except:
+            cost_stone='FREE'
+        build_time=data['build_time']
+        hp=data['hit_points']
+        try:
+            armor=data['armor']
+        except:
+            armor="N/A"
+        rvalue={'num':num,'name':name,'age':age,'cost_wood':cost_wood,'cost_food':cost_food,'cost_gold':cost_gold,'cost_stone':cost_stone,'build_time':build_time,'hp':hp,'armor':armor}
+        return rvalue

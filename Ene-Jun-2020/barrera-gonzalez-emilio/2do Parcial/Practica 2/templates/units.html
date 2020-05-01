@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/category.css">
+    <title>API of Empires II - Units</title>
+</head>
+<body>
+    <header class="header">
+        <h2>UNITS</h2>
+    </header>
+    <table class='table table-striped table-dark'>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>WOOD</th>
+                <th>GOLD</th>
+                <th>FOOD</th>
+                <th>STONE</th>
+                <th>HP</th>
+                <th>ATTACK RANGE</th>
+                <th>ATTACK POWER</th>
+                <th>ARMOR</th>
+                <th>ACCURACY</th>
+            </tr>
+        </thead>
+        {% for i in units %}
+ 
+            <tr>
+                        <td>{{ i['num'] }}</td>
+                        <td>{{ i['name'] }}</td>
+                        <td>{{ i['cost_wood'] }}</td>
+                        <td>{{ i['cost_gold'] }}</td>
+                        <td>{{ i['cost_food'] }}</td>
+                        <td>{{ i['cost_stone'] }}</td>
+                        <td>{{ i['hp'] }}</td>
+                        <td>{{ i['attack_range'] }}</td>
+                        <td>{{ i['attack'] }}</td>
+                        <td>{{ i['armor'] }}</td>
+                        <td>{{ i['accuracy'] }}</td>
+            </tr>
+
+        {% endfor %}
+    </table>
+        <footer>
+            <nav>
+                <li><a href= "/">Home</a></li>
+                <li><a href= "/civilizations">Civilizations</a></li>
+                <li><a href="/units">Units</a></li>
+                <li><a href="/structures">Structures</a></li>
+            </nav>
+        </footer>
+</body>
+</html>
