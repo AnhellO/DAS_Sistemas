@@ -20,17 +20,6 @@ class aoiiAPI(object):
             rvalue.append(dictionary)
         return rvalue
 
-    def getCivilization(self, num:int):
-        uri = f'{self.ENDPOINT}civilization/{num}'
-        r = requests.get(uri)
-        data=r.json()
-        num=data['id']
-        name=data['name']
-        army=data['army_type']
-        expansion=data['expansion']
-        rvalue={'num': num, 'name': name, 'army':army, 'expansion': expansion}
-        return rvalue
-
     def getUnits(self):
         uri=f'{self.ENDPOINT}units'
         r=requests.get(uri)
@@ -77,51 +66,6 @@ class aoiiAPI(object):
             rvalue.append(dictionary)
         return rvalue
 
-    def getUnit(self,num):
-        uri = f'{self.ENDPOINT}unit/{num}'
-        r=requests.get(uri)
-        data=r.json()
-        
-        num=data['id']
-        name=data['name']
-        age=data['age']
-        try:
-            cost_wood=data['cost']['Wood']
-        except:
-            cost_wood="FREE"
-        try:
-            cost_gold=data['cost']['Gold']
-        except:
-            cost_gold="FREE"
-        try:
-            cost_stone=data['cost']['Stone']
-        except:
-            cost_stone="FREE"
-        try:
-            cost_food=data['cost']['Food']
-        except:
-            cost_food="FREE"
-        hp=data['hit_points']
-        try:    
-            attack_range=data['range']
-        except:
-            attack_range="N/A"
-        try:    
-            attack=data['attack']
-        except:
-            attack='N/A'
-        try:
-            armor=data['armor']
-        except:
-            armor="N/A"
-        try:
-            accuracy=data['accuracy']
-        except:
-            accuracy="N/A"
-
-        rvalue={'num':num, 'name':name, 'age':age,'cost_wood':cost_wood,'cost_gold':cost_gold,'cost_food':cost_food,"cost_stone":cost_stone,'hp':hp, 'attack_range': attack_range, 'attack':attack,'armor': armor, 'accuracy':accuracy}
-        return rvalue
-
     def getStructures(self):
         uri=f'{self.ENDPOINT}structures'
         r=requests.get(uri)
@@ -157,34 +101,33 @@ class aoiiAPI(object):
             rvalue.append(dictionary)
         return rvalue
 
-    def getStructure(self,num):
-        uri=f'{self.ENDPOINT}structure/{num}'
+    def getTech(self):
+        uri=f'{self.ENDPOINT}technologies'
         r=requests.get(uri)
         data=r.json()
-        num=data['id']
-        name=data['name']
-        age=data['age']
-        try:
-            cost_wood=data['cost']['Wood']
-        except:
-            cost_wood='FREE'
-        try:
-            cost_food=data['cost']['Food']
-        except:
-            cost_food='FREE'
-        try:
-            cost_gold=data['cost']['Gold']
-        except:
-            cost_gold='FREE'
-        try:
-            cost_stone=data['cost']['Stone']
-        except:
-            cost_stone='FREE'
-        build_time=data['build_time']
-        hp=data['hit_points']
-        try:
-            armor=data['armor']
-        except:
-            armor="N/A"
-        rvalue={'num':num,'name':name,'age':age,'cost_wood':cost_wood,'cost_food':cost_food,'cost_gold':cost_gold,'cost_stone':cost_stone,'build_time':build_time,'hp':hp,'armor':armor}
+        rvalue=[]
+        for i in data["technologies"]:
+            #num=,name=,age=,wood=,food=,gold=,stone=,build_time=
+            num = i['id']
+            name = i['name']
+            age = i['age']
+            try:
+                wood = i['cost']['Wood']
+            except:
+                wood = 'FREE'
+            try:
+                food = i['cost']['Food']
+            except:
+                food = 'FREE'
+            try:
+                gold = i['cost']['Gold']
+            except:
+                gold = 'FREE'
+            try:
+                stone = i['cost']['Stone']
+            except:
+                stone = 'FREE'
+            build_time = i['build_time']
+            dictionary={'num':num,'name':name,'age':age,'wood':wood,'food':food,'gold':gold,'stone':stone,'build_time':build_time}
+            rvalue.append(dictionary)
         return rvalue

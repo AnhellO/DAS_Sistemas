@@ -16,7 +16,7 @@ def index():
 @app.route('/structures')    
 def structures():
     db.connect()
-    structures=Structures.select()
+    structures=Structure.select()
     db.close()
     print(structures)
     return render_template('structures.html',structures=structures)
@@ -31,10 +31,16 @@ def units():
 @app.route('/civilizations')
 def civilizations():
     db.connect()
-    civilizations=Civilizations.select()
+    civilizations=Civilization.select()
     db.close()
     return render_template('civilizations.html', civilizations=civilizations)
 
+@app.route('/tech')
+def tech():
+    db.connect()
+    tech=Technology.select()
+    db.close()
+    return render_template('tech.html', tech=tech)
 
 
 if __name__=='__main__':

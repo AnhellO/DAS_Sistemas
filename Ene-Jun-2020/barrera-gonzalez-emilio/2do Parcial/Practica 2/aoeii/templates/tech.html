@@ -14,35 +14,25 @@
     <table class='table table-striped table-dark'>
         <thead>
             <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>WOOD</th>
-                <th>GOLD</th>
-                <th>FOOD</th>
-                <th>STONE</th>
-                <th>HP</th>
-                <th>ATTACK RANGE</th>
-                <th>ATTACK POWER</th>
-                <th>ARMOR</th>
-                <th>ACCURACY</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Wood</th>
+                <th>Food</th>
+                <th>Gold</th>
+                <th>Stone</th>
+                <th>Build Time</th>
             </tr>
         </thead>
-        {% for i in units %}
- 
+        {% for i in tech %}
             <tr>
                         <td>{{ i['num'] }}</td>
                         <td>{{ i['name'] }}</td>
                         <td>{{ i['wood'] }}</td>
-                        <td>{{ i['gold'] }}</td>
                         <td>{{ i['food'] }}</td>
+                        <td>{{ i['gold'] }}</td>
                         <td>{{ i['stone'] }}</td>
-                        <td>{{ i['hp'] }}</td>
-                        <td>{{ i['a_range'] }}</td>
-                        <td>{{ i['power'] }}</td>
-                        <td>{{ i['armor'] }}</td>
-                        <td>{{ i['accuracy'] }}</td>
+                        <td>{{ i['build_time'] }}</td>
             </tr>
-
         {% endfor %}
     </table>
         <footer>
@@ -51,6 +41,7 @@
                 <li><a href= "/civilizations">Civilizations</a></li>
                 <li><a href="/units">Units</a></li>
                 <li><a href="/structures">Structures</a></li>
+                <li><a href="/tech">Technologies</a></li>
             </nav>
         </footer>
 </body>

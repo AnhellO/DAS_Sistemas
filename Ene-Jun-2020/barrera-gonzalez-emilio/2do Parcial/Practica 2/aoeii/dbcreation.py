@@ -23,7 +23,7 @@ class Unit(Model):
         database = db
         db_table =  'Unit'
 
-class Structures(Model):
+class Structure(Model):
     num = CharField(unique=True)
     name = CharField()
     wood = CharField()
@@ -36,9 +36,9 @@ class Structures(Model):
 
     class Meta:
         database = db
-        db_table = "Structures"
+        db_table = "Structure"
 
-class Civilizations(Model):
+class Civilization(Model):
     num = CharField(unique=True)
     name = CharField()
     army = CharField()
@@ -46,7 +46,20 @@ class Civilizations(Model):
 
     class Meta:
         database = db
-        db_table = "Civilizations"
+        db_table = "Civilization"
+
+class Technology(Model):
+    num = CharField(unique=True)
+    name = CharField()
+    age = CharField()
+    wood = CharField()
+    food = CharField()
+    gold = CharField()
+    stone = CharField()
+    build_time = CharField()
+    class Meta:
+        database = db
+        db_table = "Technology"
 
 if __name__=='__main__':
     #CONNECTING TO THE DATABASE
@@ -58,36 +71,43 @@ if __name__=='__main__':
 
     #CREATING TABLES
     Unit.create_table() 
-    Structures.create_table()
-    Civilizations.create_table()
+    Structure.create_table()
+    Civilization.create_table()
+    Technology.create_table()
 
     #DATA INSERTION
     ###Civilization
-    civs=api.getCivilizations()
+    civs = api.getCivilizations()
     for i in civs:
         try:
-            Civilizations.create(num=i['num'],name=i['name'],army=i['army'],expansion=i['expansion'])
-            print(f'row inserted in Civilizations')
+            Civilization.create(num=i['num'],name=i['name'],army=i['army'],expansion=i['expansion'])
+            print(f'row inserted in Civilization')
         except:
-            print(f"can't reuse key '{i['num']}' in 'Civilizations'")
-    Civilizations.save()
+            print(f"can't reuse key '{i['num']}' in 'Civilization'")
     ###Units
-    uts=api.getUnits()
+    uts = api.getUnits()
     for i in uts:
         try:
             Unit.create(num=i['num'],name=i['name'],age=i['age'],wood=i['cost_wood'],gold=i['cost_gold'],food=i['cost_food'],stone=i['cost_stone'],hp=i['hp'],a_range=i['attack_range'],power=i['attack'],armor=i['armor'],accuracy=i['accuracy'])
-            print('row inserted in unit')
+            print('row inserted in Unit')
         except:
             print(f"can't reuse key '{i['num']}' in 'Units'")
-    Unit.save()
     ###Structures
-    struc=api.getStructures()
+    struc = api.getStructures()
     for i in struc:
         try:
-            Structures.create(num=i['num'],name=i['name'],age=i['age'],wood=i['cost_wood'],gold=i['cost_gold'],food=i['cost_food'],stone=i['cost_stone'],hp=i['hp'],build_time=i['build_time'],armor=i['armor'])
-            print('row inserted in structures')
+            Structure.create(num=i['num'],name=i['name'],age=i['age'],wood=i['cost_wood'],gold=i['cost_gold'],food=i['cost_food'],stone=i['cost_stone'],hp=i['hp'],build_time=i['build_time'],armor=i['armor'])
+            print('row inserted in structure')
         except:
-            print(f"can't reuse key '{i['num']}' in 'Structures'")
-    Structures.save()
+            print(f"can't reuse key '{i['num']}' in 'Structure'")
+    ###Tech
+    tech = api.getTech()
+    for i in tech:
+        try:
+            Technology.create(num=i['num'],name=i['name'],age=i['age'],wood=i['wood'],food=i['food'],gold=i['gold'],stone=i['stone'],build_time=i['build_time'])
+            print('row inserted in Technology')
+        except:
+            print(f"can't reuse key '{i['num']}' in 'Technology'")
+
     #CLOSING THE CONNECTION
     db.close()
