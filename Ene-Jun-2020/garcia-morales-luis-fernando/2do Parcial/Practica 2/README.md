@@ -7,6 +7,7 @@ Se utiliza tecnica ORM usuando la libreria peewee para insertar y mostrar los da
 -----------------------------------------------------------------------------
 INSTRUCCIONES:
 Usar comando => docker run -it -p 5000:5000 fernandogm/age_of_empires_db:1.0 para inicializar contenedor remoto de dockerhub.
+Usar comando => python3 app.py para correr el programa Local con python
 
 La aplicacion genera informacion de CIVILIZACIONES, UNIDADES, ESTRUCTURAS y TECNOLOGIAS de manera
 aleatoria al recargar la pagina deacuerdo al parametro dado en la url.
