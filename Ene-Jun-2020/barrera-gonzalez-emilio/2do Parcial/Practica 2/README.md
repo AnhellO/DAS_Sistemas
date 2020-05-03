@@ -69,4 +69,4 @@ After that, just run the app:
 ```$python3 app.py```
 
 then open your web browser and access http://0.0.0.0:5000
-you'll should be able to see the index page.
+you should be able to see the index page.
