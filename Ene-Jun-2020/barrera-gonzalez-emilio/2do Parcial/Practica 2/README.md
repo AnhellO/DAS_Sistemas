@@ -13,7 +13,7 @@ There's an already built image on dockerhub! You can pull it using the following
     
 After that, you can run it by using:
 
- ```sudo docker run -it -p 5000:5000 emiliobg1997:/aoeii:1.0 ```
+    ```sudo docker run -it -p 5000:5000 emiliobg1997:/aoeii:1.0 ```
 
 Now, simply open your web browser and access http://0.0.0.0:5000, the image should be running now
 
