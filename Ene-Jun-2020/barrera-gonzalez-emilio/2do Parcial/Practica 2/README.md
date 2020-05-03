@@ -1,11 +1,11 @@
-#AOEII - API OF EMPIRES II
+# AOEII - API OF EMPIRES II
 
-##How to run
+## How to run
 In order to run this service you have two options
 1. Use the docker image
 2. Run the Python Scripts directly
 
-##1. Running the Docker Image
+## 1. Running the Docker Image
 
 There's an already built image on dockerhub! You can pull it using the following command:
     ```sudo docker pull emiliobg1997/aoeii:1.0```
@@ -33,7 +33,7 @@ You can also build the image yourself directly from the github repo:
    
 5. Again, open your web browser and access http://0.0.0.0:5000, the image you just built should be running now
 
-##2. Running the Scripts:
+## 2. Running the Scripts:
 
 Please note that you need the following modules for python as well as python 3.x in order to run it this way:
 
