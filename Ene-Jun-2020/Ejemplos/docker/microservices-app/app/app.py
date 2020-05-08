@@ -1,6 +1,5 @@
 from flask import Flask, render_template
-from peewee import *
-from models import Pokemon
+from models import *
 from pokeapi import PokeAPI
 from random import randrange
 
@@ -9,9 +8,12 @@ api = PokeAPI()
 
 @app.route('/')
 def index():
-    pokemon = api.get_pokemon(randrange(api.get_count()))
+    # print(Pokemon.select().count())
+    pokemon = Pokemon.get(id=randrange(Pokemon.select().count()))
     print(pokemon)
+
     return render_template('index.html', pokemon=pokemon)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
+    myDB.close()

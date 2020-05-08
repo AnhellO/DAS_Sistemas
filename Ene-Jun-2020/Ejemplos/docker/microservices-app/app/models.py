@@ -3,7 +3,7 @@ from playhouse.shortcuts import model_to_dict
 
 myDB = MySQLDatabase(
 	'pokedex',
-	host='db',
+	host='pokepy_db',
 	port=3306,
 	user='root',
 	passwd='root'

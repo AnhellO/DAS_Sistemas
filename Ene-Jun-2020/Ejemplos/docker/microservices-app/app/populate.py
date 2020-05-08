@@ -1,9 +1,12 @@
 from models import *
 from pokeapi import PokeAPI
+import logging
+
+# logger = logging.getLogger('peewee')
+# logger.setLevel(logging.DEBUG)
+# logger.addHandler(logging.StreamHandler())
 
 def main():
-    myDB.connect()
-    myDB.create_tables([Pokemon])
     api = PokeAPI()
     
     for i in range(1, api.get_count(), 1):
@@ -16,7 +19,6 @@ def main():
         except Exception as e:
             print(e)
 
-    myDB.close()
-
 if __name__ == '__main__':
     main()
+    myDB.close()

@@ -26,7 +26,7 @@ class PokeAPI(object):
             raise Exception(f"Pokemon {self.ENDPOINT}/{x} doesn't exist in the API :(")
         
         data = r.json()
-        types = ', '.join(list(filter(lambda x: x != '', [_type.get('type', {}).get('name', '') for _type in data.get('types', [])])))
+        types = ','.join(list(filter(lambda x: x != '', [_type.get('type', {}).get('name', '') for _type in data.get('types', [])])))
 
         return {
             'nombre': data.get('name'),

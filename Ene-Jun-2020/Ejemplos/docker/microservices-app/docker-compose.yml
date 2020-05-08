@@ -1,4 +1,4 @@
-version: "2"
+version: "3.2"
 services:
   app:
     build: ./app
@@ -7,6 +7,20 @@ services:
       - db
     ports:
       - "5000:5000"
+    volumes:
+      - type: bind
+        source: ./app
+        target: /usr/src/app
+  script:
+    build: ./app
+    container_name: pokepy_script
+    links:
+      - db
+    volumes:
+      - type: bind
+        source: ./app
+        target: /usr/src/app
+    command: ["python", "./populate.py"]
   db:
     image: mysql:5.7
     container_name: pokepy_db
