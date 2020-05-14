@@ -1,7 +1,6 @@
-#Nombre
+# Nombre
 Emilio Barrera González
-##Matricula
+## Matricula
 13001112
-##Semestre
+## Semestre
 7mo
-
