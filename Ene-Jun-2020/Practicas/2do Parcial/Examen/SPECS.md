@@ -10,7 +10,7 @@
     * Se encargará de alojar una base de datos en MySQL, la cual almacenará los datos obtenidos de la API, y de la cual se obtendrán los datos que se mostrarán en el contenedor `D`
   * **Contenedor C**
     * Este contenedor ejecutará una instalación de `PHPMyAdmin` que tendrá como host a la base de datos que vive dentro del contenedor `B`. Deberías poder analizar y revisar tus datos desde la interfaz que provee `PHPMyAdmin`
-    * Una vez que tus datos estén en la DB y que `PHPMyAdmin` funcione correctamente, deberás de exportar los datos existentes en la DB a un archivo `CSV`, el cual se tendrá que agregar a la carpeta de la práctica
+    * Una vez que tus datos estén en la DB y que `PHPMyAdmin` funcione correctamente, deberás de exportar los datos existentes en la DB a un archivo `CSV`, el cual se tendrá que agregar a la carpeta del exámen
   * **Contenedor D**
     * Tendrá que ejecutar una pequeña app que funcione con `Python` y `Flask`
     * La app tendrá una página principal que contenga una tabla con la lista de todos los personajes obtenidos de la API, y para cada personaje un link a una página nueva para cada uno
