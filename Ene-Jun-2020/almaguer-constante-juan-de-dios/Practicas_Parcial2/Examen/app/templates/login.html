@@ -1,0 +1,22 @@
+<! — “Child Template” →
+{% extends 'base.html' %}
+{% block title %} Index {% endblock %}
+{% block head %}
+ {{ super() }}
+{% endblock %}
+<body>
+ <h1>Hello World</h1>
+ <p>Welcome to my site.</p>
+ <table class="darktable"; style="font-family:verdana%; text-align:center;">
+   {% for char in characters %}
+       <tr>
+          <td>{{ char['id'] }}</td>
+          <td>{{ char['name'] }}</td>
+          <td>{{ char['img'] }}</td>
+          <td>{{ char['estado'] }}</td>
+          <td>{{ char['nickname'] }}</td>
+          <td>{{ char['portrayed'] }}</td>
+       </tr>
+   {% endfor %}
+ </table>
+</body>
