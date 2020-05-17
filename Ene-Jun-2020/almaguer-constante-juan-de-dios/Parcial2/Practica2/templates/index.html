@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Civilizations AEOII</title>
+    <style type="text/css">
+
+      body {
+         width: 200vh;
+         height: 100vh;
+         background: -moz-linear-gradient(left, #CE5937 0%, #A4A4A4 100%, #C59237 100%);
+         background: -webkit-linear-gradient(left, #CE5937 0%, #A4A4A4 100%, #C59237 100%);
+         background: linear-gradient(to right, #CE5937 0%, #A4A4A4 100%, #C59237 100%);
+      }
+
+      h3{
+      color: white
+      text-transform: uppercase;
+      }
+
+      div.container {
+        max-width: 500px;
+        margin: 100px auto;
+        padding: 10px;
+        text-align: center;
+
+      }
+
+      table.darkTable {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        border: 3px solid #F2FFF1;
+        background-color: #FCFFFF;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        border-collapse: collapse;
+        }
+
+    </style>
+</head>
+<body>
+<h3 style="font-size:200%; font-family:courier%; text-align:center;">Available Civilizations in AEOII:</h3>
+      <table class="darkTable">
+
+           <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Expansion</th>
+            <th>Army Type</th>
+            <th>Team Bonus</th>
+          </tr>
+
+          {% for civ in civilizations %}
+            <tr>
+                        <td>{{ civ['id'] }}</td>
+                        <td>{{ civ['name'] }}</td>
+                        <td>{{ civ['expansion'] }}</td>
+                        <td>{{ civ['army_type'] }}</td>
+                        <td>{{ civ['team_bonus'] }}</td>
+            </tr>
+          {% endfor %}
+      </table>
+
+<h3 style="font-size:200%; font-family:courier%; text-align:center;">Available Units in AEOII:</h3>
+      <table class="darkTable">
+
+           <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Expansion</th>
+            <th>Age</th>
+            <th>Created in</th>
+          </tr>
+
+          {% for unit in units %}
+            <tr>
+                        <td>{{ unit['id'] }}</td>
+                        <td>{{ unit['name'] }}</td>
+                        <td>{{ unit['description'] }}</td>
+                        <td>{{ unit['expansion'] }}</td>
+                        <td>{{ unit['age'] }}</td>
+                        <td>{{ unit['created_in'] }}</td>
+            </tr>
+          {% endfor %}
+      </table>
+
+<h3 style="font-size:200%; font-family:courier%; text-align:center;">Available Structures in AEOII:</h3>
+      <table class="darkTable">
+
+           <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Expansion</th>
+            <th>Age</th>
+            <th>Cost</th>
+          </tr>
+
+          {% for struc in structures %}
+            <tr>
+                        <td>{{ struc['id'] }}</td>
+                        <td>{{ struc['name'] }}</td>
+                        <td>{{ struc['expansion'] }}</td>
+                        <td>{{ struc['age'] }}</td>
+                        <td>{{ struc['cost'] }}</td>
+            </tr>
+          {% endfor %}
+      </table>
+
+<h3 style="font-size:200%; font-family:courier%; text-align:center;">Available Technologies in AEOII:</h3>
+      <table class="darkTable">
+
+           <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Expansion</th>
+            <th>Age</th>
+            <th>Cost</th>
+          </tr>
+
+          {% for tech in techs %}
+            <tr>
+                        <td>{{ tech['id'] }}</td>
+                        <td>{{ tech['name'] }}</td>
+                        <td>{{ tech['description'] }}</td>
+                        <td>{{ tech['expansion'] }}</td>
+                        <td>{{ tech['age'] }}</td>
+                        <td>{{ tech['cost'] }}</td>
+            </tr>
+          {% endfor %}
+      </table>
+</body>
+</html>
