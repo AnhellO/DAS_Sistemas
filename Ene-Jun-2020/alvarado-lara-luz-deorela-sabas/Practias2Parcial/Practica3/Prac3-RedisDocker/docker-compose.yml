@@ -2,15 +2,17 @@ version: "3.2"
 services:
   
   script:
-    build: ./Prac3-RedisDocker
+    build: ./Script
     container_name: fake_data
-    links: 
-      -redis
+    depends_on: 
+      - redis
+    environment: 
+      - REDIS_HOST=redis
     volumes: 
-      - type: build
-        source: ./Script/fake.py
-        target: /usr/src/Script
-    command: ["python", "./fake.py"]
+      - type: bind
+        source: ./Script
+        target: /usr/src/Prac3-RedisDocker
+    command: ["python", "/fake.py"]
       
   redis:
     image: redis:latest
