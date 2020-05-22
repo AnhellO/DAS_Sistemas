@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character List - BREAKING BAD API</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+</head>
+<body>
+    <table>
+        <thead>
+            <th>id</th>
+            <th>name</th>
+            <th>birthday</th>
+            <th>occupation</th>
+            <th>status</th>
+            <th>nickname</th>
+            <th>appearance</th>
+            <th>portrayed</th>
+            <th>category</th>
+            <th>Better Call Saul Seasons</th>
+        </thead>
+    {% for i in chars %}
+        <tr>
+            <td>{{ i['char_id'] }}</td>
+            <td><a href = "/{{ i['char_id'] }}">{{ i['char_name'] }}</a></td>
+            <td>{{ i['char_bd'] }}</td>
+            <td>{{ i['char_oc'] }}</td>
+            <td>{{ i['char_status'] }}</td>
+            <td>{{ i['char_nickname'] }}</td>
+            <td>{{ i['char_appearances'] }}</td>
+            <td>{{ i['char_portrayed'] }}</td>
+            <td>{{ i['char_category'] }}</td>
+            <td>{{ i['char_bcs_a'] }}</td>
+        </tr>
+    {% endfor %}}
+    </table>
+</body>
+</html>
