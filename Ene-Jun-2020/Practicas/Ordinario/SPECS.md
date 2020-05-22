@@ -44,4 +44,4 @@
 
 ### Deadline
 
-* `Domingo 31 de Mayo a las 11:59pm`.
+* `Sábado 6 de Junio a las 11:59pm`
