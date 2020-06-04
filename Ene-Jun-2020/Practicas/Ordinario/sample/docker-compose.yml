@@ -1,0 +1,62 @@
+version: "3.5"
+services:
+  app:
+    build: ./app
+    container_name: pokepy_app
+    networks:
+      - pokepy
+    depends_on:
+      - "postgres"
+    restart: on-failure:10
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/usr/src/app
+
+  script:
+    build: ./app
+    container_name: pokepy_script
+    networks:
+      - pokepy
+    depends_on:
+      - "postgres"
+    restart: on-failure:10
+    volumes:
+      - ./app:/usr/src/app
+    command: ["python", "./populate.py"]
+
+  postgres:
+    container_name: pokepy_db
+    image: postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      PGDATA: /data/postgres
+    volumes:
+       - $PWD/pg-data/:/data/postgres
+       - ./db:/docker-entrypoint-initdb.d/:ro
+    ports:
+      - "5432:5432"
+    networks:
+      - pokepy
+    restart: unless-stopped
+  
+  pgadmin:
+    container_name: pokepy_pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+    volumes:
+       - $PWD/pgadmin-data/:/root/.pgadmin
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    networks:
+      - pokepy
+    depends_on:
+      - "postgres"
+    restart: unless-stopped
+
+networks:
+  pokepy:
+    driver: bridge
