@@ -41,5 +41,5 @@
 
 #### Ejercicio 4
 
-* Partiendo del ejemplo de código en el archivo [`ocp.py`](ocp.py) surge la siguiente preguntas: ¿qué pasaría con esa escalera `if-elif` y en específico con la clase `Animal` si vamos agregando más especies de animales?
+* Partiendo del ejemplo de código en el archivo [`ocp.py`](ocp.py) surgen la siguiente preguntas: ¿qué pasaría con esa escalera `if-elif` y en específico con la clase `Animal` si vamos agregando más especies de animales?
 * Refactoriza el ejemplo proporcionado utilizando el principio `Open/Closed (OCP)` de tal forma que podamos agregar más funcionalidad de "animales" sin preocuparnos por la modificación de la clase `Animal`
