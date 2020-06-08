@@ -23,7 +23,7 @@ Partiendo del ejemplo de código en el archivo [composite.py](composite.py), imp
 
 Partiendo del ejemplo de código en el archivo [chain-of-responsibility.py](chain-of-responsibility.py), imaginemos que existen varias formas de pago disponibles en una cuenta, y que cada una tiene un balance/monto específico. Si deseamos comprar un artículo que cuesta $200, pero en determinada forma de pago solamente tenemos disponible un balance de $150, ¿cómo podemos implementar la lógica en el programa de tal manera que podamos llevar a cabo la compra del artículo con alguna de las otras cuentas y formas de pago que tenemos disponibles?.
 
-Apóyate del patrón de diseño [Chain of Responsibility](https://sourcemaking.com/design_patterns/chain_of_responsibility) para darle solución al problema planteado anteriorment. Este patrón nos plantea que podemos crear una cadena de objetos de tal manera que una petición/input inicial pase de un objeto a otro hasta que exista un objeto que satisfaga la petición original.
+Apóyate del patrón de diseño [Chain of Responsibility](https://sourcemaking.com/design_patterns/chain_of_responsibility) para darle solución al problema planteado anteriormente. Este patrón nos plantea que podemos crear una cadena de objetos de tal manera que una petición/input inicial pase de un objeto a otro hasta que exista un objeto que satisfaga la petición original.
 
 ## Requisitos Adicionales
 
