@@ -11,7 +11,7 @@
 
 Partiendo del ejemplo de código en el archivo [prototype.py](prototype.py), supongamos que se crea una instancia de la clase `Oveja`  con nombre `Dolly`, ¿qué lógica de código necesitaríamos implementar para poder clonar a esta instancia de la clase `Oveja`?.
 
-Implementa el patrón de diseño [Prototype](https://sourcemaking.com/design_patterns/prototype) para ilustrar este ejemplo. Este patrón nos permite crear copias de objetos existentes independientement de su clase, y así poder modificar las nuevas copias a necesidad
+Implementa el patrón de diseño [Prototype](https://sourcemaking.com/design_patterns/prototype) para ilustrar este ejemplo. Este patrón nos permite crear copias de objetos existentes independientemente de su clase, y así poder modificar las nuevas copias a necesidad
 
 #### Ejercicio 2
 
