@@ -1,0 +1,39 @@
+body{
+    background-image: linear-gradient(to right top, #f6a01a, #deb500, #bbc900, #88db00, #12eb41);
+}
+main{
+    display: flex;
+    flex :1;
+    flex-flow: column;
+    color:white;
+    background: rgb(13,29,29);
+    background: linear-gradient(0deg, rgba(13,29,29,1) 0%, rgba(167,142,87,1) 100%);
+}
+main div{
+    border: .1rem;
+    border-color: gray;
+    border-style: solid;
+
+}
+main div:last-of-type{
+    border-bottom: .1rem;
+}
+.cardimage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardimage img{
+    height: 15.625rem;
+    width: 10.61rem;
+}
+
+.Cardname{
+    text-align: center;
+}
+
+.carddetails div{
+    display: flex;
+    justify-content: space-around;
+    
+}
