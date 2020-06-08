@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/category.css">
+    <title>API OF EMPIRES II - CIVILIZATIONS</title>
+</head>
+<body>
+    <header class="header">
+        <h2>CIVILIZATIONS</h2>
+    </header>
+    <table class='table table-striped table-dark'>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Army</th>
+                <th>expansion</th>
+            </tr>
+        </thead>
+        {% for i in civilizations %}
+ 
+            <tr>
+                        <td>{{ i['num'] }}</td>
+                        <td>{{ i['name'] }}</td>
+                        <td>{{ i['army'] }}</td>
+                        <td>{{ i['expansion'] }}</td>
+            </tr>
+
+        {% endfor %}
+    </table>
+    <footer>
+        <nav>
+            <li><a href= "/">Home</a></li>
+            <li><a href= "/civilizations">Civilizations</a></li>
+            <li><a href="/units">Units</a></li>
+            <li><a href="/structures">Structures</a></li>
+            <li><a href="/tech">Technologies</a></li>
+        </nav>
+    </footer>
+</body>
+</html>

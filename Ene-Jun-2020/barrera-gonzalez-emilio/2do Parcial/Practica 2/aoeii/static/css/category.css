@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background: #343a40;
+}
+body h1{
+    margin: 0;
+}
+.header{
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #343a40;
+    margin:0;
+}
+.table{
+    margin:0;
+    flex:1;
+}
+footer{
+    display: flex;
+    flex:1;
+    justify-content: right;
+}
+footer nav{
+    display:flex;
+    list-style: none;
+    color: white;
+}
+footer nav a{
+    margin-right: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer nav li{
+    margin-right: .5rem;
+}
+footer nav a:hover{
+    color:#69bf29;
+}
+
+footer nav li:last-of-type{
+    margin-right: .2rem;
+}
