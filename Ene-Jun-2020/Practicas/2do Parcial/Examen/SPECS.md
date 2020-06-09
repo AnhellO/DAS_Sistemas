@@ -7,7 +7,7 @@
     * Ejecutará un script en python el cual se encargué de obtener la lista de todos los personajes existentes en la siguiente API: https://www.breakingbadapi.com/
     * Los items deberán de guardarse en la base de datos que correrá dentro del contenedor `B`
   * **Contenedor B**
-    * Se encargará de alojar una base de datos en MySQL, la cual almacenará los datos obtenidos de la API, y de la cual se obtendrán los datos que se mostrarán en el contenedor `D`
+    * Se encargará de alojar una base de datos en `MySQL`, la cual almacenará los datos obtenidos de la API, y de la cual se obtendrán los datos que se mostrarán en el contenedor `D`
   * **Contenedor C**
     * Este contenedor ejecutará una instalación de `PHPMyAdmin` que tendrá como host a la base de datos que vive dentro del contenedor `B`. Deberías poder analizar y revisar tus datos desde la interfaz que provee `PHPMyAdmin`
     * Una vez que tus datos estén en la DB y que `PHPMyAdmin` funcione correctamente, deberás de exportar los datos existentes en la DB a un archivo `CSV`, el cual se tendrá que agregar a la carpeta del exámen
