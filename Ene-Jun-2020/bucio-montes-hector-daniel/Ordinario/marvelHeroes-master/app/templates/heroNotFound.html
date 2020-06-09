@@ -1,0 +1,17 @@
+{% extends "indexBase.html" %}
+{% block content %}
+
+
+
+<div id='image'>
+    <img src="{{ url_for('static', filename ='images/notFound.jpg') }}">
+</div>
+
+<div id='information'>
+
+    Sorry, hero id {{id_Hero}} isnt in this DB
+
+</div>
+  
+{% endblock %}
+
