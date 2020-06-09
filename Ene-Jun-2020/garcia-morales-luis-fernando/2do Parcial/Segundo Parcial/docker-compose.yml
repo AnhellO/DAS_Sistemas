@@ -1,0 +1,44 @@
+version: "3.2"
+services:
+  script:
+    build: ./app
+    container_name: breaking_script
+    links:
+      - db
+    volumes:
+      - type: bind
+        source: ./app
+        target: /usr/src/app
+    command: ["python","./breakingInsert.py"]
+  db:
+    image: mysql:5.7
+    container_name: breaking_db
+    ports:
+      - "3200:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: breaking_myadmin
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8080:80
+  app:
+    build: ./app
+    container_name: breaking_app
+    links:
+      - db
+    ports:
+      - "5000:5000"
+    volumes:
+      - type: bind
+        source: ./app
+        target: /usr/src/app
