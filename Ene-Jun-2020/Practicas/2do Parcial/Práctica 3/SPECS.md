@@ -21,7 +21,7 @@
   * Utiliza la librería `Faker` para generar una lista de 100 `email` (direcciones de correo electrónico) falsos
   * Estos `emails` deben almacenarse en el storage de `Redis` utilizando la librería de `redis-py`. Los `emails` serán identificados por una llave única que también tendrá que ser generada por medio de la librería de `Faker` (revisa los generadores para `md5`, `sha1` y `sha256` en la documentación de `Faker` para mejor referencia)
 * Accede a tu contenedor de `Redis` y verifica que las nuevas llaves fueron almacenadas. Puedes adjuntar screenshots a tu práctica para comprobar este paso
-* Finalmente crea un archivo `README.md`, al cual le hagas commit junto con los demás archivos de tu práctica. En él deberás de describir tu experiencia después de investigar sobre `Redis` y utilizarlo un poco, así los pros y contras que pudiste detectar en la tecnología después de llevar acabo la práctica
+* Finalmente crea un archivo `README.md`, al cual le hagas commit junto con los demás archivos de tu práctica. En él deberás de describir tu experiencia después de investigar sobre `Redis` y utilizarlo un poco, así como los pros y contras que pudiste detectar en la tecnología después de llevar acabo la práctica
 
 ### Hints
 * No es necesario publicar la imagen en https://hub.docker.com/
