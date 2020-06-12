@@ -17,7 +17,7 @@
     * Deberás utilizar el sistema de templates [`Jinja`](https://flask.palletsprojects.com/en/1.1.x/tutorial/templates/) nativo de `Flask` para mostrar el `HTML`/markup de la aplicación. Queda a tu criterio el uso de `CSS`/estilos para darle formato a la web-app
   * **Contenedor D**
     * Este contenedor deberá de tener funcionando una instalación de `Redis`
-    * La instalación de `Redis` funcionará como base de datos y punto de [caché](https://en.wikipedia.org/wiki/Cache_(computing) para todos los queries de tipo `SELECT/GET` que se hagan a tu aplicación a través de la web-app
+    * La instalación de `Redis` funcionará como base de datos y punto de [caché](https://en.wikipedia.org/wiki/Cache_(computing)) para todos los queries de tipo `SELECT/GET` que se hagan a tu aplicación a través de la web-app
 * Finalmente crea un archivo `README.md` en el que incluyas lo siguiente:
   * Los pasos detallados a seguir para hacer funcionar tu proyecto
   * La lista de URLs finales que existen en la aplicación. Estas URLs son las generadas por tu app, y no las que pertenecen a la API
