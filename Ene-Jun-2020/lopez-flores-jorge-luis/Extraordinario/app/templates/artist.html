@@ -1,0 +1,75 @@
+{% extends "indexBase.html" %}
+{% block content %}
+
+
+
+<div id='name'>
+    <h3>{{artist.name}}</h3>
+</div>
+
+<div id='image'>
+    <img src='{{artist.image}}'>
+</div>
+
+<div id='id'>
+    <h3> ID: {{artist.id}} </h3>
+</div>
+
+<div id='information'>
+
+    <table id='playlist'>
+
+        {% for k, v in artist.playlist.items()   %}
+            {% if k!='id' %}
+            <tr>
+                <td>{{k}}</td>
+                <td>{{v}}</td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+
+    </table >
+
+    <table id='biography'>
+
+        {% for k, v in artist.biography.items()   %}
+            {% if k!='id' %}
+            <tr>
+                <td>{{k}}</td>
+                <td>{{v}}</td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+
+    </table >
+    <table id='track'>
+
+        {% for k, v in artist.track.items()  %}
+        {% if k!='id' %}
+            <tr>
+                <td>{{k}}</td>
+                <td>{{v}}</td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+
+    </table >
+    
+    <table id='country'>
+
+        {% for k, v in artist.country.items()   %}
+            {% if k!='id' %}
+            <tr>
+                <td>{{k}}</td>
+                <td>{{v}}</td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+
+    </table >
+
+
+</div>
+  
+{% endblock %}
+
