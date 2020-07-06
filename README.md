@@ -6,7 +6,7 @@ Repositorio para las prácticas y proyectos de la materia de Diseño y Arquitect
 
 - Clona el repo: `git clone https://github.com/AnhellO/DAS_Sistemas.git` y comienza con la talacha
 
-<h2>Prerequisites</h2>
+## Prerequisites
 
 - Ganas de jalar, pasar la materia, y superarse en esta vida `>:v`
 
