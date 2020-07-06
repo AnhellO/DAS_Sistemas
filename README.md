@@ -12,7 +12,7 @@ Repositorio para las prácticas y proyectos de la materia de Diseño y Arquitect
 
 ## Contributing
 
-- Si tienes permisos, pos branchea del repo, si no, pos forkea
+- Crea un [fork](https://docs.github.com/es/github/getting-started-with-github/fork-a-repo) del repositorio
 - Manda todos tus Pull Requests a la `develop` branch para revisión. Una vez que fueron aceptados, mandalos a `master`
   - Los PRs a `development` y a `master` tienen que llamarse de la siguiente forma: `DAS_Sistemas {Branch} Push: {Cambios Principales}`
   - Si estás actualizando de una branch a otra, los PRs tienen que llamarse de la siguiente manera: `Updating {Branch} from {Branch}`
