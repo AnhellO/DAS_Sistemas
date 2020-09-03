@@ -11,11 +11,13 @@ class Matrix:
         # de listas que corresponde a index
         # retorno una lista de la row creada de los elementos del item que corresponde a la row del index
         # para no mantener relacion con matrix_list
+        
+        try:
+            row = (self.matrix_List.copy())[index-1]
+        except:
+            row = []
 
-        if len(self.matrix_List) != 0:
-            return [i for i in self.matrix_List if i == self.matrix_List[index-1]][0]
-        else:
-            return []
+        return row
 
     def column(self, index):
         # List comprehension que te regresa la columna que corresponde al indice; La idea es recorrer las rows
@@ -25,7 +27,7 @@ class Matrix:
 
 
 ###########
-myMatrix = Matrix("1 2 3\n 4 5 6\n7 8 9")
+myMatrix = Matrix("1 2 3\n4 5 6\n 7 8 9")
 
 print(myMatrix.row(1))
 print(myMatrix.column(1))
