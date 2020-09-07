@@ -8,10 +8,10 @@ class Matrix:
         self.matrizfilas = [[int(x) for x in i.split()] for i in matrix_string.splitlines()]
 
     def row(self, index):
-        #se crea una copia para que guarde la lista original y después regresa la lista de las que están
-        #separados por saltos de linea que se le indica
-        self.fila = self.matrizfilas.copy()
-        return self.fila[index-1]
+        #se retorna la lista separada por saltos de linea que se indica de una copia de la matriz donde
+        #se creo originalmente para que no tenga cambios o problemas la matriz original
+        return self.matrizfilas[index-1].copy()
+        
 
     def column(self, index):
         #se retorna directamente la columna que se indica, tomando el indice que se le pide de cada una
