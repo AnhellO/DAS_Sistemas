@@ -11,13 +11,8 @@ class Matrix:
         # de listas que corresponde a index
         # retorno una lista de la row creada de los elementos del item que corresponde a la row del index
         # para no mantener relacion con matrix_list
-        
-        try:
-            row = (self.matrix_List.copy())[index-1]
-        except:
-            row = []
-
-        return row
+    
+        return (self.matrix_List.copy())[index-1]
 
     def column(self, index):
         # List comprehension que te regresa la columna que corresponde al indice; La idea es recorrer las rows
