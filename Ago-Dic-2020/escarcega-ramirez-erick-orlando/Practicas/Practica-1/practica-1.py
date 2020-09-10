@@ -7,7 +7,7 @@ class Matrix:
 
     def column(self, col):
         #return [self.matrix[k][col-1] for k in enumerate(len(self.matrix))]
-        return [k[col-1] for k in (self.matrix.copy())]
+        return [k[col-1] for k in self.matrix]
         
 end = Matrix("9 8 7\n5 3 2\n6 6 7")
 
