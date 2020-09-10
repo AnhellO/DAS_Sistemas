@@ -25,4 +25,4 @@
 
 ## Deadline
 
-* `Domingo 13 de Septiembre a las 12:00pm`
+* `Domingo 13 de Septiembre a las 11:59pm`
