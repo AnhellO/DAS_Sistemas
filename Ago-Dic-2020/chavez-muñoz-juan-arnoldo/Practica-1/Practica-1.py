@@ -1,26 +1,15 @@
 class Matrix:
-    matrix_string = [[9, 8, 7], 
-    [5, 3, 2],
-    [6, 6, 7]]
+    matrix_string =[]
     
-
-    def __init__(self, matrix_string):
-        pass
+    def __init__(self, matrix_string):#constructor de la clase
+        self.matrix_string = [[int(num) for num in lista.split()] for lista in matrix_string.split("\n")]
 
     def row(self, index):
-            return print(f'La fila {index} es: '+str( self.matrix_string[index-1]))
+            return print(self.matrix_string[index-1])
         
-
     def column(self, index):
-        columnas = []
-        for i in range(len(self.matrix_string)):
-            for j in range(len(self.matrix_string[i])):
-                if (j == index-1):
-                    columnas.append(self.matrix_string[i][j])  
-        return print(f'La columna {index} es: '+str(columnas))
-
-matriz = Matrix(matrix_string=()) #Creo la instancia de la clase
-matriz.row(3)
-matriz.column(3)
-
-
+        return print([self.matrix_string[i][index-1] for i in range( len(self.matrix_string))])
+        
+matriz = Matrix("9 8 7\n 5 3 2\n6 6 7") #Creo la instancia de la clases
+matriz.row(1)
+matriz.column(2)
