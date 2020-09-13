@@ -1,0 +1,7 @@
+digraph "classes" {
+charset="utf-8"
+rankdir=BT
+"0" [label="{Dunedain|hp :int\lnombre :string\locupacion :string\lsp :int\lvivo : bool\l|Cambiar_Ocupacion(ocupacion)\lComer(comida)\lSaludar()\lStatus()\l}", shape="record"];
+"1" [label="{Ranger|hp :int\lnombre :string\locupacion :string\lsp :int\lvivo : bool\l|Atacar()\lRecibir_Daño(sp)\l}", shape="record"];
+"1" -> "0" [arrowhead="empty", arrowtail="none"];
+}
