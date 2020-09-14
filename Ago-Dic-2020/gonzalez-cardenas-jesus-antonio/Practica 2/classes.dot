@@ -1,0 +1,9 @@
+digraph "classes" {
+charset="utf-8"
+rankdir=BT
+"0" [label="{Camion|Cuenta: float\lNumActualDePasajeros: int\lcobro: float\l|BajaPasajero(numBaj)\lCamionStatus()\lSetCuota(cta)\lSubePasajero(numSub)\l}", shape="record"];
+"1" [label="{Jet|MGAmmo: int\lMissileAmmo: int\l|JetStatus()\lSendMessageToBase(mess)\lShootMG(Shoots)\lShootMissiles(Shoots)\l}", shape="record"];
+"2" [label="{Vehiculo|dateRelease: string\lname: string\lnumOfWheels: int\lpassengers: int\lterrain: string\ltypeVehicle: string\l|movev(km)\lspecs()\lstop()\l}", shape="record"];
+"0" -> "2" [arrowhead="empty", arrowtail="none"];
+"1" -> "2" [arrowhead="empty", arrowtail="none"];
+}
