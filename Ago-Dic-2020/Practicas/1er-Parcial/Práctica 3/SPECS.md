@@ -16,7 +16,7 @@
   * Participantes
   * Ejemplo de código
   * Aplicación o usos conocidos
-* Además de la implementación como tal, el ejemplo de código deberá de estar acompado por una testsuite (clase de tests) por separado en donde sometas a prueba el resultado de la salida del ejemplo codificado para tu patrón de diseño, esto implica que deberás de implementar el ejemplo del patrón de diseño de la manera más correcta posible, y éste deberá de poder procesar una entrada y devolver una salida de tal manera que pueda ser testeable. Puedes ver el ejemplo de código del patrón [`Simple Factory`]([/Ago-Dic-2020/Ejemplos/Patrones de Diseño](https://github.com/AnhellO/DAS_Sistemas/tree/development/Ago-Dic-2020/Ejemplos/Patrones%20de%20Diseño/simple_factory.py)) explicado en la clase previa.
+* Además de la implementación como tal, el ejemplo de código deberá de estar acompado por una testsuite (clase de tests) por separado en donde sometas a prueba el resultado de la salida del ejemplo codificado para tu patrón de diseño, esto implica que deberás de implementar el ejemplo del patrón de diseño de la manera más correcta posible, y éste deberá de poder procesar una entrada y devolver una salida de tal manera que pueda ser testeable. Puedes ver el ejemplo de código del patrón [`Simple Factory`](https://github.com/AnhellO/DAS_Sistemas/tree/development/Ago-Dic-2020/Ejemplos/Patrones%20de%20Diseño/simple_factory.py) explicado en la clase previa.
 
 ## Distribución de Temas
 
