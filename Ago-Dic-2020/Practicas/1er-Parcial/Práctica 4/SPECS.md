@@ -8,7 +8,7 @@
 
 ## Especificaciones
 
-* Para el ejemplo del patrón de diseño Simple Factory expuesto durante la clase del `2020-09-10`, continua con el proceso de refactorización llevado a cabo en la clase de tal manera que tomes en cuenta los siguientes puntos:
+* Para el [ejemplo del patrón de diseño `Simple Factory`](https://github.com/AnhellO/DAS_Sistemas/tree/development/Ago-Dic-2020/Ejemplos/Patrones%20de∞20Diseño/simple_factory.py) expuesto durante la clase del `2020-09-10`, continua con el proceso de refactorización llevado a cabo en la clase de tal manera que tomes en cuenta los siguientes puntos:
   * Agrega una nueva función a la clase `SchoolMember`, pero en esta ocasión que la función sea abstracta
   * Sobreescribe el método `__str__` pero de manera más `D.R.Y.` y menos `W.E.T.`
   * Heredemos otra nueva clase desde `SchoolMember` y hagamos `T.D.D.` sobre ese nuevo caso
