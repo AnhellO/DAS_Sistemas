@@ -1,0 +1,7 @@
+digraph "classes" {
+charset="utf-8"
+rankdir=BT
+"0" [label="{Album|artista\laño\lcancion\lgenero\ltitulo\l|get_cancion()\lget_titulo()\l}", shape="record"];
+"1" [label="{Cancion|Nombre\lduracion\lpista\l|get_Nombre(Nombre)\lget_pista()\l}", shape="record"];
+"1" -> "0" [arrowhead="empty", arrowtail="none"];
+}
