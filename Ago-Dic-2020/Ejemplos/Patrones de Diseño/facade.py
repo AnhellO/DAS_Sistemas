@@ -63,7 +63,7 @@ class ABSuite:
         # time.sleep(SLEEP)
         print("Testsuite finalizada")
 
-# Fachada que el cliente consumer
+# Fachada que el cliente consume
 class SuitesFacade:
     def __init__(self, tests={}):
         self.unit = UnitSuite() if tests.get('unit') else None
@@ -81,10 +81,10 @@ class SuitesFacade:
 
 def main():
     test_suites = {
-        'unit': False,
-        'integration': False,
-        'regression': False,
-        'stress': False,
+        'unit': True,
+        'integration': True,
+        'regression': True,
+        'stress': True,
         'ab': True
     }
 
