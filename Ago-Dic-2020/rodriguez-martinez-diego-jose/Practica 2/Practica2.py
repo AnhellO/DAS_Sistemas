@@ -25,8 +25,8 @@ class Persona:
     def saluda(self):
         if self.vivo:
             return f"Hola, soy {self.nombre}"
-        else:
-            return f"'~~  BOOOOOOO  ~~'"
+        
+        return f"'~~  BOOOOOOO  ~~'"
 
     def hablar(self,persona):
         return f"Buenos dias, {persona.nombre}. Yo {self.nombre} te deseo buenos dias"
@@ -47,15 +47,13 @@ class Peleador(Persona):
             self.poder = math.floor(random.uniform(0,self.__maxdmg))
 
     def saluda(self):
-
         if self.vivo:
             print(super().saluda())
             return f"Soy peleador, con poder de {self.poder}"
-        else:
-            return super().saluda()
+        
+        return super().saluda()
 
     def __str__(self):
-        
         return super().__str__() + f"\nPoder: {self.poder}"
 
     def atacar(self,persona):
