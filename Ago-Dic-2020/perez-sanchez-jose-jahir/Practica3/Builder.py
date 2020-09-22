@@ -1,3 +1,6 @@
+import abc
+from abc import abstractclassmethod, ABCMeta , abstractmethod    
+
 class Director:
     __builder = None
 
@@ -41,10 +44,13 @@ class Moto:
         print(f"caballos de fuerza del motor: {self.__motor.caballos}")
         print(f"Tamaño de llanta: {self.__llantas[0].tamaño}")
 
-class Builder:
+class Builder(metaclass=abc.ABCMeta):
 
+    @abstractmethod
     def getLLanta(self): pass
+    @abstractmethod
     def getMotor(self): pass
+    @abstractmethod
     def getCuerpo(self): pass
 
 
@@ -64,6 +70,21 @@ class ItalikaBuilder(Builder):
         cuerpo.tipo = "C90"
         return cuerpo
 
+class HarleyBuilder(Builder):
+    def getLLanta(self):
+        llanta = Llanta()
+        llanta.tamaño = 20
+        return llanta
+    
+    def getMotor(self):
+        motor = Motor()
+        motor.caballos = 300
+        return motor   
+
+    def getCuerpo(self):
+        cuerpo = Cuerpo()
+        cuerpo.tipo = "Chopper"
+        return cuerpo
 
 class Llanta:
     tamaño = None
@@ -74,7 +95,8 @@ class Motor:
 class Cuerpo:
     tipo = None
 
-def Italika(string): 
+
+def main():
     italikaBuilder = ItalikaBuilder()
     director = Director()
     print("Italika")
@@ -82,11 +104,12 @@ def Italika(string):
     italika = director.getMoto()
     italika.especificaciones()
 
-def main():
-    name = input("Dame la marca: ")
-    if name == "Italika":
-        print(Italika(name))
-
+    harleyBuilder = HarleyBuilder()
+    director = Director()
+    print("Harley")
+    director.setBuilder(harleyBuilder)
+    harley = director.getMoto()
+    harley.especificaciones()
 
 if __name__ == "__main__":
     main()
