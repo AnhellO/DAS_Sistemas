@@ -2,27 +2,13 @@ class Matrix:
 	__matrix = []
 
 	def __init__(self, matrix_str):
-		try:
-			self.__matrix = list(
-				map(
-					lambda x: list(map(lambda y: float(y), x)),
-					map(lambda i: i.split(" "), matrix_str.split("\n"))
-				)
-			)
-		except Exception:
-			pass
+		self.__matrix = [m.split() for m in matrix_str.splitlines()]
 
-	def getRow(self, index):
-		if index < len(self.__matrix):
-			return self.__matrix[index]
+	def get_row(self, index):
+		return self.__matrix[index - 1]
 
-		return []
-
-	def getColumn(self, index):
-		try:
-			return [ self.__matrix[i][index] for i in range(len(self.__matrix)) ]
-		except Exception:
-			return []
+	def get_column(self, index):
+		return [ m[index - 1] for m in self.__matrix ]
 
 
 
@@ -44,9 +30,6 @@ if __name__ == '__main__':
 		get = input("column(c) or row(r)?: ")
 
 		if get == 'c':
-			print(matrix.getColumn(int(input("column's index: "))))
+			print(matrix.get_column(int(input("column's index: "))))
 		elif get == 'r':
-			print(matrix.getRow(int(input("row's index: "))))
-
-
-	
+			print(matrix.get_row(int(input("row's index: "))))
