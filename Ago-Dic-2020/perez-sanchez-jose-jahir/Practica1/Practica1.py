@@ -5,13 +5,11 @@ class Matriz(str):
 
     def row(self, index):  
         #Regresa la parte de la lista que se refiera a ese numero de fila 
-        num = self.matriz[index-1]
-        return f"Los valores en la fila {index} son: {num}"
+        return f"Los valores en la fila {index} son: {self.matriz[index-1].copy()}"
 
     def column(self,index):
         #Regresas la columna gracias al indice
-        num = [x[index-1] for x in self.matriz]
-        return f"Los valores en la columna {index} son: {num}"
+        return f"Los valores en la columna {index} son: {[x[index-1] for x in self.matriz]}"
 
 
 if __name__ == "__main__":
