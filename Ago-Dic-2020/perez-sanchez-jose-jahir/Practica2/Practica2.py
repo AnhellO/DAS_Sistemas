@@ -8,13 +8,13 @@ class Animal():
     def __str__(self):
         return f"Edad: {self.edad} años\nTamaño: {self.tamaño}\nPeso: {self.peso}kg\nAltura: {self.altura}cm"
     
-    def IMC(self):
+    def imc(self):
         self.imc = self.peso/self.altura
         return f"El IMC de este animal con un peso de {self.peso} y una altura de {self.altura} es: {self.imc}"
 
 class Perro(Animal):
     def __init__(self, edad, tamaño, peso, altura, nombre):
-        Animal.__init__(self,edad,tamaño,peso,altura)
+        super().__init__(edad,tamaño,peso,altura)
         self.nombre = nombre
 
     def descripcion(self):
@@ -33,6 +33,6 @@ if __name__ == "__main__":
     print(firulais.descripcion())
     print(firulais.hablar("Woof"))
     print(firulais.truco("hace un triple mortal invertido"))
-    print(firulais.IMC())
+    print(firulais.imc())
 
     
