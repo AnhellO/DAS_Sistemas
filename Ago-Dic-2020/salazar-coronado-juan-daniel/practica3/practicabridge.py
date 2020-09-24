@@ -1,3 +1,4 @@
+from abc import ABC, abstractmethod
 
 class Abstraction:
     def __init__(self, imp):
@@ -16,7 +17,8 @@ class ExtendedAbstraction(Abstraction):
         print("Haciendo uso de la abstracción extendida\n"
                 f"{self._imp.operation_imp(self._a, self._b)}")
 
-class Implementor():
+class Implementor(ABC):
+    @abstractmethod
     def operation_imp(self, a, b):
         pass
 
