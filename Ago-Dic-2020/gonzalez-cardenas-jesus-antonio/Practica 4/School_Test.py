@@ -4,42 +4,51 @@ from School_Member import SchoolMemberFactory
 class SchoolMemberFactoryTest(unittest.TestCase):
     def test_student_creation(self):
         kind = "Student"
-        name = "Jorge"
+        _name = "Jorge"
         edad = 13
         idd = "JAP001"
-        student = SchoolMemberFactory.make("student")
-        self.assertEqual(str(student), "Soy el alumno "+ name +" !")
+        student = SchoolMemberFactory.make(kind, name=_name, age=int(edad), id=idd)
+        self.assertEqual(str(student.MemberInfo()), "Soy el alumno {name}!, tengo {edad} años y mi ID = {idd}")
         
     def test_teacher_creation(self):
         kind = "Teacher"
-        name = "Laura"
+        _name = "Laura"
         edad = 55
         idd = "LOP523"
-        teacher = SchoolMemberFactory.make("teacher", "bar")
-        self.assertEqual(str(teacher), "Soy el maestro "+ name +" !")
+        teacher = SchoolMemberFactory.make(kind, name=_name, age=int(edad), id=idd)
+        self.assertEqual(str(teacher.MemberInfo()), "Soy el profesor {name}!, tengo {edad} años y mi ID = {idd}")
         
     def test_creation_with_multiple_case(self):
-        kind =
-        name =
-        edad =
-        idd =
-        teacher = SchoolMemberFactory.make("tEaCHer", "baz")
-        self.assertEqual(str(teacher), "Soy el maestro baz!")
+        kind ="TeAcHER"
+        _name ="Juan"
+        edad =28
+        idd = "JCA153"
+        teacher = SchoolMemberFactory.make(kind, name=_name, age=int(edad), id=idd)
+        self.assertEqual(str(teacher), "Soy el maestro "+ name +" !")
         
     def test_invalid_type(self):
-        kind =
-        name =
-        edad =
-        idd =
-        invalid = SchoolMemberFactory.make("invalid", "foo")
-        self.assertEqual(str(invalid), "Error! tipo 'invalid' invalido!")
+        kind = "student"
+        _name = "Pepe"
+        edad = 12
+        idd = "JLO123"
+        invalid = SchoolMemberFactory.make(kind, name=_name, age=int(edad), id=idd)
+        self.assertRaises(ValueError, invalid)
         
-    def test_invalid_with_multiple_case(self):
-        kind =
-        name =
-        edad =
-        idd =
-        invalid = SchoolMemberFactory.make("inVaLiD", "bar")
-        self.assertEqual(str(invalid), "Error! tipo 'inVaLiD' invalido!")
+    def test_invalid_age(self):
+        kind = "Student"
+        _name = "Jorge"
+        edad = -15
+        idd = "123456"
+        invalid = SchoolMemberFactory.make(kind, name=_name, age=int(edad), id=idd)
+        self.assertRaises(ValueError, invalid)
+
+    def test_invalid_id(self):
+        kind = "Student"
+        _name = "Jorge"
+        edad = 15
+        idd = "12345678"
+        invalid = SchoolMemberFactory.make(kind, name=_name, age=int(edad), id=idd)
+        self.assertRaises(ValueError, invalid)
         
+   
 

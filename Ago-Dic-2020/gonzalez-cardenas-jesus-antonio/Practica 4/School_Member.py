@@ -28,7 +28,7 @@ class SchoolMemberFactory:
     def make(cls, kind, **args):
         # return eval(kind.capitalize())(**args)
         if kind != kind.capitalize():
-            raise ValueError("No existe esa clase, verifique su entrada")
+            raise ValueError("No existe ese tipo, verifique su entrada")
         if args.get('age') <0:
             raise ValueError("Edad negativa")
         #Formato de id? XXXXXX 6 caracteres (?)
