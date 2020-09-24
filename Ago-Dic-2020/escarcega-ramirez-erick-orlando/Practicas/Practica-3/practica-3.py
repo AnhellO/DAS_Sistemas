@@ -1,4 +1,3 @@
-import unittest
 from datetime import date
 from operator import attrgetter
 
@@ -65,16 +64,12 @@ class StatsService:
         else:
             return 0
 
-class testing(unittest.TestCase):
-    def test(self, user, year):
-        reservations_service = Proxy(user, ReservationService())
-        stats_service = StatsService(reservations_service)
-        average_price = stats_service.year_top_100_reservations_average_total_price(year)
-        print("{0} will see: {1}".format(user.name, average_price))
+#Test:
+def test(user, year):
+    reservations_service = Proxy(user, ReservationService())
+    stats_service = StatsService(reservations_service)
+    average_price = stats_service.year_top_100_reservations_average_total_price(year)
+    print("{0} will see: {1}".format(user.name, average_price))
 
-    #test(User(True, "John the Admin"), 2017)
-
-    #test(User(False, "Guest"),         2017)
-
-if __name__ == 'test' :
-    unittest.main()
+test(User(True, "John the Admin"), 2017)
+test(User(False, "Guest"),         2017)
