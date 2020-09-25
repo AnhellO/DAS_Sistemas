@@ -24,7 +24,7 @@ class SchoolMemberFactoryTest(unittest.TestCase):
         edad =28
         idd = "JCA153"
         teacher = SchoolMemberFactory.make(kind, name=_name, age=int(edad), id=idd)
-        self.assertEqual(str(teacher), "Soy el maestro "+ name +" !")
+        self.assertRaises(ValueError, teacher)
         
     def test_invalid_type(self):
         kind = "student"
