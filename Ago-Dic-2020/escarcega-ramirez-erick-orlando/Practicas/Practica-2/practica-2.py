@@ -7,41 +7,39 @@ class Zoo(object):
         self.age = age
     
      def dance(self):
-        print(self.name.title() + " is now dancing.")
+       print(f"{self.name.title()} is now dancing.")
 
      def eats(self):
-        print(self.name.title() + " is a " + self.species.title() + " " + self.animal.title() + " and " + self.species.title() + "'s favorite food is " + self.food.title())
+        print(f"{self.name.title()} is a {self.species.title()} {self.animal.title()} and {self.species.title()} favorite food is {self.food.title()}")
         
      def info(self):
-        print(self.name.title() + " age is " + str(self.age) + " years old.")
+        print(f"{self.name.title()} age is {str(self.age)} years old.")
 
 class Gorilla(Zoo):
     def __init__(self, name, animal, species, food, age):
-        Zoo.__init__(self, name, animal, species, food, age)
-
+        super(Gorilla, self).__init__(name, animal, species, food, age)
 
     def habilty(self):
-        print(self.animal.title() + "s do not know how to fly")
+        print(f"{self.animal.title()}'s do not know how to fly")
 
     def power(self):
-        print(self.name.title() + "'s power is over 9000! ")
+        print(f"{self.name.title()}'s power is over 9000!")
         
     def magic(self):
-        print(self.name.title() + " is a stand user")
+        print(f"{self.name.title()} is a stand user")
 
 class Bear(Zoo):
     def __init__(self, name, animal, species, food, age):
-        Zoo.__init__(self, name, animal, species, food, age)
+        super(Bear, self).__init__(name, animal, species, food, age)
 
     def speed(self):
-        print("A " + self.animal.title() + " stamina is better when they're running down a hill")
+        print(f"A {self.animal.title()} stamina is better when they're running down a hill")
     
     def level(self):
-        print(self.name.title() +"'s karate level is " + str(self.age))
+        print(f"{self.name.title()}'s karate level is {str(self.age)}")
 
     def hidden(self):
-        print(self.name.title() + " usually hides his " + self.food.title() + " under his bed.")
-
+        print(f"{self.name.title()} usually hides his  {self.food.title()} under his bed.")
 
 my_gorilla = Gorilla('harambe', 'gorilla', 'silver back', 'lassagna', 14)
 my_bear = Bear('Kuma', 'bear', 'Grizzly', 'Honey', 3)
