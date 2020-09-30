@@ -5,19 +5,21 @@ class Entity:
 		self.__x = x
 		self.__y = y
 		self.__death = False
-		self.__killedBy = None
+		self.__killed_by = None
 
 	def __str__(self):
-		return f"{self.getName()} {('with live' if not self.isDeath() else self.deathMessage())}, position: <{self.__x},{self.__y}>"
+		return f"{self.get_name()} {('with live' if not self.is_death() else self.death_message())}, position: <{self.__x},{self.__y}>"
 
-	def deathMessage(self):
-		if self.__death:
-			if isinstance(self.__killedBy, Entity):
-				return f'killed by {self.__killedBy.getName()}'
-			return 'killed'
-		return ''
+	def death_message(self):
+		if not self.__death:
+			return ''
 
-	def setPos(self, x, y):
+		if isinstance(self.__killed_by, Entity):
+			return f'killed by {self.__killed_by.get_name()}'
+
+		return 'killed'
+
+	def set_pos(self, x, y):
 		self.__x = x
 		self.__y = y
 
@@ -25,14 +27,14 @@ class Entity:
 		self.__x += x
 		self.__y += y
 
-	def isDeath(self):
+	def is_death(self):
 		return self.__death
 
 	def kill(self, by):
 		self.__death = True
-		self.__killedBy = by
+		self.__killed_by = by
 
-	def getName(self):
+	def get_name(self):
 		return self.__name
 
 class Player(Entity):
@@ -46,33 +48,33 @@ class Player(Entity):
 		super().kill(by)
 		self.__health = 0.0
 
-	def isDeath(self):
+	def is_death(self):
 		if self.__health <= 0.0:
 			self.kill()
 
-		return super().isDeath()
+		return super().is_death()
 
 
 	def hurt(self, by):
 		if(isinstance(by, Player)):
 			self.__health -= (1 - self.__protection) * abs(by.__strength)
-			self.isDeath()
+			self.is_death()
 
-	def setHealth(self, health):
+	def set_health(self, health):
 		self.__health = health
-		self.isDeath()
+		self.is_death()
 
-	def getHealth(self):
+	def get_health(self):
 		return self.__health
 
-	def setProtection(self, protection):
+	def set_protection(self, protection):
 		self.__protection = abs(protection) % 1
 
-	def getProtection(self):
+	def get_protection(self):
 		return self.__protection
 
-	def setStrength(self, strength):
+	def set_strength(self, strength):
 		self.__strength = abs(strength)
 
-	def getStrength(self):
+	def get_strength(self):
 		return self.__strength
