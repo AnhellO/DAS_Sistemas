@@ -1,6 +1,4 @@
 class Matrix:
-	__matrix = []
-
 	def __init__(self, matrix_str):
 		self.__matrix = [m.split() for m in matrix_str.splitlines()]
 
