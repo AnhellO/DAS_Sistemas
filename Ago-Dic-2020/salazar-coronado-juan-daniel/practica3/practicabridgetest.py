@@ -1,8 +1,8 @@
 import unittest
-from practicabridge import suma
-from practicabridge import resta
-from practicabridge import division
-from practicabridge import multiplicacion
+from practicabridge import ImplementorSuma
+from practicabridge import ImplementorResta
+from practicabridge import ImplementorDivision
+from practicabridge import ImplementorMultiplicacion
 
 class BridgeMetodosTest(unittest.TestCase):
     def setUp(self):
@@ -38,10 +38,10 @@ class BridgeMetodosTest(unittest.TestCase):
             (-18, 4, -4.5),
         )
 
-        self.suma = suma()
-        self.resta = resta()
-        self.division = division()
-        self.multiplicacion = multiplicacion()
+        self.suma = ImplementorSuma()
+        self.resta = ImplementorResta()
+        self.division = ImplementorDivision()
+        self.multiplicacion = ImplementorMultiplicacion()
     
     def test_suma(self):
         for tc in self.testcasessuma:

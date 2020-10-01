@@ -22,44 +22,44 @@ class Implementor(ABC):
     def operation_imp(self, a, b):
         pass
 
-class suma(Implementor):
+class ImplementorSuma(Implementor):
     def operation_imp(self, a, b):
         self.resultado = a + b
         return "Suma de {} y {} = {}".format(a, b, self.resultado)
         
-class resta(Implementor):
+class ImplementorResta(Implementor):
     def operation_imp(self, a, b):
         self.resultado = a - b
         return "Resta de {} y {} = {}".format(a, b, self.resultado)
 
-class division(Implementor):
+class ImplementorDivision(Implementor):
     def operation_imp(self, a, b):
         self.resultado = a / b
         return "División de {} y {} = {}".format(a, b, self.resultado)
 
-class multiplicacion(Implementor):
+class ImplementorMultiplicacion(Implementor):
     def operation_imp(self, a, b):
         self.resultado = a * b
         return "Multiplicación de {} y {} = {}".format(a, b, self.resultado)
 
 
 def main():
-    unasuma = suma()
+    unasuma = ImplementorSuma()
     abstraction = Abstraction(unasuma)
     abstraction.operation(float(5), float(4))
 
     abstractionext = ExtendedAbstraction(unasuma)
     abstractionext.operation(float(6), float(7))
 
-    #unaresta = resta()
+    #unaresta = ImplementorResta()
     #abstraction2 = Abstraction(unaresta)
     #abstraction2.operation(float(5), float(4))
 
-    #unamultiplicacion = multiplicacion()
+    #unamultiplicacion = ImplementorMultiplicacion()
     #abstraction3 = Abstraction(unamultiplicacion)
     #abstraction3.operation(float(5), float(4))
 
-    #unadivision = division()
+    #unadivision = ImplmentorDivision()
     #abstraction4 = Abstraction(unadivision)
     #abstraction4.operation(float(5), float(4))
 
