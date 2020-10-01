@@ -26,8 +26,8 @@ hello_class()
 
 print(f"\n{'#'*10} 3: Podemos retornar valores desde las funciones internas {'#'*10}")
 
-def hello_class(num):
-	print('Hola clase de diseño y arquitectura de software!')
+def hello_class_2(num):
+	my_string = 'Hola clase de diseño y arquitectura de software!'
 
 	def hello_you(num):
 		return f'\ty a ti también que me estás viendo desde la pantalla >:D! {num}'
@@ -36,16 +36,16 @@ def hello_class(num):
 		return '\ty a ti también que no me estás viendo desde la pantalla >:C!'
 
 	if num == 1:
-		return hello_you(10)
+		return f'{my_string}\n{hello_you(10)}'
 
 	if num == 2:
-		return hello_there()
+		return f'{my_string}\n{hello_there()}'
 
-print(hello_class(1))
-# print(hello_you(1)) -> Esto dará error ya que hello_you existe solamente en el contexto/ámbito (scope) de la función hello_class
-variable = hello_class(2)
+print(hello_class_2(1))
+# print(hello_you(1)) -> Esto dará error ya que hello_you existe solamente en el contexto/ámbito (scope) de la función hello_class_2
+variable = hello_class_2(2)
 print(variable)
-print(hello_class(3))
+print(hello_class_2(3))
 
 print(f"\n{'#'*10} 4: Ahora si los decorators nativos {'#'*10}")
 

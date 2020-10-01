@@ -12,7 +12,7 @@ class NormalTextComponent(TextComponent):
         self._text = text
 
     def render(self):
-        return f"¡{self._text}!"
+        return f"{self._text}"
 
 # Decorator
 class TextDecorator(TextComponent, metaclass=abc.ABCMeta):
@@ -26,7 +26,7 @@ class TextDecorator(TextComponent, metaclass=abc.ABCMeta):
 # Concrete Decorator A
 class HighlightTextDecorator(TextDecorator):
     def render(self):
-        return f"<strong>{self._text_component.render()}</strong>"
+        return f"<b>{self._text_component.render()}</b>"
 
 # Concrete Decorator B
 class UnderlineTextDecorator(TextDecorator):
@@ -36,7 +36,7 @@ class UnderlineTextDecorator(TextDecorator):
 # Concrete Decorator C
 class ItalicTextDecorator(TextDecorator):
     def render(self):
-        return f"<em>{self._text_component.render()}</em>"
+        return f"<i>{self._text_component.render()}</i>"
 
 
 def main():
