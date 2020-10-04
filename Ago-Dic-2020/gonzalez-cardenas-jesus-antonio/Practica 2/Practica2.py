@@ -22,7 +22,7 @@ class Camion(Vehiculo):
     cuenta = 0.000
     cobro = 0.000
     def __init__(self, name, date_of_release, passengers, number_of_wheels, terrain, type_of_vehicle,):
-        Vehiculo.__init__(self, name, date_of_release, passengers, number_of_wheels, terrain, type_of_vehicle)
+        super().__init__(name, date_of_release, passengers, number_of_wheels, terrain, type_of_vehicle)
 
     def SubePasajero (self, numero_de_pasajeros_que_subieron):
         numero_de_pasajeros_que_subieron = int(numero_de_pasajeros_que_subieron)
@@ -46,7 +46,7 @@ class Jet(Vehiculo):
     def __init__(self, name, date_of_release, passengers, number_of_wheels, terrain, type_of_vehicle, mg_ammo, missile_ammo):
         self.mg_ammo = mg_ammo
         self.missile_ammo = missile_ammo
-        Vehiculo.__init__(self, name, date_of_release, passengers, number_of_wheels, terrain, type_of_vehicle)
+        super().__init__(name, date_of_release, passengers, number_of_wheels, terrain, type_of_vehicle)
 
     def ShootMG(self,shoots):
         if shoots > self.mg_ammo:
