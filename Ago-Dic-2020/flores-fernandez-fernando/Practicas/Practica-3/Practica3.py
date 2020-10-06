@@ -2,16 +2,16 @@ from abc import abstractmethod, ABCMeta
 
 class InternalState(metaclass = ABCMeta): ##creamos la interfaz de los estado hace que cambie el estado
     @abstractmethod
-    def changeState(self):
+    def change_state(self):
         pass
 
 class TurnedOn(InternalState):  ##estado encendido
-    def changeState(self):
+    def change_state(self):
         print("Turning ON the Antenna!!!")
         return "ON"
 
 class TurnedOff(InternalState):  ##estado apagado
-    def changeState(self):
+    def change_state(self):
         print("Turning OFF the Antenna!!!")
         return "OFF"
     
@@ -19,33 +19,33 @@ class RadioStation(InternalState): ##contexto
     def __init__(self):
         self.state = None
 
-    def getState(self):
+    def get_state(self):
         return self.state
 
-    def setState(self, status):
+    def set_state(self, status):
         self.state = status
 
-    def changeState(self):
-        self.state = self.state.changeState()
+    def change_state(self):
+        self.state = self.state.change_state()
     
-    def howinternal(self):
-        print('The radios internal state is currently: {}'.format(Radio.getState()))
+    def how_internal(self):
+        print('The radios internal state is currently: {}'.format(radio.get_state()))
 
-Radio = RadioStation()
-ON = TurnedOn()
-OFF = TurnedOff()
+radio = RadioStation()
+on = TurnedOn()
+off = TurnedOff()
 
 def main():
-    des= ""
+    des = ""
     while (des != "exit"):
-        Radio.howinternal()
-        des= input("Change internal state to: ")
+        radio.how_internal()
+        des = input("Change internal state to: ")
         if(des == "on"):
-            Radio.setState(ON)
-            Radio.changeState()
+            radio.set_state(on)
+            radio.change_state()
         if(des == "off"):
-            Radio.setState(OFF)
-            Radio.changeState()
+            radio.set_state(off)
+            radio.change_state()
             
 if __name__ == "__main__":
     main()
