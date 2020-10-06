@@ -107,7 +107,7 @@ if __name__ == '__main__':
 
     dyas = Courses_At_GFG_Cache.get_course("4") 
     print(dyas.get_type()) 
+    
     STL.course(stl)
     DYAS.course(dyas)
-
     print(stl.get_id())
