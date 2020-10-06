@@ -13,8 +13,6 @@ class Proxy:
                 date_to,
                 reservations_count
               )
-        else:
-            return []
 
 #Models and ReservationService:
 
