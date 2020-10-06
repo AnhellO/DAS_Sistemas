@@ -10,7 +10,7 @@ class SchoolMember(ABC):
         return f"Soy el {type(self).__name__} {self.name}!, tengo {self.age} años y mi ID = {self.id_num}"
 
     @abstractmethod
-    def funcionDe(self):
+    def funcion_de(self):
         """ Returnea la funcion del puesto"""
 
         return f"Funcion de {type(self).__name__}: \n"
@@ -18,22 +18,22 @@ class SchoolMember(ABC):
 ##################
 class Teacher(SchoolMember):
 
-    def funcionDe(self):
-        super().funcionDe()
+    def funcion_de(self):
+        super().funcion_de()
         return "Persona que ayuda a los estudiantes a adquirir conocimientos"
 
 ##################
 class Janitor(SchoolMember):
 
-    def funcionDe(self):
-        super().funcionDe()
+    def funcion_de(self):
+        super().funcion_de()
         return "Persona empleada como cuidador del edificio de la escuela; limpia y mantiene los edificios"
 
 ###################
 class Student(SchoolMember):
 
-    def funcionDe(self):
-        super().funcionDe()
+    def funcion_de(self):
+        super().funcion_de()
         return "Persona inscrita en una escuela con el objetivo de adquirir conocimientos"
 
 ###################
