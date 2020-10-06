@@ -44,10 +44,10 @@ class ServicioSocialYPracticas(Estudiante):
         if not self.servicio and not self.practicas:
             return "No he realizado el servicio social ni las practicas profesionales"
         
-        if self.servicio == True and self.practicas == False:
+        if self.servicio and not self.practicas:
             return "Ya realice el servicio social pero no he realizado las practicas profesionales"
         
-        if self.servicio == False and self.practicas == True:
+        if not self.servicio and self.practicas:
             return "No he realizado el servicio social pero ya realice las practicas profesionales"
 
     def programas_servicio(self):
@@ -68,7 +68,7 @@ print(estudiante1.presentacion())
 print(estudiante1.get_carrera())
 print("En base a mi promedio " + estudiante1.motivacion_promedio(88.34))
 
-estudiante1ssyp = ServicioSocialYPracticas("Daniel", "21", "Septimo", "ISC", False, False)
+estudiante1ssyp = ServicioSocialYPracticas("Daniel", "21", "Septimo", "ISC", True, False)
 
 print(estudiante1ssyp.estado())
 print(estudiante1ssyp.programas_servicio())
