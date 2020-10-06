@@ -4,23 +4,23 @@ from abc import abstractclassmethod, ABCMeta , abstractmethod
 class Director:
     __builder = None
 
-    def setBuilder(self, builder):
-        self.__builder=builder
+    def set_builder(self, builder):
+        self.__builder = builder
     
-    def getMoto(self):
+    def get_moto(self):
         moto = Moto()
 
-        cuerpo = self.__builder.getCuerpo()
-        moto.setCuerpo(cuerpo)
+        cuerpo = self.__builder.get_cuerpo()
+        moto.set_cuerpo(cuerpo)
 
-        motor = self.__builder.getMotor()
-        moto.setMotor(motor)
+        motor = self.__builder.get_motor()
+        moto.set_motor(motor)
 
         i = 0
         while i < 2:
-            llanta = self.__builder.getLLanta()
-            moto.setLLanta(llanta)
-            i +=1
+            llanta = self.__builder.get_llanta()
+            moto.set_llanta(llanta)
+            i += 1
 
         return moto
 
@@ -30,13 +30,13 @@ class Moto:
         self.__motor = None
         self.__cuerpo = None
     
-    def setCuerpo(self, cuerpo):
+    def set_cuerpo(self, cuerpo):
         self.__cuerpo = cuerpo
     
-    def setLLanta(self, llanta):
+    def set_llanta(self, llanta):
         self.__llantas.append(llanta)
 
-    def setMotor(self, motor):
+    def set_motor(self, motor):
         self.__motor = motor
     
     def especificaciones(self):
@@ -47,41 +47,41 @@ class Moto:
 class Builder(metaclass=abc.ABCMeta):
 
     @abstractmethod
-    def getLLanta(self): pass
+    def get_llanta(self): pass
     @abstractmethod
-    def getMotor(self): pass
+    def get_motor(self): pass
     @abstractmethod
-    def getCuerpo(self): pass
+    def get_cuerpo(self): pass
 
 
 class ItalikaBuilder(Builder):
-    def getLLanta(self):
+    def get_llanta(self):
         llanta = Llanta()
         llanta.tamaño = 15
         return llanta
     
-    def getMotor(self):
+    def get_motor(self):
         motor = Motor()
         motor.caballos = 250
         return motor   
 
-    def getCuerpo(self):
+    def get_cuerpo(self):
         cuerpo = Cuerpo()
         cuerpo.tipo = "C90"
         return cuerpo
 
 class HarleyBuilder(Builder):
-    def getLLanta(self):
+    def get_llanta(self):
         llanta = Llanta()
         llanta.tamaño = 20
         return llanta
     
-    def getMotor(self):
+    def get_motor(self):
         motor = Motor()
         motor.caballos = 300
         return motor   
 
-    def getCuerpo(self):
+    def get_cuerpo(self):
         cuerpo = Cuerpo()
         cuerpo.tipo = "Chopper"
         return cuerpo
@@ -100,15 +100,15 @@ def main():
     italikaBuilder = ItalikaBuilder()
     director = Director()
     print("Italika")
-    director.setBuilder(italikaBuilder)
-    italika = director.getMoto()
+    director.set_builder(italikaBuilder)
+    italika = director.get_moto()
     italika.especificaciones()
 
     harleyBuilder = HarleyBuilder()
     director = Director()
     print("Harley")
-    director.setBuilder(harleyBuilder)
-    harley = director.getMoto()
+    director.set_builder(harleyBuilder)
+    harley = director.get_moto()
     harley.especificaciones()
 
 if __name__ == "__main__":
