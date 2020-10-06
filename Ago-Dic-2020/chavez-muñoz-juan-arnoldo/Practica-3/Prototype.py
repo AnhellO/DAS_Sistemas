@@ -91,7 +91,6 @@ class Courses_At_GFG_Cache:
         Courses_At_GFG_Cache.cache[dyas.get_id()] = dyas
         
   
-# main function 
 if __name__ == '__main__': 
     
     Courses_At_GFG_Cache.load() 
