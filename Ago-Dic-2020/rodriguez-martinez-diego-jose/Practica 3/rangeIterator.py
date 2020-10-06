@@ -9,7 +9,7 @@ class RangeIterator(IIterator):
         self.stop = rangeIterable.stop
         self.step = rangeIterable.step
 
-    def getNext(self):
+    def get_next(self):
         if self.start < self.stop:
             x = self.start
             self.start += self.step
@@ -17,7 +17,7 @@ class RangeIterator(IIterator):
         else:
             raise Exception("AtEndOfIteratorException")
 
-    def hasMore(self):
+    def has_more(self):
         return self.start < self.stop
 
 

@@ -26,5 +26,5 @@ class mBTree(IIterableCollection):
             self._val = _val
 
 ###############
-    def createIterator(self):
+    def create_iterator(self):
         return BTIterator(self)

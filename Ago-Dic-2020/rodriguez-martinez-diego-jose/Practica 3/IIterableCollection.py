@@ -1,10 +1,10 @@
 from abc import ABC, abstractmethod
 
-class IIterableCollection:
+class IIterableCollection(ABC):
 
     """ ''Interfaz'' para las collecciones a iterar """
 
     @abstractmethod
-    def createIterator(self):
+    def create_iterator(self):
         pass
 

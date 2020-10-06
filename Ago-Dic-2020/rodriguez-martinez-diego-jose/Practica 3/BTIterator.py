@@ -23,13 +23,13 @@ class BTIterator(IIterator):
         self.nodes_sorted.append(root._val)
         self.inorder(root._right)    
 
-    def getNext(self):
+    def get_next(self):
         #Como ya esta el arbol en forma de lista, para conseguir el siguiente solo la recorre y aumento el indice cada vez
 
         self.index += 1
         return self.nodes_sorted[self.index]
 
-    def hasMore(self):
+    def has_more(self):
         #Como ya esta el arbol en forma de lista el len de la lista conseguida son los numeros totales de elementos
 
         return self.index + 1 < len(self.nodes_sorted)

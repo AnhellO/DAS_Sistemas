@@ -5,12 +5,12 @@ class IIterator(ABC):
     """ ''Interfaz'' para los Iteradores """
 
     @abstractmethod
-    def getNext(self, iterable):
+    def get_next(self, iterable):
         """ Regresa el siguiente elemento del iterable """
         pass
 
     @abstractmethod
-    def hasMore(self):
+    def has_more(self):
         """ Regresa True si hay mas elementos en el iterable, False si no """
         pass
     

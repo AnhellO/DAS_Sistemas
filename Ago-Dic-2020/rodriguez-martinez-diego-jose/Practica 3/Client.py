@@ -2,24 +2,24 @@ from mRange import mRange
 from mArbolBinario import mBTree
 
 
-def recorrerIterable(iterable):
+def recorrer_iterable(iterable):
     ### Input: Iterable
     ### Output: Sus elementos printeados, si es que tengo interfaz para recorrerlo
     
-    elementosIterable = []
+    elementos_iterable = []
 
     try:
 
         #Iterador concreto
-        iterador = iterable.createIterator()
+        iterador = iterable.create_iterator()
         
-        while iterador.hasMore():
-            elementosIterable.append(iterador.getNext())
+        while iterador.has_more():
+            elementos_iterable.append(iterador.get_next())
 
     except Exception:
         raise ValueError("Interfaz no disponible")
 
-    return elementosIterable
+    return elementos_iterable
 
 
 
@@ -34,7 +34,7 @@ if __name__ == "__main__":
         myTree.insert(i)
 
 
-    for i in (recorrerIterable(myRange)) + (recorrerIterable(myTree)):
+    for i in (recorrer_iterable(myRange)) + (recorrer_iterable(myTree)):
         print(i)
 
  

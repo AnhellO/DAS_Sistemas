@@ -14,7 +14,7 @@ class mRange(IIterableCollection):
 
 
 ############
-    def createIterator(self):
+    def create_iterator(self):
         return RangeIterator(self)
 
 
