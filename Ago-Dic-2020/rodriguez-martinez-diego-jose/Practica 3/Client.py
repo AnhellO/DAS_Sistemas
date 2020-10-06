@@ -1,5 +1,5 @@
-from mRange import mRange
-from mArbolBinario import mBTree
+from mRange import MRange
+from mArbolBinario import MBTree
 
 
 def recorrer_iterable(iterable):
@@ -26,15 +26,15 @@ def recorrer_iterable(iterable):
 if __name__ == "__main__":
 
     #Colecciones concretas
-    myRange = mRange(start = 1, stop = 10)
-    myTree = mBTree(10)
+    my_range = MRange(start = 1, stop = 10)
+    my_tree = MBTree(10)
 
     #Relleno el arbol
     for i in range(11,16):
-        myTree.insert(i)
+        my_tree.insert(i)
 
 
-    for i in (recorrer_iterable(myRange)) + (recorrer_iterable(myTree)):
+    for i in (recorrer_iterable(my_range)) + (recorrer_iterable(my_tree)):
         print(i)
 
  

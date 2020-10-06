@@ -1,7 +1,7 @@
 from IIterableCollection import IIterableCollection
 from rangeIterator import RangeIterator
 
-class mRange(IIterableCollection):
+class MRange(IIterableCollection):
 
     """Implementacion de una clase iterable para probar Iterator Pattern Design\n
     start = 0, stop = 100, step = 0"""

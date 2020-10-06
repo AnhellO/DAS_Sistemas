@@ -1,7 +1,7 @@
 from IIterableCollection import IIterableCollection
 from BTIterator import BTIterator
 
-class mBTree(IIterableCollection):
+class MBTree(IIterableCollection):
     def __init__(self, x = None):
         self._val = x
         self._left = None
@@ -14,12 +14,12 @@ class mBTree(IIterableCollection):
         if self._val:
             if _val < self._val:
                 if self._left is None:
-                    self._left = mBTree(_val)
+                    self._left = MBTree(_val)
                 else:
                     self._left.insert(_val)
             elif _val > self._val:
                 if self._right is None:
-                    self._right = mBTree(_val)
+                    self._right = MBTree(_val)
                 else:
                     self._right.insert(_val)
         else:
