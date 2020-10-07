@@ -12,7 +12,6 @@ class SchoolMember(ABC):
     @abstractmethod
     def funcion_de(self):
         """ Returnea la funcion del puesto"""
-
         return f"Funcion de {type(self).__name__}: \n"
 
 ##################
@@ -55,7 +54,7 @@ def main():
     _name = input("Qué nombre tiene?\n")
     obj = SchoolMemberFactory.make(kind, name=_name, age=22, id='070KGP')
     print(obj)
-    print(obj.funcionDe())
+    print(obj.funcion_de())
     
 if __name__ == "__main__":
     main()

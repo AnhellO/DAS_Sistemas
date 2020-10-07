@@ -23,12 +23,10 @@ class SchoolMemberFactoryTest(unittest.TestCase):
         self.assertEqual(str(teacher), "Soy el Teacher !, tengo 22 años y mi ID = XXXXXX")
 
     def test_invalid_type(self):
-
         with self.assertRaisesWithMessage(ValueError):
             SchoolMemberFactory.make("invalid", name = "foo")
         
     def test_invalid_with_multiple_case(self):
-
         with self.assertRaisesWithMessage(ValueError):
            SchoolMemberFactory.make("InVaLID", name = "foo")
         
