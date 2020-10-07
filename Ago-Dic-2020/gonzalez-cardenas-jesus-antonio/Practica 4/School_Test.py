@@ -1,5 +1,6 @@
 import unittest
 from School_Member import SchoolMemberFactory
+
 class SchoolMemberFactoryTest(unittest.TestCase):
     def test_student_creation(self):
         kind = "Student"
