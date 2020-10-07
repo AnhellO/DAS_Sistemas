@@ -2,7 +2,7 @@ import unittest
 
 from factory_method_second_refactoring_sprint import *
 
-class FacthoryMethodTest(unittest.TestCase):
+class FactoryMethodTest(unittest.TestCase):
     def test_generic_bicycle_factory(self):
         bicycle = Bicycle()
         self.assertEqual(bicycle.get_type(), 'Bicicleta')
