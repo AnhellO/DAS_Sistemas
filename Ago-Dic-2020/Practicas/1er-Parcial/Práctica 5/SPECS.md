@@ -1,6 +1,6 @@
 # Práctica 5
 
-## Objetivo
+## Objetivos
 
 * Mejorar en el conocimiento de patrones de diseño
 * Mejorar técnicas de desarrollo como refactorización y `T.D.D.`
