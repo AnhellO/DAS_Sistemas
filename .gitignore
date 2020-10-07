@@ -8,5 +8,9 @@ include/
 lib/
 pip-selfcheck.json
 .vscode
+.vscode/*
 .idea
+.idea/*
 .DS_Store
+.cache
+.cache/*
