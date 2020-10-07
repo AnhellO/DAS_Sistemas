@@ -7,22 +7,25 @@ class school_member:
         self.age = args.get('age', -1)
         self.id_num = args.get('id', '')
 
+    def __str__(self):
+        return f"Soy el {self.member_info()} {self.name}!, tengo {self.age} años y mi ID = {self.id_num}"
+
     @abstractmethod
     def member_info(self):
         pass
 
 class Teacher(school_member):
     def member_info(self):
-        return f"Soy el profesor {self.name}!, tengo {self.age} años y mi ID = {self.id_num}"
+        return f"profesor"
 
 
 class Student(school_member):
     def member_info(self):
-        return f"Soy el alumno {self.name}!, tengo {self.age} años y mi ID = {self.id_num}"
+        return f"alumno"
 
 class Personel(school_member):
     def member_info(self):
-        return f"Soy el miembro del personal {self.name}!, tengo {self.age} años y mi ID = {self.id_num}"
+        return f"miembro del personal"
 
 class school_member_factory:
     @classmethod
@@ -45,7 +48,7 @@ def main():
     edad = input("¿Qué edad tiene?\n")
     idd = input("Id del individuo\n") 
     obj = school_member_factory.make(kind, name=_name, age=int(edad), id=idd)
-    print(obj.member_info())
+    print(obj)
     
 if __name__ == "__main__":
     main()
