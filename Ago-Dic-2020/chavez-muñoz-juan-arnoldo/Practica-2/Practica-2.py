@@ -39,7 +39,8 @@ class ElecricCar (Carro):
     def print_value(self):
         print(self.value)
 
-my_tesla = ElecricCar('Tesla', '2018', 2000, True)
-print(my_tesla.modelo)
-my_tesla.car_is_flying()
-my_tesla.print_value()
+if __name__ == "__main__":
+    my_tesla = ElecricCar('Tesla', '2018', 2000, True)
+    print(my_tesla.modelo)
+    my_tesla.car_is_flying()
+    my_tesla.print_value()
