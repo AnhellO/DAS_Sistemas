@@ -16,7 +16,7 @@
 2. Para el archivo de [strategy_test.py](strategy_test.py)
    1. Imagina que estamos desarrollando la capa de autenticación para una aplicación y las especificaciones nos dicen que podemos acceder al servicio por medio de diferentes métodos de autenticación. Implementa la funcionalidad necesaria para tener flexibilidad de cambio en el tipo de autenticación requerida, todo esto utilizando el patrón de diseño de `Strategy`
    2. En este ejercicio aplicaremos una estrategia `T.D.D.`, por lo cual tendrás que partir de los tests para modelar las clases y objetos necesarios
-   3. Los tests *NO* deben de modificarse, sin embargo, sí es posible agregar nuevos casos de prueba a la suite en caso de considerarlo pertinente
+   3. Los tests **NO** deben de modificarse, sin embargo, sí es posible agregar nuevos casos de prueba a la suite en caso de considerarlo pertinente
 
 ## Recursos
 
