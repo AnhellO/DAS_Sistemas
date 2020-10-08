@@ -25,7 +25,7 @@ class Anime():
 class Character(Anime):
 
     def __init__ (self, **kwargs):
-        super().__init__()
+        super().__init__(**kwargs)
         self.__character_name = kwargs.get('character_name','')
         self.__character_description = kwargs.get('character_description','')
         self.__voice_actor = kwargs.get('voice_actor','')
@@ -45,6 +45,7 @@ print(zankyou_no_terror.get_anime_statistics())
 print(zankyou_no_terror.get_anime_alternative_titles())
 
 nine = Character(title='Zankyou no Terror (VON)', episodes=11, status='Finished Airing', aired='Jul 11, 2014 to Sep 26, 2014', score=8.14, ranked=368, popularity=90, english='Terror in Resonance', synonyms='Terror in Tokyo, Terror of Resonance', japanese='残響のテロル', character_name='Twelve', character_description='He is a member of sphinx LOL', voice_actor='Sudo Von')
+print(nine.get_anime_information())
 print(nine.get_character_information())
 nine.set_character_name('Nine')
 print(nine.get_character_information())
