@@ -31,7 +31,9 @@
 
 #### Ejercicio 3
 
-_Pendiente..._
+- Partiendo de la suite de tests unitarios en el archivo [proxy_test.py]:
+  - Imagina que estamos agregando un sistema de autenticación para los diferentes sistemas existentes en la empresa en donde trabajamos, y en cada uno de ellos hay diferentes roles/tareas que se pueden hacer o no hacer en base al nivel de permisos del usuario (para casos prácticos, solamente hay **3** niveles disponibles en esta práctica)
+  - Crea un nuevo archivo/módulo `proxy.py` e implementa la funcionalidad necesaria para que nuestro nuevo sistema de autenticación funcione como un sistema de `Proxy` que llevará a cabo la asignación/accesibilidad de operaciones en base al nivel de permisos
 
 #### Ejercicio 4
 
