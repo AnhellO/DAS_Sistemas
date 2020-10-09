@@ -2,7 +2,7 @@ import unittest
 
 from builder import *
 
-class ProxyTest(unittest.TestCase):
+class BuilderTest(unittest.TestCase):
     def test_pizza_sencilla_18_pulgadas(self):
         builder = PizzaBuilder(18)
         pizza = builder.build()
