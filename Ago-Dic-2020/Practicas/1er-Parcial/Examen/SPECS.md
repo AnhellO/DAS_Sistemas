@@ -37,12 +37,31 @@
 
 #### Ejercicio 4
 
-_Pendiente..._
-
-#### Ejercicio 5
-
-_Pendiente..._
+- Partiendo de la suite de tests unitarios en el archivo [`builder.py`](builder.py):
+  - Tenemos una pizzeria que vende en línea, y queremos darle la posibilidad al usuario de que arme su propia pizza a su gusto, como el quiera (_al cliente lo que pida!!!_), por lo cual tenemos que darle la flexibilidad a nuestra página en línea para que se puedan registrar pizzas compradas con los ingredientes seleccionados (los cuales pueden ser varios)
+  - Crea un nuevo archivo/módulo `builder.py` e implementa el patrón de diseño `Builder` para que el código de nuestra paginita web pueda ir construyendo la pizza deseada en base a los ingredientes seleccionados
 
 ## Puntos Extra
 
-- Implementa la suite de tests unitarios para el **Ejercicio 1**. En esta suite se deben de probar al menos 10 posibles casos de prueba para el comportamiento de una instancia de la clase `ReproductorMusical` -> _(5 puntos sobre 100)_
+- Implementa la suite de tests unitarios para el **Ejercicio 1**. En esta suite se deben de probar al menos 10 posibles casos de prueba para el comportamiento de una instancia de la clase `ReproductorMusical`
+  - **(5 puntos sobre 100)**
+- Para el ejemplo de código en el archivo [composite.py](composite.py):
+  - Implementa la funcionalidad necesaria utilizando el patrón de diseño `Composite` para que sea posible crear una interfaz gráfica sencilla que contenga múltiples componentes, como sucedería en una GUI real.
+    - Algunos componentes pueden contener otros componentes, pero también hay componentes que no tengan más componentes
+    - Deberás de tomar la siguiente [imagen de ejemplo](https://semantic-ui.com/images/examples/login.png) como caso de prueba para tu implementación del patrón `Composite`
+    - Ejemplo:
+    ```
+      Componente 'Ventana' contiene 'Imagen'
+      Componente 'Imagen': imagen.jpg
+      Componente 'Ventana' contiene 'Etiqueta'
+      Componente 'Etiqueta': "Log-in to your account"
+      Componente 'Ventana' contiene 'Panel'
+      Componente 'Panel' contiene 'Input'
+      Componente 'Panel' contiene 'Input'
+      Componente 'Panel' contiene 'Botón'
+      Componente 'Botón' contiene 'Etiqueta'
+      ...
+    ```
+  - **(10 puntos sobre 100)**
+- Implementa la suite de tests unitarios para el ejercicio de puntos extra de composite, tomando el caso de uso propuesto como caso de prueba en la suite
+  - **(5 puntos sobre 100)**
