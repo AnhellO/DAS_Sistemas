@@ -24,7 +24,10 @@
 
 #### Ejercicio 2
 
-_Pendiente..._
+- Complementando tus resultados del ejercicio 1. Imagina que queremos darle la funcionalidad a nuestro _"reproductor musical"_ de poder integrar plug-ins a él. Estos plug-ins se encargan de **agregar nueva funcionalidad** al reproductor musical, como por ejemplo, mostrar las letras de una determinada canción, decirte pistas relacionadas al género de la canción, devolverte la información del artista material de la canción, o hasta customizar el reproductor musical a que tenga una imágen de fondo, etcétera
+- Implementa el patrón de diseño decorador, de tal manera que podamos **"decorar"** nuestras instancias de la clase `ReproductorMusical` con `Plugins`
+  - Al menos dos plugins con diferente funcionalidad entre si necesitan agregarse en este punto
+  - Puedes implementar esto con el patrón de diseño desde 0, o bien, utilizando los decoradores nativos de `Python`, como a ti se te haga más sencillo :wink:
 
 #### Ejercicio 3
 
