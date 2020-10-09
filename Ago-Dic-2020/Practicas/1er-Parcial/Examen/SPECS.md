@@ -20,7 +20,7 @@
 - Crea una clase `ReproductorMusical` (también puede llamarse `AppMusical` o cualquier sinónimo relacionado). Esta tendrá el objetivo de modelar un objeto _"disco"_ de la vida real, y deberá de tener al menos **3** atributos, 1 de ellos deberá de ser alguna estructura de datos que se encargue de almacenar `1 o más` pistas. Las funciones con las que contará esta clase se describen a continuación:
   - Una función que nos permita agregar `pistas` a una instancia de la clase
   - Otra función que nos devuelva todas las `pistas` marcadas como favoritas en el reproductor musical
-  - Finalmente, agrega una última función que nos devuelva todas las pistas por orden
+  - Finalmente, agrega una última función que nos devuelva todas las pistas ordenádas por duración de la pista, desde la más corta a la más larga (ascendentemente)
 
 #### Ejercicio 2
 
