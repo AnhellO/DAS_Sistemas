@@ -37,7 +37,7 @@
 
 #### Ejercicio 4
 
-- Partiendo de la suite de tests unitarios en el archivo [`builder.py`](builder.py):
+- Partiendo de la suite de tests unitarios en el archivo [`builder_test.py`](builder_test.py):
   - Tenemos una pizzeria que vende en línea, y queremos darle la posibilidad al usuario de que arme su propia pizza a su gusto, como el quiera (_al cliente lo que pida!!!_), por lo cual tenemos que darle la flexibilidad a nuestra página en línea para que se puedan registrar pizzas compradas con los ingredientes seleccionados (los cuales pueden ser varios)
   - Crea un nuevo archivo/módulo `builder.py` e implementa el patrón de diseño `Builder` para que el código de nuestra paginita web pueda ir construyendo la pizza deseada en base a los ingredientes seleccionados
 
