@@ -37,7 +37,7 @@ class BuilderTest(unittest.TestCase):
 
         self.assertIsInstance(pizza, Pizza)
         self.assertEqual(
-            'Mi pizza es de 14" con los siguientes ingredientes: salsa de tomate, queso, doble queso y pepperoni',
+            'Mi pizza es de 20" con los siguientes ingredientes: salsa de tomate, queso, doble queso y pepperoni',
             str(pizza)
         )
     
