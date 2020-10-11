@@ -95,7 +95,7 @@ def main():
     }
 
     facade = SuitesFacade(componentes_suites)
-    facade.agregar_componentes()
+    print(facade.agregar_componentes())
 
 if __name__ == "__main__":
     main()
