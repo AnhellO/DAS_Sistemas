@@ -31,7 +31,7 @@ class SchoolMemberFactory:
     def make(cls, kind, **args):
         #recorro las clases existentes y guardo los nombres
         identidades = [identidad.__name__.capitalize() for identidad in SchoolMember.__subclasses__()]
-        #checo si el tipo es igual a los nombres de las clases
+        #checo si el tipo es igual a los nombres de las clases.
         if kind.capitalize() in identidades:
             return eval(kind.capitalize())(**args)
         return f"Error: '{kind}' type not found"   
