@@ -54,7 +54,7 @@ class ApiKeyConcreteStrategy(Authentication):
     def auth(self):
         return f"### Authenticated with API Key\n\tKey: {self.api_key}"
 
-
+#función main
 if __name__ == "__main__":
     context = AuthContext()
     print(context.authenticate()) 
