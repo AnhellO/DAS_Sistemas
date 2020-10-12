@@ -64,7 +64,7 @@ class DYAS(Courses_At_GFG):
 # class - Courses At GeeksforGeeks Cache 
 class Courses_At_GFG_Cache: 
       
-    # Cache to store useful information 
+    #Cache to store useful information 
     cache = {} 
   
     @staticmethod
