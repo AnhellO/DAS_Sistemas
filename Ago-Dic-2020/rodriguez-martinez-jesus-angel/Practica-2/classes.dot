@@ -1,7 +1,7 @@
 digraph "classes" {
 charset="utf-8"
 rankdir=BT
-"0" [label="{Anime|aired\lenglish\lepisodes\ljapanese\lpopularity\lranked\lscore\lstatus\lsynonyms\ltitle\l|get_anime_alternative_titles()\lget_anime_information()\lget_anime_statistics()\l}", shape="record"];
-"1" [label="{Character|character_description\lcharacter_name\lvoice_actor\l|get_character_information()\lget_voice_actor()\lset_character_name(character_name)\l}", shape="record"];
+"0" [label="{Anime|\l|get_anime_alternative_titles()\lget_anime_information()\lget_anime_statistics()\l}", shape="record"];
+"1" [label="{Character|\l|get_character_information()\lget_voice_actor()\lset_character_name(character_name)\l}", shape="record"];
 "1" -> "0" [arrowhead="empty", arrowtail="none"];
 }
