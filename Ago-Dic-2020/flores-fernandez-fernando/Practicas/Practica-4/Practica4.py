@@ -14,23 +14,14 @@ class SchoolMember(metaclass = ABCMeta):
         pass
 
 class Teacher(SchoolMember):
-    def __str__(self):
-        return super().__str__().replace("Soy", "Soy el ticher")
-    
     def saludar(self):
         return f"Buenos dias me llamo: {self.name}"
 
 class Student(SchoolMember):
-    def __str__(self):
-        return f"Soy el alumno {self.name}!, tengo {self.age} años y mi ID = {self.id_num}"
-    
     def saludar(self):
         return f"Buenos dias me llamo: {self.name}"
 
 class Visitor(SchoolMember):
-    def __str__(self):
-        return f"Soy el visitante {self.name}!, tengo {self.age} años y mi ID = {self.id_num}"
-    
     def saludar(self):
         return f"Buenos dias me llamo: {self.name}"    
 
