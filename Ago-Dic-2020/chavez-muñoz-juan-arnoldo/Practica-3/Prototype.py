@@ -5,7 +5,7 @@ import copy
 # class 
 class Courses_At_GFG(metaclass = ABCMeta): 
       
-    # constructor  
+    #constructor  
     def __init__(self): 
         self.id = None
         self.type = None
