@@ -10,48 +10,48 @@ class SchoolMember(metaclass = ABCMeta):
         return f"Soy {self.name}!, tengo {self.age} años y mi ID = {self.id_num}"
     
     @abstractmethod
-    def Saludar(self):
+    def saludar(self):
         pass
 
 class Teacher(SchoolMember):
     def __str__(self):
         return super().__str__().replace("Soy", "Soy el ticher")
     
-    def Saludar(self):
+    def saludar(self):
         return f"Buenos dias me llamo: {self.name}"
 
 class Student(SchoolMember):
     def __str__(self):
         return f"Soy el alumno {self.name}!, tengo {self.age} años y mi ID = {self.id_num}"
     
-    def Saludar(self):
+    def saludar(self):
         return f"Buenos dias me llamo: {self.name}"
 
 class Visitor(SchoolMember):
     def __str__(self):
         return f"Soy el visitante {self.name}!, tengo {self.age} años y mi ID = {self.id_num}"
     
-    def Saludar(self):
+    def saludar(self):
         return f"Buenos dias me llamo: {self.name}"    
+
 class SchoolMemberFactory:
     @classmethod
-    def make(cls, kind, **args):
-        print(len(args.get("id_num", "XXXXXX")))
+    def make(cls, kind, **kwargs):
        
         # valida el tamaño del ID
-        if len(args.get("id_num", "XXXXXX")) != 6:
+        if len(kwargs.get("id_num", "XXXXXX")) != 6:
             return "Error! El tamaño del ID debe ser de 6 caracteres"
+       
         #validar que edad sea numero
-        if isinstance(args.get('age', -1),int) == False:
+        if isinstance(kwargs.get('age', -1),int) == False:
             return "Error! la Edad debe ser numero"
             
-            # valida que el kind sea correcto
-        if kind != "Student" and kind != "Visitor" and kind != "Teacher" :
-            print(kind)
-            return f"Error! tipo '{kind}' invalido!"
+        # valida que el kind sea correcto
+        tipos = [tipo.__name__.capitalize() for tipo in SchoolMember.__subclasses__()] #crea una lista con los nombres de las subclases para compararla con el   
+        if kind.capitalize() not in tipos:                                             # input del usuario
+             return f"[Error]: '{kind}' invalid kind"
+        return eval(kind.capitalize())(**kwargs)
         
-        return eval(kind.capitalize())(**args)
-
 def main():
     kind = input("Qué quieres crear?\n")
     _name = input("Qué nombre tiene?\n")
