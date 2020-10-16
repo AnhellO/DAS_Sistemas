@@ -35,12 +35,14 @@ def main():
     ventana = ComponenteGraficoComposite('Ventana')
     # Hijos de ventana
     imagen = ComponenteGraficoComposite('Imagen')
-    panel = ComponenteGraficoComposite('Panel')
-    etiqueta1 = ComponenteGraficoComposite('Etiqueta')
+    panel = ComponenteGraficoComposite('Panel 1')
+    etiqueta1 = ComponenteGraficoComposite('Etiqueta 1')
+    panel2 = ComponenteGraficoComposite('Panel 2')
     # Agregar hijos a 'ventana'
     ventana.add_hijo(imagen)
     ventana.add_hijo(etiqueta1)
     ventana.add_hijo(panel)
+    ventana.add_hijo(panel2)
     # Hijo de 'imagen'
     image = ComponenteGraficoLeaf('imagen.jpg')
     # Agregar hijo a 'imagen'
@@ -58,11 +60,16 @@ def main():
     panel.add_hijo(input2)
     panel.add_hijo(boton)
     # Hijos de 'boton'
-    etiqueta2 = ComponenteGraficoComposite('Etiqueta')
+    etiqueta2 = ComponenteGraficoComposite('Etiqueta 2')
     texto2 = ComponenteGraficoLeaf('Login')
     # Agregar hijos a 'boton'
     etiqueta2.add_hijo(texto2)
     boton.add_hijo(etiqueta2)
+    # Hijos de 'panel 2'
+    etiqueta3 = ComponenteGraficoComposite('Etiqueta 3')
+    texto3 = ComponenteGraficoLeaf('New to us? Sign Up')
+    etiqueta3.add_hijo(texto3)
+    panel2.add_hijo(etiqueta3)
     # A renderizar 'ventana' para mostrarla
     ventana.renderizar()
 
