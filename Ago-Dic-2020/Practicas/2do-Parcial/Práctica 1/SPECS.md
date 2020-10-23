@@ -17,6 +17,8 @@ Del ejemplo-2 de Docker:
 * <https://docker.events.cube365.net/docker/dockercon/>
 * <https://www.youtube.com/watch?v=6idFknRIOp4>
 * <https://www.youtube.com/watch?v=fqMOX6JJhGo>
+* <https://pypi.org/project/pymongo/>
+* <https://docs.mongodb.com/manual/tutorial/getting-started/>
 
 ## Deadline
 
