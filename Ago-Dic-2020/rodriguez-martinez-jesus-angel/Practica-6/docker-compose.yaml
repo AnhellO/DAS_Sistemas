@@ -11,7 +11,7 @@ services:
   - '.env'
  phpmoadmin:
   build:
-   context: ./phpmoadmin
+   context: ./phpmongoadmin
   ports:
   - "80:80"
   links:
