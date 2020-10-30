@@ -8,9 +8,9 @@
 
 Del ejemplo-2 de Docker:
 
-- Mover la lógica de Python (incluída la instalación de la librería de `pymongo`) a que funcione con contenedores
-  - Más detalles a venir proximamente...
-- Agregar conexión con [PHPMoAdmin](https://hub.docker.com/r/thinkcube/phpmoadmin)
+* Mover la lógica de Python (incluída la instalación de la librería de `pymongo`) a que funcione con contenedores
+  ~* Más detalles a venir proximamente...~
+* Agregar conexión con [PHPMoAdmin](https://hub.docker.com/r/thinkcube/phpmoadmin)
 
 ## Recursos
 
