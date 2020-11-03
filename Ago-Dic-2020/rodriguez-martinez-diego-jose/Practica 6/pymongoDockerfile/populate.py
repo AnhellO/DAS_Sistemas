@@ -6,6 +6,11 @@ db = client["mi-db"]
 # Name
 print("Nombre de la DB: ", db.name)
 
+#Agrego la coleccion
+collist = db.list_collection_names()
+if "pet" not in collist:
+    mycol = db["customers"]
+
 # Crea colección e inserta un registro
 print(db.pet.insert_many([
     {
