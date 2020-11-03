@@ -1,6 +1,6 @@
 FROM mongo
 
-MAINTAINER JAGC
+MAINTAINER JesusAGC
 
 RUN apt-get update && apt-get update
 
