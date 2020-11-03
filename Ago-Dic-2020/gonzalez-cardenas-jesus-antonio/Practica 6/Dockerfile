@@ -10,18 +10,14 @@ RUN apt install python3-pip -y
 
 RUN pip3 install pymongo
 
-WORKDIR /root
-
 RUN mkdir mongo_app
 
-ADD find.py /root/mongo_app
+WORKDIR /root/mongo_app
 
-ADD populate.py /root/mongo_app
+COPY . .
 
-RUN service mongodb start -y
+RUN ["chmod", "+x", "py_scripts.sh"]
 
-RUN python3 /root/mongo_app/populate.py
-
-RUN python3 /root/mongo_app/find.py
+CMD [ "./py_scripts.sh" ]
 
 EXPOSE 27017
