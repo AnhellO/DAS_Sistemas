@@ -2,7 +2,7 @@ FROM mongo
 
 MAINTAINER JesusAGC
 
-RUN apt-get update && apt-get upgrade
+RUN apt-get update && apt-get upgrade -y
 
 RUN apt-get install python3.7 -y
 
