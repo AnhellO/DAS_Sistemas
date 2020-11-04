@@ -4,6 +4,7 @@ from time import sleep
 #################################################################################################
 #										COMPOSITE												#
 #################################################################################################
+
 class ComputerComponent(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def spec(self):
@@ -19,9 +20,9 @@ class BaseComposite(ComputerComponent):
             if isinstance(child, str):
                 structure.append(child)
                 continue
-            
+
             structure.append(child.spec())
-            
+
         return '\n'.join(structure)
 
     def add(self, component: ComputerComponent):
@@ -42,7 +43,7 @@ class MotherboardComposite(BaseComposite):
 
 class ProcessorLeaf(ComputerComponent):
     def spec(self):
-        return f"{4*' '}Procesador: AMD Ryzen 5 3600"
+        return f"{4*' '}Procesador: Intel Core I7 "
 
 class GraphicsLeaf(ComputerComponent):
     def spec(self):
@@ -61,67 +62,65 @@ class NICLeaf(ComputerComponent):
         return f"{4*' '}Tarjeta de Red: AX WIFI 6"
 
 
-#################################################################################################
-#										FACADE													#
-#################################################################################################
+##########IMPLEMENTO FACADE###############
+
+
 class Computadora():
 
-    def __init__(self, usuario = "usuario"):
-        self.is_on = False
-        self.usuario = usuario
-
+    def __init__(self, user):
+        self.on = False
+        self._user = user
         self.gabinete = CabinetComposite()
         self.motherboard = MotherboardComposite()
-        self.componentes = [ProcessorLeaf(), GraphicsLeaf(), MemoryLeaf(), HDDLeaf(), NICLeaf(),""]
+        self.componentes = [ProcessorLeaf(), GraphicsLeaf(), MemoryLeaf(), HDDLeaf(), NICLeaf()]
 
-        for componente in self.componentes:
-            self.motherboard.add(componente)
+        for i in self.componentes:
+            self.motherboard.add(i)
 
         self.gabinete.add(self.motherboard)
 
-    def display(self):
-        with open("computadora.txt") as reader:
-            content = reader.read().replace("[USER]", f"[{self.usuario.upper()}]")
-            print(content)
-
-    def toggle_on(self):
-        if not self.is_on:
+    def encender(self):
+        if (self.on == False):
             print("Encendiendo computadora")
-            sleep(1.2)
-            self.display()
-        else:
-            print("Apagando computadora")
             sleep(1)
+            self.on = True
 
-        self.is_on = not self.is_on
-
-    def spec(self):
-        if self.is_on:
-            return self.gabinete.spec()
-
-        return "Primero enciende la computadora..."
+    def apagar(self):
+        if (self.on == True):
+            print("Apagando Computadora")
+            sleep(2)
+            self.on = False
 
 
-########
+    def pantalla(self,cambiar):
+       if (cambiar == True):
+            self.apagar()
+
+    def especificaciones(self):
+        if (self.on == True):
+            return f"La Computadora de {self._user} tiene las siguientes especificaciones:\n{ self.gabinete.spec()}"
+        return "La computadora esta apagada"
+
+
+def main():
+    mi_compu = Computadora("DavidSena87")
+
+    ### Prender computadora
+    mi_compu.encender()
+
+    ### Muestra la Pantalla
+    cambio = False
+    question = input("Desea apagar la computadora?  True or False\n")
+    if (question == "True"):
+        cambio = True
+    if (question == "False"):
+        cambio = False
+    mi_compu.pantalla(cambio)
+
+
+    ### Specs de la computadora que armamos con el composite
+    specs = mi_compu.especificaciones()
+    print(specs)
+
 if __name__ == "__main__":
-    
-    my_computer = Computadora("anhello")
-
-    ##### No se pueden hacer cosas si la computadora esta apagada
-    print(my_computer.spec())
-
-    ###### Prender computadora
-    my_computer.toggle_on()
-
-    ####### Specs de la computadora que armamos con el composite
-    print(my_computer.spec())
-
-    ###### Apagar computadora
-    my_computer.toggle_on()
-
-    ##### No se pueden hacer cosas si la computadora esta apagada
-    print(my_computer.spec())
-
-    ## Esto es un facade, por que a pesar de que tenemos nuestro objeto computadora, podemos seguir accesando
-    ## funcionalidades de los componentes por si solos
-    # print(my_computer.componentes[0].spec())
+    main() 
