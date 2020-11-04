@@ -1,87 +1,79 @@
-import abc
+from abc import ABC, abstractmethod
 
-#################################################################################################
-#										COMPOSITE												#
-#################################################################################################
-class ComputerComponent(metaclass=abc.ABCMeta):
-    @abc.abstractmethod
-    def spec(self):
+class interface_authentication(ABC):
+    @abstractmethod
+    def authenticate(self):
         pass
 
-class BaseComposite(ComputerComponent):
-    def __init__(self):
-        self._child_components = []
+class BasicAuthConcreteStrategy(interface_authentication):
 
-    def spec(self):
-        structure = []
-        for child in self._child_components:
-            if isinstance(child, str):
-                structure.append(child)
-                continue
+    def __init__(self,usr : str, passwd:str):
+        self.user = usr
+        self.password = passwd
 
-            structure.append(child.spec())
+    def authenticate(self):
+        return f'### Authenticated with Basic Auth\n\tUser: {self.user}\n\tPass: {self.password}'
 
-        return '\n'.join(structure)
 
-    def add(self, component: ComputerComponent):
-        self._child_components.append(component)
-        return self
+class OauthAuthConcreteStrategy(interface_authentication):
 
-    def remove(self, component: ComputerComponent):
-        self._child_components.remove(component)
-        return self
+    defaultdict = {
+        "access_token": "una cadena muy larga",
+        "token_type": "Bearer",
+        "expires_in": 3600,
+        "refresh_token": "una cadena muy larga 2",
+        "scope": "default"
+    }
+    def __init__(self,**kwargs):
+        self.credentials = kwargs.get("credentials",self.defaultdict)
 
-class CabinetComposite(BaseComposite):
-    def __init__(self):
-        self._child_components = ["Gabinete: Asus ROG"]
+    def prepare_credentials(self,_credentials:dict):
+        keylist = ["access_token","token_type","expires_in","refresh_token","scope"]
+        token = _credentials.get(keylist[0])
+        token_type = _credentials.get(keylist[1])
+        expires_time = _credentials.get(keylist[2])
+        token_for_refresh = _credentials.get(keylist[3])
+        scope_value = _credentials.get(keylist[4])
+        return f'### Authenticated with OAuth\n\tCredentials: {{"access_token":"{token}","token_type":"{token_type}","expires_in":{expires_time},"refresh_token":"{token_for_refresh}","scope":"{scope_value}"}}'
 
-class MotherboardComposite(BaseComposite):
-    def __init__(self):
-        self._child_components = [f"{2*' '}Tarjeta Madre: Gigabyte B450M"]
+    def authenticate(self):
+        return f"{self.prepare_credentials(self.credentials)}"
 
-class ProcessorLeaf(ComputerComponent):
-    def spec(self):
-        return f"{4*' '}Procesador: AMD Ryzen 5 3600"
+class ApiKeyConcreteStrategy(interface_authentication):
 
-class GraphicsLeaf(ComputerComponent):
-    def spec(self):
-        return f"{4*' '}Tarjeta Gráfica: Nvidia Geforce RTX 3070"
+    def __init__(self, api_key: str):
+        self.api_key = api_key
 
-class MemoryLeaf(ComputerComponent):
-    def spec(self):
-        return f"{4*' '}Memoria RAM: Hyper X"
+    def authenticate(self):
+        return f"### Authenticated with API Key\n\tKey: {self.api_key}"
+    pass
 
-class HDDLeaf(ComputerComponent): 
-    def spec(self):
-        return f"{4*' '}Disco Duro: SSD Kingston 960TB"
+class AuthContext(interface_authentication):
+    def __init__(self, _strategy:interface_authentication = OauthAuthConcreteStrategy()):
+        self.strategy = _strategy
 
-class NICLeaf(ComputerComponent):
-    def spec(self):
-        return f"{4*' '}Tarjeta de Red: AX WIFI 6"
+    def set_strategy(self, _strat_to_set:interface_authentication):
+        self.strategy =  _strat_to_set
 
-##############################   IMPLEMENT FACADE PATTERN   ##############################
-class Facade:
-    def __init__(self, componentes={}):
-        self.gabinete = CabinetComposite() if  componentes.get('se agrega gabinete') else print('No se agrega gabinete')
-        self.tarjetamadre = MotherboardComposite() if componentes.get('tarjeta madre') else print('No se agrega tarjeta madre')
-        self.procesador = ProcessorLeaf() if componentes.get('procesador') else print('No se agrega procesador')
-        self.grafica = GraphicsLeaf() if componentes.get('grafica') else print('No se agrega tarjeta grafica')
-        self.memoria = MemoryLeaf() if componentes.get('memoria') else print('No se agrega memoria ')
-        self.hdd = HDDLeaf() if componentes.get('hdd') else print ('No se agrega disco duro')
-        self.nic = NICLeaf() if componentes.get('nic') else print ('No se agrega tarjeta de red')
+    def authenticate(self):
+        return self.strategy.authenticate()
+
+    pass    
+
 
 def main():
-    componentes= {
-        'gabinete': True,
-        'tarjeta madre': False,
-        'procesador': True,
-        'grafica': True,
-        'memoria': False,
-        'hdd': False,
-        'nic': False
-    }
-    facade = Facade(componentes)
-    
+    cred = {
+            "access_token": "una cadena muy larga",
+            "token_type": "Bearer",
+            "expires_in": 3600,
+            "refresh_token": "una cadena muy larga 2",
+            "scope": "readAndWrite"
+        }
+    context2 = AuthContext(OauthAuthConcreteStrategy(credentials=cred))
+    print(context2.authenticate())
+    context = AuthContext()
+    print(context.authenticate())
+
 
 if __name__ == "__main__":
-    main() 
+    main()
