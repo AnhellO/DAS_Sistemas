@@ -22,13 +22,14 @@
   * **Contenedor C**
     * Tendrá otra pequeño script de python, el cual se llamara `view.py`
     * Éste se encargará de mostrar un usuario al azar de tu base de datos en `Mongo`. Algo similar a lo que hace <https://github.com/AnhellO/pokepy>, pero tomando la información de tu base de datos previamente llenada
-    * Los usuarios tendrán que mostrarse en formato `HTML`, usando etiquetas como `<table>`, `<ul>` y/o similares. Tu decides si utilizar templates y/o estilos CSS. Opcional también es que puedes utilizar <https://flask.palletsprojects.com/en/1.1.x/> para hacer este paso aún más fácil :wink:
+    * Los usuarios tendrán que mostrarse en formato `HTML`, usando etiquetas como `<table>`, `<ul>` y/o similares. Tu decides si utilizar templates y/o estilos CSS. Opcional también es que puedes utilizar [Flask](https://flask.palletsprojects.com/en/1.1.x/) para hacer este paso aún más fácil :wink:
 * Finalmente crea un archivo `README.md`, al cual le hagas commit junto con los demás archivos de tu práctica. En él deberás de describir tu experiencia después de investigar sobre `Mongo`, `requests` y sobre todo `Docker Compose` y describir el aprendizaje obtenido después de utilizarlos un poco, así como los pros y contras que pudiste detectar de las tecnologías después de llevar acabo la práctica
 
 ## Recursos
 
 * <https://medium.com/faun/consuming-rest-apis-with-python-eb86c6b724c5>
 * <https://www.digitalocean.com/community/tutorials/how-to-use-web-apis-in-python-3>
+* <https://j2logo.com/tutorial-flask-espanol/>
 
 ## Deadline
 
