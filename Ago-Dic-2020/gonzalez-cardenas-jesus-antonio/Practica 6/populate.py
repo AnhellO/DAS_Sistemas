@@ -34,4 +34,3 @@ print(db.pet.insert_many([
         "specie": "perro"
     },
 ]))
-

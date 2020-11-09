@@ -1,4 +1,4 @@
-# Practica 6 de DAS
+# Práctica 6 de DAS
 
 Estas son las instrucciones para correr el contenedor de docker:
 
@@ -10,6 +10,14 @@ Estas son las instrucciones para correr el contenedor de docker:
 
     ``` docker run -d -p 27017:27017 --name m1 mongo_app ```
 
-4. Para usar phpMoadmin con la base de datos corra el siguiente comando:
+4. Hay que entrar al contenedor y correr el script:
 
-    ``` docker run --name moadmmin -d --link m1:db 8080:80 thinkcube/phpmoadmin ```
+    ``` docker exec -it m1 /bin/bash ```
+    
+    ``` ./py_scripts.sh ```
+
+5. Salimos de nuestro contenedor    
+
+5. Para usar phpMoadmin con la base de datos corra el siguiente comando:
+
+    ``` docker run --name moadmmin -d --link m1:db -p 8080:80 thinkcube/phpmoadmin  ```
