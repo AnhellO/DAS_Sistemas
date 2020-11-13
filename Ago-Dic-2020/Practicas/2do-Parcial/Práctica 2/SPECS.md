@@ -33,4 +33,4 @@
 
 ## Deadline
 
-* `Jueves 19 de Junio a las 06:59pm`
+* `Jueves 19 de Noviembre a las 06:59pm`
