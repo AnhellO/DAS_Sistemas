@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:12.2
+    restart: always
+    environment:
+      POSTGRES_DB: postgre
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret123
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+    - db-data:/var/lib/postgresql/data
+    ports:
+    - "5432:5432"
+
+  app:
+    build: .
+    container_name: pyapp
+    restart: always
+    links:
+      - db
+    ports:
+      - "5000:5000"
+    volumes:
+      - type: bind
+        source: .
+        target: /usr/src/app
+    depends_on:
+     - scraper
+
+volumes:
+  db-data:
+  pgadmin-data:
