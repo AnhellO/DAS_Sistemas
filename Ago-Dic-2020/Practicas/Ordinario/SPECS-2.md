@@ -37,7 +37,7 @@ Crear un archivo `docker-compose.yml` por medio del cual se instancien **4** con
 #### Contenedor C - API Scraper/Fetcher/Consumer
 
 * Este contenedor se encargará de correr un scraper/consumer para obtener los datos de una API
-* La API es opcional de entre las disponibles en <https://github.com/public-apis/public-apis>, pero debe de contar con al menos 3 diferentes endpoints/recursos. Por ejemplo, tenemos la API de <https://developer.marvel.com/docs>, y `/v1/public/characters`, `/v1/public/comics`, `/v1/public/creators`, `/v1/public/events`, `/v1/public/series` y `/v1/public/stories` son cada uno diferentes recursos, es decir que tenemos **6** endpoints/recursos en esta API
+* La API es opcional de entre las disponibles en el listado de [Public APIs](https://github.com/public-apis/public-apis), pero debe de contar con al menos 3 diferentes endpoints/recursos. Por ejemplo, tenemos la API de [Marvel](https://developer.marvel.com/docs), y `/v1/public/characters`, `/v1/public/comics`, `/v1/public/creators`, `/v1/public/events`, `/v1/public/series` y `/v1/public/stories` son cada uno diferentes recursos, es decir que tenemos **6** endpoints/recursos en esta API
 * La API elegida debe de ser diferente entre cada uno de los **4** equipos, y no puede elegirse la API de Marvel que se mostró en el ejemplo del punto anterior
 * Se deben de obtener todos los datos disponibles en la `API` para cada endpoint/recurso y estos no deben de guardarse en una sola tabla, por lo que hay que analizar, definir y estructurar correctamente la base de datos al momento de diseñarla
 
