@@ -53,7 +53,7 @@ Crear un archivo `docker-compose.yml` por medio del cual se instancien **4** con
 
 * .
 
-#### Requerimientos extra
+#### Puntos Extra
 
 * _Métodos GET y POST_
 * .
