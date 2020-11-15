@@ -2,9 +2,9 @@
 
 ## Equipo
 
-* Erick Escarcega
-* Jesús Antonio
-* Fernando Flores
+* Escarcega Ramirez Erick Orlando
+* Flores Fernandez Fernando
+* Gonzalez Cardenas Jesús Antonio
 
 ## Tema
 

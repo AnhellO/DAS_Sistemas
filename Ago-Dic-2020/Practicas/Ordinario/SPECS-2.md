@@ -2,9 +2,9 @@
 
 ## Equipo
 
-* Daniel Salazar
-* Juan Arnoldo
-* Jonathan Aguilar
+* Aguilar Cedillo Jonathan Ivan
+* Chavez Muñoz Juan Arnoldo
+* Salazar Coronado Juan Daniel
 
 ## Tema
 

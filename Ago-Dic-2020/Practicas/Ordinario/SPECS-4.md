@@ -2,9 +2,9 @@
 
 ## Equipo
 
-* Jesús Angel
-* David Aguirre
-* Diego Rodríguez
+* Aguirre Juarez David
+* Rodríguez Martínez Diego Jose
+* Rodríguez Martínez Jesús Angel
 
 ## Tema
 

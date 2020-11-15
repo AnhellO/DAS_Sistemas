@@ -2,9 +2,9 @@
 
 ## Equipo
 
-* Angel Sena
-* Jahir Perez
-* Jorge Luis
+* Lopez Flores Jorge Luis
+* Perez Sanchez José Jahir
+* Sena Martinez Angel David
 
 ## Tema
 
