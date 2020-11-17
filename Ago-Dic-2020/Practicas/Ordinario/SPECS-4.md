@@ -8,7 +8,7 @@
 
 ## Tema
 
-* Micro-Services Architecture
+* Micro-Services Architecture: Implementa el proyecto siguiendo los lineamientos y requisitos del patrón de arquitectura de microservicios
 
 ## Especificaciones
 
@@ -52,13 +52,17 @@ Crear un archivo `docker-compose.yml` por medio del cual se instancien **4** con
 
 #### Contenedor E - Message Queue Broker
 
-* .
+* Este contenedor se encargará de ejecutar un message queue broker como [RabbitMQ](https://www.rabbitmq.com/), [Apache Kafka](https://kafka.apache.org/) o [Celery](https://docs.celeryproject.org/en/stable/getting-started/introduction.html)
+* El nuevo servicio pasará a ser el intermediario entre el contenedor `D` del front end y el contenedor `A` de la base de datos, de tal manera que habrá que sobreescribir un poco la lógica en el contenedor `D` para la creación de registros por medio de `HTTP POST` de tal manera que ahora soporte operaciones asíncronas por medio del contenedor `E`, es decir, si escogiste `RabbitMQ` como message queue broker, entonces al enviar peticiones `POST` para crear un nuevo registro estas pasarían por `RabbitMQ` primero, y este sería el que se encargaría de enviarlo al contenedor/servicio correcto que este suscrito a un tipo concreto de mensajes, en este caso el de `PostgreSQL`. Lo mismo aplica en la otra dirección, es decir `PostgreSQL` respondiéndole al servicio del front end por medio de `RabbitMQ`. Pueden crear un endpoint/recurso nuevo para este punto, de tal manera que la aplicación tenga soporte tanto síncrono como asíncrono, o bien, sobreescribir la funcionalidad del endpoint original, como se más sencillo para ustedes
 
-#### Puntos Extra
+#### Opcional - Puntos Extra
 
-* .
-* .
-* .
+Los siguientes puntos son opcionales, sin embargo implementarlos provee **1** punto extra por cada uno sobre la calificación total final.
+
+* Habilitar soporte para las operacions [`PATCH`](https://developer.mozilla.org/es/docs/Web/HTTP/Methods/PATCH), [`PUT`](https://developer.mozilla.org/es/docs/Web/HTTP/Methods/PUT) y [`DELETE`](https://developer.mozilla.org/es/docs/Web/HTTP/Methods/DELETE) en el contenedor del front end
+* Agregar un contenedor extra con el front end separado del contenedor `D`, es decir, el contenedor `D` pasaría a tener el papel de una API propia, mientras que el nuevo contenedor `F` sería el que tendría el front end con la interfaz. Acá puedes utilizar tecnologías como `CSS`, `Javascript`, `Bootstrap`, `Angular` o `ReactJS` para hacer más efectivo este proceso :wink:
+* Agregar tests unitarios y de integración para el proyecto
+* Si agregaste soporte para `PATCH`, `PUT` y `DELETE`, entonces agregar soporte asíncrono para estos te dará otro punto extra :wink:
 
 ### Conclusión
 
