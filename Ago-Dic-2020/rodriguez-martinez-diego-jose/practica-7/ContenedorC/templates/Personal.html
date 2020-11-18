@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Personal</h1>
+
+<table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th scope="col"> Dato </th>
+        <th scope="col"> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> Age: </th>
+        <td>{{ age }}</td>
+      </tr> 
+      <tr>
+        <th scope="row"> Blood: </th>
+        <td> {{ blood }} </td>
+      </tr>
+      <tr>
+        <th scope="row"> Born in: </th>
+        <td colspan="2"> {{ born_place }} </td>
+      </tr>
+      <tr>
+        <th scope="row"> Living in: </th>
+        <td> {{ country }}, {{ city }} </td>
+      </tr>
+      <tr>
+        <th scope="row"> Full Name: </th>
+        <td> {{ user }} {{ last_name }}</td>
+      </tr>
+      <tr>
+        <th scope="row"> Gender: </th>
+        <td>{{ gender }}</td>
+      </tr>
+      <tr>
+        <th scope="row"> Heigth & Weight: </th>
+        <td>{{ height }} - {{weight}} </td>
+      </tr>
+      <tr>
+        <th scope="row"> Religion: </th>
+        <td>{{ religion }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+{% endblock %}
