@@ -1,15 +1,16 @@
 import pymongo
 import json
+import random
 from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def Index():
-    client = pymongo.MongoClient("mongodb://localhost:27017/")
-    db = client["persons"]
-    some_person_json = db.persons.find_one()
-    some_person = json.loads(some_person_json)
+    client = pymongo.MongoClient("mongodb://mongo:27017/")
+    db = client["persons"]  
+    some_persons = db.persons.find()
+    some_person = some_persons[random.randrange(100)]
     some_person = format_data(some_person)
     return render_template('index.html', person = some_person)
 
@@ -26,5 +27,4 @@ def format_data(data_person:dict):
     return person_info
 
 if __name__ == "__main__":
-    app.run(debug = True    
-    )
+    app.run(host="0.0.0.0", port=5000)
