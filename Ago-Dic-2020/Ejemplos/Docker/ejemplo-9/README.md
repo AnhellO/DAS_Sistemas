@@ -20,10 +20,9 @@ Las operaciones `CRUD` se llevan a cabo en un contenedor de `PostgreSQL`, el cua
 
 ## Recursos
 
-* <https://docs.docker.com/compose/>
+* <https://www.docker.com/>
 * <https://www.postgresql.org/>
 * <https://hub.docker.com/_/postgres>
 * <http://docs.peewee-orm.com/en/latest/>
-* <https://flask.palletsprojects.com/en/1.1.x/>
-* <https://developer.mozilla.org/es/docs/Web/HTTP/Methods/GET>
-* <https://developer.mozilla.org/es/docs/Web/HTTP/Methods/POST>
+* <https://parzibyte.me/blog/2019/06/17/python-postgresql-ejemplo-conexion-crud/>
+* <https://cosasdedevs.com/posts/como-crear-un-crud-en-python-parte-4-conexion-a-postgresql/>
