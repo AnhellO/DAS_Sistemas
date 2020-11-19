@@ -4,7 +4,7 @@ import json
 import pymongo
 
 api_url = 'https://pipl.ir/v1/getPerson'
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+client = pymongo.MongoClient("mongodb://mongo:27017/")
 db = client["persons"]
 
 def get_some_data():
