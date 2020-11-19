@@ -1,33 +1,41 @@
 version: "3.8"
 services:
   db:
+    container_name: pollsdb
     image: postgres:12.2
-    restart: always
-    environment:
-      POSTGRES_DB: postgre
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: secret123
-      PGDATA: /var/lib/postgresql/data
-    volumes:
-    - db-data:/var/lib/postgresql/data
+    restart: unless-stopped
     ports:
-    - "5432:5432"
-
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - custom
+    environment:
+      - POSTGRES_DB=peewee_polls
+      - POSTGRES_USER=aj
+      - POSTGRES_PASSWORD=ajsecret123
+      - PGDATA=/var/lib/postgresql/data
   app:
-    build: .
     container_name: pyapp
-    restart: always
-    links:
-      - db
+    build: ./app
+    restart: unless-stopped
     ports:
       - "5000:5000"
     volumes:
       - type: bind
-        source: .
+        source: ./app
         target: /usr/src/app
     depends_on:
-     - scraper
+      - db
+    networks:
+      - custom
+    env_file:
+      - ./app/env.list
 
 volumes:
   db-data:
   pgadmin-data:
+
+networks:
+  custom:
+    driver: bridge

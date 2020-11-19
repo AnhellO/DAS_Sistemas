@@ -1,10 +1,9 @@
+import settings
 from peewee import PostgresqlDatabase
-from settings import *
 
 db = PostgresqlDatabase(
-    DATABASE['NAME'],
-    user=DATABASE['USER'],
-    password=DATABASE['PASSWORD'],
-    host=DATABASE['HOST'],
-    port=DATABASE['PORT']
+    settings.DATABASE['NAME'],
+    user=settings.DATABASE['USER'],
+    password=settings.DATABASE['PASSWORD'],
+    host=settings.DATABASE['HOST'],
 )
