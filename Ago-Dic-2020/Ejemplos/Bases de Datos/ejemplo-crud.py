@@ -14,7 +14,7 @@ def insert(datos, conexion):
 
 	return cursor.execute(insert_prueba)
 
-# Crea y conéctate a la DB
+# Crea la DB y conéctate a ella
 conexion = sqlite3.connect('pokemon.db')
 cursor = conexion.cursor()
 

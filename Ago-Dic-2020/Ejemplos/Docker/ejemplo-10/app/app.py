@@ -1,11 +1,22 @@
-from flask import Flask, request, render_template
+import json
+from datetime import datetime
+from flask import Flask, request
+from models import Question
+
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return 'Index Page'
+@app.route('/polls/questions/', methods=['GET', 'POST'])
+def questions():
+    if request.method == 'POST':
+        question_text = request.form['question_text']
+        pub_date = datetime.strptime(request.form['pub_date'], '%Y-%m-%d')
+        question = Question(question_text=question_text, pub_date=pub_date)
+        question.save()
+        rep = {'question_text': question.question_text, 'id': question.id, 'pub_date': question.pub_date.strftime('%Y-%m-%d')}
+        return rep
 
-@app.route('/hello', methods=['GET', 'POST'])
-def hello():
-    name = request.form['name'] if request.method == 'POST' and 'name' in request.form else 'Anonymous'
-    return render_template('hello.html', name=name)
+    questions = Question.select()
+    l = []
+    for question in questions:
+        l.append({'question_text': question.question_text, 'id': question.id, 'pub_date': question.pub_date.strftime('%Y-%m-%d')})
+    return json.dumps(l)

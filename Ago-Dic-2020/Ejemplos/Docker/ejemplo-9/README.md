@@ -1,27 +1,29 @@
 # Guía
 
-Esta guía muestra un ejemplo de un contenedor que corre una app con `Flask` y otro que ejecuta un servidor de `PostgreSQL`, orquestados por medio de `Docker Compose`.
+Esta guía pretende enseñar un breve ejemplo de como llevar a cabo operaciones `CRUD` por medio de un `ORM` en `Python`, el cual será [`Peewee`](http://docs.peewee-orm.com/en/latest/) para este ejemplo.
 
-La pequeña app permite interactuar con ella por medio de los verbos `GET` y `POST` de `HTTP`, de tal manera que podamos ver esta faceta de `Flask` en acción.
+Las operaciones `CRUD` se llevan a cabo en un contenedor de `PostgreSQL`, el cual inicializaremos por medio de un archivo `init.sql` y el entrypoint de Docker `docker-entrypoint-initdb.d`, que permite que todos los scripts dentro de esa ruta sean ejecutados al inicializar un nuevo contenedor. Para ello utilizaremos el [`Dockerfile`](Dockerfile) que se encuentra dentro de la carpeta del ejemplo.
 
-De igual manera, la app utiliza el `ORM` [`Peewee`](http://docs.peewee-orm.com/en/latest/) para conectarse a `PostgreSQL` y crear registros en ella.
-
-1. Ejecuta el comando `docker-compose up -d --build` y espera a que ambos contenedores estén listos
-   1. Ambos contenedores deben de estar en ejecución. Puedes verificarlos individualmente utilizando `docker logs <nombre-del-container>`
-   2. Visita la URL <http://0.0.0.0:5000/polls/questions/>. Obtendrás un `JSON` vacío de inicio
-   3. Para poder crear registros en la DB es necesario hacer un `POST` request a esta URL. Puedes lograr esto por medio de CLI con clientes como [`cURL`](https://curl.se/), o bien, por medio de clientes con GUI como [`Postman`](https://www.postman.com/) o [`Insomnia`](https://insomnia.rest/). A continuación se adjunta una imágen de como ejecutar un `POST` request por medio de `Insomnia`, el funcionamiento es muy similar para `Postman`: ![Screenshot](post-request.png)
-   4. Vuelve a visitar la URL de <http://0.0.0.0:5000/polls/questions/>, y en esta ocasión deberías de poder ver un `JSON` con los registros que insertaste. Esto es meramente un `GET` request :wink:
-   5. Alternativamente puedes revisar tus registros directamente en tu contenedor de PostgreSQL, para poder hacer esto sigue los pasos descritos a continuación:
-      1. Ejecuta el comando `docker exec -it pollsdb bin/bash` para meterte al contenedor de `PostgreSQL`
-      2. Una vez dentro, ejecuta el cliente de CLI `psql` con el siguiente comando: `psql -U <db-user> -d peewee_polls`, donde `<db-user>` es el `POSTGRES_USER` que hayas configurado para este contenedor
-      3. Una vez dentro de la DB, puedes utilizar el comando `\dt` para ver las tablas existentes en la base de datos, ahí deberías de ver la tabla de `question`. Puedes jugar con esta tabla utilizando los queries normales que conoces de `SQL`, intenta con `SELECT * FROM question;` por ejemplo y sin miedo, estos queries son casi iguales a otros motores de `SQL` a los que ya pudieras estar familiarizado, como `MySQL` o `MS SQLServer` por ejemplo :wink:
-      4. Puedes salir del client `psql` utilizando el comando `\q`, y después salir del contenedor tecleando `exit`
-2. Una vez que hayas terminado con todas las pruebas y experimentaciones que querías llevar a cabo, procede a detener todos los containers en ejecución utilizando el comando `docker-compose down -v --rmi all`. Este comando aparte de detener y remover los contenedores y las networks que se hayan creado, también borrará los volúmenes creados (flag `-v`) y las imágenes que se crearon y/o descargaron (opción `--rmi all`) para echar a andar cada contenedor
+1. Construye la imagen con el comando `docker build -t mipostgre .`
+   1. Recuerda que puedes revisar tu imagen recién creada utilizando el comando `docker images`
+2. Ahora ejecuta un contenedor en base a la imágen que acabas de crear utilizando el comando `docker run -d --name postgres -p 5432:5432 mipostgre`
+   1. Utiliza el comando `docker logs postgres` para poder verificar la inicialización del contenedor, ¿puedes ver como nuestro script de `init.sql` se ejecuta en la línea de `running /docker-entrypoint-initdb.d/init.sql`?
+3. Después de esto ejecuta el script [`orm.py`](orm.py) utilizando el comando `python orm.py`
+   1. Asegúrate de instalar las librerías necesarias antes por medio del comando `pip install --no-cache-dir -r requirements.txt`
+   2. El script debe de correr sin problema alguno, y deberías de poder ver en el output de tu consola como se imprimen registros de la DB y valores de las operaciones CRUD
+   3. Puedes revisar la base de datos directamente desde el contenedor de `PostgreSQL`, siguiendo los pasos descritos a continuación:
+      1. Ejecuta el comando `docker exec -it postgres bin/bash` para meterte al contenedor de `PostgreSQL`
+      2. Una vez dentro ejecuta el cliente de CLI `psql` con el siguiente comando: `psql -U the_cat -d random_cats`
+      3. Una vez dentro de la DB puedes utilizar el comando `\dt` para ver las tablas existentes en la base de datos, y ahí deberías de ver la tabla de `my_cats`. Teclea el query `SELECT * FROM my_cats;` para poder ver los rows existentes
+      4. Puedes salir del client `psql` utilizando el comando `\q`, y después salir del contenedor de `PostgreSQL` tecleando `exit`
+   4. Siéntete libre de jugar todo lo necesario con el archivo de `orm.py` y con el contenedor en ejecución, y una vez que hayas terminado asegúrate de remover el contenedor de `PostgreSQL` por medio del comando `docker stop postgres; docker rm postgres`
 
 ## Recursos
 
 * <https://docs.docker.com/compose/>
 * <https://www.postgresql.org/>
 * <https://hub.docker.com/_/postgres>
-* <https://www.pgadmin.org/>
-* <https://hub.docker.com/r/dpage/pgadmin4/>
+* <http://docs.peewee-orm.com/en/latest/>
+* <https://flask.palletsprojects.com/en/1.1.x/>
+* <https://developer.mozilla.org/es/docs/Web/HTTP/Methods/GET>
+* <https://developer.mozilla.org/es/docs/Web/HTTP/Methods/POST>
