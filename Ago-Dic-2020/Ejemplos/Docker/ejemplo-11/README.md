@@ -11,7 +11,7 @@ El ejemplo combina lo visto en los ejemplos 9 y 10, junto con un poco de la lóg
 
 Se puede tomar el siguiente diagrama como referencia del funcionamiento de la aplicación:
 
-[Screenshot](diagrama.png)
+![Screenshot](diagrama.png)
 
 Para ejecutar la aplicación basta con seguir los pasos descritos a continuación:
 
