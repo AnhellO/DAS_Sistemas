@@ -4,7 +4,7 @@ Esta guía muestra un ejemplo de un contenedor que corre una app con `Flask` y o
 
 Parte de lo aprendido en el `ejemplo-9`, pero en esta ocasión, aparte de integrar `Flask` y `Docker Compose` el ejemplo muestra un ejemplo de como estructurar mejor una aplicación con archivos de configuración, inicialización y variables de ambiente en `Python`. De igual manera la app permite interactuar con ella por medio de los verbos `GET` y `POST` de `HTTP`, de tal manera que podamos ver la faceta `CRUD` de `Flask` en acción.
 
-Al igual que el `ejemplo-8`, la app utiliza el `ORM` `Peewee` para conectarse a `PostgreSQL` y crear registros en ella, pero en esta ocasión `Peewee` se hace cargo de crear la tabla en la base de datos.
+Al igual que el `ejemplo-9`, la app utiliza el `ORM` `Peewee` para conectarse a `PostgreSQL` y crear registros en ella, pero en esta ocasión `Peewee` se hace cargo de crear la tabla en la base de datos.
 
 1. Ejecuta el comando `docker-compose up -d --build` y espera a que ambos contenedores estén listos
    1. Ambos contenedores deben de estar en ejecución. Puedes verificarlos individualmente utilizando `docker logs <nombre-del-container>`

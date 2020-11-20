@@ -5,13 +5,7 @@ from faker import Faker
 fake = Faker()
 
 # Crea conexión con la DB
-db = PostgresqlDatabase(
-    'random_cats',
-    user='the_cat',
-    password='secretcat123',
-    host='localhost',
-    port=5432
-)
+db = SqliteDatabase('random_cats.db')
 
 # ORM con una tabla
 class MyCats(Model):
@@ -25,8 +19,11 @@ class MyCats(Model):
 	def __str__(self):
 		return f"ID: {self.id}\nNombre: {self.nombre}\nImagen: {self.imagen}"
 
+# Crea la tabla si no existe
+if db.table_exists('my_cats') is False:
+    db.create_tables([MyCats])
+
 # Conectate a la DB
-db.connect()
 print("¡Conectado!")
 
 # Creamos un registro

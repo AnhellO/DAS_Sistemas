@@ -34,7 +34,6 @@ services:
 
 volumes:
   db-data:
-  pgadmin-data:
 
 networks:
   custom:

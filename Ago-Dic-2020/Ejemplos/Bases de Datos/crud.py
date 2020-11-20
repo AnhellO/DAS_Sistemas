@@ -1,5 +1,4 @@
 import sqlite3
-import sys
 
 def insert(datos, conexion):
 	select = f"SELECT nombre FROM pokemon WHERE nombre = '{datos['nombre']}'"
