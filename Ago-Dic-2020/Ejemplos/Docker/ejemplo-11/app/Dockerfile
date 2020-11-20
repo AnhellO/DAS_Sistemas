@@ -9,8 +9,9 @@ WORKDIR /usr/src/app
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 5000 available to the world outside this container
-EXPOSE 5000
+# Add the wait script to the image
+# ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.7.3/wait /wait
+# RUN chmod +x /wait
 
 # run the command
-CMD [ "python", "./app.py" ]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
