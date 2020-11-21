@@ -1,6 +1,6 @@
 # Práctica 8 | Dockercon2020  | 17284052
 
-## HOW TO GET STARTED WITH DOCKER 
+## How to get started with Docker
 ----
   - [Por que usar Docker?](#por-que-usar-docker?)
   - [Docker Files](#docker-files)
@@ -17,9 +17,10 @@ Los contenedores nos permiten eso. Es un cambio de ver a los servidores como alg
 
 
 **Ejemplo de workflow en docker:**
- **BUILD**: | **SHIP**: | **RUN**
-------------|----------------------
-Empaquetar consistentemente todo lo que tu aplicación necesita para funcionar |  Enviar facilmente estas imágenes a la nube o a otras máquina de development   | Ejecutar fácil y *consistentemente* las aplicaciones
+
+|  **BUILD**: | **SHIP**:  | **SHIP**:  |
+| ----------- | ----------- | -----------
+| Empaquetar consistentemente todo lo que tu aplicación necesita para funcionar     | Enviar facilmente estas imágenes a la nube o a otras máquina de development     |  Ejecutar fácil y *consistentemente* las aplicaciones   |
 
 
 Docker nos permite la creacion de ambientes de desarrollo *predecibles* y consistentes.
