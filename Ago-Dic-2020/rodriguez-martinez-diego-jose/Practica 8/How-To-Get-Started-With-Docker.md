@@ -18,7 +18,7 @@ Los contenedores nos permiten eso. Es un cambio de ver a los servidores como alg
 
 **Ejemplo de workflow en docker:**
 
-|  **BUILD**: | **SHIP**:  | **SHIP**:  |
+|  **BUILD**: | **SHIP**:  | **RUN**:  |
 | ----------- | ----------- | -----------
 | Empaquetar consistentemente todo lo que tu aplicación necesita para funcionar     | Enviar facilmente estas imágenes a la nube o a otras máquina de development     |  Ejecutar fácil y *consistentemente* las aplicaciones   |
 
