@@ -2,11 +2,11 @@
 
 ## How to get started with Docker
 ----
-  - [Por que usar Docker?](#por-que-usar-docker?)
-  - [Docker Files](#docker-files)
+  - [Por que usar Docker?](#docker)
+  - [DockerFiles](#dockerfile)
 ----
 
-### Por que usar Docker?
+### Docker
 Antes de docker, configurar y *"deployear"* era una historia interminable de instalación y configuración, llena de errores dificiles de troubleshootear
 
 Si existia un error, se tenia que retirar el servidor de produccion para arreglarlo,
