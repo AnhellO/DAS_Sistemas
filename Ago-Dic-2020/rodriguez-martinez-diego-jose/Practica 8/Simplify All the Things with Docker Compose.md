@@ -10,10 +10,12 @@
 
 Al principio del video explican como un equipo hipotetico, trabaja antes de conocer sobre docker-compose y despues de conocer sobre docker compose, lo pongo aqui en el resumen, por que fue exactamente igual a como me paso a mi
 
-**workflow anterior**
-|  **Sin Docker-Compose**: | **Con Docker-Compose**: |
-| ----------- | ----------- | -----------
-| ![workflow-anterior](workflow1.jpeg)    | ![workflow-nuevo](workflow2.jpeg)     | 
+
+**Sin Docker-Compose**:
+![workflow-anterior](images/workflow1.jpeg)  
+
+**Con Docker-Compose**: 
+![workflow-nuevo](images/workflow2.jpeg)     | 
 
 Es evidente cual workflow es mucho mas sencillo y eficiente
 
@@ -21,7 +23,7 @@ Es evidente cual workflow es mucho mas sencillo y eficiente
 
 Una forma de entender mejor como funciona Docker compose, es como lo explicaron en el video.
 
-![compose](dockercomposeapi.jpeg)
+![compose](images/dockercomposeapi.jpeg)
 
 
 El daemon de docker es en realidad sólo un RESTful api que corre en:
