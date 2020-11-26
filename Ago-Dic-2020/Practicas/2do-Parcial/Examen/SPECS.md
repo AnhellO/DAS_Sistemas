@@ -18,18 +18,18 @@
 - Que el password sea `bar123`
 - Que se cree una base de datos llamada `baz`
 
-Finalmente, ¿con qué comando(s) puedo conectarme a mi base de datos de `MySQL` corriendo dentro de mi contenedor `mysql_db`?
+Finalmente, ¿con qué comando(s) puedo conectarme a mi base de datos de `MySQL` corriendo dentro de mi contenedor de `mysql_db`?
 
 Anexa los comandos utilizados para llevar a cabo este ejercicio.
 
 ### Ejercicio 2
 
-Crea 2 contenedores por medio del client `docker-cli`:
+Crea 2 contenedores por medio del cliente `CLI` de `docker`:
 
-- El **1er contenedor** ejecutará un servidor de [`Redis`](https://hub.docker.com/_/redis), y su nombre deberá de ser `redis`
-- El **2do contenedor** deberá de ejecutar un servidor de [`Redis Commander`](https://hub.docker.com/r/rediscommander/redis-commander), el cual tiene que estar protegido con usuario y contraseña para poder acceder a él. El contenedor debe de llamarse `commander`
+- El **1er contenedor** ejecutará un servidor de [`Redis`](https://hub.docker.com/_/redis) y su nombre deberá de ser `redis`
+- El **2do contenedor** deberá de ejecutar un servidor de [`Redis Commander`](https://hub.docker.com/r/rediscommander/redis-commander) el cual tiene que estar protegido con usuario y contraseña para poder acceder a él. El contenedor debe de llamarse `commander`
 
-Asegúrate de probar que todo funciona correctamente y que el servidor de `redis-commander` puede contectarse al de `redis`, visitando la URL correcta.
+Asegúrate de probar que todo funciona correctamente y que el servidor de `redis-commander` puede contectarse al de `redis` sin problema alguno visitando la URL correcta.
 
 Anexa los comandos utilizados para llevar a cabo este ejercicio.
 
@@ -39,7 +39,7 @@ Crea un volumen que se llame `mongo_volume` y que utilice el driver por default 
 
 Ejecuta un contenedor de [`MongoDB`](https://hub.docker.com/_/mongo) que se llame `mongo` y que monte el volumen creado en el paso anterior, y una vez que todo este listo ejecuta los siguientes pasos:
 
-- Corre el script [populate.py](ejercicio-3/populate.py)
+- Corre el script [`populate.py`](ejercicio-3/populate.py)
 - Luego corre el otro script [`find.py`](ejercicio-3/find.py), deberías de obtener una salida como la siguiente:
 
 ``` shell
@@ -53,7 +53,7 @@ Ejecuta un contenedor de [`MongoDB`](https://hub.docker.com/_/mongo) que se llam
 
 Ahora detén y borra el contenedor de `mongo`, y levanta un nuevo contenedor que también ejecute un servidor de `MongoDB` y que utilice el mismo volumen de `mongo_volume` previamente creado, pero que en esta ocasión se llame `mongo2`.
 
-- Vuelve a ejecutar el script de [`find.py`](ejercicio-3/find.py) y contesta a la siguiente pregunta: ¿Cuál fue nuestra salida en está ocasión?
+Vuelve a ejecutar el script de [`find.py`](ejercicio-3/find.py) y contesta a la siguiente pregunta: ¿Cuál fue nuestra salida en está ocasión?
 
 Anexa los comandos utilizados para llevar a cabo este ejercicio.
 
@@ -63,12 +63,12 @@ Crea un `Dockerfile` que cumpla con los siguientes requisitos:
 
 - Que extienda de la imágen base de [`Python3`](https://hub.docker.com/_/python)
 - Que utilice el directorio `/usr/src` como el directorio de trabajo
-- Que clone el siguiente repositorio -> <https://github.com/joaoventura/flask-static-site>
+- Que clone el siguiente repositorio: <https://github.com/joaoventura/flask-static-site>
 - Que instale todas las dependencias necesarias especificadas en el archivo de [`requirements.txt`](https://github.com/joaoventura/flask-static-site/blob/master/requirements.txt) por medio de `pip`
 - Y finalmente que ejecute el script [`site.py`](https://github.com/joaoventura/flask-static-site/blob/master/site.py), justo como se especifíca en el [`README`](https://github.com/joaoventura/flask-static-site#development--building) del repositorio
 - Ten en cuenta que los contenedores creados en base a esta imágen deben de ser accesibles desde el exterior :wink:
 
-Construye una imágen basada en el `Dockerfile` que acabas de crear y llámala `{mi-user}/static_flask`, donde `{mi-user}` equivale a tu usuario de [`DockerHub`](https://hub.docker.com/). Una vez que hayas creado la imagen envíala a tu cuenta de `DockerHub`. Debe de estar accesible similar a como lo está en este ejemplo: <https://hub.docker.com/repository/docker/anhellojz/static_flask/>. Asegúrate de adjuntar el link a ella en los resultados de la práctica.
+Construye una imágen basada en el `Dockerfile` que acabas de crear y llámala `{mi-user}/static_flask`, donde `{mi-user}` equivale a tu usuario de [`DockerHub`](https://hub.docker.com/). Una vez que hayas creado la imagen envíala a tu cuenta de `DockerHub`. Debe de estar accesible similar a como lo está en [este ejemplo](https://hub.docker.com/repository/docker/anhellojz/static_flask/). Asegúrate de adjuntar el link a ella en tus resultados del ejercicio.
 
 Para finalizar, ejecuta un nuevo contenedor basado en la imágen recién creada que se llame `flask`, que corra "_daemonizado_", y que esté accesible a través del puerto `5000` de tu máquina.
 
@@ -78,10 +78,10 @@ Anexa los comandos utilizados para llevar a cabo este ejercicio.
 
 Crea un archivo `docker-compose.yml` que ejecute 3 contenedores:
 
-- El **1er contenedor** ejecutará un servidor de `PostgreSQL` y su nombre deberá de ser `postgres`
+- El **1er contenedor** ejecutará un servidor de [`PostgreSQL`](https://hub.docker.com/_/postgres) y su nombre deberá de ser `postgres`
   - Este debe de crear una base de datos que se ajuste al archivo [`data.json`](ejercicio-5/data.json). Tu decides como modelarla, pero lo importante es que la(s) tabla(s) en la `BD` tengan **al menos 10** diferentes columnas para varios de los registros existentes en el archivo
-- El **2do contenedor** deberá de ejecutar un servidor de [`PgAdmin`](https://hub.docker.com/r/dpage/pgadmin4/), el cual debe de tener acceso al servidor de base de datos del _1er contenedor_. El contenedor debe de llamarse `pgadmin`
-- Finalmente el **3er contenedor** deberá de ejecutar un script de `Python` que tome todos los registros existentes en el archivo [`data.json`](ejercicio-5/data.json) y los inserte en la base de datos del _1er contenedor_
+- El **2do contenedor** deberá de ejecutar un servidor de [`PgAdmin`](https://hub.docker.com/r/dpage/pgadmin4/) el cual debe de tener acceso al servidor de base de datos del _1er contenedor_. El contenedor debe de llamarse `pgadmin`
+- El **3er contenedor** deberá de ejecutar un script de `Python` que tome todos los registros existentes en el archivo [`data.json`](ejercicio-5/data.json) y los inserte en la base de datos del _1er contenedor_
   - Para llevar a cabo esta parte puedes utilizar algún ORM como [`Peewee`](http://docs.peewee-orm.com/en/latest/) o [`SQLAlchemy`](https://www.sqlalchemy.org/), o bien [`SQL` "_crudo_"](https://www.postgresqltutorial.com/postgresql-python/)
 
 ## Deadline
