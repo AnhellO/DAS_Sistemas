@@ -101,4 +101,4 @@ Finalmente, agreguen un video en equipo, en donde se exponga a detalle su proyec
 
 ## Deadline
 
-* `Lunes 30 de Noviembre a las 11:59pm`
+* `Martes 1 de Diciembre a las 06:00pm`
