@@ -9,7 +9,7 @@
 
 ### Ejercicio 1
 
-¿Cuál es el comando que necesito ejecutar para poder levantar un contenedor de `Docker` que corra un servidor de [`MySQL`](https://hub.docker.com/_/mysql) versión **5** y que cumpla con los siguientes puntos?
+¿Cuál es el comando que necesito ejecutar para poder levantar un contenedor de `Docker` que corra un servidor de [`MySQL`](https://hub.docker.com/_/mysql) versión **8** y que cumpla con los siguientes puntos?
 
 - Que el contenedor se llame `mysql_db`
 - Que el contenedor se ejecute en el background (es decir, que se mantenga en ejecución)
