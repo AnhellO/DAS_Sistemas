@@ -3,7 +3,7 @@
 ## Previo
 
 - Desarrolla los ejemplos de código en tu computadora y envíalos al repositorio de la materia siguiendo los [lineamientos de contribución del repositorio](https://github.com/AnhellO/DAS_Sistemas#contributing). La carpeta del examen en este caso tendría que llamarse `../Segundo Parcial/..`
-- Si el ejemplo solamente necesita comandos escritos entonces agregalos en un archivo `.md` que anexes por separado dentro de tu carpeta con las soluciones al examen
+- Si el ejemplo solamente necesita comandos escritos entonces agregalos en un archivo `.md` que anexes por separado dentro de tu carpeta con las soluciones al examen. También es importante adjuntar las demás evidencias que se piden por ejercicio.
 
 ## Ejercicios
 
@@ -20,7 +20,7 @@
 
 Finalmente, ¿con qué comando(s) puedo conectarme a mi base de datos de `MySQL` corriendo dentro de mi contenedor de `mysql_db`?
 
-Anexa los comandos utilizados para llevar a cabo este ejercicio.
+Anexa los comandos utilizados para llevar a cabo este ejercicio, así como screenshots de evidencia de que llevaste este ejercicio a cabo en tu equipo.
 
 ### Ejercicio 2
 
@@ -31,7 +31,7 @@ Crea 2 contenedores por medio del cliente `CLI` de `docker`:
 
 Asegúrate de probar que todo funciona correctamente y que el servidor de `redis-commander` puede contectarse al de `redis` sin problema alguno visitando la URL correcta.
 
-Anexa los comandos utilizados para llevar a cabo este ejercicio.
+Anexa los comandos utilizados para llevar a cabo este ejercicio, así como screenshots de evidencia de que llevaste este ejercicio a cabo en tu equipo.
 
 ### Ejercicio 3
 
@@ -55,7 +55,7 @@ Ahora detén y borra el contenedor de `mongo`, y levanta un nuevo contenedor que
 
 Vuelve a ejecutar el script de [`find.py`](ejercicio-3/find.py) y contesta a la siguiente pregunta: ¿Cuál fue nuestra salida en está ocasión?
 
-Anexa los comandos utilizados para llevar a cabo este ejercicio.
+Anexa los comandos utilizados para llevar a cabo este ejercicio, así como screenshots de evidencia de que llevaste este ejercicio a cabo en tu equipo.
 
 ### Ejercicio 4
 
