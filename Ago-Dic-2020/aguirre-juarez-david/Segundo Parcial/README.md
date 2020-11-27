@@ -7,7 +7,7 @@ El comando para correr un contenedor **mysql** con las específicaciones del eje
 docker run --name mysql_db -p 4000:3306 -e MYSQL_USER=foo -e MYSQL_PASSWORD=bar123 -e MYSQL_DATABASE=baz -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -d mysql:8
 ```
 
-![Creando contenedor **mysql**](/images/p1-init-mysql.png)
+![Creando contenedor **mysql**](./images/p1-init-mysql.png)
 
 Y los comandos utilizados para conectarnos a la BD dentro del contenedor:
 
@@ -18,7 +18,7 @@ mysql -u foo -p
 
 Colocando la contraseña específicada **bar123**, escribimos `show databases;` para comprobar que efectivamente creamos la BD **baz**.
 
-![Entrando al contenedor **mysql**](/images/p1-into-container.png)
+![Entrando al contenedor **mysql**](./images/p1-into-container.png)
 
 
 ## Ejercicio 2
@@ -34,11 +34,11 @@ docker run -d --name redis --network redis-net redis:6.0.9
 docker run --name commander -d -p 80:8081 --network redis-net -e REDIS_HOSTS=redis rediscommander/redis-commander:latest
 ```
 
-![Comandos utilizados](/images/p2-redis.png)
+![Comandos utilizados](./images/p2-redis.png)
 
 Ahora es posible probar **Redis Commander** por medio del puerto 80.
 
-![Redis commander en acción](/images/p2-redis-commander.png)
+![Redis commander en acción](./images/p2-redis-commander.png)
 
 
 ## Ejercicio 3
@@ -48,7 +48,7 @@ docker volume create mongo_volume
 ```
 
 2. Luego sigo los pasos específicados:
-![Corriendo el segundo contenedor](/images/p3-volumes.png)
+![Corriendo el segundo contenedor](./images/p3-volumes.png)
 
 _Guarde la información de la BD del primer contenedor **mongo** en el volume **mongo_volume**, para luego montar otro contenedor apuntando al mismo volume, recuperando la información almacenada._
 
@@ -61,7 +61,7 @@ _Para ejecutar los siguientes comandos, debe de estar posicionado en este direct
 ```
 docker build -t daguirrez/static_flask ./ejercicio-4
 ```
-![Image construida](/images/p4-built-image.png)
+![Image construida](./images/p4-built-image.png)
 
 2. Creo mi repositorio: [https://hub.docker.com/repository/docker/daguirrez/static_flask](https://hub.docker.com/repository/docker/daguirrez/static_flask).
 
@@ -69,10 +69,10 @@ docker build -t daguirrez/static_flask ./ejercicio-4
 ```
 docker push daguirrez/static_flask:tagname
 ```
-![Pusheando](/images/p4-push.png)
+![Pusheando](./images/p4-push.png)
 
 4. Ahora la imagen es accesible para todos.
-![Pulleando](/images/p4-pull.png)
+![Pulleando](./images/p4-pull.png)
 
 ### Parte 2 - Corriendo el contenedor
 Corriendo el contenedor llamado **flask** en el puerto **5000**.
@@ -80,9 +80,9 @@ Corriendo el contenedor llamado **flask** en el puerto **5000**.
 ```
 docker run -d --name flask -p 5000:8000 daguirrez/static_flask
 ```
-![Corriendo contenedor](/images/p4-container.png)
+![Corriendo contenedor](./images/p4-container.png)
 
-![Página del contenedor](/images/p4-flask-page.png)
+![Página del contenedor](./images/p4-flask-page.png)
 
 
 ## Ejercicio 5
@@ -92,7 +92,7 @@ Siguiendo los pasos solicitados, estos vendrían siendo mis resultados:
 ```
 docker-compose up --build -d
 ```
-![Corriendo](/images/p5-build.png)
+![Corriendo](./images/p5-build.png)
 
 2. En **PgAdmin** se muestran los resultados:
-![Resultados](/images/p5-pgadmin.png)
+![Resultados](./images/p5-pgadmin.png)
