@@ -37,7 +37,7 @@ def get_persons_from_file(data:list):
         _address = x.get('address')
         _about = x.get('about')
         _registered = x.get('registered')
-        list_p.append(MyPerson(
+        list_p.append(MyPerson.get_or_create(
             person_id = _id,
     balance = _balance,
     age = _age,
@@ -63,8 +63,8 @@ def main():
     # conn.commit()
     # conn.close()
     for ind in inds:
-        ind.save()
-        print(f'Se registro a {ind.name}')
+        ind.save(force_insert=True)
+        print(f'Se registro a un nuevo usuario')
 
 if __name__ == "__main__":
     main()

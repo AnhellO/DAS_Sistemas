@@ -20,4 +20,4 @@ COPY settings.py .
 
 COPY data.json .
 
-CMD ["python3", "data_extractor.py"]
+# CMD ["python3", "data_extractor.py"]

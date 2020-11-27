@@ -42,6 +42,7 @@ services:
       - "pgadmin"
     env_file:
       - ./Container_3/env.list
+    command: python ./data_extractor.py
 volumes:
   db-data:
   pgadmin-data:
