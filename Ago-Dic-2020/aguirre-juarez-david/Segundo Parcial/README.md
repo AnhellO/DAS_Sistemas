@@ -72,6 +72,7 @@ docker push daguirrez/static_flask:tagname
 ![Pusheando](./images/p4-push.png)
 
 4. Ahora la imagen es accesible para todos.
+
 ![Pulleando](./images/p4-pull.png)
 
 ### Parte 2 - Corriendo el contenedor
