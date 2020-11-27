@@ -1,1 +1,0 @@
-print('Inicia el semestre!')
