@@ -1,4 +1,4 @@
-import pika, time, os
+import pika, time
 
 credentials = pika.PlainCredentials('therabbit', 'secret123')
 parameters = pika.ConnectionParameters(host='rabbitmq', port=5672, virtual_host='/', credentials=credentials)
