@@ -86,5 +86,5 @@ Crea un archivo `docker-compose.yml` que ejecute 3 contenedores:
 
 ## Deadline
 
-- `Viernes 27 de Noviembre a las 02:00am`
+- `Viernes 27 de Noviembre a las 12:00pm`
 - OJO: Si terminas el examen antes de la hora límite, no lo subas a `GitHub` hasta que se aproxime la hora para que este no sea copiado :wink:
