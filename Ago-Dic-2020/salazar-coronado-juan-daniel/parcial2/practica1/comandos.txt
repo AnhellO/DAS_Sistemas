@@ -8,11 +8,9 @@ docker build -t practicadockerizar .
 
 docker run -d --name contenedorpractica practicadockerizar
 
-#################################################################################################
-Aquí se me ocurrio que podia añadir el --link m1 para conectar el contendor de mi imagen
-con el contenedor de mongo y así pudiera correr el script de python sin errores, pero no funciono.
-era algo así docker run -d --name contenedorpractica --link m1 practicadockerizar
-#################################################################################################
+python populate.py
+
+python find.py
 
 docker run --name moadmin -d --link m1:db -p 8080:80 thinkcube/phpmoadmin
 
