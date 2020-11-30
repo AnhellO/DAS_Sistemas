@@ -1,0 +1,18 @@
+Moverse con CMD a la ruta del proyecto y ejecutamos:
+docker volume create mongo_volume
+
+Levantamos el contenedor junto con el volumen:
+docker run --name mongo -p 27017:27017 -d -v mongo_volume:/data/db mongo:latest
+
+Ejecutamos "populate.py" después "find.py"
+
+docker ps
+docker stop (contenedor)
+docker rm (contenedor)
+docker ps
+
+Después levantamos el segundo contenedor:
+docker run --name mongo2 -p 27017:27017 -d -v mongo_volume:/data/db mongo:latest
+
+Ejecutamos "find.py"
+Y nos mostrará la información previamente insertada por el anterior contenedor
