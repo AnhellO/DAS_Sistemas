@@ -1,0 +1,16 @@
+Comandos que use:
+
+cd desktop\universidad\diseño y arquitectura de software\das_sistemas\ago-dic-2020\salazar-coronado-juan-daniel\parcial2\practica1
+
+docker run -d -p 27017:27017 --name m1 mongo
+
+docker build -t practicadockerizar .
+
+docker run -d --name contenedorpractica practicadockerizar
+
+python populate.py
+
+python find.py
+
+docker run --name moadmin -d --link m1:db -p 8080:80 thinkcube/phpmoadmin
+
