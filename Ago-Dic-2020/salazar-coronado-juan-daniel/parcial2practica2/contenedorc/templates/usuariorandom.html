@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Parcial 2 Practica 2 DAS_Sistemas Daniel Salazar</title>
+<style>
+	body {background-color: powderblue;}
+	h1   {color: blue;}
+	table {
+	  width:100%;
+	}
+	table, th, td {
+	  border: 1px solid black;
+	  border-collapse: collapse;
+	}
+	th, td {
+	  padding: 15px;
+	  text-align: left;
+	}
+	#t01 tr:nth-child(even) {
+	  background-color: #eee;
+	}
+	#t01 tr:nth-child(odd) {
+	 background-color: #fff;
+	}
+	#t01 th {
+	  background-color: black;
+	  color: white;
+	}
+	</style>
+</head>
+<body>
+
+<h1>Usuario random</h1>
+<h3>Esta es una pagina que hace uso de una api para mostrar información de una persona random</h3>
+
+<table id="t01">
+	<tr>
+	  <th>Nombre</th>
+	  <th>Edad</th> 
+	  <th>Lugar de nacimiento</th>
+	  <th>Celular</th>
+	  <th>Ciudad en que reside</th>
+	  <th>Pais</th>
+	  <th>Religión</th>
+	</tr>
+	<tr>
+	  <td>{{person.personal.name}}</td>
+	  <td>{{person.personal.age}}</td>
+	  <td>{{person.personal.born_place}}</td>
+	  <td>{{person.personal.cellphone}}</td>
+	  <td>{{person.personal.city}}</td>
+	  <td>{{person.personal.country}}</td>
+	  <td>{{person.personal.religion}}</td>
+	</tr>
+</table>
+
+<h3>Daniel Salazar - DAS - Parcial 2 - Practica 2 - FS - Ago-Dic-2020</h3>
+
+</body>
+</html>
