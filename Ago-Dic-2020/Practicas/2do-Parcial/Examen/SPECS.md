@@ -53,7 +53,7 @@ Ejecuta un contenedor de [`MongoDB`](https://hub.docker.com/_/mongo) que se llam
 
 Ahora detén y borra el contenedor de `mongo`, y levanta un nuevo contenedor que también ejecute un servidor de `MongoDB` y que utilice el mismo volumen de `mongo_volume` previamente creado, pero que en esta ocasión se llame `mongo2`.
 
-Vuelve a ejecutar el script de [`find.py`](ejercicio-3/find.py) y contesta a la siguiente pregunta: ¿Cuál fue nuestra salida en está ocasión?
+Vuelve a ejecutar el script de [`find.py`](ejercicio-3/find.py) y contesta a la siguiente pregunta: ¿Cuál fue nuestra salida en esta ocasión?
 
 Anexa los comandos utilizados para llevar a cabo este ejercicio, así como screenshots de evidencia de que llevaste este ejercicio a cabo en tu equipo.
 

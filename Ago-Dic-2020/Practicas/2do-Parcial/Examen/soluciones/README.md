@@ -10,7 +10,7 @@
 ## Ejercicio 2
 
 - Redis: `docker run -d -p 6379:6379 --name redis redis`
-- Redis Commander: `docker run --rm --name commander -d -p 8081:8081 -e REDIS_HOSTS=local:{redis-container-IP}:6379 -e HTTP_USER={usuario} -e HTTP_PASSWORD={password} rediscommander/redis-commander` donde ->
+- Redis Commander: `docker run --name commander -d -p 8081:8081 -e REDIS_HOSTS=local:{redis-container-IP}:6379 -e HTTP_USER={usuario} -e HTTP_PASSWORD={password} rediscommander/redis-commander` donde ->
   - `{redis-container-IP}`: la IP de tu contenedor de `redis`
   - `{usuario}`: un nombre de usuario que tu elijas
   - `{password}`: un password que tu elijas
