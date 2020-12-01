@@ -1,8 +1,0 @@
-- Moverse con el comando cd a <PATH/CarpetaConElDockerfile>
-- construir la imagen en base al docker file utilizando el comando:
-  docker build -t <nombre> <PATH/CarpetaConElDockerfile> (usar un "." en vez del PATH completo)
-- docker run -d -p 27017:27017 --name m1 mongo
-- python populate.py
-- python find.py
-- docker run --name moadmin -d --link m1:db -p 8080:80 thinkcube/phpmoadmin
-- ir a http://localhost:8080/ para verificar la conexión.
