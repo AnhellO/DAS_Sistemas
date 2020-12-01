@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age of Empires -Estructuras</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css'>
+</head>
+<style type="text/css">
+    body{
+      background-image: url("../static/background.jpg");
+        }
+</style>
+<body background="">
+    <div class="container">
+        <div class="row valign-wrapper">
+          <div class="col s6 offset-s3 valign">
+            <div class="card blue-grey darken-1">
+                <div class="card-image">
+                    <img src="../static/structures.jpg">
+                </div>
+                <div class="card-content white-text">
+                    <table class="centered">
+                        <tr>
+                            <td>ID</td>
+                            <td>{{estructura.get("id")}}</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td>{{estructura.get("nombre")}}</td>
+                        </tr>
+                            <td>Expansion</td>
+                            <td>{{estructura.get("expansion")}}</td>
+                        </tr>
+                        <tr>
+                            <td>Age</td>
+                            <td>{{estructura.get("edad")}}</td>
+                        </tr>
+                        <tr>
+                            <td>Buid Time</td>
+                            <td>{{estructura.get("tiempo")}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+<script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js'></script>
+</body>
+</html>
