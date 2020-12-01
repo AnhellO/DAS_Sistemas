@@ -1,15 +1,21 @@
 import random, time
 
 suertudos = [
-    'BUCIO MONTES HECTOR DANIEL',
-    'FLORES PARDO NOEMI ESTHER',
-    'GONGORA TREVIÑO JOSE HORACIO',
-    'HERNANDEZ SANCHEZ JORGE ALBERTO',
-    'LLANES NAVA LUIS OSVALDO',
-    'MEDINA MARTINEZ JUAN IVAN',
-    'MONTOYA MARTINEZ ERIK EDUARDO',
-    'ONOFRE SUAREZ JOSE EDUARDO',
-    'ROMERO MEDINA RICARDO FRANCISCO',
+    'Aguilar Cedillo Jonathan Ivan',
+    'Aguirre Juarez David',
+    'Castro Torres Maria Guadalupe',
+    'Cedillo Aparicio Cristina',
+    'Chavez Muñoz Juan Arnoldo',
+    'Escarcega Ramirez Erick Orlando',
+    'Flores Fernandez Fernando',
+    'Gonzalez Cardenas Jesus Antonio',
+    'Lopez Flores Jorge Luis',
+    'Morin Hinojosa Esly Abigail',
+    'Perez Sanchez Jose Jahir',
+    'Rodriguez Martinez Diego Jose',
+    'Rodriguez Martinez Jesus Angel',
+    'Salazar Coronado Juan Daniel',
+    'Sena Martinez Angel David',
 ]
 
 rand = random.sample(range(0, len(suertudos)), len(suertudos))

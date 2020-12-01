@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  db:
+    image: mongo
+
+  almacenar:
+    build: "./contenedorb"
+    links:
+      - "db"
+    container_name: almacen
+
+  ver:
+    build: "./contenedorc"
+    links:
+      - "db"
+    container_name: vista
+    depends_on:
+      - "almacenar"
+    ports:
+      - "80:5000"
+    environment:
+      - "FLASK_APP=view.py"
+
+  phpmoadmin:
+    image: "thinkcube/phpmoadmin"
+    ports:
+      - "8080:80" 
