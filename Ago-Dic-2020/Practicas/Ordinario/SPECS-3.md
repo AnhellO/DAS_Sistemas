@@ -8,7 +8,7 @@
 
 ## Tema
 
-* Event-Driven Architecture: Implementa el proyecto siguiendo los lineamientos y requisitos del patrón de arquitectura basada en eventos
+* Clean Architecture: Implementa el proyecto siguiendo los lineamientos y requisitos del patrón de arquitectura limpio, el cual se complementa con el patrón MVC
 
 ## Especificaciones
 
@@ -50,11 +50,6 @@ Crear un archivo `docker-compose.yml` por medio del cual se instancien **4** con
 * Si usas `Flask`, deberás de utilizar el sistema de templates [`Jinja`](https://flask.palletsprojects.com/en/1.1.x/tutorial/templates/) nativo en el framework de `Flask` para mostrar el `HTML`/markup de la aplicación. Queda a tu criterio el uso de `CSS`, `JS` y otras artimañas para darle formato a la web-app :wink:
 * Finalmente, para cada uno de los endpoints/recursos que hayas agregado, habilita la opción de crear registros por medio del mismo, es decir, ser capaz de hacer un request de tipo [`HTTP - POST`](https://developer.mozilla.org/es/docs/Web/HTTP/Methods/POST) a esa ruta en tu frontend, de tal manera que alguien que consuma tu "_web-app_" también pueda crear registros por medio de la misma. Partiendo una vez más del ejemplo de Marvel, si yo quisiera crear un nuevo personaje en la `BD`, entonces yo tendría que mandar un `POST` request al endpoint de `/characters/` en mi "_web-app_". Asegúrate de que para cada endpoint/recurso se pasen todos los datos necesarios para poder crear un registro en la BD con éxito. Puedes hacer pruebas para este punto en específico con herramientas gratuitas como [`Postman`](https://www.postman.com/) o [`Insomnia`](https://insomnia.rest/)
 
-#### Contenedor E - Message Queue Broker
-
-* Este contenedor se encargará de ejecutar un message queue broker como [RabbitMQ](https://www.rabbitmq.com/), [Apache Kafka](https://kafka.apache.org/) o [Celery](https://docs.celeryproject.org/en/stable/getting-started/introduction.html)
-* El nuevo servicio pasará a ser el intermediario entre el contenedor `D` del front end y el contenedor `A` de la base de datos, de tal manera que habrá que sobreescribir un poco la lógica en el contenedor `D` para la creación de registros por medio de `HTTP POST` de tal manera que ahora soporte operaciones asíncronas por medio del contenedor `E`, es decir, si escogiste `RabbitMQ` como message queue broker, entonces al enviar peticiones `POST` para crear un nuevo registro estas pasarían por `RabbitMQ` primero, y este sería el que se encargaría de enviarlo al contenedor/servicio correcto que este suscrito a un tipo concreto de mensajes, en este caso el de `PostgreSQL`. Lo mismo aplica en la otra dirección, es decir `PostgreSQL` respondiéndole al servicio del front end por medio de `RabbitMQ`. Pueden crear un endpoint/recurso nuevo para este punto, de tal manera que la aplicación tenga soporte tanto síncrono como asíncrono, o bien, sobreescribir la funcionalidad del endpoint original, como se más sencillo para ustedes
-
 #### Opcional - Puntos Extra
 
 Los siguientes puntos son opcionales, sin embargo implementarlos provee **1** punto extra por cada uno sobre la calificación total final.
@@ -62,7 +57,6 @@ Los siguientes puntos son opcionales, sin embargo implementarlos provee **1** pu
 * Habilitar soporte para las operacions [`PATCH`](https://developer.mozilla.org/es/docs/Web/HTTP/Methods/PATCH), [`PUT`](https://developer.mozilla.org/es/docs/Web/HTTP/Methods/PUT) y [`DELETE`](https://developer.mozilla.org/es/docs/Web/HTTP/Methods/DELETE) en el contenedor del front end
 * Agregar un contenedor extra con el front end separado del contenedor `D`, es decir, el contenedor `D` pasaría a tener el papel de una API propia, mientras que el nuevo contenedor `F` sería el que tendría el front end con la interfaz. Acá puedes utilizar tecnologías como `CSS`, `Javascript`, `Bootstrap`, `Angular` o `ReactJS` para hacer más efectivo este proceso :wink:
 * Agregar tests unitarios y de integración para el proyecto
-* Si agregaste soporte para `PATCH`, `PUT` y `DELETE`, entonces agregar soporte asíncrono para estos te dará otro punto extra :wink:
 
 ### Conclusión
 
@@ -80,24 +74,23 @@ Finalmente, agreguen un video en equipo, en donde se exponga a detalle su proyec
 
 ### Arquitectura
 
-* <https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch02.html>
-* <https://www.redhat.com/en/topics/integration/what-is-event-driven-architecture>
-* <https://aws.amazon.com/es/event-driven-architecture/>
-* <https://www.cosmicpython.com/book/chapter_11_external_events.html>
-* <https://www.bbvanexttechnologies.com/que-es-una-arquitectura-event-driven/>
-* <https://docs.microsoft.com/es-es/azure/architecture/guide/architecture-styles/event-driven>
-* <https://medium.com/@cardona.root/arquitectura-orientada-por-eventos-introducci%C3%B3n-f1cd44bc7304>
-* <https://www.paradigmadigital.com/dev/como-construir-microservicios-en-python-1-2/>
+* <http://xurxodev.com/por-que-utilizo-clean-architecture-en-mis-proyectos/>
+* <https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html>
+* <https://www2.deloitte.com/es/es/pages/technology/articles/clean-architecture.html>
+* <https://blog.kirei.io/consejos-sobre-clean-architecture-98df898b8068>
+* <https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164>
+* <https://clean-architecture-python.readthedocs.io/en/latest/>
+* <https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/>
+* <https://stackoverrun.com/es/q/10485735>
+* <https://realpython.com/the-model-view-controller-mvc-paradigm-summarized-with-legos/>
+* <https://www.giacomodebidda.com/mvc-pattern-in-python-introduction-and-basicmodel/>
 
 ### Librerías
 
-* <https://www.rabbitmq.com/getstarted.html>
-* <https://github.com/Pungyeon/go-rabbitmq-example/blob/master/README.md>
-* <https://kafka.apache.org/>
-* <https://redislabs.com/blog/use-redis-event-store-communication-microservices/>
-* <https://docs.celeryproject.org/en/stable/getting-started/introduction.html>
-* <https://autobahn.readthedocs.io/en/latest/asynchronous-programming.html>
-* <https://xpdays.com.ua/programs/event-driven-systems-with-mongodb/>
+* <https://openwebinars.net/blog/los-4-mejores-frameworks-para-aplicaciones-de-python/>
+* <https://wiki.python.org/moin/WebFrameworks>
+* <https://pypi.org/project/python-clean-architecture/>
+* <https://github.com/tducret/python-clean-architecture-example>
 
 ## Deadline
 
