@@ -72,4 +72,4 @@ Anexa los comandos utilizados para tu solución así como los screenshots necesa
 
 ## Deadline
 
-- `Lunes 7 de Diciembre a las 02:00pm`
+- `Lunes 7 de Diciembre a las 11:59pm`
