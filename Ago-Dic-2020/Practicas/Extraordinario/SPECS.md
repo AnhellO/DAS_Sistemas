@@ -50,7 +50,7 @@ Crea un `Dockerfile` que cumpla con los siguientes requisitos:
 
 Construye una imágen basada en el `Dockerfile` que acabas de crear, que use la versión `extraordinario` y que se llame `{mi-user}/hello_flask`, donde `{mi-user}` equivale a tu usuario de [`DockerHub`](https://hub.docker.com/). Una vez que hayas creado la imagen envíala a tu cuenta de `DockerHub`. Debe de estar accesible similar a como lo está en [este ejemplo](https://hub.docker.com/r/anhellojz/hello_flask). Asegúrate de adjuntar el link a ella en tus resultados del ejercicio.
 
-Para finalizar, ejecuta un nuevo contenedor basado en la imágen que recién acabas de crear y que deberá de llamarse `hflask`. Este tendrá que correr "_daemonizado_", y deberá de estar accesible a través del puerto `9999` de tu máquina. Asegúrate de verificar que funciona de manera correcta :wink:.
+Para finalizar, ejecuta un nuevo contenedor basado en la imágen que recién acabas de crear y que tenga por nombre `hflask`. Este tendrá que correr "_daemonizado_", y deberá de estar accesible a través del puerto `9999` de tu máquina. Asegúrate de verificar que funciona de manera correcta :wink:.
 
 Recuerda que **todo debe de funcionar** por medio de `docker`, es decir, nada debe de hacerse manualmente ni instalando algo en el equipo host.
 
