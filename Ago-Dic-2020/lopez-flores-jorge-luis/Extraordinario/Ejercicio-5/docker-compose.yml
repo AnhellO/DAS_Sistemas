@@ -1,0 +1,47 @@
+version: '3.3'
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+
+      MYSQL_USER: 'user'
+
+      MYSQL_PASSWORD: 'password'
+
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: myadmin
+    links:
+      - db
+    environment:
+      MYSQL_ROOT_PASSWORD: extra123
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    depends_on:
+      - db
+    restart: always
+    ports:
+      - 8080:80
+
+  countriesapp:
+    build: ./
+    container_name: countriesApp
+    restart: always
+    links:
+        - db
+    ports:
+        - "5000:5000"
+
+    command: ["python", "./countriesapp.py"]
+    depends_on:
+     - db
