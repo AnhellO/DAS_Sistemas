@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Practica2 David Sena</title>
+<style>
+	body {background-color: rgb(51, 255,221 );}
+	h1   {color: rgb(132, 132, 236);}
+	table {
+	  width:100%;
+	}
+	table, th, td {
+	  border: 1px solid blanchedalmond;
+	  border-collapse: collapse;
+	}
+	th, td {
+	  padding: 15px;
+	  text-align: left;
+	}
+	#t01 tr:nth-child(even) {
+	  background-color: wheat;
+	}
+	#t01 tr:nth-child(odd) {
+	 background-color: #fff;
+	}
+	#t01 th {
+	  background-color: blue;
+	  color: white;
+	}
+	</style>
+</head>
+<body>
+
+<h1>Usuario random</h1>
+<h3>Esta es una pagina que hace uso de una api para mostrar información de una persona random</h3>
+
+<table id="t01">
+	<tr>
+	  <th>Nombre</th>
+	  <th>Edad</th>
+	  <th>Lugar de nacimiento</th>
+	  <th>Celular</th>
+	  <th>Ciudad en que reside</th>
+	  <th>Pais</th>
+	  <th>Religión</th>
+	</tr>
+	<tr>
+	  <td>{{person.personal.name}}</td>
+	  <td>{{person.personal.age}}</td>
+	  <td>{{person.personal.born_place}}</td>
+	  <td>{{person.personal.cellphone}}</td>
+	  <td>{{person.personal.city}}</td>
+	  <td>{{person.personal.country}}</td>
+	  <td>{{person.personal.religion}}</td>
+	</tr>
+</table>
+
+<h3>David Sena - DAS - Parcial 2</h3>
+
+</body>
+</html>

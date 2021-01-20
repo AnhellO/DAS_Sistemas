@@ -1,0 +1,15 @@
+FROM python:latest
+LABEL "Correo:"=d.rdz.mtz314@gmail.com
+
+WORKDIR /src
+
+COPY settings.py .
+COPY db.py .
+COPY models.py .
+COPY  insert.py .
+COPY  data.json .
+
+RUN pip3 install peewee
+RUN pip3 install psycopg2-binary
+
+CMD ["python3", "insert.py"]
