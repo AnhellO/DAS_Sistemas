@@ -9,7 +9,7 @@ class SchoolMember:
 
 class Teacher(SchoolMember):
     def __str__(self):
-        return super().__str__().replace("Soy", "Soy el ticher")
+        return f"Soy el maestro {self.name}!, tengo {self.age} años y mi ID = {self.id_num}"
 
 class Student(SchoolMember):
     def __str__(self):
@@ -27,7 +27,7 @@ class SchoolMemberFactory:
 def main():
     kind = input("Qué quieres crear?\n")
     _name = input("Qué nombre tiene?\n")
-    obj = SchoolMemberFactory.make(kind, name=_name, age=22, id='070KGP')
+    obj = SchoolMemberFactory.make(kind, name=_name, age=22, id_num='070KGP')
     print(obj)
     
 if __name__ == "__main__":

@@ -1,0 +1,42 @@
+  version: '3'
+
+  services:
+    postgres:
+      container_name: postgres
+      image: postgres:latest
+      restart: always
+      environment:
+        POSTGRES_DB: examen
+        POSTGRES_USER: admin
+        POSTGRES_PASSWORD: 123abc
+        PGDATA: /var/lib/postgresql/data
+      # volumes: 
+      #   - postgres_db:/var/lib/postgresql/data
+      ports: 
+        - "5432:5432"
+
+    pgadmin:
+      container_name: pgadmin
+      image: dpage/pgadmin4
+      restart: always
+      environment: 
+        - PGADMIN_DEFAULT_EMAIL=test@gmail.com
+        - PGADMIN_DEFAULT_PASSWORD=pass123
+        - PGADMIN_LISTEN_PORT=80
+      links:
+      - "postgres:database"
+      depends_on: 
+        - postgres
+      # volumes_from: 
+      #   - postgres
+      ports: 
+        - "8080:80"
+
+    python:
+      container_name: cont_python
+      build: .
+      depends_on: 
+        - postgres
+    
+  # volumes: 
+  #   postgres_db:

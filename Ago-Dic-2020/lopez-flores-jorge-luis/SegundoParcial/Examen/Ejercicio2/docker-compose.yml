@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+
+  redis:
+    image: redis:latest
+    ports:
+      - 6370:6370
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+
+  commander:
+    image: rediscommander/redis-commander:latest
+    environment:
+      - REDIS_HOSTS=local:redis:6370
+      - HTTP_USER=root
+      - HTTP_PASSWORD=qwerty
+    ports:
+      - 8081:8081
+    depends_on:
+      - redis
+
+volumes:
+  redis-data:
