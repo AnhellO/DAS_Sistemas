@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  script:
+    build: ./app
+    container_name: script
+    depends_on:
+      - db
+    volumes:
+      - type: bind
+        source: ./app
+        target: /usr/src/app
+    restart: on-failure:10
+  db:
+    image: mysql:8
+    container_name: mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: extra-admin123
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: myadmin
+    depends_on:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8080:80

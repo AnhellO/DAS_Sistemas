@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Persons</title>
+<style>
+    table, th, td {
+      border: 1px solid white;
+    }
+    body {
+        background: black;
+        color: white;
+      }
+    </style>
+    <img src="{{url_for('static', filename='fslogo.jpg')}}" style="float:right;width:100px;height:100px;" />
+</head>
+<body>
+<h1>Obtener datos de una persona random</h1>
+<table style="width:100%">
+    <tr>
+    <th>User name</th>
+    <th>e-mail</th>
+    <th>Name</th>
+    <th>Last name</th>
+    <th>Age</th>
+    <th>Number</th>
+    <th>Country</th>
+    </tr>
+    <tr>
+    <td>{{person.user_name}}</td>
+    <td>{{person.e_mail}}</td>
+    <td>{{person.name}}</td>
+    <td>{{person.last_name}}</td>
+    <td>{{person.age}}</td>
+    <td>{{person.number}}</td>
+    <td>{{person.country}}</td>
+    </td>
+</table>
+
+
+</body>
+</html>
