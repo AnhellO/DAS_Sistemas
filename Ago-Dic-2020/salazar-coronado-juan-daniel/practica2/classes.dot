@@ -1,0 +1,7 @@
+digraph "classes" {
+charset="utf-8"
+rankdir=BT
+"0" [label="{practica2.Estudiante|carrera\ledad\lnombre\lsemestre\l|get_carrera()\lmotivacion_promedio(promedio)\lpresentacion()\l}", shape="record"];
+"1" [label="{practica2.ServicioSocialYPracticas|practicas\lservicio\l|empresas_practicas()\lestado()\lprogramas_servicio()\l}", shape="record"];
+"1" -> "0" [arrowhead="empty", arrowtail="none"];
+}

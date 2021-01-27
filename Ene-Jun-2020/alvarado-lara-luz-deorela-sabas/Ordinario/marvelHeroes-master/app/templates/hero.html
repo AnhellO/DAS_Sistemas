@@ -1,0 +1,88 @@
+{% extends "indexBase.html" %}
+{% block content %}
+
+
+
+<div id='name'>
+    <h3>{{hero.name}}</h3>
+</div>
+
+<div id='image'>
+    <img src='{{hero.image}}'>
+</div>
+
+<div id='id'>
+    <h3> ID: {{hero.id}} </h3>
+</div>
+
+<div id='information'>
+
+    <table id='powerstats'>
+
+        {% for k, v in hero.powerstats.items()   %}
+            {% if k!='id' %}
+            <tr>
+                <td>{{k}}</td>
+                <td>{{v}}</td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+
+    </table >
+
+    <table id='biography'>
+
+        {% for k, v in hero.biography.items()   %}
+            {% if k!='id' %}
+            <tr>
+                <td>{{k}}</td>
+                <td>{{v}}</td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+
+    </table >
+    <table id='appearance'>
+
+        {% for k, v in hero.appearance.items()  %}
+        {% if k!='id' %}
+            <tr>
+                <td>{{k}}</td>
+                <td>{{v}}</td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+
+    </table >
+
+    <table id='connections'>
+
+        {% for k, v in hero.connections.items()   %}
+        {% if k!='id' %}
+            <tr>
+                <td>{{k}}</td>
+                <td>{{v}}</td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+
+    </table >
+    
+    <table id='work'>
+
+        {% for k, v in hero.work.items()   %}
+            {% if k!='id' %}
+            <tr>
+                <td>{{k}}</td>
+                <td>{{v}}</td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+
+    </table >
+
+
+</div>
+  
+{% endblock %}
+

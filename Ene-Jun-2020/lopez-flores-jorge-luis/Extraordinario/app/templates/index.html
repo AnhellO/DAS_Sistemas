@@ -1,0 +1,14 @@
+{% extends "indexBase.html" %}
+{% block content %}
+  
+  <table>
+    {% for key,value in artist.items() %}
+    <tr>
+        <td>ID: {{key}}</td>
+        <td>ARTIST: <a href='/artist/{{key}}'>{{value}}</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  
+{% endblock %}
+

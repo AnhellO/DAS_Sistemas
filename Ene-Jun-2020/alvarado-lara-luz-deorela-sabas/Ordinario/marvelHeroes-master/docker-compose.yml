@@ -1,0 +1,79 @@
+version: "3.2"
+services:
+  db:
+    image: postgres:9.4
+    restart: always
+    container_name: marvelDB_A
+    ports:
+      - "5432:5432"
+    networks:
+      - postgresql
+    environment:
+      POSTGRES_PASSWORD: "marvel123"
+      POSTGRES_DB: "marvelHeroes"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+  pgadmin4:
+    image: dpage/pgadmin4
+    restart: always
+    container_name:  pgadmin4_B
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "marvel@marvel.com"
+      PGADMIN_DEFAULT_PASSWORD: "marvel123"
+    ports:
+     - "80:80"
+    links:
+     - db
+    networks:
+      - postgresql
+    depends_on:
+     - db
+  scrapper-marvel:
+    build: ./app
+    container_name: marvelScrapper_C
+    links: 
+      - db
+    networks:
+      - postgresql
+    volumes:
+      - type: bind
+        source: ./app
+        target: /usr/src/app
+    command: ["python", "./scrapper.py"]
+    depends_on:
+     - db
+  app-marvel:
+    build: ./app
+    container_name: marvelApp_D
+    restart: always
+    links:
+        - db
+    ports:
+        - "5000:5000"
+    networks:
+      - postgresql
+    volumes:
+      - type: bind
+        source: ./app
+        target: /usr/src/app
+    command: ["python", "./appMarvel.py"]
+    depends_on:
+     - scrapper-marvel
+  redis:
+    image: redis:latest
+    container_name: marvelRedis_E
+    ports:
+      - 6379:6379
+    volumes:
+      - type: bind
+        source: ./config/redis.conf
+        target: /redis.conf
+    command: ["redis-server", "/redis.conf"]
+    networks:
+      - postgresql
+    depends_on:
+     - scrapper-marvel
+networks:
+  postgresql:
+    driver: bridge
+

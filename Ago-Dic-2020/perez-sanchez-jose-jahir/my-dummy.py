@@ -1,0 +1,1 @@
+print('Inicia el semestre!')

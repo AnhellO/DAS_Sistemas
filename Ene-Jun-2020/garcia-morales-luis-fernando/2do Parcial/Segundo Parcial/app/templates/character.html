@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style type="text/css">
+        body{
+            background-image: url("../static/background.jpg");
+            }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card horizontal">
+      <div class="card-image ">
+        <img src= "{{personaje.imagen}}">
+      </div>
+        <div class="card-content">
+            <table class="centered">
+                <tr>
+                    <td>ID</td>
+                    <td>{{personaje.id}}</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>{{personaje.nombre}}</td>
+                </tr>
+                <tr>
+                    <td>Birthday</td>
+                    <td>{{personaje.fechaNac}}</td>
+                </tr>
+                <tr>
+                    <td>Occupation</td>
+                    <td>{{personaje.ocupacion}}</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>{{personaje.estado}}</td>
+                </tr>
+                <tr>
+                    <td>Nickname</td>
+                    <td>{{personaje.nickname}}</td>
+                </tr>
+                <tr>
+                    <td>Apearance</td>
+                    <td>{{personaje.apariciones}}</td>
+                </tr>
+                <tr>
+                    <td>Actor</td>
+                    <td>{{personaje.actor}}</td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td>{{personaje.categoria}}</td>
+                </tr>
+            </table>
+        </div>
+      </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+version: "3.3"
+
+services:
+  postgres:
+    build: 
+      context: ./posgres/
+    restart: always
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      PGDATA: /var/lib/postgresql/data
+      DB_PORT: 5432
+    volumes:
+    - db-data:/var/lib/postgresql/data
+    ports: 
+    - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: correo@correo.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_LISTEN_PORT: 80
+    ports:
+    - "8080:80"
+    volumes:
+    - pgadmin-data:/var/lib/pgadmin
+    links:
+    - postgres:pgsql-server
+    depends_on:
+    - "postgres"
+  
+  python:
+    build:
+      context: ./python/
+    restart: on-failure
+    links:
+      - "postgres"
+    depends_on:
+      - "postgres"
+
+volumes:
+  db-data:
+  pgadmin-data:

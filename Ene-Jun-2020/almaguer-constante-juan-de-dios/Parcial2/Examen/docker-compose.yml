@@ -1,0 +1,48 @@
+version: "3.2"
+services:
+  app:
+    build: ./app
+    container_name: breaking_app
+    depends_on:
+      - db
+    ports:
+      - "5000:5000"
+    volumes:
+      - type: bind
+        source: ./app
+        target: /home/breaking
+
+  script:
+    build: ./app
+    container_name: breaking_script
+    depends_on:
+      - db
+    volumes:
+      - type: bind
+        source: ./app
+        target: /home/breaking
+        command: ["python", "./populate.py"]
+
+  db:
+    image: mysql:5.7
+    container_name: breaking_db
+    ports:
+     - "32000:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: breaking_myadmin
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8080:80
+
