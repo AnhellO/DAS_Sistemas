@@ -1,0 +1,39 @@
+version: "3.2"
+services:
+  postgres:
+    image: postgres:9.4
+    restart: always
+    container_name: postgres
+    ports:
+      - 5432:5432
+    networks:
+      - ejercicio_09
+    environment:
+      POSTGRES_DB: "scraper"
+      POSTGRESQL_USER: "scraper"
+      POSTGRES_PASSWORD: "scraper"
+    volumes:
+      - postgres_volume:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    container_name:  pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "pgadmin@pgadmin.com"
+      PGADMIN_DEFAULT_PASSWORD: "pgadmin"
+    ports:
+      - 80:80
+    links:
+      - postgres
+    networks:
+      - ejercicio_09
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_volume:
+
+networks:
+  ejercicio_09:
+    driver: bridge
+
