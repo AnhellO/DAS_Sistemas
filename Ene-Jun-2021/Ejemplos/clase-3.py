@@ -98,6 +98,8 @@ print(f"El resultado es: {suma_vocales(b=2, c=3, d=4, e=5, x=6, y=7, z=8, r=0, u
 --- Clases y Objetos
 '''
 class Persona:
+    x = 'soy un atributo de clase'
+    
     def __init__(self, nombre: str, edad: int, peso: float, estatura: float) -> None:
         self.nombre = nombre
         self.edad = edad
@@ -116,5 +118,16 @@ p = Persona(
     1.67
 )
 
+persona_2 = Persona(
+    'Casimiro',
+    16,
+    68.5,
+    1.7
+)
+
+# Para los atributos de clase, aquí x será igual a 'soy un atributo de clase'
 print(p)
-print(p.nombre, p.edad, p.peso, p.estatura, p._protegido)
+print(p.nombre, p.edad, p.peso, p.estatura, p.x)
+
+print(persona_2)
+print(persona_2.nombre, persona_2.edad, persona_2.peso, persona_2.estatura, persona_2.x)
