@@ -39,4 +39,4 @@ Mediante la función `main()`, crea una lista que contenga varias instancias de 
 
 ## Deadline
 
-* `Sábado 12 de Febrero a las 11:00pm`
+* `Sábado 13 de Febrero a las 11:00pm`
