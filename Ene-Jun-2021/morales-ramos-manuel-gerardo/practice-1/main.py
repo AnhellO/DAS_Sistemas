@@ -1,6 +1,8 @@
 from vehicle import Vehicle
 from bus import Bus
 
+# A function that calculates the fare
+
 def fare(vehicle):
     final_amount = (vehicle.get_capacity() * 100)
     
@@ -10,6 +12,9 @@ def fare(vehicle):
         return final_amount
 
 def main():
+    
+    # A list of vehicles
+    
     list = [
         Vehicle(100, 200000, 4),
         Bus(90, 350000, 45),
@@ -19,11 +24,13 @@ def main():
         Bus(95, 400000, 35),
     ]
 
-    for x in list:
-        if not isinstance(x, Bus):
+    # Print only buses
+
+    for vehicle in list:
+        if not isinstance(vehicle, Bus):
             continue
 
-        print(f"{ x }\nFare: { fare(x) } $", end="\n\n")
+        print(f"{ vehicle }\nFare: { fare(vehicle) } $", end="\n\n")
 
 if __name__ == "__main__":
     main()
