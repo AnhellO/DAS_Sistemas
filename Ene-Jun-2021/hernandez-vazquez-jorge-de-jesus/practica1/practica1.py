@@ -36,7 +36,7 @@ class Autobus(Vehiculo):
         Mi Kilometraje es de: {self.kmtje}Km, 
         Capacidad: {self.capcty} asientos,
         La tarifa es de: ${self.tarifa()}  
-        """
+        """  
 
 if __name__=='__main__':
 
