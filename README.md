@@ -13,9 +13,9 @@ Repositorio para las prácticas y proyectos de la materia de Diseño y Arquitect
 ## Contributing
 
 - Crea un [fork](https://docs.github.com/es/github/getting-started-with-github/fork-a-repo) del repositorio
-- Manda todos tus Pull Requests a la `develop` branch para revisión
+- Manda todos tus Pull Requests a la `development` branch para revisión
   - Los pull requests tienen que llamarse de la siguiente forma: `DAS_Sistemas Develop Push: {Cambios Principales}`
-  - Los pull requests para cada práctica tienen que venir de diferentes branches, es decir, si trabajas en la práctica 1, entonces debes de crear una branch/rama llamada `practica-1`, y si trabajas en la práctica 2, entonces tienes que crear una nueva branch llamada `practica-2`
+  - Los pull requests para cada práctica tienen que venir de diferentes branches, es decir, si trabajas en la práctica 1, entonces debes de crear una branch/rama llamada `practica-1`, y si trabajas en la práctica 2, entonces tienes que crear una nueva branch llamada `practica-2`. Esto mismo aplica para todas las prácticas y exámenes que se trabajen por separado
   - Todas las branches que crees en tu fork/repositorio tienen que ser creadas en base a tu branch de `development`
   - Puedes encontrar algunos ejemplos de los puntos anteriores [aquí](https://github.com/AnhellO/DAS_Sistemas/pulls?q=is%3Apr+is%3Aclosed)
 - Todos tus cambios deben de ir con la siguiente ruta: `repo/{carpeta-semestre}/{carpeta-alumno}/{carpeta-práctica-#}/`, donde:
