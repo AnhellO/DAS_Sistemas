@@ -1,0 +1,3 @@
+### Comandos
+
+docker-compose up

@@ -7,3 +7,12 @@ bin/
 include/
 lib/
 pip-selfcheck.json
+.vscode
+.vscode/*
+.idea
+.idea/*
+.DS_Store
+.cache
+.cache/*
+.pytest_cache
+.pytest_cache/*
