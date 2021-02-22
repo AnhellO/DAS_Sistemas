@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-* Desarrolla capacidad de análisis y solución de problemas de programación orientada a objetos
+* Desarrollar la capacidad de análisis y de solución de problemas de programación orientada a objetos
 * Expandir conocimientos sobre el tema de patrones de diseño de software orientado a objetos
 * Comenzar a involucrarse con el uso de [T.D.D.](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas)
 
@@ -22,13 +22,21 @@ La suite de pruebas unitarias debe de pasar sin problema alguno y esta **NO** de
 
 ## Parte 2
 
-Implementa la misma solución pero ahora utilizando los [decoradores nativos de python](https://pythones.net/decoradores-en-python-oop/).
+Agrega **2** aditamentos extra para el personaje, como un anillo de magia, un collar de protección contra magia o un escudo.
 
-Al igual que con la parte 1, la suite de pruebas unitarias debe de pasar sin problema alguno y sin modificarla.
+En esta ocasión **SÍ** podrás y tendrás que modificar las pruebas unitarias, de tal manera que agregues un par de funciones de prueba para el nuevo par de aditamentos que añadiste.
 
 ## Parte 3
 
-Leer sobre el patrón de diseño [Composite](https://refactoring.guru/es/design-patterns/composite) :wink:.
+Implementa la misma solución pero ahora utilizando los [decoradores nativos de python](https://pythones.net/decoradores-en-python-oop/). Esta solución tendrá que ser creada en un archivo por separado, y tendrás que utilizar la misma suite de tests unitarios que ya está existente para realizar pruebas unitarias de este nueva solución.
+
+Al igual que con la parte 1 y para esta parte en concreto, la suite de pruebas unitarias debe de pasar sin problema alguno y ya no debería ser modificada ni alterada de nuevo (con excepción de la parte 2 en donde se agregaron nuevas funciones de prueba).
+
+## Parte 4
+
+Lee sobre el patrón de diseño [Composite](https://refactoring.guru/es/design-patterns/composite).
+
+Anexa un archivo [Markdown](https://es.wikipedia.org/wiki/Markdown) con una síntesis de qué es lo que entendiste sobre este patrón de diseño y cómo es que funciona :wink:.
 
 ## Recursos
 
