@@ -44,4 +44,4 @@ Leer sobre el patrón de diseño [Composite](https://refactoring.guru/es/design-
 
 ## Deadline
 
-* `Sábado 27 de Febrero a las 11:00pm`
+* `Domingo 28 de Febrero a las 11:59pm`
