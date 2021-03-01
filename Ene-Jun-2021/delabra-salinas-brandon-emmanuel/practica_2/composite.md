@@ -1,0 +1,3 @@
+El patrón composite consiste en una composición recursiva la cual permite la construcción de algoritmos u objetos de magnitud pequeña, a partir de las más simples, gracias a su estructura de árbol.  Al tener todos los objetos dentro de una misma interfaz, permite que su tratamiento se mucho más simple.
+Este patrón busca representar una jerarquía de objetos llamada “parte de todo” donde cada una de las partes que la conforman dormán partes forman el todo, sin olvidar cada una de esas partes pueden contener otras.
+Un ejemplo sencillo sería la construcción de una casa de ladrillos, donde las paredes están pequeñas de piezas pequeñas, que es el ladrillo, los cuales forman una pared y el conjunto de todas las paredes componen una casa. 
