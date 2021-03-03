@@ -34,3 +34,13 @@ class ArmorConcreteDecorator(BaseDecorator):
 class SwordConcreteDecorator(BaseDecorator):
     def equip(self):
         return f"{super().equip().replace(' Empty', '')}\nSword: Yes"
+
+# Concrete Decorator C
+class ShieldConcreteDecorator(BaseDecorator):
+    def equip(self):
+        return f"{super().equip().replace(' Empty', '')}\nShield: Yes"
+
+# Concrete Decorator D
+class RingConcreteDecorator(BaseDecorator):
+    def equip(self):
+        return f"{super().equip().replace(' Empty', '')}\nRing: Yes"
