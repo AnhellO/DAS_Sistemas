@@ -34,6 +34,26 @@ class DecoratorTest(unittest.TestCase):
             sword.equip(),
             "Luxor equipment:\nArmor: Yes\nSword: Yes"
         )
+    
+    def test_character_with_shield_and_ring(self):
+        character = CharacterConcreteComponent(name='Luxor')
+        shield = ShieldConcreteDecorator(character)
+        ring = RingConcreteDecorator(shield)
+        self.assertEqual(
+            ring.equip(),
+            "Luxor equipment:\nShield: Yes\nRing: Yes"
+        )
+    
+    def test_character_with_all(self):
+        character = CharacterConcreteComponent(name='Luxor')
+        armor = ArmorConcreteDecorator(character)
+        sword = SwordConcreteDecorator(armor)
+        shield = ShieldConcreteDecorator(sword)
+        ring = RingConcreteDecorator(shield)
+        self.assertEqual(
+            ring.equip(),
+            "Luxor equipment:\nArmor: Yes\nSword: Yes\nShield: Yes\nRing: Yes"
+        )
 
 
 if __name__ == "__main__":
