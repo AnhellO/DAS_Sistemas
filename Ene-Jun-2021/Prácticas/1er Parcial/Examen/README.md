@@ -43,11 +43,20 @@
 
 #### Ejercicio 4
 
-* ...
+* Partiendo del siguiente [diagrama UML](chain-of-reponsibility.jpg), y complementando con el caso de uso propuesto a continuación:
+  * Tenemos de ejemplo un cajero automático, el cual debe de distribuir el dinero en billetes de $50 primero, luego en billetes de $20 y al final en billetes de a $10
+  * Este orden predeterminado de la "_cadena_" ayuda a garantizar que se distribuya el número mínimo de billetes. De lo contrario, podría dispensar 5 x $10 cuando hubiera sido mejor dispensar 1 x $50
+  * Codifica la solución utilizando el patrón de diseño [`Chain of Responsibility`](https://refactoring.guru/design-patterns/chain-of-responsibility)
+  * Agrega la respectiva suite de tests unitarios para este ejercicio. Recuerda utilizar un enfoque `T.D.D.` :wink:
 
 #### Ejercicio 5
 
-* ...
+* Para el ejemplo de código en el archivo [srp.py](srp.py):
+  * Analiza y refactoriza el código de tal manera que se utilice el [`Single Responsibility Principle`](https://dev.to/annalara/solid-programming-part-1-single-responsibility-principle-1ki6) de la manera correcta
+  * Utiliza un enfoque "_Red-Green Refactoring_" como el visto en clase, de tal manera que agregues la suite de tests unitarios necesaria a la par de que vas refactorizando el código propuesto :wink:
+  * Explica la lógica implementada detrás de tu enfoque y contesta a las siguientes preguntas (todo esto como comentarios dentro de tu código):
+    * ¿Qué sucedería si quiero agregar otro formato de serialización más complejo como `XML` o `Yaml`?
+    * ¿Qué sucedería si quiero soporte para serialización a otros objetos aparte de los instanciados por la clase `Usuario`?
 
 ### Puntos Extra
 
@@ -55,3 +64,9 @@
   * **(5 puntos sobre 100)**
 * Implementa el patrón de diseño `Proxy` para agregar una capa de autenticación básica con `usuario` y `password` a objetos de la clase `SitioWeb` del ejercicio 1
   * **(5 puntos sobre 100)**
+* Generar diagrama UML para el Ejercicio 1
+  * **(2 puntos sobre 100)**
+* Generar diagrama UML para el Ejercicio 2
+  * **(2 puntos sobre 100)**
+* Generar diagrama UML para el Ejercicio 3
+  * **(2 puntos sobre 100)**
