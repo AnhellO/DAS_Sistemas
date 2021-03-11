@@ -1,5 +1,5 @@
 class WebPage:
-    def __init__(self, url, route, page_format, content, title, slug, meta_tags: list):
+    def __init__(self, url, route, page_format, content, title, slug, meta_tags = []):
         self._url: str = url
         self._route: str = route
         self._format: str = page_format
@@ -9,16 +9,14 @@ class WebPage:
         self._meta_tags: list = meta_tags
 
     def __str__(self) -> str:
-        return f"""
-                \r  Title: {self._title}
-                \r  URL: {self._url}
-                \r  Slug: {self._slug}
-                \r  Route: {self._route}
-                \r  Format: {self._format}
-                \r  Content: {self._content}
-                \r  Meta tags: {self._meta_tags}
-                \r  -----------------------------
-                """
+        return f'\nTitle: {self._title}\nURL: {self._url}\nSlug: {self._slug}\nRoute: {self._route}\nFormat: {self._format}\nContent: {self._content}\nMeta tags: {self.get_tags()}'
+    
+    def get_tags(self):
+        tags = ''
+        for tag in self._meta_tags:
+            tags += str(tag)
+
+        return tags
 
 class WebSite:
     def __init__(self, domain, category, pages:list):
@@ -27,12 +25,7 @@ class WebSite:
         self._pages: WebPage = pages
 
     def __str__(self) -> str:
-        return f"""
-                \rDomain: {self._domain}
-                \rCategory: {self._category}
-                \r\nWeb Pages: 
-                \r{self.get_pages()}
-                """
+        return f'\r\nCategory: {self._category}\n\rDomain: {self._domain}\r\n\nWeb Pages: \r\n{self.get_pages()}'
 
     def get_pages(self) -> WebPage:
         pages = ''
