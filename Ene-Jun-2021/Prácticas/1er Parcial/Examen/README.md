@@ -43,7 +43,7 @@
 
 #### Ejercicio 4
 
-* Partiendo del siguiente [diagrama UML](chain-of-reponsibility.jpg), y complementando con el caso de uso propuesto a continuación:
+* Partiendo del siguiente [diagrama UML](chain-of-responsibility.jpg), y complementando con el caso de uso propuesto a continuación:
   * Tenemos de ejemplo un cajero automático, el cual debe de distribuir el dinero en billetes de $50 primero, luego en billetes de $20 y al final en billetes de a $10
   * Este orden predeterminado de la "_cadena_" ayuda a garantizar que se distribuya el número mínimo de billetes. De lo contrario, podría dispensar 5 x $10 cuando hubiera sido mejor dispensar 1 x $50
   * Codifica la solución utilizando el patrón de diseño [`Chain of Responsibility`](https://refactoring.guru/design-patterns/chain-of-responsibility)
