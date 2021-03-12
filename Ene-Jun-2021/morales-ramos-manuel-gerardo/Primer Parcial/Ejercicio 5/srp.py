@@ -27,7 +27,7 @@
     -¿Qué sucedería si quiero soporte para serialización a otros objetos aparte de los instanciados por la clase Usuario?
     
     Creo que respondí la pregunta antes de leerla. xD
-    
+
     La mejor manera es extraer la funcionalidad en una clase capaz de serializar objetos.
 """
 import json
@@ -74,15 +74,22 @@ class Serializar:
         return json.dumps(self._usuario.__dict__)
 
     def to_html(self):
-        pass
+        return json2html.convert(json=json.dumps(self._usuario.__dict__))
 
     def to_dict(self):
-        pass
+        return self._usuario.__dict__
 
-user = Usuario(
-    nombre='Ramanujan',
-    edad=25,
-    direccion='Calle X, #Y Colonia Z'
-)
+def main():
+    user = Usuario(
+        nombre='Ramanujan',
+        edad=25,
+        direccion='Calle X, #Y Colonia Z'
+    )
 
-print(Serializar(user).to_json())
+    print(Serializar(user).to_html())
+    print(Serializar(user).to_json())
+    print(Serializar(user).to_str())
+    print(Serializar(user).to_dict())
+
+if __name__ == "__main__":
+    main()

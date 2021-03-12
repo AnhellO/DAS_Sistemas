@@ -25,5 +25,16 @@ class Srp(unittest.TestCase):
 
         self.assertEqual('{"nombre": "Ramanujan", "edad": 25, "direccion": "Calle X, #Y Colonia Z"}',result)
 
+    def test_to_dict(self):
+        usuario = Usuario(
+            nombre='Ramanujan',
+            edad=25,
+            direccion='Calle X, #Y Colonia Z'
+        )
+
+        result = Serializar(usuario).to_dict()
+
+        self.assertEqual({'nombre': 'Ramanujan', 'edad': 25, 'direccion': 'Calle X, #Y Colonia Z'},result)
+
 if __name__ == "__main__":
     unittest.main()
