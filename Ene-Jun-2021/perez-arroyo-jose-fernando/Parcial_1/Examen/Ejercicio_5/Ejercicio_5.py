@@ -49,3 +49,9 @@ if __name__=='main':
     )
 
     print(user.serializarHtml()) 
+
+#¿Qué sucedería si quiero agregar otro formato de serialización más complejo como XML o Yaml?
+#Para esto tenriamos que crear un metodo extra para que pudiera agregar ese formato o crear una instancia que lo pueda contener.
+
+#¿Qué sucedería si quiero soporte para serialización a otros objetos aparte de los instanciados por la clase Usuario?
+#Con esto podriamos decir que no habria que hacer mucho puesto que no exisitria alguna contradiccion en la implementacion
