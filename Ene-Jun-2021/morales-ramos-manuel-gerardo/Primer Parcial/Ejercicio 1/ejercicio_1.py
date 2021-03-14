@@ -1,5 +1,6 @@
 import abc
 
+#Clase de la página web
 class WebPage:
     def __init__(self, url, route, page_format, content, title, slug, meta_tags = []):
         self._url: str = url
@@ -20,11 +21,13 @@ class WebPage:
 
         return tags
 
+#Interface para el proxy
 class ServiceInterface(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def login(self, user: str, passw: str):
         pass
 
+#Clase para el sitio web
 class WebSite(ServiceInterface):
     def __init__(self, domain, category, pages:list):
         self._domain: str = domain
@@ -44,6 +47,7 @@ class WebSite(ServiceInterface):
     def login(self, user: str, passw: str):
         return f'Welcome, {user}!'
 
+#Clase que hará la autenticación
 class Authentication(ServiceInterface):
     def __init__(self, s: WebSite):
         self._service = s

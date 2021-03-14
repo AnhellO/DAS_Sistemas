@@ -10,6 +10,7 @@ class SoloCentrifugado:
         print('Centrifugando...')
         print('Finalizado!')
 
+#Fachada que instancia código "complejo"
 class LavadoraFacade:
     def __init__(self):
         self._ciclo_completo = CicloCompleto()
