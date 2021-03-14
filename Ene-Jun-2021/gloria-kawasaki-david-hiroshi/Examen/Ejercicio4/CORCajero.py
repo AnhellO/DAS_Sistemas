@@ -10,6 +10,10 @@ class CajeroHandler(metaclass=ABCMeta):
     def handle(cantidad):
         pass
 
+'''
+Esta función lo que hace es determinar cuantos billetes de 50 se entregarán y
+pasarle el resto al sucesor.
+'''
 class Cajero50ConcreteHandler(CajeroHandler):
     def __init__(self):
         self._succesor = None
@@ -27,6 +31,10 @@ class Cajero50ConcreteHandler(CajeroHandler):
         else:
             self._succesor.handle(cantidad)
 
+'''
+Esta función lo que hace es determinar cuantos billetes de 20 se entregarán y
+pasarle el resto al sucesor.
+'''
 class Cajero20ConcreteHandler(CajeroHandler):
     def __init__(self):
         self._succesor = None
@@ -44,6 +52,10 @@ class Cajero20ConcreteHandler(CajeroHandler):
         else:
             self._succesor.handle(cantidad)
 
+'''
+Esta función lo que hace es determinar cuantos billetes de 10 se entregarán y
+pasarle el resto al sucesor.
+'''
 class Cajero10ConcreteHandler(CajeroHandler):
     def __init__(self):
         self._succesor = None
@@ -61,6 +73,9 @@ class Cajero10ConcreteHandler(CajeroHandler):
         else:
             self._succesor.handle(cantidad)
 
+'''
+Esta función determina cuales son los sucesores de cada cadena
+'''
 class CajeroATMChain:
     def __init__(self):
         self.chain1 = Cajero50ConcreteHandler()

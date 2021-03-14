@@ -1,15 +1,20 @@
-class PaginaWeb(object):
+class Page(object):
+    '''
+    Función que inicializa la clase.
+    '''
     def __init__(self, URL: str, RUTA: str, FORMATO:str, CONTENIDO:str, TITULO: str, SLUG:str, METATAGS:list):
         self.URL = URL
         self.RUTA = RUTA
-        self.FORMATO = FORMATO
+        self.FORMATO=FORMATO
         self.CONTENIDO = CONTENIDO
         self.TITULO = TITULO
-        self.SLUG = SLUG
+        self.SLUG= SLUG
         self.METATAGS=METATAGS
-
+    '''
+    grupo de setters para colocar los valores desde fuera de la clase
+    '''
     def set_URL(self,URL):
-        self.URL = URL.lower()
+        self.URL = URL
     def set_RUTA(self,RUTA):
         self.RUTA = RUTA
     def set_FORMATO(self,FORMATO):
@@ -23,6 +28,9 @@ class PaginaWeb(object):
     def set_typo(self,METATAGS:list):
         self.METATAGS.append(METATAGS)
     
+    '''
+    grupo de getters usados para obtener los valores de las variables desde fuera de la clase
+    '''
     def get_URL(self):
         return self.URL
     def get_RUTA(self):
@@ -39,6 +47,9 @@ class PaginaWeb(object):
         r = ", ".join(self.METATAGS)
         return r
     
+    '''
+    Función para volver string el objeto
+    '''
     def __str__(self):
         mettags = ",".join(self.METATAGS)
         r=f"URL: {self.URL}"
@@ -50,15 +61,24 @@ class PaginaWeb(object):
         r+=f"\nMETA-TAGS: {mettags}"
         return r
 
-class SitioWeb(PaginaWeb):
+class Website(Page):
+    '''
+    Función que inicializa la clase.
+    '''
     def __init__(self, DOMINIO:str, CATEGORIA: str, PAGINAS: list):
         self.DOMINIO=DOMINIO
         self.CATEGORIA=CATEGORIA
         self.PAGINAS=PAGINAS
     
+    '''
+    Función para agregar páginas nuevas a la lista PAGINAS
+    '''
     def add_PAGINA(self, PAGINA):
         self.PAGINAS.append(PAGINA)
     
+    '''
+    Función para eliminar páginas de la lista PAGINAS
+    '''
     def del_PAGINA(self,PAGINA):
         try:
             self.PAGINAS.remove()
@@ -66,6 +86,9 @@ class SitioWeb(PaginaWeb):
             return f"{PAGINA} ha sido eliminado"
         return f"{PAGINA} no ha podido ser eliminado\n inexistente?"
 
+    '''
+    Grupo de getters para obtener los valores de las variables desde fuera de la clase
+    '''
     def get_DOMINIO(self):
         return self.DOMINIO
     def get_CATEGORIA(self):
@@ -78,12 +101,9 @@ class SitioWeb(PaginaWeb):
             r+="#########"
         return r
 
-    def buscador(self,obj):
-        for i in self.PAGINAS:
-            if obj == i:
-                return "Existe."
-        return "Aquí no esta."
-    
+    '''
+    Función para volver string el objeto
+    '''
     def __str__(self):
         r=f"DOMINIO: {self.DOMINIO}"
         r+=f"\nCATEGORIA: {self.CATEGORIA}"
@@ -93,3 +113,12 @@ class SitioWeb(PaginaWeb):
             r+=f"{i}"
             r+="\n"
         return r
+
+    '''
+    Función que es el buscador. Recibe un objeto y búsca en la lista PAGINAS por la coincidencia.
+    '''
+    def buscador(self,obj):
+        for i in self.PAGINAS:
+            if obj == i:
+                return "Existe."
+        return "Aquí no esta."

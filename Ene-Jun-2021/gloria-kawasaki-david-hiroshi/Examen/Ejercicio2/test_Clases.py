@@ -2,6 +2,9 @@ import unittest
 from Clases import PaginaWeb as pagWeb
 from Clases import SitioWeb as SitWeb
 
+'''
+Casos de prueba de la clase Clases
+'''
 class TestClases(unittest.TestCase):
     def test_Just_One_Page(self):
         self.url="www.facebook.com/Hiroshi"
@@ -22,6 +25,9 @@ class TestClases(unittest.TestCase):
         self.r+=f'\nMETA-TAGS: {self.mettags}'
         self.assertEqual(str(self.pagina),self.r)
 
+    '''
+    Para este caso de prueba, solo se agregó 4 veces la misma página para poblar la lista
+    '''
     def test_Just_One_SiteWeb_With_4_Pages(self):
         self.url="www.facebook.com/Hiroshi"
         self.ruta="/facebook/Usuarios/Hiroshi"
@@ -58,6 +64,9 @@ class TestClases(unittest.TestCase):
         self.r+=f"{self.pagina4}\n"
         self.assertEqual(str(self.sitio),self.r)
 
+    '''
+    Para este caso, se tuvo que poblar la lista con diferentes páginas para probar el buscador
+    '''
     def test_Buscador(self):
         self.url="www.facebook.com/Hiroshi"
         self.ruta="/facebook/Usuarios/Hiroshi"
