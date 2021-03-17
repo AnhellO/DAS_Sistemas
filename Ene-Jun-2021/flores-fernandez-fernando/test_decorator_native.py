@@ -1,6 +1,6 @@
 import unittest
 
-from decorator import *
+from decorator_native import *
 
 class DecoratorTest(unittest.TestCase):
     def test_character_without_equipment(self):

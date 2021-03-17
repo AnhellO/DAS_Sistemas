@@ -43,7 +43,7 @@ class ArmorConcreteDecorator(CharacterDecorator):
 
 class SwordConcreteDecorator(CharacterDecorator):
     def __init__(self, decorator: CharacterDecorator):
-        self.decorator = decorator
+        self._decorator = decorator
 
     def equip(self):
         if ( " Empty" in self._decorator.equip()):
