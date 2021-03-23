@@ -1,0 +1,3 @@
+este patron sirve para problemas que requieren la creación de una estructura de árbol. La gran característica del Composite es la capacidad para ejecutar métodos de forma recursiva 
+y construir objetos complejos a partir de otros más simples y similares entre sí, gracias a su  composición recursiva y su forma de árbol.
+El Composite es fácil de reconocer por los métodos de comportamiento que toman una instancia del mismo tipo abstracto/interfaz 
