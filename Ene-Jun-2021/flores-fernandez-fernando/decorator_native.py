@@ -56,10 +56,9 @@ def main():
     character = CharacterConcreteComponent(name = "Luxor")
     armor = ArmorConcreteDecorator(character)
     p = armor.equip()
-    
-   
+
+
     print(p)
 
 if __name__ == "__main__":
     main()
-    
