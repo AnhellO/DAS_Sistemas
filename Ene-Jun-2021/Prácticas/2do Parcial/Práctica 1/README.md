@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-* Expandir el conocimiento teórico/práctico sobre el tema de arquitectura de software
+* Expandir el conocimiento teórico sobre el tema de arquitectura de software
 * Conocer casos de uso reales de las arquitecturas de software más utilizadas
 * Revisar múltiples recursos para aprender sobre el uso de los diferentes patrones de arquitectura de software
 
