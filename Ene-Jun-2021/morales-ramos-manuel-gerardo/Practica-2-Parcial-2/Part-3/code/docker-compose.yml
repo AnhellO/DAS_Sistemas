@@ -1,0 +1,35 @@
+version: "3.8"
+
+services: 
+    
+    python:
+        container_name: python
+        build: .
+        volumes:
+            - .:/usr/src/app
+        networks: 
+            - myNetwork
+    
+    mongo:
+        container_name: mongo
+        image: mongo
+        ports: 
+            - "27018:27017"
+        logging: 
+            driver: none
+        networks: 
+            - myNetwork
+
+    redis:
+        image: redis:latest
+        container_name: redis
+        ports:
+          - 6379:6379
+        logging: 
+            driver: none
+        command: ["redis-server"]
+        networks: 
+            - myNetwork
+
+networks: 
+    myNetwork:
