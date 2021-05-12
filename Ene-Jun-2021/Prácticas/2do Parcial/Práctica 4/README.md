@@ -1,8 +1,8 @@
 # Práctica 4
 
-Esta práctica es totalmente opcional, pero se recomienda que se lleve a cabo para poder prácticar previo al 2do examen parcial y al proyecto de Ordinario, ya que te dará bases más sólidas para estos dos puntos mencionados anteriormente.
+Esta práctica es totalmente opcional, pero se recomienda que se lleve a cabo para poder prácticar previo al 2do examen parcial y al proyecto de ordinario, ya que te dará bases más sólidas para estos dos puntos mencionados anteriormente.
 
-Completarla en su totalidad y con todo funcionando correctamente y como se pide te otorgará **3** puntos extra sobre la calificación final de la materia.
+Completarla en su totalidad y con todo funcionando correctamente y como se pide te otorgará **3** puntos extra sobre la calificación final de la materia, pero aparte puedes obtener más puntos adicionales en base a cada ítem que implementes de la sección de "_Bonus_".
 
 ## Objetivo
 
