@@ -2,7 +2,7 @@
 
 Esta práctica es totalmente opcional, pero se recomienda que se lleve a cabo para poder prácticar previo al 2do examen parcial y al proyecto de ordinario, ya que te dará bases más sólidas para estos dos puntos mencionados anteriormente.
 
-Completarla en su totalidad y con todo funcionando correctamente y como se pide te otorgará **3** puntos extra sobre la calificación final de la materia, pero aparte puedes obtener más puntos adicionales en base a cada ítem que implementes de la sección de "_Bonus_".
+Completarla en su totalidad y con todo funcionando correctamente y como se pide te otorgará **3 puntos extra sobre la calificación final de la materia**, pero aparte puedes obtener más puntos adicionales en base a cada ítem que implementes de la sección de "_Bonus_".
 
 ## Objetivo
 
@@ -47,6 +47,6 @@ Cada ítem que implementes de la siguiente lista te dará **1** punto adicional 
 * Si implementaste el CRUD, llevar a cabo pruebas de cada una de las operaciones con `Postman` o `Insomnia` y adjuntar un _export_ con todas las peticiones que hiciste de prueba
 * Implementar la solución utilizando `Domain Driven Design`
 * Agregar una suite robusta de tests unitarios y/o funcionales
-* Agregar documentación y comentarios en el código. Diagramas de la arquitectura de la aplicación, UMLs, docblocks, etcétera
+* Agregar documentación y comentarios en el código (diagramas de la arquitectura de la aplicación, UMLs, docblocks, etcétera)
 * Agregar un frontend para la aplicación a través de un nuevo contenedor de `Docker`
 * Si agregaste un frontend y agregaste el CRUD, que este provea la funcionalidad completa de `CRUD`  desde la misma `GUI`
