@@ -25,7 +25,7 @@ Al final cada elemento del equipo deberá de subir un link al repositorio del pr
 
 ### Desarrollo
 
-Crear un archivo `docker-compose.yml` por medio del cual se instancien **4** contenedores:
+Crear un archivo `docker-compose.yml` por medio del cual se instancien **5** contenedores:
 
 #### Contenedor A - DB
 
@@ -49,11 +49,15 @@ Crear un archivo `docker-compose.yml` por medio del cual se instancien **4** con
 * Este contenedor estará a cargo de ejecutar una pequeña "_web-app_" que muestre un listado de todos los libros y de las otras entidades de la librería que hayas agregado o generado por medio del contenedor `C` en formato `JSON`
 * Para cada uno de los endpoints/recursos que hayas agregado, habilita las operaciones `CRUD` por medio del mismo endpoint, es decir, ser capaz de hacer un request de tipo [`HTTP - POST`](https://developer.mozilla.org/es/docs/Web/HTTP/Methods/POST) a esa ruta a través de nuestro API, de tal manera que alguien que consuma la "_web-app_" también pueda crear registros por medio de la misma. Puedes revisar los laboratorios 11 y 12 del repositorio de [docker-workshop](https://github.com/AnhellO/docker-workshop/tree/main/laboratorios) como referencia a este punto en específico. Asegúrate de que para cada endpoint/recurso se pasen todos los datos necesarios para poder llevar a cabo operaciones CRUD en la BD con éxito. Recuerda que puedes hacer pruebas para este punto en específico con algunas herramientas gratuitas como [`Postman`](https://www.postman.com/) o [`Insomnia`](https://insomnia.rest/)
 
+#### Contenedor E - Frontend
+
+* Agregar un contenedor extra `E` con un frontend (GUI) que consuma la API del contenedor `D`. Acá puedes utilizar tecnologías como `HTML`, `CSS`, `Javascript`, `Bootstrap`, `Vue`, `Angular` o `ReactJS` para hacer más rápido este proceso
+* Queda a tu imaginación y creatividad el como luzca la interfaz final :wink:
+
 #### Opcional - Puntos Extra
 
 Los siguientes puntos son opcionales, sin embargo implementarlos provee **1** punto extra por cada uno sobre la calificación total final.
 
-* Agregar un contenedor extra `E` con un frontend (GUI) que consuma la API del contenedor `D`. Acá puedes utilizar tecnologías como `HTML`, `CSS`, `Javascript`, `Bootstrap`, `Vue`, `Angular` o `ReactJS` para hacer más rápido este proceso :wink:
 * Agregar tests unitarios y de integración para el proyecto
 * Utilizar [Swagger](https://swagger.io/) en tu proyecto y agregar un contenedor nuevo con el [`Swagger UI`](https://hub.docker.com/r/swaggerapi/swagger-ui) de la aplicación
 

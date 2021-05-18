@@ -26,7 +26,7 @@ Al final cada elemento del equipo deberá de subir un link al repositorio del pr
 
 ### Desarrollo
 
-Crear un archivo `docker-compose.yml` por medio del cual se instancien **4** contenedores:
+Crear un archivo `docker-compose.yml` por medio del cual se instancien **5** contenedores:
 
 #### Contenedor A - DB
 
