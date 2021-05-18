@@ -52,7 +52,7 @@ Crear un archivo `docker-compose.yml` por medio del cual se instancien **5** con
 #### Contenedor E - Frontend
 
 * Agregar un contenedor extra `E` con un frontend (GUI) que consuma la API del contenedor `D`. Acá puedes utilizar tecnologías como `HTML`, `CSS`, `Javascript`, `Bootstrap`, `Vue`, `Angular` o `ReactJS` para hacer más rápido este proceso
-* Queda a tu imaginación y creatividad el como luzca la interfaz final :wink:
+* Queda a tu criterio, imaginación y creatividad el cómo luzca la interfaz final :wink:
 
 #### Opcional - Puntos Extra
 
