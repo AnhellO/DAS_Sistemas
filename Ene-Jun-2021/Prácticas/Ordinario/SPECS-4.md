@@ -50,11 +50,17 @@ Crear un archivo `docker-compose.yml` por medio del cual se instancien **4** con
 * Este contenedor estará a cargo de ejecutar una pequeña "_web-app_" que muestre un listado de todos los libros y de las otras entidades de la librería que hayas agregado o generado por medio del contenedor `C` en formato `JSON`
 * Para cada uno de los endpoints/recursos que hayas agregado, habilita las operaciones `CRUD` por medio del mismo endpoint, es decir, ser capaz de hacer un request de tipo [`HTTP - POST`](https://developer.mozilla.org/es/docs/Web/HTTP/Methods/POST) a esa ruta a través de nuestro API, de tal manera que alguien que consuma la "_web-app_" también pueda crear registros por medio de la misma. Puedes revisar los laboratorios 11 y 12 del repositorio de [docker-workshop](https://github.com/AnhellO/docker-workshop/tree/main/laboratorios) como referencia a este punto en específico. Asegúrate de que para cada endpoint/recurso se pasen todos los datos necesarios para poder llevar a cabo operaciones CRUD en la BD con éxito. Recuerda que puedes hacer pruebas para este punto en específico con algunas herramientas gratuitas como [`Postman`](https://www.postman.com/) o [`Insomnia`](https://insomnia.rest/)
 
+#### Contenedor E - Message Queue Broker
+
+* Este contenedor se encargará de ejecutar un message queue broker por medio de [RabbitMQ](https://www.rabbitmq.com/)
+* El nuevo servicio pasará a ser el intermediario entre el contenedor `D` del API y el contenedor `A` de la base de datos, de tal manera que habrá que sobreescribir un poco la lógica de negocio para que las operaciones `CRUD` sean ahora asíncronas por medio del contenedor `E`. Por ejemplo, al enviar peticiones `POST` para crear un nuevo registro estas ahora pasarían por `RabbitMQ` primero, y este sería el que se encargaría de enviarlo al contenedor/servicio correcto que este suscrito a un tipo concreto de mensajes, en este caso al contenedor de la base datos. Pueden crear un endpoint/recurso nuevo para este punto, de tal manera que la aplicación tenga soporte tanto síncrono como asíncrono, o bien, sobreescribir la funcionalidad del endpoint original, como sea más sencillo para ustedes
+* Como tip, utiliza el patrón [queue/workers](queue-workers-microservices-team.png) para la comunicación intermedia entre los contenedores `D` y `A` :wink:
+
 #### Opcional - Puntos Extra
 
 Los siguientes puntos son opcionales, sin embargo implementarlos provee **1** punto extra por cada uno sobre la calificación total final.
 
-* Agregar un contenedor extra `E` con un frontend (GUI) que consuma la API del contenedor `D`. Acá puedes utilizar tecnologías como `HTML`, `CSS`, `Javascript`, `Bootstrap`, `Vue`, `Angular` o `ReactJS` para hacer más rápido este proceso :wink:
+* Agregar un contenedor extra `F` con un frontend (GUI) que consuma la API del contenedor `D`. Acá puedes utilizar tecnologías como `HTML`, `CSS`, `Javascript`, `Bootstrap`, `Vue`, `Angular` o `ReactJS` para hacer más rápido este proceso :wink:
 * Agregar tests unitarios y de integración para el proyecto
 * Utilizar [Swagger](https://swagger.io/) en tu proyecto y agregar un contenedor nuevo con el [`Swagger UI`]((https://hub.docker.com/r/swaggerapi/swagger-ui)) de la aplicación
 
