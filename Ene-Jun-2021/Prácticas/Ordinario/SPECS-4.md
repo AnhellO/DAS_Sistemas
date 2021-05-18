@@ -62,7 +62,7 @@ Los siguientes puntos son opcionales, sin embargo implementarlos provee **1** pu
 
 * Agregar un contenedor extra `F` con un frontend (GUI) que consuma la API del contenedor `D`. Acá puedes utilizar tecnologías como `HTML`, `CSS`, `Javascript`, `Bootstrap`, `Vue`, `Angular` o `ReactJS` para hacer más rápido este proceso :wink:
 * Agregar tests unitarios y de integración para el proyecto
-* Utilizar [Swagger](https://swagger.io/) en tu proyecto y agregar un contenedor nuevo con el [`Swagger UI`]((https://hub.docker.com/r/swaggerapi/swagger-ui)) de la aplicación
+* Utilizar [Swagger](https://swagger.io/) en tu proyecto y agregar un contenedor nuevo con el [`Swagger UI`](https://hub.docker.com/r/swaggerapi/swagger-ui) de la aplicación
 
 ### Conclusión
 
