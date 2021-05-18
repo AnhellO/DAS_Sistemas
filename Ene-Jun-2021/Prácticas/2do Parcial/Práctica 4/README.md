@@ -48,5 +48,10 @@ Cada ítem que implementes de la siguiente lista te dará **1** punto adicional 
 * Implementar la solución utilizando `Domain Driven Design`
 * Agregar una suite robusta de tests unitarios y/o funcionales
 * Agregar documentación y comentarios en el código (diagramas de la arquitectura de la aplicación, UMLs, docblocks, etcétera)
+* Utilizar [Swagger](https://swagger.io/) en tu proyecto y agregar un contenedor nuevo con el [`Swagger UI`]((https://hub.docker.com/r/swaggerapi/swagger-ui)) de la aplicación
 * Agregar un frontend para la aplicación a través de un nuevo contenedor de `Docker`
 * Si agregaste un frontend y agregaste el CRUD, que este provea la funcionalidad completa de `CRUD`  desde la misma `GUI`
+
+## Deadline
+
+* `Domingo 6 de Junio a las 11:59pm`
