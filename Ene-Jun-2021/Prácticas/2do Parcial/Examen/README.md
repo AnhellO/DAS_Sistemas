@@ -11,7 +11,7 @@
 
 #### Ejercicio 1
 
-* ¿Cuál es el comando que necesito ejecutar para poder levantar un contenedor de `Docker` que corra un servidor de [`MongoDB`](https://hub.docker.com/_/mongo) versión **4.2** y que cumpla con los siguientes puntos?
+¿Cuál es el comando que necesito ejecutar para poder levantar un contenedor de `Docker` que corra un servidor de [`MongoDB`](https://hub.docker.com/_/mongo) versión **4.2** y que cumpla con los siguientes puntos?
 
 * Que el contenedor se llame `mongo_db`
 * Que el contenedor se mantenga en ejecución
