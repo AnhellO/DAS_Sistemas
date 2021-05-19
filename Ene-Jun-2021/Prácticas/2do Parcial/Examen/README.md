@@ -2,7 +2,7 @@
 
 ## Previo
 
-* Desarrolla los ejemplos de código en tu computadora y envíalos por correo electrónico al email de <asjz2892@gmail.com>. La carpeta del examen tendrá que llamarse `../Segundo Parcial/..` y dentro de esta carpeta deberá de venir
+* Desarrolla los ejemplos de código en tu computadora y envíalos por correo electrónico al email de <asjz2892@gmail.com>. La carpeta del examen tendrá que llamarse `../Segundo Parcial/..` y dentro de esta carpeta deberá de venir una carpeta dedicada para cada ejercicio, por ejemplo `../Segundo Parcial/Ejercicio-1/..`
 * Si el ejemplo solamente necesita comandos escritos entonces agregalos en un archivo `.md` que anexes por separado dentro de tu carpeta con las soluciones al examen. También es importante adjuntar las demás evidencias que se piden por ejercicio.
 
 ## Especificaciones y Requerimientos
@@ -38,7 +38,13 @@ Anexa los comandos utilizados para llevar a cabo este ejercicio, así como scree
 
 #### Ejercicio 4
 
-* Dado el siguiente proyecto
+* Toma el siguiente proyecto de referencia y ejecútalo en tu máquina local: <https://github.com/nickjj/docker-flask-example>
+  * Análizalo con detenimiento y estúdialo un poco
+  * Asegúrate de leer la información del `README.md` sobre cómo funciona, y de jugar y experimentar un poco con él
+* Elabora el diagrama de arquitectura de la aplicación
+  * Puedes hacerlo a mano o bien utilizar alguna herramientas externa como <https://app.diagrams.net/>
+  * Adjunta el diagrama como un archivo `.jpg` o `.png` en la carpeta de este ejercicio
+  * Adicionalmente adjunta un archivo `README.md` específico para este ejercicio en el cual justifiques tu diagrama de arquitectura y el por qué de la forma en que decidiste diseñarlo
 
 #### Ejercicio 5
 
