@@ -2,7 +2,7 @@
 
 ## Previo
 
-* Desarrolla los ejemplos de código en tu computadora y envíalos por correo electrónico al email de <asjz2892@gmail.com>. La carpeta del examen tendrá que llamarse `../Segundo Parcial/..` y dentro de esta carpeta deberá de venir una carpeta dedicada para cada ejercicio, por ejemplo `../Segundo Parcial/Ejercicio-1/..`
+* Desarrolla los ejemplos de código en tu computadora y envíalos por correo electrónico al email de <asjz2892@gmail.com> por medio de un achivo comprimido `.zip`. La carpeta del examen tendrá que llamarse `../Segundo Parcial/..` y dentro de esta carpeta deberá de venir una carpeta dedicada para cada ejercicio, por ejemplo `../Segundo Parcial/Ejercicio-1/..`
 * Si el ejemplo solamente necesita comandos escritos entonces agregalos en un archivo `.md` que anexes por separado dentro de tu carpeta con las soluciones al examen. También es importante adjuntar las demás evidencias que se piden por ejercicio.
 
 ## Especificaciones y Requerimientos
