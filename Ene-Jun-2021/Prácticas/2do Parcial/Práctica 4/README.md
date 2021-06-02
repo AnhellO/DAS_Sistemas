@@ -54,4 +54,4 @@ Cada ítem que implementes de la siguiente lista te dará **1** punto adicional 
 
 ## Deadline
 
-* `Domingo 6 de Junio a las 11:59pm`
+* `Sábado 12 de Junio a las 11:59pm`

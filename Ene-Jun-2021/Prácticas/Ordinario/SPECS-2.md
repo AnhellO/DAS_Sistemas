@@ -86,4 +86,4 @@ Finalmente, agreguen un video en equipo, en donde se exponga a detalle su proyec
 
 ## Deadline
 
-* `Domingo 6 de Junio a las 12:00pm`
+* `Sábado 12 de Junio a las 11:59pm`
