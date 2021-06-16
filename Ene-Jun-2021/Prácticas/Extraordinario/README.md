@@ -91,4 +91,4 @@ Crea el diagrama de arquitectura para el ejercicio anterior. Puedes utilizar la 
 
 ## Deadline
 
-* `Sábado 19 de Junio a las 11:59pm`
+`Sábado 19 de Junio a las 11:59pm`
