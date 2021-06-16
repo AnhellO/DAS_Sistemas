@@ -52,7 +52,7 @@ Partiendo del diagrama UML propuesto en el archivo [`memento_uml`](memento_uml.p
 
 ### Ejercicio 7
 
-Partiendo del diagrama UML propuesto en el archivo [`facade_uml`](ejercicio-8/facade_uml.png), y de las clases existentes en la carpeta de [`facade/`](facade/), implementa el patrón de diseño `Facade` respetando la jerarquía de clases, atributos y funciones definida en el diagrama `UML`.
+Partiendo del diagrama UML propuesto en el archivo [`facade_uml`](ejercicio-8/facade_uml.png), y de las clases existentes en la carpeta de [`ejercicio-8/`](ejercicio-8/), implementa el patrón de diseño `Facade` respetando la jerarquía de clases, atributos y funciones definida en el diagrama `UML`.
 
 ### Ejercicio 8
 
