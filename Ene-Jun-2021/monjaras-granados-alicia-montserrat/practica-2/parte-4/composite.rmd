@@ -1,0 +1,18 @@
+# Composite
+## También llamado: Objeto compuesto, Object Tree
+
+El patrón de diseño Composite se define por la manera en la que trabaja es decir todos los objetos que tengan los van a ordenar en una estructura de árbol, pero al momento de ejecutar este patrón los trabaja de manera individual.
+
+## Estructura
+- La interfaz llamada Componente que describe los metodos que son comunes a elementos del árbol.
+- La clase Leaf define el comportamiento que se va a realizar siempre y cuando no depandan de otra rama.
+- La clase Container es donde van todos los hijos del árbol y es la que decide que operación va a realizar cada uno, y en el cual recibe un arreglo de tipo interfaz y tiene las siguentes funciones :
+- - add(que revibe un dato de tipo interfaz)
+- - remove(recibe un dato de tipo interfaz)
+- - getChildren() es una función que retorna un arreglo de tipo interfaz
+- - y ela función excute() que es el método que hereda de la interfaz
+- Cliente: el cliente decide que parte del árbol se va a ejecutar
+-
+
+Comparten la misma interfaz, se puede dividir por los nodos simples(leaf) y los nodos compuestos(container). Puedes trabajar con estructuras de árbol complejas con mayor comodidad: utilizando la recursión.El patrón de diseño Composite se puede relacionar con varios patrones por ejemplo el de iteradores,chain of reponsability entre otros.
+

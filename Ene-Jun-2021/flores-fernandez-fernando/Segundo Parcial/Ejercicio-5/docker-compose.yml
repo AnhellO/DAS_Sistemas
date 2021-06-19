@@ -1,0 +1,60 @@
+version: "3.8"
+services:
+
+    redis1:
+        image: redis:latest
+        hostname: redis
+        container_name: redis_db_1
+        ports:
+          - 6379:6379
+        networks:
+            ejecicio-2:
+                aliases: 
+                    - redis_1
+
+    redis2:
+        image: redis:latest
+        hostname: redis
+        container_name: redis_db_2
+        ports:
+          - 6380:6379
+        networks:
+            ejecicio-2:
+                aliases: 
+                    - redis_2
+
+    redis3:
+        image: redis:latest
+        hostname: redis
+        container_name: redis_db_3
+        ports:
+          - 6381:6379
+        networks:
+          ejecicio-2:
+                aliases: 
+                    - redis_3           
+        
+    redis-commander:
+        container_name: redis_dbms
+        hostname: redis
+        image: rediscommander/redis-commander:latest
+        restart: always
+        environment:
+        - REDIS_HOSTS=172.21.0.2:redis_db_1:6379,172.21.0.3:redis_db_2:6379,172.21.0.4:redis_db_3:6379 
+        - HTTP_USER=DASistemas
+        - HTTP_PASSWORD=2do-parcial!
+        ports:
+        - 8081:8081  
+        networks:
+            ejecicio-2:
+                aliases: 
+                    - redis_commander    
+                 
+networks:
+    ejecicio-2: 
+        name: redis_network
+        driver: bridge
+        ipam:
+            driver: default
+
+        

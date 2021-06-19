@@ -1,0 +1,48 @@
+version: "3.8"
+services:
+
+    redis1:
+        image: redis:latest
+        hostname: redis
+        container_name: redis_db_1
+        ports:
+          - 6379:6379
+        networks:
+          - 'practica2' 
+
+    redis2:
+        image: redis:latest
+        hostname: redis
+        container_name: redis_db_2
+        ports:
+          - 6380:6379
+        networks:
+          - 'practica2' 
+
+    redis3:
+        image: redis:latest
+        hostname: redis
+        container_name: redis_db_3
+        ports:
+          - 6381:6379
+        networks:
+          - 'practica2'           
+        
+    redis-commander:
+        container_name: redis_dbms
+        hostname: redis
+        image: rediscommander/redis-commander:latest
+        restart: always
+        environment:
+        - REDIS_HOSTS=local:localhost:6379,myredis:10.10.20.30 
+        - HTTP_USER=DASistemas
+        - HTTP_PASSWORD=2do-parcial!
+        ports:
+        - "8081:8081"  
+        networks:
+            - 'practica2'    
+                 
+networks:
+    practica2: {}
+
+        

@@ -1,0 +1,7 @@
+Comandos:
+1.- docker build -t kryz73/static_flask .
+2.- docker run -d -p 5000:8000 --name prueba kryz73/static_flask
+3.- docker push kryz73/static_flask:latest
+
+Docker Hub:
+1.- https://hub.docker.com/r/kryz73/static_flask

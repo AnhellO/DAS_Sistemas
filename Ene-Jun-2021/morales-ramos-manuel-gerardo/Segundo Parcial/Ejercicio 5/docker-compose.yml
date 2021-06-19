@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+    
+    # py-conatiner:
+    #     build: .
+    #     depends_on: 
+    #         - redis
+    #     networks: 
+    #         - app
+    
+    redis:
+        image: redis
+        volumes: 
+            - redis_voume:/data
+        networks:
+            - app
+        ports: 
+            - 6379:6379
+        container_name: redis
+
+volumes:
+    redis_voume:
+
+networks:
+    app:
