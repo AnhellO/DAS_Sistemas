@@ -1,0 +1,48 @@
+version: "3.8"
+services:
+
+    redis1:
+        image: redis
+        hostname: redis
+        container_name: redis_db_1
+        ports:
+          - 6350:6379
+        networks:
+          - 'redisNetwork' 
+
+    redis2:
+        image: redis
+        hostname: redis
+        container_name: redis_db_2
+        ports:
+          - 63851:6379
+        networks:
+          - 'redisNetwork' 
+
+    redis3:
+        image: redis
+        hostname: redis
+        container_name: redis_db_3
+        ports:
+          - 6352:6379
+        networks:
+          - 'redisNetwork'           
+        
+    redis-commander:
+        container_name: redis_dbms
+        hostname: redis
+        image: rediscommander/redis-commander:latest
+        restart: always
+        environment:
+        - REDIS_HOSTS=mylocal1:172.20.0.2:6379,mylocal2:172.20.0.3,mylocal3:172.20.0.4:6379 
+        - HTTP_USER=DASistemas
+        - HTTP_PASSWORD=2do-parcial!
+        ports:
+        - "8081:8081"  
+        networks:
+            - 'redisNetwork'    
+                 
+networks:
+    redisNetwork: {}
+
+        

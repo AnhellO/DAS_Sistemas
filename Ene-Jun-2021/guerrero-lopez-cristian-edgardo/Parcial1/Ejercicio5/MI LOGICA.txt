@@ -1,0 +1,9 @@
+Yo comprendi que era de muy facil uso manejarlo de manera seriada pense y pense en como podria moverle, asi que una buena googleada dividio las funciones en otras de esta forma encontramos especificamente algun fallo.
+No se si fue la mejor manera de implementarlo pero a como entendi hice algo xd
+
+¿Qué sucedería si quiero agregar otro formato de serialización más complejo como XML o Yaml?
+Seria que en algun momento al cambiar de formato o agregar uno distinto, se crearia una fucnion que despues de pasar los test se refactorizara y que la misma funcion hiciera la chamba de agregar el formato especifico
+
+¿Qué sucedería si quiero soporte para serialización a otros objetos aparte de los instanciados por la clase Usuario?
+Tenemos funciones modulares para serializar necesitamos un metodo puntual.
+Haria una nueva clase con la serializacion de metodo y esa clase seria mi modulo de serializacion podremos usar objetos por las funciones modulares.

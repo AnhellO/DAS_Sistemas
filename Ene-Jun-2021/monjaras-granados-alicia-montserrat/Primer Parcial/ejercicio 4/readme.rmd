@@ -1,0 +1,21 @@
+# EJERCICIO 4
+
+En el ejercicio 4 lo primero que hice fue realizar la estructura del patron chain pof responsability:
+
+## Estructura
+- CajeroHandler: Interfaz comun a los manejadores concretos, los métodos en común son: next_successor que recibe una variable de tipo CajeroHandle y handle que recibe la cantidad.
+- BaseCajeroHandler: (Segmentos de código que no puede alterarse) recibe la interfaz.
+- Manejadores Conretos :  son los que procesan el código. 
+--Cajero50ConcreteHandler
+--Cajero20ConcreteHandler
+--Cajero10ConcreteHandler
+Cada uno tiene su ManejadorConcretp tiene su contructor donde se define el billete que le corresponde y en la función handle realiza las operaciones que te permiten dar con el resultado de la cantidad de billestes que tendrán
+- CajeroATMChain: es el cliente:  declara  la lógica de como será procesada la información donde declara los manejadores que existen y define como se usará el manejador.
+
+
+
+La función main() manda a llamar la clase del cliente donde se estructuro la cadena, define la cantidad de billetes a cambiar y por cual manejador pasar
+if __name__ == "__main__": manda a llamar la función main para que se ejecute lo ingresado.
+
+
+

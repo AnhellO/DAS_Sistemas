@@ -1,0 +1,32 @@
+version: '2'
+services:
+  mongodb:
+    image: mongo
+    container_name: mongo_compose
+    restart: always
+    volumes:
+      - ./volumes/mongodb:/volumes/mongodb
+    ports:
+      - 27017:27017
+    networks:
+      - ejercicio10
+
+  mongo-express:
+    image: mongo-express
+    container_name: mexpress_compose
+    restart: always
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: DASistemas
+      ME_CONFIG_BASICAUTH_PASSWORD: ex-especial567
+    ports:
+      - 8081:8081
+    links:
+      - mongodb
+    networks:
+      - ejercicio10
+    depends_on:
+      - mongodb
+
+networks:
+  ejercicio10:
+      driver: bridge

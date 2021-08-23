@@ -1,0 +1,2 @@
+# Explicacion
+En este repositorio tenemos un proyecto elaborado con una serie de competencias para su implementacion, empezando por contenedores de docker, asi como como python, SQL, flesk, redis, cada uno conformado para poder tener una pagina web conectada a una base de datos incorporada con redis para el almacenamiento de los datos asi como la configuración de la pagina misma, cada parte estaba bien explicada puesto que existian anotaciones para comprender un poco mejor la forma de trabajar por parte de este proyecto que al parecer es en conjunto.
