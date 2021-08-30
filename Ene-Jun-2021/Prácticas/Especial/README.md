@@ -21,7 +21,7 @@ Crea un archivo `docker-compose.yml` que ejecute **4** contenedores:
   - Para almacenar los datos puedes utilizar cualquier motor de base de datos que gustes, desde `SQLite` hasta `MySQL` o `MongoDB`
 - El **2do contenedor** ejecutará un DBMS el cual se llame `dbms` y que se conectará al contenedor de `db` creado en el punto anterior. Este contenedor fungirá como el DBMS de la aplicación. Otro requisito más es que este cliente tiene que estar protegido por medio de las siguientes credenciales:
   - Usuario: `das-sistemas`
-  - Password: `practica-4-2021!`
+  - Password: `eespecial-2021!`
 - El **3er contenedor** ejecutará un programa que lleve a cabo lo siguiente:
   - Que lea el archivo XML [`people.xml`](people.xml) adjunto
   - Que guarde cada nodo de `<person>` en la base de datos del **1er contenedor**. Cada nodo tendrá que ser un registro por separado, pero todos estos registros pueden vivir en una sola colección/tabla
@@ -40,7 +40,7 @@ Crea un archivo `docker-compose.yml` que ejecute **4** contenedores:
 
 ## Bonus
 
-Cada ítem que implementes de la siguiente lista te dará **1** punto adicional sobre la cantidad de puntos extra que ya te da el completar la práctica con su correcto funcionamiento.
+Cada ítem que implementes de la siguiente lista te dará **1** punto adicional sobre la cantidad de puntos que ya te da el completar la práctica con su correcto funcionamiento.
 
 - Utilizar `Python` o `GO` como lenguaje principal
 - Utilizar `MongoDB` como base de datos
