@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+    db:
+        image: mysql:8
+        container_name: database_mysql
+        ports:
+        - "4444:4444"
+        networks:
+        - custom
+        environment:
+            MYSQL_ROOT_PASSWORD: "root"
+            MYSQL_USER: "extra"
+            MYSQL_PASSWORD: "ordinario123!"
+            MYSQL_DATABASE: "pruebas"
+
+    adminer:
+        image: adminer
+        restart: on-failure:5
+        container_name: adminer
+        ports:
+        - "8080:8080"
+        networks:
+        - custom
+        depends_on:
+        - db       
+
+networks:
+  custom:
+        driver: bridge
