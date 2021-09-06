@@ -1,0 +1,51 @@
+version: '2'
+services:
+        db:
+                image: mongo
+                container_name: db
+                restart: always
+                environment:
+                        MONGO_INITDB_ROOT_USERNAME: das-sistemas
+                        MONGO_INITDB_ROOT_PASSWORD: eespecial-2021!
+                volumes:
+                                - ./volumes/db:/volumes/db        
+                ports:
+                        - 27017:27017
+                networks:
+                        - person
+        dbms:
+                image: mongo-express
+                container_name: dbms
+                restart: always
+                ports:
+                        - 8081:8081
+                networks:
+                        - person
+                depends_on:
+                        - db
+                environment:
+                        ME_CONFIG_MONGODB_ADMINUSERNAME: das-sistemas
+                        ME_CONFIG_MONGODB_ADMINPASSWORD: eespecial-2021!
+                        ME_CONFIG_MONGODB_URL: mongodb://das-sistemas:eespecial-2021!@db:27017/
+        scraper:
+                container_name: scraper
+                build: ./app
+                networks:
+                        - person
+        api:
+                container_name: api
+                build: ./app
+                restart: always
+                networks:
+                        - person
+                links:
+                        - db
+                ports:
+                        - "7777:7777"
+                depends_on:
+                        - scraper
+                command: ["python", "./api.py"]                  
+
+networks:
+        person:
+                driver: bridge
