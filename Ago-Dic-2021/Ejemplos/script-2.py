@@ -1,4 +1,4 @@
-# Retomando clase pasada!
+# Retomando clase pasada 2021-08-30!
 import string
 
 # Estructuras de datos
