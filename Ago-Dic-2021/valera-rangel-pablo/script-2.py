@@ -145,7 +145,7 @@ division(5, 5)
 
 # Clases y objetos
 
-
+"""
 class Calculadora:
     #pass #ESTO SIRVE PARA QUE NO TIRE ERROR ES COMO PA DECIRLE QUE NO HAGA NADA AUN#
     # Magic Methods
@@ -164,13 +164,59 @@ class Calculadora:
 
     def division(self):
         return(self.a / self.b)
-    
+
     def __str__(self):
-        return '### Numeros ###\nA: {self.a}\nB: {self.b}'
-        
-    mi_calculadora = Calculadora(5,5)
-    print(mi_calculadora.suma())
-    print(mi_calculadora.resta())
-    print(mi_calculadora.multiplicacion())
-    print(mi_calculadora.division())
-    print(mi_calculadora)
+        return f'### Numeros ###\nA: {self.a}\nB: {self.b}'
+
+
+mi_calculadora = Calculadora(5, 5)
+print(mi_calculadora.suma())
+print(mi_calculadora.resta())
+print(mi_calculadora.multiplicacion())
+print(mi_calculadora.division())
+print(mi_calculadora)
+"""
+
+#Clase 6 de Septiembre 2021#
+
+
+class Calculadora:
+    #pass #ESTO SIRVE PARA QUE NO TIRE ERROR ES COMO PA DECIRLE QUE NO HAGA NADA AUN#
+    # Magic Methods
+    def __init__(self, lista_numeros: list) -> None:
+        self.lista_numeros = lista_numeros
+
+    def suma(self) -> int:
+        suma = 0
+        for i in self.lista_numeros:
+            suma += i
+        return(suma)
+
+    def resta(self) -> int:
+        resta = 0
+        for i in self.lista_numeros:
+            resta -= i
+        return resta
+
+    def multiplicacion(self) -> int:
+        multiplicacion = 0
+        for i in self.lista_numeros:
+            multiplicacion *= i
+        return multiplicacion
+
+    def division(self) -> float:
+        division = 0
+        for i in self.lista_numeros:
+            division *= i
+        return division
+
+    def __str__(self):
+        return f'### Numeros ###\nA: {self.lista_numeros}'
+
+
+mi_calculadora = Calculadora(5, 5)
+mi_calculadora_2 = Calculadora(5, 5, 2)
+print(mi_calculadora_2.suma())
+print(mi_calculadora_2.resta())
+print(mi_calculadora_2.multiplicacion())
+print(mi_calculadora_2.division())
