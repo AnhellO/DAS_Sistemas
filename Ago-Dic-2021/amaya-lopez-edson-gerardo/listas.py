@@ -148,33 +148,3 @@ suma(5, 5)
 resta(5, 5)
 multiplicacion(5, 5)
 division(5, 5)
-
-#Clases y objetos
-class Calculadora:
-    #Magic methods
-    def __init__(self, a, b) -> None:
-        self.a = a
-        self.b = b
-
-    #Funciones
-    def suma(self):
-        return (self.a + self.b)
-
-    def resta(self):
-        return (self.a - self.b)
-
-    def multiplicacion(self):
-        return (self.a * self.b)
-
-    def division(self):
-        return (self.a / self.b)
-
-    def __str__(self) -> str:
-        return 'Numeros: {}, {}'.format(self.a, self.b)
-
-mi_calculadora = Calculadora(5, 5)
-print(mi_calculadora.suma())
-print(mi_calculadora.resta())
-print(mi_calculadora.multiplicacion())
-print(mi_calculadora.division())
-print(mi_calculadora)
