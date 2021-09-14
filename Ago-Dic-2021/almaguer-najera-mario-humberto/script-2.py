@@ -152,29 +152,40 @@ division(5, 5)
 #Clases y objetos
 class Calculadora:
     #Magic methods
-    def __init__(self, a, b) -> None:
-        self.a = a
-        self.b = b
+    def __init__(self, *lista_numeros) -> None:
+        self.lista_numeros = lista_numeros
 
     #Funciones
-    def suma(self):
-        return (self.a + self.b)
+    def suma(self) -> int:
+        suma = 0
+        for i in self.lista_numeros:
+            suma += i
+        return suma
 
     def resta(self):
-        return (self.a - self.b)
+        resta = 0
+        for i in self.lista_numeros:
+            resta -= i
+        return resta
 
     def multiplicacion(self):
-        return (self.a * self.b)
+        mult = 0
+        for i in self.lista_numeros:
+            mult += i
+        return mult
 
     def division(self):
-        return (self.a / self.b)
+        div = 0
+        for i in self.lista_numeros:
+            div += i
+        return div
 
     def __str__(self) -> str:
-        return 'Numeros: {}, {}'.format(self.a, self.b)
+        return 'Numeros: {}'.format(self.lista_numeros)
 
-mi_calculadora = Calculadora(5, 5)
-print(mi_calculadora.suma())
-print(mi_calculadora.resta())
-print(mi_calculadora.multiplicacion())
-print(mi_calculadora.division())
-print(mi_calculadora)
+mi_calculadora_2 = Calculadora(5, 5, 2)
+print(mi_calculadora_2.suma())
+print(mi_calculadora_2.resta())
+print(mi_calculadora_2.multiplicacion())
+print(mi_calculadora_2.division())
+print(mi_calculadora_2)
