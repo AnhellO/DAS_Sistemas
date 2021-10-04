@@ -1,0 +1,27 @@
+{% extends "indexBase.html" %}
+{% block content %}
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>  
+        <th>NAME</th>  
+        <th>COMPANY</th>  
+        <th>EMAIL</th>  
+        <th>SHOW</th>  
+      </tr>
+    </thead>
+    {% for persona in personas %}
+    
+    <tr>
+      <td>{{persona.id}}</td>
+      <td>{{persona.first_name+' '+persona.last_name}}</td>
+      <td>{{persona.company}}</td>
+      <td>{{persona.email}}</td>
+      <td>
+        <a href='/people/{{persona.id}}'>show</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  
+{% endblock %}
