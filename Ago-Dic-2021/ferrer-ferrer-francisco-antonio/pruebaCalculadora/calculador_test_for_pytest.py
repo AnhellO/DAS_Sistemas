@@ -1,7 +1,7 @@
 import unittest
 
 from calculator import *
-        ####py -m pytest pruebaCalculadora/calculador_test.py
+        #py -m pytest --version
 class CalculatorTest(unittest.TestCase):
 
     def test_suma_dos_numeros(self):
