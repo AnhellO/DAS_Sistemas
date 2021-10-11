@@ -1,0 +1,27 @@
+print("========== ejercicio 9-14 ==========")
+from random import randint
+
+class Die():
+    def __init__(self,cont):
+        """Initialize attributes of the parent class."""
+        self.sides=6
+        self.cont = cont
+    
+    def roll_die (self):
+        for i in range(self.cont):
+            x = randint(1, self.sides)
+            print(x)
+print("dado de 6 lados")
+die = Die(10)
+die.sides = 6
+die.roll_die()
+print("dado de 10 lados")
+#dado de 20 lados
+die1 = Die(10)
+die1.sides = 10
+die1.roll_die()
+print("dado de 20 lados")
+#20 lados
+die2 = Die(10)
+die2.sides = 20
+die2.roll_die()

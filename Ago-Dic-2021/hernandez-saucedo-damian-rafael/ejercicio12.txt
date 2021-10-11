@@ -1,0 +1,4 @@
+print("========== ejercicio 9-12 ==========")
+from adminprivileges import Admin2
+user1 = Admin2("angel","coronado","999869864","67")
+user1.privileges1.show_privilege()

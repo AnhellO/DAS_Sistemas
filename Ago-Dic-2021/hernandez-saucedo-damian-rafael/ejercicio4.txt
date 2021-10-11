@@ -1,0 +1,37 @@
+print("========== ejercicio 9-4 ==========")
+class Restaurant():
+
+    def __init__(self,restaurant_name,cuisine_type):
+        #"""Initialize name and age attributes."""
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+        self.number_served = 0
+    
+    def describe_restaurant(self):
+        print("Restaurant name: "+self.restaurant_name.title())
+        print("Restaurant name: "+self.cuisine_type.title()+"\n")
+    
+    def open_restaurant(self):
+        print("Restaurant '"+self.restaurant_name.title()+"' is open!!!\n")
+
+    def set_number_served(self):
+        print("clients: "+str(self.number_served)+"\n")
+    
+    def increment_number_served(self,miles):
+        """Add the given amount to the odometer reading."""
+        self.number_served += miles
+
+#--- instance
+restaurant = Restaurant("los panchos","mexican")
+restaurant.describe_restaurant()
+#Setting a Default Value for an Attribute
+print("------------------------ Setting a Default Value for an Attribute ----------------------")
+restaurant.set_number_served()
+#Modifying an Attribute’s Value Directly
+print("------------------------ methods modifying ----------------------")
+restaurant.number_served= 23
+restaurant.set_number_served()
+#Incrementing an Attribute’s Value Through a Method
+print("-------------- Incrementing an Attribute’s Value Through a Method -----------------")
+restaurant.increment_number_served(100)
+restaurant.set_number_served()
