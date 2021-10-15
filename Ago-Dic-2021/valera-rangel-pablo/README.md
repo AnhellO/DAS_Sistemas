@@ -2,11 +2,11 @@
 
 ## Sintesis comprendida
 
-> Es un patron que sirve para encapsular logica, el objetivo es poder tener diferentes algoritmos para asi poder cambiar de una a otra de una forma mas facil.
+Es un patron que sirve para encapsular logica, el objetivo es poder tener diferentes algoritmos para asi poder cambiar de una a otra de una forma mas facil.
 
-> La clave esta en crear objetos que representen una estrategia que siga un mismo patron.
+La clave esta en crear objetos que representen una estrategia que siga un mismo patron.
 
-> El patron Strategy esta dividido en 5 elementos:
+El patron Strategy esta dividido en 5 elementos:
 1. **Contexto:** Da una descripcion a las **estrategias concretas** y se comunica mendiante la **interfaz estategia**.
 
 2. **Interfaz Estategia:** Es parecida a las concretas, declara un metodo que el **contexto** usa para el uso de una estrategia.
@@ -18,9 +18,9 @@
 5. **Cliente:** Este crea un objeto para darselo al **contexto** y este ejecute la estrategia requerida.
 
 ## Descripción del Ejemplo
-> En este ejemplo se describe lo que ocurre en un juego de Futbol Americano: Decidi elegir esto para desarrollar el patron de diseño, pues de alguna manera se relaciona a una estrategia de juego dependiendo del contexto como es Yardaje, Numero de oportunidad y Yarda en campo.
+En este ejemplo se describe lo que ocurre en un juego de Futbol Americano: Decidi elegir esto para desarrollar el patron de diseño, pues de alguna manera se relaciona a una estrategia de juego dependiendo del contexto como es Yardaje, Numero de oportunidad y Yarda en campo.
 
-> Como primer paso del codigo crearemos lo que seria nuestra interfaz para la estrategia
+Como primer paso del codigo crearemos lo que seria nuestra interfaz para la estrategia
 ~~~
 class ChoosePlayStrategy(metaclass=abc.ABCMeta):
     @abc.abstractmethod
@@ -49,14 +49,14 @@ class playContext(object):
         self._YardaCampo = YardaCampo
         self._strategy = strategy
 ~~~
->En este caso como lo mencionamos anteriormente daremos como parametro lo que seria el yardaje, la posicon del balon en el campo y el numero de oportunidad, asi como su estrategia la cual en este caso estara nula.
+En este caso como lo mencionamos anteriormente daremos como parametro lo que seria el yardaje, la posicon del balon en el campo y el numero de oportunidad, asi como su estrategia la cual en este caso estara nula.
 
-> En este caso creamos 4 contextos para cada situacion los cuales serian
+En este caso creamos 4 contextos para cada situacion los cuales serian
 - Si la oportunidad es menor igual a 3 y las yardas a jugar son menor que 5, se jugara por tierra (En este caso no importa la posicion del balon)
 - Si la oportunidad es igual a 4, las yardas mayor igual a 5 y la posicion del balon es menor a la yarda 70 iremos por intento de despeje
 - Si la oportunidad es igual a 4, las yardas mayor igual a 1 y la posicion del balon es mayor a la yarda 70 iremos por intento de gol de campo
 
->En dado caso que no cumpla ninguna de las anteriores se jugara por aire
+En dado caso que no cumpla ninguna de las anteriores se jugara por aire
 ~~~
 def play_context(self):
 
@@ -75,7 +75,7 @@ def play_context(self):
         return passPlayStrategy.play(self)
 
 ~~~
->Una vez realizado nuestras estrategias y contexto es hora de crear el cliente
+Una vez realizado nuestras estrategias y contexto es hora de crear el cliente
 ~~~
 yardas = randint(1, 15)
     oportunidad = randint(1, 4)
@@ -85,8 +85,8 @@ yardas = randint(1, 15)
     context = playContext(yardas, oportunidad, yardasCampo)
     print(context.play_context())
 ~~~
->En este caso estaremos dando un valor aleatorio para cada atributo y estos valores correrian la jugada
-> En dado caso que nosotros queramos forzar una jugada por otra estrateigia debemos de mandar a llamar la estrategia por medio de la propiedad en el contexto "set_Strategy"
+En este caso estaremos dando un valor aleatorio para cada atributo y estos valores correrian la jugada
+En dado caso que nosotros queramos forzar una jugada por otra estrateigia debemos de mandar a llamar la estrategia por medio de la propiedad en el contexto "set_Strategy"
 ~~~
 #Forzamos a jugar por tierra
     rushPlay = rushPlayStrategy()
@@ -97,7 +97,7 @@ yardas = randint(1, 15)
 
 ## Diagrama UML
 
-![Diagrama UML](https://imgur.com/a/Q7F1VAO)
+![Diagrama UML](DiagramaStrategy.jpg)
 
 ## Referencias
 
