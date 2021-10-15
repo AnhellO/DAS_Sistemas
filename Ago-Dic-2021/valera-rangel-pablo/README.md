@@ -73,7 +73,6 @@ def play_context(self):
             return fieldGoalPlayStrategy.play(self)
 
         return passPlayStrategy.play(self)
-
 ~~~
 Una vez realizado nuestras estrategias y contexto es hora de crear el cliente
 ~~~
@@ -92,7 +91,6 @@ En dado caso que nosotros queramos forzar una jugada por otra estrateigia debemo
     rushPlay = rushPlayStrategy()
     context.set_strategy(rushPlay)
     print(context.play_context())
-
 ~~~
 
 ## Diagrama UML
