@@ -1,6 +1,6 @@
 # Práctica 1
 
-## Objetivo
+## Objetivos
 
 * Expandir el conocimiento teórico sobre el tema de arquitectura de software
 * Conocer casos de uso reales de las arquitecturas de software más utilizadas
@@ -65,4 +65,4 @@
 
 ## Deadline
 
-* `Domingo 28 de Noviembre a las 11:59pm`
+* `Viernes 3 de Diciembre a las 11:59pm`
