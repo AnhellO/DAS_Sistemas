@@ -12,7 +12,7 @@
 
 El proyecto consistirá en crear un [CRUD](https://developer.mozilla.org/es/docs/Glossary/CRUD) de personas y sus mascotas. La relación entre personas y mascotas deberá de ser de 1-N, es decir, una persona puede tener 1 o más mascotas.
 
-La mascota elegida para este equipo son los zorros :fox:: <https://randomfox.ca/floof/>. Cada mascota debe estar bautizada con un nombre :wink:.
+La mascota elegida para este equipo son los zorros 🦊: <https://randomfox.ca/floof/>. Cada mascota debe estar bautizada con un nombre :wink:.
 
 Las personas deberán de tener un nombre, apellido e imágen, y se obtendrán aleatoriamente desde el API <https://randomuser.me/>.
 
