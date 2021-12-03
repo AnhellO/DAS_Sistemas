@@ -28,4 +28,5 @@
 <br>
 <h1>Mi experiencia</h1>
 <p>Al nunca haber trabajando con arquitectura de microservicios no puedo decir mucho, pero lo que si se es que esta arquitectura es el futuro de las cosas, cada vez mas empresas empizan a trabajar de esta manera y todo apunta a que seguira creciendo su uso. Aun hay muchas empresas que trabajan con la arquitectura monolitica, pero conforme vaya creciendo el equipo empezaran a mudarse a esta nueva arquitectura. En mi opinion, me siento muy comodo trabajando con la monolitica por que ya tengo mas experiencia, ya la domino un poco mas, y te adaptas a lo que tienes, pero llegara un punto en donde no se podra trabajar mas con esta y habra que cambiar y aprender desde el inicio, como si de un niño chiquito se tratace.</p>
+<p>Respecto a las respuestas de mis preguntas, no cambiaria ninguna, lo que respondi es parte de lo que eyo pienso y con las lecturas realizadas mi conclusión es que la arquitectura monolitica es mas sencilla que la de microservicios.</p>
 <h3>Todo<b><i>"depende"</i></b>de a que lo quieras enfocar</h3>
