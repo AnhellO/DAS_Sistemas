@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  mongodb:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: mongo_db
+    restart: always
+    hostname: host-mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: foo
+      MONGO_INITDB_ROOT_PASSWORD: bar123
+      MONGO_INITDB_DATABASE: baz
+
+    ports:
+      - 12500:27017
+    volumes:
+      - ./mongo/:/etc/mongo
+volumenes:
+  mongo: {}
