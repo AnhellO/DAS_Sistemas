@@ -1,27 +1,27 @@
 ##Parte 2##
 **¿Qué lenguaje de programación utiliza el equipo de Netflix?**
-_Usan Python_
+_Python_
 
 **¿Qué sucedía con la base de datos de Oracle del monolito de Netflix?**
-_ Sucedia que en la web usaban una arquitectura monolitica y como esto lo actualizaban semanalmente, y cuando se introducian cambios pues podian haber errorer, un dia hubo un error que causo un fallo que causo que los albumes fueran dificiles de diagnosticar. _
+_En la web usaban arquitectura monolítica y era actualizado cada semana pero al haber cambios podían presentarse erores, uno de los fallos causó que los álbumes fueran difíciles de diagnosticar._
 
 **¿Cuál fue una de las principales desventajas que el equipo de Netflix tuvo con la arquitectura monolítica?**
-_Una de las principales fallas era que no se podian detectar fallos facilmente, eran dificiles de detectar, aunque extrajeran partes del codigo era muy dificil detectar estos fallos ya que se revisaban individualmente._
+_El encontrar los fallos era complicado, estos eran dificiles de detectar, aunque extrajeran partes del codigo era muy dificil detectar estos fallos ya que se revisaban individualmente._
 
 **¿A qué autor cita el ponente cuando da el concepto de un microservicio?**
 _Martin Fowler._
 
 **¿Cuáles son las 3 principales ventajas que el ponente cita sobre los microservicios?**
-_ <li>La modularidad</li> <li>La escalabilidad</li> <li>La particion del trabajo</li> _
+_La modularidad, la escalabilidad y la particion del trabajo_
 
 **¿Qué analogía se utiliza para comparar los microservicios con la vida real?**__
 _Menciona algo sobre la familia, el tema de dividir el tiempo entre su familia y el trabajo_
 
 **Describe al menos 3 diferentes tipos de servicios que Netflix tenía en su arquitectura en aquel entonces**
-_Usaban base de datos Oracle, tambien usaban Apache y una tecnología llamada Tomcat._
+_Se usaba base de datos Oracle, Apache y Tomcat._
 
 **¿Cuáles son las áreas primarias que se proponen para los retos y soluciones de utilizar microservicios?**
-_Se espera que sean utilizadas en aplicaciones muy grandes o en las que la aplicación este en constante crecimiento. En donde una arquitectura monolitica no de para mas y asi con los microservicios poder escalar muy facilmente._
+_Que se usen en aplicaciones grandes o de constante crecimiento, donde una arquitectura monolitica no de para mas y asi con los microservicios poder escalar muy facilmente._
 
 **¿Qué es el falló en cascada?**
 _Como su nombre lo dice, si algo falla, todo lo que esta debajo de ese fallo tambien comienza a fallar y asi se provoca un fallo en cascada. Esto derriba los servicios para todos los miembros._
@@ -66,5 +66,4 @@ _Es un programa diseñado para llevar a cabo mejores practicas, para poderlas in
 _Dejando de martillar el mismo conjunto de sistemas por lotes y en tiempo real hacer caché a nivel de solicitud para que no se este llamando repetidamente al mismo servicio una y otra vez una y otra vez._
 
 **¿Qué es "chaos engineering" o "ingeniería del caos"?**
-_Es experimentar la compatibilidad del software estando en producción y asi poder soportar condiciones inesperadas._
-
+_Experimentar con la compatibilidad del sw mientras este está en producción._
