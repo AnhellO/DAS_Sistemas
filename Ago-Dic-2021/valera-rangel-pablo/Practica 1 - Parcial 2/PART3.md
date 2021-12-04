@@ -1,4 +1,5 @@
 # Parte 3 
+
 ## Monolito
 Una gran parte de las aplicaciones que nosotros conocemos estan hechas por medio de la arquitectura de monolito, esto debido a que muchas de ellas van empezando y algunas de disponen de un presupuesto muy elevado para poder tener una arquitectura de microservicios.
 En la aplicaciones monoliticas todo depende de un servicio lo cual hace mas simple el manejo de la misma, esto tiene sus pros y sus contras
