@@ -11,12 +11,12 @@
 ## Codigo para la contenedor
 docker run -d -p 27027:27027 --name mongo_db -e MONGODB_INITDB_ROOT_USERNAME=foo -e MONGODB_INITDB_ROOT_PASSWORD=bar123 mongo:4.4
 
-![](img\creando-mongo.png)
+![](img/creando-mongo.png)
 
 ## ¿Con qué comando(s) puedo conectarme a la base de datos de MongoDB corriendo dentro de mi contenedor de mongo_db?
 docker exec -it mongo_db mongo
 
-![](img\accesando-mongo.png)
+![](img/accesando-mongo.png)
 ## ¿Cómo puedo insertar este registro en la colección de qux creada previamente?
 
 - use baz
@@ -24,4 +24,4 @@ docker exec -it mongo_db mongo
     groups:["politics","news"]})
 - db.qux.find()
 
-![](img\evidencia-qux.png)
+![](img/evidencia-qux.png)
