@@ -1,4 +1,3 @@
-##Practica1##
 
 ###Parte 1###
 
@@ -42,73 +41,4 @@ Otro de los desafios es, el hecho de que este desarrollado en componentes, hay q
 
 **¿Cómo garantizamos la disponibilidad de un servicio en la arquitectura basada en microservicios?**
 _Podria ser evitando que falle algun componente mediante la redundancia y asi reducir la probabilidad de que ocurran multiples fallas en lo que se esta trabajando._
-
-##Parte 2##
-**¿Qué lenguaje de programación utiliza el equipo de Netflix?**
-__
-
-**¿Qué sucedía con la base de datos de Oracle del monolito de Netflix?**
-__
-
-**¿Cuál fue una de las principales desventajas que el equipo de Netflix tuvo con la arquitectura monolítica?**
-__
-
-**¿A qué autor cita el ponente cuando da el concepto de un microservicio?**
-__
-
-**¿Cuáles son las 3 principales ventajas que el ponente cita sobre los microservicios?**
-__
-
-**¿Qué analogía se utiliza para comparar los microservicios con la vida real?**__
-__
-**Describe al menos 3 diferentes tipos de servicios que Netflix tenía en su arquitectura en aquel entonces**
-__
-
-**¿Cuáles son las áreas primarias que se proponen para los retos y soluciones de utilizar microservicios?**
-__
-
-**¿Qué es el falló en cascada?**
-__
-
-**¿Qué es Hystrix?**
-__
-
-**¿Qué analogía utiliza el ponente para comparar las librerias de cliente con la vida real?**
-__
-
-**¿De qué manera el equipo de Netflix manejo el problema de la persistencia en microservicios?**
-__
-
-**¿Cuál fue la estrategia de Netflix después de que sufrieron la caída del 24 de Diciembre del 2012?**
-__
-
-**¿Cuáles son los 3 escenarios/casos que se plantean para la parte de escalamiento?**
-__
-
-**¿De qué manera se describe un "stateless service" en el video?**
-__
-
-**¿Qué es Chaos Monkey?**
-__
-
-**¿Qué es un microservicio híbrido?**
-__
-
-**¿Cómo solucionó el equipo de Netflix el problema con el anti-patrón de carga excesiva?**
-__
-
-**¿Qué tecnologías nuevas integró el equipo de Netflix cuando comenzó a manejar contenedores?**
-__
-
-**¿Cuáles fueron algunos de los principales costos de varianza del equipo de Netflix?**
-__
-
-**¿Qué es Spinnaker?**
-__
-
-**¿Cómo manejo Netflix el problema de las arquitecturas híbridas?**
-__
-
-**¿Qué es "chaos engineering" o "ingeniería del caos"?**
-__
 
