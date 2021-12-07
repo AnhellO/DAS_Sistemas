@@ -10,3 +10,6 @@ Al contrario que la arquitectura monolítica, este se divide en varias aplicacio
 ## ARQUITECTURA MONOLÍTICA VS DE MICROSERVICIOS
 "Depende". Al igual que la mayoría de las cosas en el software, el contexto es la clave. Un enfoque puede funcionar muy bien para un equipo y puede que no para el otro.
 <p> Al final todo dependerá de la necesidad del negocio y a partir de ahí debes definir qué arquitectura se ajusta más a las necesidades de tu solución.
+
+## ¿QUÉ RESPUESTAS CAMBIARÍA DE LAS PARTES ANTERIORES?
+Ninguna. Yo creo algunas respuestas varían debido a la opinión de cada uno. Y eso está bien. Todos tienen diferentes puntos de vista, y no es que haya respuestas correctas o incorrectas. En cambio, habrá otras que sin duda son iguales debido a la comprensión de los vídeos y así. 
