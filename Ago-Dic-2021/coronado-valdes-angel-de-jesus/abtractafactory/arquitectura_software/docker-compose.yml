@@ -1,0 +1,58 @@
+version: "3.8"
+
+services:
+
+    mysql:
+        container_name: mysql1
+        image: mysql:latest
+        #command: --default-authentication-plugin=mysql_native_password
+        #restart: always
+        ports: 
+            - "3306:3306"
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=prueba 
+            - MYSQL_USER=user
+            - MYSQL_PASSWORD=pass1234
+        volumes: 
+            - /docker:/var/lib/mysql
+    
+    phpmyadmin:
+        container_name: phpmyadmin1
+        image: phpmyadmin/phpmyadmin
+        expose: 
+            - 80
+        ports: 
+            - 8081:80
+        environment: 
+            - PMA_HOST=mysql
+        depends_on: 
+            - mysql
+        #links: 
+        #   - mysql:mysql
+    
+    generator:
+        container_name: generator
+        build: ./app
+        ports: 
+            - 5000:5000
+        depends_on: 
+            - mysql
+    #        - api
+    # ya no pudimos terminar :(
+    #api:
+    #    container_name: api
+    #    ports: 
+    #        - 6000:6000
+    
+    #frontend:
+    #    container_name: frontend
+    #    ports: 
+    #        - 7000:7000
+    #    depends_on:
+    #        - api 
+        
+        
+
+
+    
