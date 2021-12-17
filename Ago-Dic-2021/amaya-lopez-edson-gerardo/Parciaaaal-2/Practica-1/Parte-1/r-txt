@@ -1,0 +1,2853 @@
+
+all right Wow full room I'm just going
+00:08
+to jump right in about 15 years ago my
+00:11
+stepmother and we'll call her Frances
+00:13
+for the sake of this conversation became
+00:15
+ill she had aches through her whole body
+00:18
+she had weakness she had difficulty
+00:21
+standing and by the time they got her to
+00:23
+the hospital she had paralysis in her
+00:25
+arms and legs it was a terrifying
+00:27
+experience for her and obviously for us
+00:29
+as well turns out she had something
+00:32
+called guillain-barre syndrome anybody
+00:35
+heard of this before I'm just curious Oh
+00:37
+lots of people good well not good
+00:40
+hopefully you haven't had first-hand
+00:41
+experience with it it's an autoimmune
+00:44
+disorder and it's a really interesting
+00:46
+one it's triggered by some kind of
+00:48
+external factor which is fairly common
+00:50
+with autoimmune disorders but what's
+00:53
+interesting about this one is that the
+00:54
+antibodies will directly attack what's
+00:56
+called the myelin sheath that wraps
+00:57
+around the axon that long section in
+01:00
+their self and it essentially eats away
+01:03
+at it such that the signals become very
+01:05
+diffuse and so you can imagine these
+01:07
+symptoms of pain and weakness and
+01:09
+paralysis are all quite logical then you
+01:11
+understand what's going on the good news
+01:15
+is is that it's treatable
+01:16
+either through plasmapheresis where they
+01:19
+filter your blood outside your body or
+01:21
+antibody therapy and that was successful
+01:23
+the latter was successful for Francis
+01:25
+what was interesting also was her
+01:28
+reaction to this condition she became
+01:31
+much more disciplined about her health
+01:32
+she started eating right exercising more
+01:36
+she started to take doing Qi Gong and
+01:39
+Tai Chi to improve her health and she
+01:41
+was committed to having this kind of
+01:43
+event never happened to her again and
+01:46
+what this event really underscores for
+01:49
+me is how amazing the human body is and
+01:54
+how something as simple as the act of
+01:56
+breathing or interacting with the world
+01:58
+is actually a pretty miraculous thing
+02:00
+and it's actually an act of bravery to a
+02:02
+certain extent there are so many forces
+02:04
+in the world so many allergens and
+02:07
+bacterial infections and various things
+02:09
+that can cause problems for us and so
+02:13
+you might be wondering why the hell are
+02:14
+we talking about this that our micro
+02:16
+services
+02:17
+talk but just as breathing is a
+02:20
+miraculous act of bravery so is taking
+02:23
+traffic in your micro service
+02:24
+architecture you might have traffic
+02:26
+spikes you might have a DDoS attack you
+02:29
+might introduce changes into your own
+02:31
+environment that can take the entire
+02:33
+service down and prevent your customers
+02:35
+from accessing it and so this is why
+02:38
+we're here today we're going to talk
+02:39
+about micro service architectures which
+02:41
+have huge benefits but also talk about
+02:43
+the challenges and the solutions that
+02:45
+Netflix has discovered over the last
+02:48
+seven years wrestling with a lot of
+02:51
+these kinds of failures and conditions
+02:53
+so I do a bit of an introduction I'll
+02:55
+introduce myself and I'm gonna spend a
+02:58
+little bit of time level setting on
+03:00
+micro service basics so we're all using
+03:02
+the same vocabulary as we go through
+03:04
+this and then we'll spend the majority
+03:06
+of our time talking about the challenges
+03:08
+and solutions that netflix has
+03:09
+encountered and then we'll spend a
+03:11
+little bit of time talking about the
+03:13
+relationship between organization and
+03:14
+architecture and how that's relevant to
+03:16
+this discussion so by way of
+03:19
+introduction hello I'm Josh Evans
+03:22
+I started at Netflix had a career before
+03:25
+this but I this is the most relevant
+03:27
+part in 1999 I joined Netflix about a
+03:30
+month before the subscription DVD
+03:32
+service launched I was in the commerce
+03:35
+space as an engineer and then a manager
+03:36
+and got to see that transition from an
+03:39
+e-commerce perspective how we integrated
+03:41
+streaming into the existing DVD business
+03:45
+2009 I moved over right into the heart
+03:47
+of streaming managing a team that today
+03:49
+called playback services this is the
+03:51
+team that does DRM and manifest delivery
+03:54
+recording telemetry coming back from
+03:56
+devices I also managed this team during
+03:59
+a time when we were going international
+04:01
+getting onto every possible device in
+04:03
+the world and just this slide project of
+04:06
+moving from data center to cloud so it's
+04:08
+actually quite an interesting and
+04:09
+exciting time for the last three years
+04:12
+I've been managing a team called
+04:14
+operations engineering where we focus on
+04:16
+operational excellence engineering
+04:18
+velocity monitoring and alerting so
+04:21
+think about things like delivery chaos
+04:23
+engineering a whole wide variety of
+04:25
+functions to help Netflix engineers be
+04:27
+successful operating their own so
+04:29
+this is in the cloud so you'll see that
+04:32
+there's an end date there I actually met
+04:33
+left Netflix about a month ago and today
+04:36
+I'm actually thinking a lot about
+04:37
+Arianna Huffington catching up on like
+04:40
+sleep for the first time in quite some
+04:42
+time taking some time off bending time
+04:45
+with my family trying to figure out what
+04:47
+this work-life balance thing looks like
+04:49
+actually this we mostly life balance
+04:50
+which will be great they'd shift from
+04:52
+what I was doing before Netflix as you
+04:55
+know is the leader in subscription
+04:57
+internet TV service it produces or
+05:00
+licenses Hollywood independent and local
+05:03
+content has a growing slate of pretty
+05:05
+amazing original and at this point is
+05:08
+that about 86 million members globally
+05:11
+and growing quite rapidly Netflix is in
+05:14
+about a hundred and ninety countries
+05:15
+today and has localized in tens of
+05:18
+languages that's user interface subs end
+05:20
+of thousands of device platforms and all
+05:25
+of this is running on micro services on
+05:28
+AWS so let's dig in and let's talk about
+05:33
+micro services from the abstract sense
+05:36
+and I'd like to start by talking about
+05:39
+what microservices are not I'm going to
+05:41
+go back to 2000 my early days and
+05:43
+Netflix when we were a web based
+05:45
+business where people put DVDs in their
+05:48
+queue and had them shipped out and
+05:49
+returned and all of that so we had a
+05:52
+pretty simple infrastructure this was in
+05:54
+a data center hardware based load
+05:56
+balancer actually very expensive
+05:58
+hardware that we put our that we used as
+06:00
+our Linux hosts running a fairly
+06:03
+standard configuration of an Apache
+06:05
+reverse proxy and Tomcat and this one
+06:08
+application that we call Java web kind
+06:11
+of everything that was in Java that our
+06:13
+customers needed to access now this was
+06:16
+connected directly to an Oracle database
+06:17
+using JDBC which was then interconnect
+06:21 with other Oracle databases using
+06:22
+database links the first problem with
+06:26
+this architecture was that the code base
+06:28
+for Java Web was monolithic in the sense
+06:31
+that everybody was contributing to one
+06:34
+code base that got deployed on a weekly
+06:36
+or bi-weekly basis the problem with that
+06:40
+was is when a change was introduced that
+06:42
+caused
+06:42
+album it was difficult to diagnose we
+06:45
+probably spent well over a week
+06:46
+troubleshooting a slow-moving memory we
+06:48
+took about a day to happen we tried
+06:51
+pulling out pieces of code and running
+06:52
+it again to see what would happen and
+06:54
+because so many changes were rolling
+06:56
+into that one application this took an
+06:58
+extended period of time
+07:01
+the database was also monolithic in even
+07:05
+a more severe sense it was one piece of
+07:07
+hardware running one big Oracle database
+07:10
+that we called the store database and
+07:12
+when this went down everything went down
+07:15
+and every year as we started to get into
+07:18
+the holiday peak we were scrambling to
+07:20
+find bigger and bigger hardware so that
+07:22
+we could vertically scale this
+07:23
+application probably one of the most
+07:27
+painful pieces from the engineering
+07:28
+perspective other than the outages that
+07:30
+might have happened was the lack of
+07:31
+agility that we had because everything
+07:33
+was so deeply interconnected we had
+07:36
+direct calls into the database we had
+07:38
+many applications directly referencing
+07:39
+table schemas and I can remember trying
+07:42
+to add a column to a table was a big
+07:43
+cross-functional project for us so this
+07:46
+is a great example of how not to build
+07:48
+services today although this was the
+07:51
+common pattern back in the late 90s and
+07:53
+early 2000s so what is a micro service
+07:57
+does anybody want to volunteer their
+08:00
+understanding or definition of what a
+08:01
+micro services sort of curious well get
+08:03
+here somebody some brave soul there we
+08:06
+go what's the micro service say it again
+08:16
+context bound and data ownership I like
+08:18
+that I'm going to give you the Martin
+08:21
+Fowler definition there's a good place
+08:23
+to start that's definitely a key piece
+08:24
+I'm going to read this to you if you
+08:26
+don't have to micro service architecture
+08:28
+style is an approach to developing a
+08:30
+single application as a suite of small
+08:32
+services each running in its own process
+08:34
+and commuting with a lightweight Mac and
+08:37
+lightweight mechanisms often an HTTP
+08:39
+resource API I think we all know this
+08:41
+it's a somewhat abstract definition it's
+08:44
+very technically correct but it'll
+08:45
+really give you enough of a flavor I
+08:46
+think of what it means to build micro
+08:48
+services when I think about it I think
+08:51
+of it as this extreme reaction to that
+08:54
+experience that I had back
+08:56
+mm with monolithic applications
+08:58
+separation of concerns being probably
+09:01
+one of the most critical things that it
+09:03
+encourages modularity the ability to
+09:05
+encapsulate your data structures behind
+09:08
+something so that you don't have to deal
+09:10
+with all of this coordination
+09:12
+scalability they tend to lend themselves
+09:14
+to horizontal scaling if you approach it
+09:16
+correctly and workload partitioning
+09:19
+because it's a distributed system you
+09:21
+can take your work and break it out into
+09:22
+smaller components which make it more
+09:23
+manageable and then of course none of
+09:27
+this really works well from my
+09:29
+perspective unless you're running it in
+09:31
+a virtualized and elastic environment it
+09:33
+is much much harder to manage micro
+09:35
+services if you're not doing it in this
+09:37
+kind of environment you need to be able
+09:39
+to automate your operations as much as
+09:41
+possible and on-demand provisioning is a
+09:44
+huge huge benefit that I would want to
+09:46
+give up our building this going back to
+09:49
+that theme of the human body and biology
+09:52
+you can think of Micra services also as
+09:54
+organs in an organ system and these
+09:57
+systems that then come together to form
+09:59
+the overall organisms so let's take a
+10:01
+look at the Netflix architecture a
+10:03
+little bit and see how that maps there's
+10:06
+a proxy layer that's behind the ELB
+10:08
+called Zul that does dynamic routing
+10:10
+there's a tier that was our legacy tier
+10:13
+called NCCP that supported our earlier
+10:15
+devices plus fundamental playback
+10:17
+capability and there's our Netflix API
+10:20
+which is our API gateway that today is
+10:23
+part of really core to our modern
+10:25
+architecture calling out into all of the
+10:27
+other services to fulfill requests for
+10:29
+customers this aggregate set that we've
+10:33
+just walked through we consider our edge
+10:34
+service there's some a few auxilary
+10:37
+services as well like drm that support
+10:39
+this that are also part of the edge and
+10:41
+then this soup on the right-hand side is
+10:44
+a combination of middle tier and
+10:46
+platform services that enable the
+10:48
+service to function overall to give you
+10:51
+a sense of what these organs look like
+10:53
+these entities here are a few examples
+10:56
+we have an a/b testing infrastructure
+10:58
+and there's an a/b service that returns
+11:00
+back values if you want to know what
+11:02
+tests a customer should be in we have a
+11:04
+subscriber service that is called from
+11:07
+almost everything to find out
+11:08
+information about our
+11:09
+a recommendation system that provides
+11:13
+the information necessary to build the
+11:14
+lists of movies that get presented to
+11:16
+each customer is a unique experience and
+11:18
+then of course there's platform services
+11:20
+that perform the more fundamental
+11:21
+capabilities routing to get to the micro
+11:24
+services can find each other dynamic
+11:27
+configuration cryptographic operations
+11:29
+and then of course there's the
+11:31
+persistence layers as well these are the
+11:33
+kinds of objects that live in this echo
+11:36
+system now I also want to underscore
+11:38
+that micro services are an abstraction
+11:41
+we tend to think of them very
+11:43
+simplistically as here's my nice
+11:46
+horizontally scaled micro service and
+11:48
+people are going to call me which is
+11:50
+great if it's that simple but it's
+11:51
+almost never that simple at some point
+11:54
+you need data your service is going to
+11:57
+need to pull on data for a variety of
+11:59
+reasons about the subscriber information
+12:00
+it might be recommendations but that
+12:02
+data is typically stored in your
+12:03
+persistence layer and then for
+12:06
+convenience and this is a really a
+12:08
+Netflix approach that I think many of us
+12:11
+have embraced but definitely specific to
+12:13
+Netflix as well
+12:14
+is start providing client libraries and
+12:17
+this we're mostly Java based so client
+12:19
+libraries for doing those basic data
+12:21
+access types of operations now at some
+12:25
+point as you scale you're probably going
+12:27
+to need to front this with a cache
+12:29
+because the service plus the database
+12:31
+may not perform well enough and so
+12:33
+you're going to have a cache clients as
+12:34
+well and then now you need to start
+12:37
+thinking about orchestration so I'm
+12:39
+going to hit the cache first then if
+12:41
+that fails I need to go to the service
+12:43
+which is going to call the database
+12:44
+it'll return a response back and then of
+12:47
+course you want to make sure you
+12:48
+backfill the cache so that it's hot the
+12:49
+next time you call it which might just
+12:51
+be a few milliseconds later
+12:52
+now this client library is going to be
+12:55
+embedded within the applications that
+12:57
+want to consume your micro service and
+12:59
+so it's important to realize from their
+13:01
+perspective this entire set of
+13:04
+technologies this whole complex
+13:06
+configuration is your micro service it's
+13:09
+not this very simple stateless thing
+13:11
+which is nice from sort of a pure
+13:12
+perspective but it actually has these
+13:15
+sort of complex structures to them so
+13:18
+that
+13:19
+the level set on microservices and now
+13:21
+let's go ahead and let's dig in on the
+13:23
+challenges that we've encountered over
+13:24
+the last seven years and some of the
+13:26
+solutions and philosophies behind that
+13:33
+so I love junk food and I love this
+13:36
+image because I think in many cases the
+13:39
+problems and solutions have to do with
+13:41
+the habits that we have and how we
+13:42
+approach micro-services and so the goal
+13:45
+is to get us to eat more vegetables in
+13:47
+many cases we're going to break this
+13:50
+down into four sort of primary areas
+13:53
+that we're going to investigate there
+13:55
+are four dimensions in terms of how we
+13:57
+address these challenges dependency
+14:00
+scale variance within your architecture
+14:05
+and how you introduce change we're going
+14:09
+to start with dependencies and I'm going
+14:11
+to break this down into four use cases
+14:13
+within dependencies interest service
+14:17
+requests this is the call from
+14:18
+microcircuit a micro service B in order
+14:21
+to fulfill some larger requests and just
+14:24
+as we were talking about earlier with
+14:26
+the nerve cells and the conduction
+14:28
+everything's great
+14:29
+when it's all working but when it's
+14:31
+challenging it can feel like you're
+14:32
+crossing a vast chasm in the case of a
+14:35
+service calling another service you've
+14:38
+just taken on a huge risk by just going
+14:40
+off process and off your box you can run
+14:44
+into network latency and congestion you
+14:46
+could have hardware failures that
+14:48
+prevent routing of your traffic or the
+14:50
+service you're calling might be in bad
+14:52
+shape it might have had a bad deployment
+14:54
+and have some kind of logical bugs or it
+14:56
+might not be properly scaled and so it
+14:58
+can simply fail or be very slow and you
+15:01
+might end up timing out when you call it
+15:04
+the disaster scenario and we've seen
+15:07
+this more than I'd like to admit is the
+15:09
+scenario where you've got one service
+15:11
+that fails with improper defenses
+15:14
+against that one service failing it can
+15:16
+cascade and take down your entire
+15:19
+service for your members and god forbid
+15:22
+you deployed that bad change out to
+15:23
+multiple regions if you have a multi
+15:25
+region strategy because now you've
+15:26
+really just got no place to go to
+15:28
+recover you just have to fix the problem
+15:30
+in place
+15:32
+so to deal with this that was created
+15:35
+history which has a few really nice
+15:37
+properties it's got a structured way for
+15:39
+handling timeouts and retries it has
+15:41
+this concept of a fallback so if I can't
+15:44
+call service B can I return some static
+15:47
+response or something that will allow
+15:49
+the customer to continue using the
+15:50
+product instead of simply getting an
+15:51
+error and then the other big benefit of
+15:54
+history is isolated thread pools and
+15:57
+this concept of circuits if I keep
+16:00
+hammering away at service B and it just
+16:01
+keeps failing maybe I should stop
+16:03
+calling it and fail fast return that
+16:06
+fall back and wait for it to recover so
+16:09
+this has been a great innovation for
+16:11
+Netflix it's been used quite broadly but
+16:14
+the fundamental question comes in now
+16:16
+I've got all my history settings in
+16:18
+place and I think I've got it all right
+16:19
+but how do you really know if it's going
+16:21
+to work and especially how do you know
+16:22
+is going to work under at scale the best
+16:26
+way to do this going back to our biology
+16:28
+thing is inoculation where you might
+16:31
+take a dead version of a virus and
+16:32
+inject it to develop the antibodies to
+16:35
+defend against the live version and
+16:37
+likewise fault injection in production
+16:40
+accomplishes the same thing and that was
+16:42
+created fit the fault injection test
+16:44
+framework in order to do this you can do
+16:48
+synthetic transactions which are
+16:50
+overridden basically at the accounts or
+16:52
+the device level or you can actually do
+16:55
+a percentage of live traffic so once
+16:56
+you've determined that everything works
+16:58
+functionally now you want to put it
+17:00
+under load and see what happens with
+17:01
+real customers and of course you want to
+17:05
+be able to test it no matter how you
+17:07
+call that service whether you call it
+17:09
+directly whether you call it indirectly
+17:10
+you want to make sure that your requests
+17:13
+are decorated with the right context so
+17:15
+that you can fail it universally just as
+17:17
+if the service was really down in
+17:19
+production without actually taking it
+17:20
+down so this is all great it's a sort of
+17:24
+a point-to-point perspective but imagine
+17:27
+now that you've got a hundred micro
+17:29
+services and each one of those might
+17:31
+have a dependency on other services or
+17:33
+multiple other services there's a big
+17:36
+challenge about how do you constrain the
+17:39
+scope of the testing that you need to do
+17:41
+so that you're not testing millions of
+17:42
+permits
+17:43
+patience of services calling each other
+17:46
+this is even more important when you
+17:48
+think about it from an availability
+17:49
+perspective imagine you've only got 10
+17:52
+services in your entire micro service
+17:54
+infrastructure and each one of them is
+17:57
+up for four nines of availability that
+17:59
+gives you 53 minutes a year that that
+18:01
+service can be down now that's great as
+18:05
+an availability number but when you
+18:07
+combine them all the aggregate failures
+18:09
+that would have happened throughout that
+18:10
+year you actually will end up with three
+18:13
+nines of availability for your overall
+18:15
+service and that's somewhere in the
+18:18
+ballpark of between 8 and 9 hours a year
+18:20
+a big difference and so to address this
+18:24
+let's let's define this concept of
+18:26
+critical micro services the ones that
+18:29
+are necessary to have basic
+18:31
+functionality work can the customer load
+18:34
+the app browse and find something to
+18:36
+watch it might just be a list of the
+18:37
+most popular movies hit play and have it
+18:40
+actually work and so we've taken this
+18:43
+approach and identified those services
+18:45
+as a group and then created skip recipes
+18:50
+that essentially blacklist all of the
+18:52
+other services that are not critical and
+18:55
+this way we can actually test this out
+18:57
+and we have tested this for short
+18:58
+periods of time in production to make
+19:01
+sure that the service actually functions
+19:03
+when all those dependencies go away so
+19:07
+this is a much simpler approach to
+19:09
+trying to do all of the point-to-point
+19:10
+interactions and has actually been very
+19:12
+successful for Netflix and finding
+19:14
+critical errors so let's now talk about
+19:18
+client libraries shifting gears
+19:20
+completely when we first started moving
+19:23
+to the cloud we had some very heated
+19:24
+discussions about client libraries there
+19:27
+were a bunch of folks who had done great
+19:29
+work from Yahoo who had come to Netflix
+19:31
+who were espousing the model of bare
+19:34
+bones rest just call the service don't
+19:36
+create any client libraries don't deal
+19:38
+with all of that just go bare-bones and
+19:40
+yet at the same time they're a really
+19:43
+compelling argument for building client
+19:45
+libraries if I have common logic and
+19:48
+common access patterns for calling my
+19:50
+service and I've got 20 or 30 different
+19:52
+dependencies do I really want every
+19:54
+single one of those teams writing the
+19:55
+same
+19:56
+or slightly different code over and over
+19:58
+again or do we want to simply
+20:01
+consolidate that down into common
+20:02
+business logic and common access
+20:04
+patterns and this was so compelling that
+20:06
+this is actually what we did now the big
+20:09
+challenge here is that this is a
+20:11
+slippery slope back towards having a new
+20:14
+kind of monolith where now our API
+20:17
+gateway in this case which might be
+20:18
+hitting a hundred services is now
+20:21
+running a lot of code in process that
+20:23
+they didn't write this takes us all the
+20:25
+way back to 2000 running lots of code in
+20:28
+the same common code base it's a lot
+20:32
+like a parasitic infection if you really
+20:34
+think about it this little nasty thing
+20:36
+here is not the size of Godzilla it's
+20:38
+not going to take down Tokyo but it will
+20:41
+infest your intestines it'll attach to
+20:43
+your blood vessels and drink your blood
+20:45
+like a vampire this is called a hookworm
+20:47
+and a full-blown infestation and
+20:49
+actually lead to pretty severe anemia
+20:51
+and make you weak and likewise client
+20:55
+libraries can do all kinds of things
+20:57
+that you had to have no knowledge of
+20:58
+that might also weaken your service
+21:00
+they might consume more heat than you
+21:02
+expect they might have logical defects
+21:04
+that cause failures within your
+21:06
+application and they might have
+21:08
+transitive dependencies that pull in
+21:09
+other libraries that conflict in terms
+21:11
+of versions and break your bills and all
+21:14
+of this has happened especially with the
+21:16
+API team because they're consuming so
+21:18
+many libraries from so many teams and
+21:21
+there's no cut and dry answer here
+21:25
+there's been a lot of discussion about
+21:27
+this it's been somewhat controversial
+21:29
+even over the last year or so the
+21:31
+general consensus has been though to try
+21:33
+to simplify those libraries there's not
+21:36
+a desire to move all the way to that
+21:38
+bare bones rest model but there is a
+21:40
+desire to limit the amount of logic and
+21:42
+heat consumption happening there and you
+21:44
+want to make sure that people have the
+21:46
+ability to make smart thoughtful
+21:47
+decisions on a case-by-case basis so
+21:50
+we'll see how this all unfolds is a sort
+21:51
+of an ongoing conversation and mostly
+21:53
+I'm bringing up here that all of you can
+21:55
+be sort of thoughtful about these
+21:56
+trade-offs and understand that now
+22:00
+persistence is something that I think
+22:01
+necklace got right early on there isn't
+22:03
+there is a war story here about how we
+22:05
+got it wrong
+22:06
+and let me tell you how we got it right
+22:08
+we got it right by starting off thinking
+22:11
+about the right constructs and about cap
+22:13
+theorem
+22:14
+I assume how many people are not
+22:16
+familiar with Cass theorem of district
+22:18
+URIs okay so we've got a few let's go
+22:21
+ahead and level set here this is the
+22:23
+simplest definition that that allowed me
+22:25
+to get my brain around what this really
+22:26
+was in the presence of a network
+22:28
+partition you must choose between
+22:30
+consistency and availability in this
+22:34
+case here you might have a service
+22:35
+running a network a and it wants to
+22:38
+write two databases a copy of the same
+22:40
+data into two databases that are running
+22:43
+in three different networks or an AWS
+22:45
+this might be three different
+22:46
+availability zones the fundamental
+22:49
+question is what do you do when you
+22:50
+can't get to one or more of them do you
+22:52
+just fail and give back an error or do
+22:55
+you write to the ones you can get to and
+22:57
+then fix it up afterwards
+23:00
+Netflix chose the latter and embrace
+23:03
+this concept of eventual consistency but
+23:05
+we don't expect every single write to be
+23:07
+read back immediately from any one of
+23:09
+the sources that we've written the data
+23:11
+to and Cassandra does this really well
+23:14
+it has lots of flexibility so the client
+23:18
+might write to only one node which then
+23:19
+orchestrates and writes to multiple
+23:21
+nodes and there's a concept of local
+23:24
+quorum where you can say I need this
+23:26
+many nodes to respond back and say that
+23:28
+they've actually committed the change
+23:30
+before I'm going to assume that it's
+23:32
+written out and that could be one node
+23:33
+if you really want to take on some risk
+23:35
+in terms of the durability but you're
+23:38
+willing to get very high availability or
+23:39
+you can dial it up the other way and say
+23:41
+I want it to be all the nodes that I
+23:43
+want to write to so let's move on I'm
+23:47
+just going to briefly talk about
+23:47
+infrastructure because this is a whole
+23:50
+topic unto itself but at some point your
+23:54
+infrastructure whether it's AWS or
+23:57
+Google or things that you built yourself
+23:58
+is going to fail the point here is not
+24:01
+not that Amazon can't keep their
+24:03
+services up they're actually very very
+24:04
+good at it but that everything fails and
+24:07
+that's the mistake if I were going to
+24:09
+put blame on anybody in terms of what
+24:11
+happened in Christmas Eve of 2012 when
+24:14
+the EOB control plane went down was that
+24:16
+we we put all our eggs in one basket we
+24:19
+put them all in US East one and so when
+24:21
+there was a failure
+24:22
+and by the way we've induced enough of
+24:24
+our own to know that this is also true
+24:26
+there was no place to go
+24:27
+and so Netflix developed a strep
+24:30
+multi-region strategy with three AWS
+24:33
+regions such that if any one of them
+24:35
+failed completely we can still push all
+24:37
+the traffic over to the other surviving
+24:40
+regions so I did a talk on this earlier
+24:45
+in the year so I would encourage you to
+24:47
+take a look at it if you want to get
+24:48
+really deep into the multi region
+24:50
+strategy and all the reasons that it
+24:51
+evolved the way that it did at this
+24:54
+point I'm going to put a pin in this I'm
+24:55
+going to move forward so let's talk
+24:58
+about scale now and the scale I'm going
+25:00
+to give you three cases the stateless
+25:03
+service scenario the stateful service
+25:05
+scenario you sort of fundamental
+25:07
+components and then the hybrid similar
+25:10
+to the diagram that we were looking at
+25:11
+earlier where it's an orchestrated set
+25:13
+of things that come together okay
+25:17
+another question what's a stateless
+25:20
+service anybody have an idea to throw
+25:24
+out their idea their definition of it
+25:28
+breaks all good okay that's close that's
+25:38
+interesting I start with it's not a cash
+25:41
+or database you're not storing massive
+25:44
+amounts of data you will frequently have
+25:46
+frequently accessed metadata cached in
+25:49
+memory so there's the non-volatile
+25:52
+nature of that or configuration
+25:53
+information typically you won't have
+25:56
+instance affinity where you expect a
+25:58
+customer to stick to a particular
+26:00
+instance repeatedly and the most
+26:03
+important thing is that the loss of a
+26:05
+node is essentially a non-event it's not
+26:08
+something that we should spend a lot of
+26:09
+time worrying about and it and it
+26:11
+recovers very quickly so you should be
+26:14
+able to boot up and spin up a new one to
+26:16
+replace a bad node relatively easily and
+26:19
+the best strategy here is one going back
+26:21
+to biology is one of replication just as
+26:24
+with mitosis we can create cells
+26:26
+on-demand or cells are constantly dying
+26:28
+and constantly being replenished
+26:30
+auto-scaling accomplishes this I'm sure
+26:33
+people are familiar with auto-scaling
+26:35
+but I can't underscore enough how
+26:36
+fundamental this is and how much this is
+26:38
+table stakes for running microservices
+26:40
+in a cloud
+26:41
+you've got your men and your max you've
+26:43
+got a metric you're using determine what
+26:45
+you need to scale up your group and then
+26:47
+when you need to have a new instance bun
+26:49
+up you simply pull any image out of s3
+26:51
+and you spin it back up the advantages
+26:55
+are several you get compute efficiency
+26:56
+because you're typically using on-demand
+26:58
+capacity your nodes get replaced easily
+27:01
+and most importantly actually is when
+27:03
+you get traffic spikes to get a DDoS
+27:06
+attack if you introduce a performance
+27:07
+bug auto scaling allows you to absorb
+27:10
+that change while you're figuring out
+27:12
+what actually happened so this has saved
+27:15
+us many many times
+27:16
+strongly recommend it and then of course
+27:18
+you want to make sure it always works by
+27:20
+applying chaos chaos monkey was our very
+27:22
+first sore chaos tool and it simply
+27:24
+confirmed that when a node dies yet
+27:27
+everything still continues to work this
+27:29
+has been such a non-issue for Netflix
+27:31
+since we've implemented chaos monkey and
+27:33
+kind of want to knock wood as I say that
+27:35
+this just doesn't Britt a car service
+27:38
+down anymore losing an individual node
+27:40
+is very much the non-event that we want
+27:42
+it to be so let's jump in let's talk
+27:45
+about stateful services and they are the
+27:46
+opposite obviously of a stateless one it
+27:50
+is databases and caches it is sometimes
+27:54
+a custom app and we give this a custom
+27:56
+app that has internalized caches but of
+27:59
+like large amounts of data and we had a
+28:01
+service tier that did this and as soon
+28:03
+as we let multi region and tried to come
+28:05
+up with generic strategies for
+28:06
+replicating data this was the biggest
+28:08
+problem we had so I strongly recommend
+28:10
+you trying to avoid storing your
+28:12
+business logic and your state all within
+28:14
+one application if you can avoid it now
+28:17
+in this case what's meaningful is again
+28:19
+the opposite of stateless which is that
+28:20
+the loss of the node is a notable event
+28:22
+it may take hours to replace that node
+28:25
+and spin up a new one
+28:27
+so it is something that you need to be
+28:28
+much more careful about so I'm going to
+28:31
+talk about and I'm going to sort of
+28:32
+tipping my hand here two different
+28:34
+approaches for how we dealt with caching
+28:37
+to sort of underscore this and again we
+28:39
+as I said we had a number of people who
+28:41
+are from Yahoo who were who had
+28:43
+experience using a proxy and squid
+28:45
+caches
+28:46
+and a pattern where they had dedicated
+28:48
+nodes for customers so a given customer
+28:50
+would always hit the same node for the
+28:52
+cash and it was only one copy of that
+28:54
+data the challenge is of course when
+28:57
+that node goes down you've got a single
+28:59
+point of failure and those customers
+29:00
+would be unable to access that service
+29:03
+but even worse because this was in the
+29:05
+early days we didn't have proper history
+29:07
+settings in place we didn't have the
+29:10
+bulk heading and the separation and
+29:11
+isolation of thread pools and so I can
+29:14
+still remember being on a call where one
+29:16
+node went down and all of Netflix went
+29:19
+down along with it it took us three and
+29:21
+a half hours to pumping it back up to
+29:23
+wait for that cache to refill itself
+29:25
+before we could fulfill requests so
+29:28
+that's the anti-pattern the single point
+29:30
+of failure pattern and going back to
+29:33
+biology redundancy is fundamental we
+29:36
+have two kidneys so that if one fails we
+29:39
+still have another one we have two lungs
+29:41
+same thing those give us increased
+29:43
+capacity but we can live with only one
+29:45
+of them and just as your human body does
+29:49
+that Netflix has approached an
+29:51
+architecture using a technology called
+29:53
+edie cash and easy cash is essentially a
+29:55
+wrapper around memcache D it is sharted
+29:58
+similar to the squid caches but multiple
+30:00
+copies are written out to multiple nodes
+30:02
+so every time a write happens not only
+30:05
+does it write it out to multiple nodes
+30:06
+but it writes them into different
+30:08
+availability zones so it sprays them
+30:10
+across and separates them across the
+30:12
+network partition and likewise when we
+30:14
+do read reads are local because you want
+30:17
+that local efficiency but the
+30:19
+application can fall back to reading
+30:20
+across availability zones that it needs
+30:22
+to to get to those other nodes this is a
+30:24
+success pattern that has been repeated
+30:26
+throughout ET cache is is used by
+30:30
+virtually every service that needs the
+30:32
+cash today at Netflix have been highly
+30:35
+useful to us
+30:36
+in lots of good ways now let's talk
+30:39
+about the combination of the two this is
+30:42
+the scenario we talked about earlier
+30:44
+where you've got a hybrid service it's
+30:47
+very easy in this case to take UD cash
+30:50
+for granted let me tell you why it can
+30:53
+handle 30 million requests per second
+30:56
+across the clusters we have globally
+30:58
+which is 2 trillion requests
+31:00
+it stores hundreds of billions of
+31:03
+objects in tens of thousands of memcache
+31:05
+D instances and here's the biggest win
+31:08
+here it consistently scales in a linear
+31:11
+way such that requests can be returned
+31:13
+within a matter of milliseconds no
+31:15
+matter what the load is obviously you
+31:17
+need to add enough notes but it scales
+31:19
+really well and we had a scenario
+31:22
+several years ago where our subscribers
+31:24
+service was leaning on EB cash a little
+31:27
+bit too much and this is another
+31:28
+anti-pattern worth talking about it was
+31:31
+called by almost every service I mean
+31:33
+everybody wants to know about the
+31:34
+subscriber and you know what's their
+31:36
+customer ID and how do I go access some
+31:38
+other piece of information it had online
+31:41
+and offline calls going to the same
+31:43
+cluster the same easy cache cluster so
+31:45
+the batch processes doing
+31:47
+recommendations looking up subscriber
+31:48
+information plus the real-time call path
+31:50
+and in many cases it was called multiple
+31:54
+times even with the same application
+31:56
+within the lifecycle of a single request
+31:58
+it was treated as if you could freely
+32:00
+call the cache as often as you wanted to
+32:04
+so that at peak we were seeing load of
+32:06
+800,000 to a million requests per second
+32:09
+against the service tier but fallback
+32:11
+was a logical one when you were thinking
+32:13
+about it from a one-off perspective I
+32:14
+just got a cache miss let me go call
+32:17
+into the service the problem was of the
+32:19
+fallback also when the entire Evie cache
+32:21
+layer went down was still a fallback to
+32:24
+the service and the database and that's
+32:25
+the anti-pattern the service in the
+32:28
+database couldn't possibly handle the
+32:30
+load that ET cache was shouldering and
+32:31
+so the right approach was to fail fast
+32:35
+so with the successive load we saw EB
+32:38
+cache go down it sits down the entire
+32:40
+subscriber service and the solutions
+32:43
+were several the first thing is is stop
+32:46
+hammering away at the same set of
+32:47
+systems for batch and real-time do
+32:52
+request level caching so you're not
+32:53
+repeatedly calling the same service over
+32:56
+and over again as if it was free make
+32:58
+that first hit expensive and the rest of
+33:00
+them free throughout the lifecycle of
+33:01
+the request and something we haven't
+33:03
+done yet but will very likely do is
+33:06
+embed a secure token within the devices
+33:09
+themselves that they pass with their
+33:10
+request so that the subscriber services
+33:13
+on
+33:13
+available you can fall back to that data
+33:15
+stored in that encrypted token it should
+33:17
+have enough information to identify the
+33:19
+customer and do the fundamental
+33:21
+operations for keeping the service up
+33:23
+for that customers that give some kind
+33:25
+of reasonable experience and then of
+33:28
+course you want to put this under load
+33:29
+using Kaos exercises using tools like
+33:32
+this now let's move on let's talk about
+33:35
+variants this is variety in your
+33:37
+architecture and the more variants you
+33:39
+have the greater your challenges are
+33:41
+going to be because it increases the
+33:42
+complexity of the environment you're
+33:44
+managing let's talk about two use cases
+33:47
+one is operational drift that happens
+33:50
+over time the other is the introduction
+33:53
+that we've had recently over the last
+33:54
+few years of new languages and
+33:56
+containers within our architecture
+34:00
+operational drift is something that's
+34:02
+unintentional
+34:03
+you don't do this on purpose but it does
+34:05
+happen quite naturally drift over time
+34:09
+looks something like you know setting
+34:11
+your alert alert thresholds and keeping
+34:12
+those maintained because those will
+34:14
+change over time
+34:15
+your timeouts and your retry settings
+34:17
+might change maybe you've added a new
+34:19
+batch operation that should take longer
+34:20
+your throughput will likely degrade over
+34:23
+time unless you're constantly squeezed
+34:24
+testing because as you add new
+34:26
+functionality that's likely to slow
+34:27
+things down and then you can also get
+34:29
+this drift sort of across services let's
+34:31
+say you found a great practice for
+34:33
+keeping services up and running but only
+34:35
+half of your teams have actually
+34:36
+embraced that practice so the first time
+34:40
+we go and reach out to teams and say hey
+34:42
+let's go figure this out let's go get
+34:44
+your alerts all tuned let's do some
+34:45
+squeeze testing let's let's get you all
+34:47
+tuned up and make sure service is going
+34:49
+to be highly reliable and well
+34:50
+performance and usually we get a pretty
+34:53
+enthusiastic response on that first pass
+34:55
+but humans are not very good at doing
+34:58
+this very repetitive sort of manual
+34:59
+stuff most people would rather be doing
+35:02
+something else or they need to do their
+35:04
+day job like go and build product for
+35:06
+their product managers the next ad test
+35:07
+we need to roll out and so the next time
+35:09
+we go we tend not to get that same level
+35:12
+of enthusiasm when we say hey sorry but
+35:14
+you're going to need to go do this again
+35:17
+you can really taken a lesson again from
+35:20
+biology with this concept of autonomic
+35:22
+you has been the autonomic nervous
+35:24
+there's lots of functions that your body
+35:26
+just takes care of and you don't have to
+35:28
+think about it you don't have to think
+35:30
+about how you digest food you don't have
+35:32
+to think about breathing or you would
+35:34
+die when you fell asleep and likewise
+35:36
+you want to make sure you set up an
+35:38
+environment where you can make as many
+35:40
+of these best practices subconscious or
+35:43
+not even not required for people to
+35:46
+really spend a lot of time thinking
+35:47
+about and the way that we've done that
+35:49
+at Netflix is by building out a cycle of
+35:51
+continuous learning and automation and
+35:53
+typically that learning comes from some
+35:56
+kind of incident
+35:57
+we just had an outage you get people on
+36:00
+a call we hopefully alleviate customer
+36:02
+pain we do an incident review to make
+36:05
+sure that we understand what happened
+36:06
+and then immediately do some kind of
+36:08
+remediation hopefully to make sure at
+36:09
+least practically that that works well
+36:11
+but then we do some analysis is this a
+36:14
+new pattern is there a best practice
+36:18
+that we can derive from this is this a
+36:19
+recurring issue where if we could come
+36:21
+up with some kind of solution it would
+36:22
+be very high impact and then of course
+36:25
+you want to automate that wherever
+36:27
+possible and then of course you want to
+36:30
+drive adoption to make sure that that
+36:31
+gets integrated this is how knowledge
+36:33
+becomes code and it gets integrated
+36:35
+directly into your micro service
+36:37
+architecture over the years we've
+36:40
+accumulated a set of these best
+36:42
+practices we call it production ready
+36:43
+this is a checklist and it's a program
+36:45
+within Netflix virtually every single
+36:48
+one of these has some kind of automation
+36:50
+behind it and a continuous improvement
+36:53
+model where we're trying to make them
+36:54
+better whether that's having a great
+36:56
+alerting strategy making sure using auto
+36:58
+scaling using chaos monkeys to test out
+37:01
+your stateless service doing red-black
+37:03
+pushes to make sure that you can roll
+37:04
+back quickly and what are the really
+37:06
+important ones staging your deployments
+37:09
+so that you don't push out bad code to
+37:11
+all regions simultaneously of course all
+37:15
+of these are automated and I'm going to
+37:19
+jump over I'm going to talk about
+37:20
+polyglots
+37:21
+and containers this is something that's
+37:22
+come about really just in the last few
+37:24
+years and this is an intentional form of
+37:26
+variance these are people consciously
+37:28
+going I want to introduce new
+37:29
+technologies into the micro service
+37:31
+architecture when I first started
+37:35
+managing operations engineering about
+37:37
+three years
+37:37
+ago we came up with this construct of
+37:39
+the paved road the paved road was a set
+37:42
+of sir best-of-breed technologies that
+37:44
+work best for Netflix with automation
+37:47
+and integration sort of bacon so that
+37:49
+our developers could be as agile as
+37:51
+possible but if they got on the paved
+37:52
+road they were going to have a really
+37:54
+really efficient experience we focused
+37:57
+on Java and what I'm now going to call
+37:59
+bare-bones ec2 which is a bit of an
+38:01
+oxymoron but basically using ECT as ec2
+38:05
+as opposed to containers while we were
+38:08
+building that out and very proud of
+38:10
+ourselves for getting this working well
+38:11
+our internal customers are engineering
+38:14
+customers we're going off-road and
+38:16
+building out their own paths started
+38:19
+innocuously enough with Python doing
+38:22
+operational work made perfect sense
+38:23
+we had some back-office applications
+38:26
+written and Ruby and then things got
+38:29
+sort of interesting when our web team
+38:30
+said you know we're going to abandon the
+38:32
+JVM and we're actually going to rewrite
+38:33
+the web application in node.js that's
+38:36
+when things got very interesting and
+38:38
+then as we added in docker things become
+38:41
+very challenging now the reasons we did
+38:44
+this were logical it made a lot of sense
+38:46
+to embrace these technologies however
+38:49
+things got real when we start talking
+38:52
+about putting these technologies into
+38:54
+the critical path for our customers and
+38:56
+it actually makes a lot of sense to do
+38:58
+so let me tell you why so the API
+39:01
+gateway actually had a capability or has
+39:04
+a capability to integrate groovy scripts
+39:06
+that can act as endpoints for the UI
+39:08
+team and they conversion every single
+39:10
+one of those scripts so that as they
+39:12
+make changes they can deploy a change
+39:14
+out into production that has a certain
+39:15
+to Don to devices out in the field and
+39:17
+have a sync up with that endpoint that's
+39:20
+running within the API gateway but this
+39:22
+is another example of the monolith lots
+39:25
+of code running in process with a lot of
+39:28
+variety and people with different
+39:30
+understandings of how that service works
+39:32
+and we've had situations where endpoints
+39:34
+got deleted or where the scripts or some
+39:37
+script went rogue generated too many
+39:39
+versions of something and ate up all of
+39:42
+the memory available on the API service
+39:44
+so again a monolithic pattern to be
+39:47
+avoided and so the logical solution is
+39:49
+to take those
+39:51
+points and push them out of the API
+39:53
+service and in this case the plan is to
+39:56
+move those into nodejs little node.js
+39:59
+applications running in docker
+40:01
+containers and then those would of
+40:04
+course call back into the API service
+40:06
+and now we've got our separation of
+40:07
+concerns again now we can isolate any
+40:10
+breakage or challenges that are
+40:12
+introduced by those node applications
+40:15
+now this doesn't come with a call come
+40:17
+without a cost fact there's a rather
+40:19
+large cost that comes with these kinds
+40:21
+of changes and so it's very important to
+40:23
+be thoughtful about it the UI teams that
+40:26
+we're using the groovy scripts were used
+40:27
+to a very efficient model for how they
+40:30
+did their development it didn't have to
+40:32
+spend a lot of time managing the
+40:33
+infrastructure they got to write scripts
+40:35
+check the mana and they were done and so
+40:37
+trying to replicate that with a nodejs
+40:40
+and docker container methodology takes a
+40:43
+substantial amount of additional work
+40:45
+the insight triage capabilities are
+40:47
+different if you're running in a
+40:48
+container and you're asking about how
+40:49
+much CPU is being consumed or how much
+40:51
+memory you have to treat that
+40:52
+differently you have to have different
+40:54
+tooling you have to instrument those
+40:56
+applications in different ways we have a
+40:59
+base ami that was pretty generic that
+41:01
+was used across all of our applications
+41:02
+now that's being fragmented out and more
+41:05
+specialized node management is huge
+41:09
+there is no architecture out there or no
+41:11
+technology out there today that we can
+41:13
+use out of the box that allows us to
+41:15
+manage these applications the way that
+41:17
+we want to in the cloud and so there's
+41:19
+an entirely new tier called Titus being
+41:21
+built that allows us to do all the
+41:23
+workload management and the equivalent
+41:25
+of auto scaling and node replacement and
+41:27
+all of that the Netflix is making a
+41:29
+fairly huge investment in that area
+41:31
+and then all the work we did over the
+41:33
+years running in the JVM with our
+41:35
+platform code making people efficient by
+41:38
+providing a bunch of services now we
+41:40
+have decisions to make do we duplicate
+41:42
+them do we not provide them and let
+41:44
+those teams running a node have to write
+41:46
+their own direct rest calls and manage
+41:48
+all of that themselves that's being
+41:50
+discussed and there's a certain amount
+41:51
+of compromise happening there some of
+41:53
+the platform functionality is going to
+41:54
+be written natively a note for example
+41:56
+and then of course anytime you introduce
+41:59
+a new technology into production we saw
+42:01
+the flavor to the cloud we saw this
+42:03
+every time we've done a major we are
+42:04
+to texture you're going to break things
+42:06
+and they things will break in
+42:07
+interesting and new ways that you
+42:09
+haven't yet encountered and so there's a
+42:11
+learning curve before you're actually
+42:12
+going to become good at this
+42:14
+and so rather than one paved road we now
+42:17
+have a proliferation of paved roads and
+42:20
+this is a real challenge for the teams
+42:22
+that are centralized that are that are
+42:23
+finite that are trying to provide
+42:25
+support to the rest of the engineering
+42:26
+organization so we had a big debate
+42:28
+about this a few months ago and the
+42:30
+stance where we landed was the most
+42:33
+important thing was to make sure that we
+42:35
+really raised awareness of cost so that
+42:36
+when we're making these architectural
+42:38
+decisions people are well informed and
+42:39
+they can make good choices we're going
+42:42
+to constrain the amount of support and
+42:44
+focus primarily still on JVM but
+42:47
+obviously this new use case of node and
+42:49
+docker is pretty critical and there's a
+42:50
+lot of energy going into supporting that
+42:52
+and then of course logically logically
+42:54
+we'd have to prioritize by impact with a
+42:57
+finite number of people who can work on
+42:58
+these types of things and we're possible
+43:01
+seek reusable solutions delivery is
+43:03
+relatively generic so you can probably
+43:05
+support a wide variety of languages and
+43:06
+platforms with delivery so that's one
+43:10
+example then one other example is client
+43:12
+libraries that are relatively simple can
+43:14
+potentially be auto-generated so you can
+43:16
+create a ruby version and a python
+43:18
+version and a java version so we're
+43:20
+seeking those kinds of solutions again
+43:22
+this is one of those places where
+43:23
+there's no one cut and dry right way to
+43:25
+do this hopefully this is good food for
+43:28
+thought if you're dealing with these
+43:29
+kind of situations so let's talk about
+43:32
+that last element now change what we do
+43:37
+know is that when we change when we are
+43:39
+in the office when we are making changes
+43:42
+in production we break things
+43:43
+this is outages by day of week lo and
+43:46
+behold on the weekend things tend to
+43:47
+break left here's a really interesting
+43:49
+one by time of day nine o'clock in the
+43:51
+morning boom time to push changes
+43:54
+time to break Netflix so
+43:58
+we know that that happens and so the
+44:00
+fundamental question here is how do you
+44:01
+achieve velocity but with confidence how
+44:03
+do I move as fast as possible and
+44:05
+without worrying about breaking things
+44:08
+all the time the way that we address
+44:11
+that is by creating a new delivery
+44:13
+platform this replaced asgaard which was
+44:15
+our workhorse for many years this new
+44:18
+platform is a global cloud management
+44:20
+platform but also a delivery and
+44:22
+automated delivery system and here's
+44:25
+what's really critical here spinnaker
+44:27
+was designed to integrate best practices
+44:29
+such that as things are deploying out
+44:32
+into production we can integrate these
+44:34
+lessons learned these automated
+44:36
+components directly into the path for
+44:38
+delivery in the pipeline we see here
+44:41
+using two things that we value highly
+44:43
+automated canary analysis where you put
+44:45
+a trickle of traffic or some traffic
+44:47
+into a new version of the code with live
+44:49
+production traffic and then you
+44:51
+determine whether or not the new code is
+44:53
+as good or better than the old code and
+44:55
+stage deployments where you want to make
+44:58
+sure you deploy getting the five minutes
+45:01
+fun we want to make sure you deploy one
+45:03
+region at a time so that if something
+45:05
+breaks you can go to other regions you
+45:08
+can see the list here of other functions
+45:10
+that are integrated and long-term the
+45:12
+production ready checklist we talked
+45:14
+about earlier is fodder for a whole wide
+45:16
+variety of things that long term should
+45:18
+be integrated into the delivery pipeline
+45:21
+I'm cheating a little bit here because
+45:23
+of time constraints luckily I can and I
+45:27
+did a talk last year reinvents that
+45:29
+might be of interest to you if you
+45:30
+really want to dig into how these
+45:32
+functions deeply integrate with each
+45:34
+other how does the production ready
+45:35
+performance and reliability chaos
+45:37
+engineering integrate with spinnaker and
+45:39
+continuous delivery monitoring systems
+45:41
+the special thing we encourage you to
+45:42
+check it out now I'm going to close this
+45:45
+out with a short story about
+45:47
+organization and architecture in the
+45:51
+early days there was a team called
+45:53
+electronic delivery that was actually
+45:55
+the first version of streaming was
+45:56
+called electronic delivery we can have a
+45:58
+term streaming back then back originally
+46:00
+we were going to download and had a hard
+46:02
+drive in some kind of device and the
+46:04
+very first version of the Netflix ready
+46:06
+device platform looks something like
+46:08
+this it had fundamental capabilities
+46:10
+like network
+46:10
+capabilities open the platform
+46:12
+functionality around security activation
+46:15
+playback and then it was a user
+46:16
+interface the user interface was
+46:19
+actually relatively simple at the time
+46:20
+it was using something called a cue
+46:23
+reader we go to the website to add
+46:24
+something into your cue and then go to
+46:25
+the device and see if it showed up what
+46:29
+was also nice is this is developed under
+46:30
+one organization which was called
+46:32
+electronic delivery and so the client
+46:34
+team and the server team were all one
+46:35
+organizations so they had this great
+46:36
+tight working relationship
+46:38
+it was very collaborative and the design
+46:41
+that they had developed or the we had
+46:42
+developed was XML XML based payloads
+46:45
+custom response codes within those XML
+46:48
+responses and versions firmware releases
+46:51
+that would go out over long cycles now
+46:54
+in parallel the Netflix API was created
+46:57
+for the DVD business to try and
+46:59
+stimulate applications external
+47:01
+applications that would drive traffic
+47:02
+back to Netflix we said let a thousand
+47:04
+flowers bloom we hope that this would be
+47:06
+wildly successful it really wasn't it
+47:09
+didn't really generate a huge amount of
+47:11
+value to Netflix however the Netflix API
+47:14
+was well poised to help us out with our
+47:17
+UI innovation it contained content
+47:20
+metadata so all the data about what
+47:22
+movies are available and could generate
+47:23
+lists and it had a generalized REST API
+47:27
+JSON based schema HTTP based response
+47:31
+code starting to feel like a more modern
+47:32
+architecture here and if the dude is an
+47:35
+OAuth security model because that's what
+47:36
+was required at the time for external
+47:37
+apps that evolved over time to something
+47:39
+else but what matters here is that from
+47:42
+a device perspective we now had
+47:45
+fragmentation across these two tiers we
+47:47
+now had two edge services functioning in
+47:49
+very very different ways
+47:50
+one was rest-based JSON ooofff the other
+47:54
+was RPC XML and a custom security
+47:57
+mechanism for dealing with tokens and
+47:59
+there was a firewall essentially between
+48:01
+these two teams in fact because the API
+48:03
+originally wasn't as well scaled with
+48:05
+NCCP there was a lot of frustration
+48:07
+between teams every time maybe I went
+48:09
+down my team got called and so there was
+48:11
+some friction there we really wanted
+48:12
+them to be able to get that up and
+48:13
+running but this distinction this you
+48:15
+will services protocol schemas security
+48:18
+models if it's god forbid you were a
+48:20
+client developer and you had to span
+48:21
+both of these worlds and try to
+48:23
+get work done you were switching between
+48:24
+completely different contexts and we
+48:26
+actually had examples where we wanted to
+48:28
+be able to do things like return limited
+48:31
+duration licenses back with the listed
+48:33
+movies that were coming back for the
+48:34
+user interface so when I click through
+48:36
+and hit play it was instantaneous as
+48:38
+opposed to having to make another
+48:40
+round-trip call to do DRM so because of
+48:44
+this I had a conversation with one of
+48:46
+the engineers a very senior engineer at
+48:48
+left at Netflix and I asked him what's
+48:51
+the right long-term architecture can we
+48:52
+do an exercise here and go figure this
+48:54
+out and this is a gentleman named Peter
+48:56
+stout and of course the very thought
+48:58
+police the first question he had to me
+48:59
+seconds later was do you care about the
+49:02
+organizational implication what happens
+49:04
+if we have to integrate these things
+49:05
+what happens if it breaks the way we do
+49:07
+things well this is very relevant to
+49:10
+something called Conway's law is anybody
+49:13
+hearing some laughter so whoever laughs
+49:16
+first tell me what Conway's lives all
+49:25
+right good
+49:26
+here's the sort of more sort of detailed
+49:29
+explanation organizations which design
+49:32
+systems are constrained to produce
+49:33
+designs which are copies of the
+49:34
+communication structures of these
+49:36
+organizations are very abstract I like
+49:39
+this a little better
+49:39
+any piece of software reflects the
+49:41
+organizational structure that produced
+49:43
+it here's my favorite one you have four
+49:46
+teams working on a compiler you'll end
+49:48
+up with a four path compiler so that's
+49:52
+what's had a four pass compiler that's
+49:54
+where we work and the problem with this
+49:56
+is this is the tail wagging the dog this
+49:59
+is not solutions first this is
+50:00
+organization first that was driving the
+50:02
+architecture that we had and when we
+50:05
+think about this this was this is a
+50:07
+sense of going back to this illustration
+50:08
+we had before we had our gateway we had
+50:10
+NCCP which is having a legacy devices
+50:12
++20 back support we had API this was
+50:15
+just a mess and so the architecture we
+50:18
+ended up developing with something we
+50:19
+call Blade Runner because we're talking
+50:21
+about the edge services and the
+50:23
+capabilities of NCCP became decomposed
+50:26
+and integrated directly into the Zul
+50:29
+proxy layer the API gateway and the
+50:31
+appropriate pieces were pushed out into
+50:33
+new smaller micro services that port
+50:36
+more fundamental capabilities like
+50:38
+security and features around playback
+50:41
+like subtitles and CC and data so the
+50:45
+lessons learned here this gave us
+50:48
+greater capability and it gave us
+50:50
+greater agility long term by unifying
+50:53
+these things and thinking about the
+50:54
+clients and what their experience was
+50:56
+we're able to produce something much
+50:57
+more powerful and we ended up
+50:59
+refactoring the organization in response
+51:01
+I ended up actually moving on my whole
+51:03
+team got folded under the Netflix API
+51:05
+team and that's what I moved over to
+51:07
+operations engineering and that was the
+51:09
+right thing to do for the business
+51:11
+lessons learned solutions first team
+51:14
+seconds and be willing to make those
+51:16
+organizational changes so I'm going to
+51:19
+briefly recap I have zero minutes I'm
+51:21
+going to go over just a couple of
+51:22
+minutes just so we can wrap up cleanly
+51:24
+here so micro service architectures are
+51:27
+complex and organic and its best to
+51:29
+think about them that way and their
+51:30
+health depends on a discipline and about
+51:33
+injecting chaos into that environment on
+51:36
+a regular basis for dependencies you
+51:38
+want to use circuit breakers and
+51:40
+fallbacks and apply chaos you want have
+51:43
+simple clients eventual consistency and
+51:46
+a multi reach and failover strategy for
+51:49
+scale and brace auto scaling please it's
+51:52
+so simple and it's a great benefit
+51:54
+reduce single points of failure
+51:55
+partition your workloads have a failure
+51:58
+driven design like embedding requests
+52:00
+and during request level caching and of
+52:02
+course do chaos but again chaos under
+52:04
+load to make sure that what you think is
+52:06
+true is actually true for variants
+52:09
+engineer your operations as much as
+52:11
+possible to make those automatic
+52:13
+understand and socialize the cost of
+52:16
+variants and prioritize the support if
+52:18
+you have a centralized organization and
+52:19
+most people most organizations do
+52:21
+prioritize by impact to make sure that
+52:24
+you're as efficient as possible on
+52:26
+change you want automated delivery and
+52:28
+you want to integrate your best
+52:29
+practices on a regular basis and again
+52:32
+solutions first team second there's a
+52:35
+lot of technologies that support these
+52:37
+strategies that Netflix has open source
+52:39
+if you're not familiar with it I think a
+52:41
+lot of people are go check out Netflix
+52:43
+OSS and also check out the Netflix tech
+52:46
+blogs where there are regular
+52:48
+announcements about how
+52:49
+are done at Netflix how things are done
+52:51
+at scale announcements about new open
+52:53
+source tools like visceral which is the
+52:55
+tool that generated the visuals we've
+52:57
+been looking at throughout and I think
+53:00
+we're out of time at this point do we
+53:02
+have time for questions or should I just
+53:04
+take it out of slide as you can all
+53:06
+right cool well I push the limit thank
+53:08
+you very much thank you everybody
+53:10
+[Applause]
