@@ -1,0 +1,28 @@
+version: '3'
+services:
+
+  redis1:
+    container_name: redis1
+    hostname: redis1
+    image: redis
+    ports:
+    - "6379:6379"
+    volumes:
+    - redis_volume:/usr/local/etc/redis
+  
+
+  redis_dbms:
+    container_name: redis_dbms
+    hostname: redis_dbms
+    image: rediscommander/redis-commander:latest
+    restart: always
+    environment:
+    - REDIS_HOSTS=local:redis1:6379
+    - HTTP_USER=DASistemas
+    - HTTP_PASSWORD=Ya-Casi-Se-Acaba-El-Semestre!
+    ports:
+    - "8081:8081"
+
+volumes:
+  redis_volume:
+    external: true
