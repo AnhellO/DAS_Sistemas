@@ -1,0 +1,210 @@
+Microsoft Windows [Versión 10.0.19042.985]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\gonch\Desktop\Segundo Parcial\Ejercicio-5>docker-compose up -d
+Docker Compose is now in the Docker CLI, try `docker compose up`
+
+Creating network "ejercicio-5_p2e2" with the default driver
+Pulling redis-commander (rediscommander/redis-commander:latest)...
+latest: Pulling from rediscommander/redis-commander
+532819f3e44c: Pull complete
+03090f915053: Pull complete
+e6016c8ab2f7: Pull complete
+ed44ef9eefa8: Pull complete
+Digest: sha256:0d4390823ead18f041ac6eca86318eac3c0558a215c82f3a9ffb39d7e2b73293
+Status: Downloaded newer image for rediscommander/redis-commander:latest
+Creating redis_db_1 ... done
+Creating redis_db_3 ... done
+Creating redis_db_2 ... done
+Creating redis_dbms ... done
+
+C:\Users\gonch\Desktop\Segundo Parcial\Ejercicio-5>Docker network ls
+NETWORK ID     NAME               DRIVER    SCOPE
+b4c4e3d57033   bridge             bridge    local
+67952eec40c4   ejercicio-5_p2e2   bridge    local
+669ee4e9209c   host               host      local
+54128a4bff26   none               null      local
+
+C:\Users\gonch\Desktop\Segundo Parcial\Ejercicio-5>Docker network inspect ejercicio-5_p2e2
+[
+    {
+        "Name": "ejercicio-5_p2e2",
+        "Id": "67952eec40c4ae38b05bcc95ac96f7799dc7d1403031527cb37fd405e3eb5c4a",
+        "Created": "2021-05-20T22:52:11.1600838Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "192.168.112.0/20",
+                    "Gateway": "192.168.112.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": true,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "a666b5f41aa4cf6fd21d501bf434ed48340a8cf4bd80400a8ed057380e73ebca": {
+                "Name": "redis_db_1",
+                "EndpointID": "599be04fe2234e9a55b0ac605e8010dd960d7b6bfc4913ce6000da2d5d1cbafe",
+                "MacAddress": "02:42:c0:a8:70:03",
+                "IPv4Address": "192.168.112.3/20",
+                "IPv6Address": ""
+            },
+            "e13668e86ec34d2a7d8fb3b54b6422ecce61fa7f90149ff75679777338b25569": {
+                "Name": "redis_db_2",
+                "EndpointID": "82b6fad00eeaaf886bc2a2040e12444b9d9f0fb95371323bc30147d5c8d8ea0e",
+                "MacAddress": "02:42:c0:a8:70:04",
+                "IPv4Address": "192.168.112.4/20",
+                "IPv6Address": ""
+            },
+            "eb4ebad011c81a76e15a11d6be50a0d09711f47bf10a98a2ef466932d5a411dd": {
+                "Name": "redis_db_3",
+                "EndpointID": "d1d96480e16ad2068c01c0ca66b968a3e0e94e4792af1a81436508dea286d925",
+                "MacAddress": "02:42:c0:a8:70:05",
+                "IPv4Address": "192.168.112.5/20",
+                "IPv6Address": ""
+            },
+            "fed95c19a4fdb8c058968f9375b1fdb8571d9362d1c6b783d89ca705cf59164a": {
+                "Name": "redis_dbms",
+                "EndpointID": "82eb5123efda08e3ddcd89e9f1c6298bd1994f9b8fdc2813f68b4fabb51c3d30",
+                "MacAddress": "02:42:c0:a8:70:02",
+                "IPv4Address": "192.168.112.2/20",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "p2e2",
+            "com.docker.compose.project": "ejercicio-5",
+            "com.docker.compose.version": "1.29.0"
+        }
+    }
+]
+
+C:\Users\gonch\Desktop\Segundo Parcial\Ejercicio-5>Docker network inspect ejercicio-5_p2e2
+[
+    {
+        "Name": "ejercicio-5_p2e2",
+        "Id": "67952eec40c4ae38b05bcc95ac96f7799dc7d1403031527cb37fd405e3eb5c4a",
+        "Created": "2021-05-20T22:52:11.1600838Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "192.168.112.0/20",
+                    "Gateway": "192.168.112.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": true,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "p2e2",
+            "com.docker.compose.project": "ejercicio-5",
+            "com.docker.compose.version": "1.29.0"
+        }
+    }
+]
+
+C:\Users\gonch\Desktop\Segundo Parcial\Ejercicio-5>Docker network inspect ejercicio-5_p2e2
+[
+    {
+        "Name": "ejercicio-5_p2e2",
+        "Id": "67952eec40c4ae38b05bcc95ac96f7799dc7d1403031527cb37fd405e3eb5c4a",
+        "Created": "2021-05-20T22:52:11.1600838Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "192.168.112.0/20",
+                    "Gateway": "192.168.112.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": true,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "a666b5f41aa4cf6fd21d501bf434ed48340a8cf4bd80400a8ed057380e73ebca": {
+                "Name": "redis_db_1",
+                "EndpointID": "5de1c86a180e7c4a0db1b31064fa1adce8dbc13f66ccce2d842159434fb921bf",
+                "MacAddress": "02:42:c0:a8:70:03",
+                "IPv4Address": "192.168.112.3/20",
+                "IPv6Address": ""
+            },
+            "c0449cab9951b09b1faa92fcba68f1536869afc92df1a2c6764c108765fd9dd2": {
+                "Name": "redis_dbms",
+                "EndpointID": "f1a7793005983b10d581f08420729b02a2f68a4bff30180145dd382cf39be5b3",
+                "MacAddress": "02:42:c0:a8:70:05",
+                "IPv4Address": "192.168.112.5/20",
+                "IPv6Address": ""
+            },
+            "e13668e86ec34d2a7d8fb3b54b6422ecce61fa7f90149ff75679777338b25569": {
+                "Name": "redis_db_2",
+                "EndpointID": "6ec6c7104db83e7249c9b3c8141b6677aa22f500277c2a32656890766bd1cf5a",
+                "MacAddress": "02:42:c0:a8:70:04",
+                "IPv4Address": "192.168.112.4/20",
+                "IPv6Address": ""
+            },
+            "eb4ebad011c81a76e15a11d6be50a0d09711f47bf10a98a2ef466932d5a411dd": {
+                "Name": "redis_db_3",
+                "EndpointID": "aa46f226271604d7939daaabdfc4649345ee9e3bbf9177fe0e34ad2ac7576fa4",
+                "MacAddress": "02:42:c0:a8:70:02",
+                "IPv4Address": "192.168.112.2/20",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "p2e2",
+            "com.docker.compose.project": "ejercicio-5",
+            "com.docker.compose.version": "1.29.0"
+        }
+    }
+]
+
+C:\Users\gonch\Desktop\Segundo Parcial\Ejercicio-5>docker run --name redis_dbms -d -p 8081:8081 --network=ejercicio-5_p2e2 -e REDIS_HOSTS=redis_db_1:192.168.112.3:6379,redis_db_2:192.168.112.4:6379,redis_db_3:192.168.112.2:6379 -e HTTP_USER=DASistemas -e HTTP_PASSWORD=2do-parcial! rediscommander/redis-commander:latest
+docker: Error response from daemon: Conflict. The container name "/redis_dbms" is already in use by container "c0449cab9951b09b1faa92fcba68f1536869afc92df1a2c6764c108765fd9dd2". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+
+C:\Users\gonch\Desktop\Segundo Parcial\Ejercicio-5>docker run --name redis_dbms -d -p 8081:8081 --network=ejercicio-5_p2e2 -e REDIS_HOSTS=redis_db_1:192.168.112.3:6379,redis_db_2:192.168.112.4:6379,redis_db_3:192.168.112.2:6379 -e HTTP_USER=DASistemas -e HTTP_PASSWORD=2do-parcial! rediscommander/redis-commander:latest
+738079762e000884ecd3b186930903dc7c095a14c9fd7a5aa2d1dcb17009416b
+
+C:\Users\gonch\Desktop\Segundo Parcial\Ejercicio-5>
+C:\Users\gonch\Desktop\Segundo Parcial\Ejercicio-5>docker ps
+CONTAINER ID   IMAGE                                   COMMAND                  CREATED          STATUS                    PORTS                    NAMES
+738079762e00   rediscommander/redis-commander:latest   "/usr/bin/dumb-init …"   14 minutes ago   Up 14 minutes (healthy)   0.0.0.0:8081->8081/tcp   redis_dbms
+e13668e86ec3   redis:latest                            "docker-entrypoint.s…"   19 minutes ago   Up 17 minutes             0.0.0.0:6380->6379/tcp   redis_db_2
+a666b5f41aa4   redis:latest                            "docker-entrypoint.s…"   19 minutes ago   Up 17 minutes             0.0.0.0:6379->6379/tcp   redis_db_1
+eb4ebad011c8   redis:latest                            "docker-entrypoint.s…"   19 minutes ago   Up 17 minutes             0.0.0.0:6381->6379/tcp   redis_db_3
+
+C:\Users\gonch\Desktop\Segundo Parcial\Ejercicio-5>
+

@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+    mongo:
+        container_name: mongo_db
+        image: mongo:4.2
+        ports:
+            - 27027:27017
+        restart: always
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: foo
+            MONGO_INITDB_ROOT_PASSWORD: bar123
+            MONGO_INITDB_DATABASE: baz
+    mongo-express:
+        container_name: mongo_dbms
+        image: mongo-express
+        restart: always
+        ports:
+            - 8081:8081
+        environment:
+            ME_CONFIG_MONGODB_SERVER: mongo_db
+            ME_CONFIG_MONGODB_ADMINUSERNAME: foo
+            ME_CONFIG_MONGODB_ADMINPASSWORD: bar123
+            ME_CONFIG_BASICAUTH_USERNAME: foo
+            ME_CONFIG_BASICAUTH_PASSWORD: bar123
+
+          

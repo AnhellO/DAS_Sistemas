@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+    redis1:
+        container_name: redis1
+        ports:
+            - "6379:6379"
+        image: redis:latest
+    
+    redis2:
+        container_name: redis2
+        ports:
+            - "6380:6379"
+        image: redis:latest
+    
+    redis3:
+        container_name: redis2
+        ports:
+            - "6381:6379"
+        image: redis:latest
+
+    redis_dbms:
+        container_name: redis_dbms
+        ports:
+            - "8081:8081"
+        image: rediscommander/redis-commander:latest
+        environment:
+            - HTTP_USER=DASistemas
+            - HTTP_PASSWORD=Ya-Casi-Se-Acaba-El-Semestre!
+            - REDIS_HOSTS=redis1, redis2, redis3

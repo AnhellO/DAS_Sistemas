@@ -1,0 +1,2 @@
+# Monolithic vs. Microservices Architecture
+la arquitecura de monolitica es mas facil de implementar en poryectos pequeños aunque si ocurre una falla durante la implementacion puede interrumpir todo el proceso en cambio  la arquitecura de microservicios tambien tiene su costo ya que necesitarias estar monitoreando constantemente la configuracion para la infrestructura ademas de que se enfoca mas a proyectos a una mayor escala

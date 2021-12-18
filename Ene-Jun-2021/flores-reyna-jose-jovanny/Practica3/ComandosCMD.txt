@@ -1,0 +1,72 @@
+#comandos utilizados
+PS C:\Users\Jovanny Reyna\Desktop\DAS\DAS_Sistemas\Ene-Jun-2021\flores-reyna-jose-jovanny\Parcial2\practica3> docker build -t jovannyr94/static_flask .
+[+] Building 0.0s (1/2)
+ => [internal] load build definition from Dockerfile                                                                                                                            0.0s
+ => => transferring dockerfile: 2B                                                                                                                                              0.0s
+failed to solve with frontend dockerfile.v0: failed to read dockerfile: open /var/lib/docker/tmp/buildkit-mount338482177/Dockerfile: no such file or directory
+PS C:\Users\Jovanny Reyna\Desktop\DAS\DAS_Sistemas\Ene-Jun-2021\flores-reyna-jose-jovanny\Parcial2\practica3> docker build -t jovannyr94/static_flask .
+[+] Building 10.3s (11/11) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                            0.0s
+ => => transferring dockerfile: 798B                                                                                                                                            0.0s
+ => [internal] load .dockerignore                                                                                                                                               0.0s
+ => => transferring context: 2B                                                                                                                                                 0.0s
+ => [internal] load metadata for docker.io/library/python:3                                                                                                                     1.7s
+ => [auth] library/python:pull token for registry-1.docker.io                                                                                                                   0.0s
+ => [internal] load build context                                                                                                                                               0.0s
+ => => transferring context: 3.86kB                                                                                                                                             0.0s
+ => [1/5] FROM docker.io/library/python:3@sha256:0813df59b3d73a13fc581fd416d7733a2de6540d7e3f7633a1a9aabf9b201548                                                               2.3s
+ => => resolve docker.io/library/python:3@sha256:0813df59b3d73a13fc581fd416d7733a2de6540d7e3f7633a1a9aabf9b201548                                                               0.0s
+ => => sha256:fe2971bedd019d952d4458afb1fe4e222ddb810150008c1dee5a068d38bb0e43 2.22kB / 2.22kB                                                                                  0.0s
+ => => sha256:81182ea718cf045ec1dd9ca295961b86aefe916d451fc860c0d1a86b9d7540a4 234B / 234B                                                                                      0.3s
+ => => sha256:1c053581d9c97b5cbe226c12f297b53778812e2a19c4ea2c6344aa60f70b9b35 19.19MB / 19.19MB                                                                                0.8s
+ => => sha256:0813df59b3d73a13fc581fd416d7733a2de6540d7e3f7633a1a9aabf9b201548 2.36kB / 2.36kB                                                                                  0.0s
+ => => sha256:70aa8983ec5cea7bc143af188b4bdc424fa405184d56dcbdfd9df672ade85249 8.34kB / 8.34kB                                                                                  0.0s
+ => => sha256:83ebd4edf9af1d3be8ae28b17bed10d2da1c5d614563fee3dbf60cf9f94edefd 2.31MB / 2.31MB                                                                                  0.3s
+ => => extracting sha256:1c053581d9c97b5cbe226c12f297b53778812e2a19c4ea2c6344aa60f70b9b35                                                                                       0.7s
+ => => extracting sha256:81182ea718cf045ec1dd9ca295961b86aefe916d451fc860c0d1a86b9d7540a4                                                                                       0.0s
+ => => extracting sha256:83ebd4edf9af1d3be8ae28b17bed10d2da1c5d614563fee3dbf60cf9f94edefd                                                                                       0.2s
+ => [2/5] COPY . /usr/src                                                                                                                                                       0.1s
+ => [3/5] WORKDIR /usr/src                                                                                                                                                      0.0s
+ => [4/5] RUN git clone https://github.com/joaoventura/flask-static-site.git                                                                                                    1.5s
+ => [5/5] RUN pip install --no-cache-dir -r requeriments.txt                                                                                                                    4.5s
+ => exporting to image                                                                                                                                                          0.2s
+ => => exporting layers                                                                                                                                                         0.2s
+ => => writing image sha256:bbc66bd3bc7ae3834de73ef04c1eedad808f4e3ea8599165f555f0fb1e3e098c                                                                                    0.0s
+ => => naming to docker.io/jovannyr94/static_flask                                                                                                                              0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+PS C:\Users\Jovanny Reyna\Desktop\DAS\DAS_Sistemas\Ene-Jun-2021\flores-reyna-jose-jovanny\Parcial2\practica3> docker images
+REPOSITORY                  TAG       IMAGE ID       CREATED             SIZE
+jovannyr94/static_flask     latest    bbc66bd3bc7a   7 minutes ago       909MB
+redispy_app                 latest    f9a59316e1d4   55 minutes ago      897MB
+<none>                      <none>    eb0a29ff44b7   About an hour ago   897MB
+jovannyr94/redispy          latest    3b575a1ba6f1   2 weeks ago         896MB
+jovannyr94/pokepy-ejemplo   1.0       84af88bdeb11   3 weeks ago         897MB
+lab6                        latest    84af88bdeb11   3 weeks ago         897MB
+mongo-express               latest    51fc3f2af7a1   3 weeks ago         128MB
+phpmyadmin                  latest    88fd4ae67acd   4 weeks ago         477MB
+redis                       latest    de974760ddb2   4 weeks ago         105MB
+mysql                       8         cbe8815cbea8   4 weeks ago         546MB
+mongo                       latest    30b3be246e39   4 weeks ago         449MB
+ubuntu                      latest    26b77e58432b   5 weeks ago         72.9MB
+docker/getting-started      latest    3ba8f2ff0727   7 weeks ago         27.9MB
+anhellojz/pokepy            latest    77dfe8d4a304   11 months ago       945MB
+PS C:\Users\Jovanny Reyna\Desktop\DAS\DAS_Sistemas\Ene-Jun-2021\flores-reyna-jose-jovanny\Parcial2\practica3> docker push jovannyr94/static_flask
+Using default tag: latest
+The push refers to repository [docker.io/jovannyr94/static_flask]
+dec40980d77d: Pushed
+33beb915682d: Pushed
+5f70bf18a086: Pushed
+13ceee2355dd: Pushed
+b5fbcb0e3639: Mounted from library/python
+a056838ebc49: Mounted from library/python
+dda023c1ba15: Mounted from library/python
+8d18b38717e2: Mounted from library/python
+651326e9f1ca: Mounted from library/python
+5d5962699bd5: Mounted from library/python
+a42439ce9650: Mounted from library/python
+26270c5e25fa: Mounted from library/python
+e2c6ff462357: Mounted from library/python
+latest: digest: sha256:e0ebfac35cb958d14dcd39b8393fe8bf98e835a31df70871b55d2c9275a38175 size: 3053
+PS C:\Users\Jovanny Reyna\Desktop\DAS\DAS_Sistemas\Ene-Jun-2021\flores-reyna-jose-jovanny\Parcial2\practica3> docker run -d -p 5000:5000 --name flask jovannyr94/static_flask
+be997acfe929a3d933fa5658d0c9afd55263b5c5648b176b78c2e45f0f265366

@@ -1,0 +1,11 @@
+version: '4.1'
+services:
+  mongo:
+    image: mongo
+    container_name: mongo_db
+    ports:
+      - 27027:27027
+    environment: 
+      MONGO_INITDB_USERNAME: foo
+      MONGO_INITDB_PASSWORD: bar123
+   
