@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+    mysql:
+        container_name: database
+        image: mysql:latest
+        ports: 
+            - "3306:3306"
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=issue 
+            - MYSQL_USER=user
+            - MYSQL_PASSWORD=pass1234
+        volumes: 
+            - /docker:/var/lib/mysql
+
+    phpmyadmin:
+        container_name: admin
+        image: phpmyadmin/phpmyadmin
+        expose: 
+            - 80
+        ports: 
+            - 8081:80
+        environment: 
+            - PMA_HOST=mysql
+        depends_on: 
+            - mysql
+
+    codepython:
+        container_name: codepython
+        build: ./app
+        ports: 
+            - 5000:5000
+        depends_on: 
+            - mysql
