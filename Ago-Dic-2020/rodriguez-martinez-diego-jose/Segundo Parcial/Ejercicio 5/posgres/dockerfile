@@ -1,4 +1,0 @@
-FROM postgres:latest
-LABEL "Correo:"=d.rdz.mtz314@gmail.com
-
-COPY CreateDB.sql /docker-entrypoint-initdb.d/
