@@ -1,7 +1,0 @@
-digraph "classes" {
-charset="utf-8"
-rankdir=BT
-"0" [label="{Peleador|poder : int\lvida\lvivo : bool\l|atacar(persona)\lentrenar()\lsaluda()\l}", shape="record"];
-"1" [label="{Persona|edad\lnombre\lvida\lvivo : bool\l|descansa()\lhablar(persona)\lsaluda()\l}", shape="record"];
-"0" -> "1" [arrowhead="empty", arrowtail="none"];
-}
