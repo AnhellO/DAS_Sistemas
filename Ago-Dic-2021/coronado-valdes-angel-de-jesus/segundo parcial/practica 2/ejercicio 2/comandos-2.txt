@@ -1,6 +1,0 @@
-//creamos nuestro archivo .yml
-//y modificamos el archivo para utilizar docker-compose
-
-$sudo docker-compose up
-
-
