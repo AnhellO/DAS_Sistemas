@@ -1,6 +1,0 @@
-from administrador import Admin2
-print("========== ejercicio 9-11 ==========")
-
-user1 = Admin2("angel","coronado","999869864","67")
-user1.privileges1.show_privilege()
-

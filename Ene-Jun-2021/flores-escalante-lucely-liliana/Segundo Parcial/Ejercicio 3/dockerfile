@@ -1,8 +1,0 @@
-FROM python:3.8
-
-WORKDIR /app
-COPY . /app
-VOLUME [ "/var/lib/docker/volumes/redis_volume/_data" ]
-RUN pip install --no-cache-dir -r Requisitos.txt
-
-CMD ["python","./inserciones.py"]

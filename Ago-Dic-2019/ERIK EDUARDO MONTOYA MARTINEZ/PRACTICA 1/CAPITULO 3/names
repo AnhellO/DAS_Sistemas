@@ -1,8 +1,0 @@
-Nombres=['Daniel', 'Fernando', 'Elena', 'Ruben', 'Omar']
-print(Nombres)
-
-print(Nombres[0].title())
-print(Nombres[1].title())
-print(Nombres[2].title())
-print(Nombres[3].title())
-print(Nombres[-1].title())
