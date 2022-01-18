@@ -1,1 +1,0 @@
-print ("Hola soy la practica numero 2 de Dummy")
