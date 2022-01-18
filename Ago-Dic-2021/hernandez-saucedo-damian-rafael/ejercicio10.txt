@@ -1,5 +1,0 @@
-print("========== ejercicio 9-10 ==========")
-from restaurante import Restaurant1
-
-res = Restaurant1("python","code")
-res.describe_restaurant1()

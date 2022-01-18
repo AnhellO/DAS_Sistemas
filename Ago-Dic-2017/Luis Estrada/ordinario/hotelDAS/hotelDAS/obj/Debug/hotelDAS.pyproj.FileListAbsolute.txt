@@ -1,2 +1,0 @@
-C:\Users\Clemente\source\repos\hotelDAS\hotelDAS\obj\Debug\hotelDAS.pyproj.CoreCompileInputs.cache
-C:\Users\Clemente\Desktop\ModeloVistaControlador\GITHUB\DAS_Sistemas\Ago-Dic-2017\Luis Zúñiga\ordinario\hotelDAS\hotelDAS\obj\Debug\hotelDAS.pyproj.CoreCompileInputs.cache

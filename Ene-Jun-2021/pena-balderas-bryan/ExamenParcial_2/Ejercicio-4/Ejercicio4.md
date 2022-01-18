@@ -1,2 +1,0 @@
-Decidi hacer el diagrama de esa forma ya que el cliente es quien recibe la informacion previamente procesada por el codigo en Python
-que a la vez, este codigo es quien genera la conexion con el broker de celery y la base de datos, cuando se manda una peticion a la app esta la manda a celery que es el message broker y quien asigna las tareas a los workers, y una vez asignado, en a base de redis es donde se procesa la tarea para al final mostrar la informacion en la app o en otro caso guardar algun dato.

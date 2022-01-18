@@ -1,4 +1,0 @@
-flask
-flask_flatpages
-frozen_flask
-pygments

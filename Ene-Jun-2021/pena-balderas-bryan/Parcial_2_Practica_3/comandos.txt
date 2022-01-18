@@ -1,3 +1,0 @@
-sudo docker run -p 5000:5000 bryanbalderas/static_flask
-
-https://hub.docker.com/r/bryanbalderas/static_flask

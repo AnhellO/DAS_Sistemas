@@ -1,4 +1,0 @@
-flask==1.1.1
-requests==2.22.0
-redis==3.5.3
-pylast>=1.0.0
