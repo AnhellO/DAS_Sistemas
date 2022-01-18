@@ -1,1 +1,0 @@
-animales = ["Perro", "Halcon", "Ballena"]
