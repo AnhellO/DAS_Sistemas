@@ -1,7 +1,0 @@
-ejecutar redis:
-docker run --name redis -p 6379:6379 -d redis
-
-2do contenedor:
-docker run --rm --name commander --link redis:serverredis -e REDIS_HOSTS=local:redis:6379 -e HTTP_USER=root -e HTTP_PASSWORD=qwerty -d -p 8081:8081 rediscommander/redis-commander:latest
-
-ir a http://localhost:8081/ y verificar con el user y password especificados

@@ -1,4 +1,0 @@
-peewee
-pymysql
-cryptography
-requests

@@ -1,3 +1,0 @@
-requests==2.22.0
-redis==3.3.8
-pymongo==3.11.2

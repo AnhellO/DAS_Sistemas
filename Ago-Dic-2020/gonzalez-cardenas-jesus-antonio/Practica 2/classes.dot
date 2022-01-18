@@ -1,9 +1,0 @@
-digraph "classes" {
-charset="utf-8"
-rankdir=BT
-"0" [label="{Camion|cobro: float\lcuenta: float\lnumero_actual_de_pasajeros: int\l|baja_pasajero(numero_de_pasajeros_que_bajaron)\lcamion_status()\lset_cuota(cta)\lsube_pasajero(numero_de_pasajeros_que_subieron)\l}", shape="record"];
-"1" [label="{Jet|mg_ammo: int\lmissile_ammo: int\l|jet_status()\lsend_message_to_base(mess)\lshoot_mg(shoots)\lshoot_missiles(shoots)\l}", shape="record"];
-"2" [label="{Vehiculo|date_of_release: string\lname: string\lnumber_of_wheels: int\lpassengers: int\lterrain: string\ltype_of_vehicle: string\l|move_vehicle(km)\lspecs()\lstop_vehicle()\l}", shape="record"];
-"0" -> "2" [arrowhead="empty", arrowtail="none"];
-"1" -> "2" [arrowhead="empty", arrowtail="none"];
-}

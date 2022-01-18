@@ -1,7 +1,0 @@
-#comandos utlizados
-
-docker build -t jovannyr94/static_flask .
-docker images
-#desde docker desktop corri mi imagen
-docker push jovannyr94/static_flask
-docker run -d -p 5000:5000 --name flask jovannyr94/static_flask

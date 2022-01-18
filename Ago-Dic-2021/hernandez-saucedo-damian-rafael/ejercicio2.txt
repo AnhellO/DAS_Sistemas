@@ -1,8 +1,0 @@
-print("========== ejercicio 9-2 ==========")
-restaurant1 = Restaurant("lua","code1")
-restaurant2 = Restaurant("java","code2")
-restaurant3 = Restaurant("ruby","code3")
-print("------------------------ methods ----------------------")
-restaurant1.describe_restaurant()
-restaurant2.describe_restaurant()
-restaurant3.describe_restaurant()
