@@ -1,9 +1,0 @@
-digraph "classes" {
-charset="utf-8"
-rankdir=BT
-"0" [label="{Bear|\l|hidden()\llevel()\lspeed()\l}", shape="record"];
-"1" [label="{Gorilla|\l|habilty()\lmagic()\lpower()\l}", shape="record"];
-"2" [label="{Zoo|age : Int\lanimal : String\lfood : String\lname : String\lspecies : String\l|dance()\leats()\linfo()\l}", shape="record"];
-"0" -> "2" [arrowhead="empty", arrowtail="none"];
-"1" -> "2" [arrowhead="empty", arrowtail="none"];
-}

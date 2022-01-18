@@ -1,6 +1,0 @@
-##### Actividad 3
-
-Con los videos de las practicas anteriores nos dimos una idea, con esta lectura estamos puliendo esa idea.
-Veo esta lectura como una guia para saber que arquitectura debo usar, tambien una idea seria plantear nuestro sistema, ver nuestros requerimientos y ver que hara o para cuando sera nuestro sistema, en base a eso escoger una arquitectura.
-La arquitectura monolitca es mas simple, tal vez los microservicios sean la ultima opcion a utilizar, aunque es muy completa su funcionalidad, me parece que puede ser explotada en proyectos grandes, pero en algo mas simple no se aprovecharia todo el jugo de microservicios.
-En general, la arquitectura monolitica me parece mas practica para aprender a utilizar estas arquitecturas.Pero la arquitectura de microservicios, aunque parece complicada, si la aprendemos a dominar podriamos hacer mas cosas. Entiendo que ninguna es perfecta y dependera de la situacion para ver cual implementar, pero mi gusto se va mas por la arquitectura de microservicios.
