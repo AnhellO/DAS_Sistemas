@@ -31,7 +31,7 @@ Lee algunos o todos los artículos que se adjuntan a continuación.
 - <https://tecnonucleous.com/2018/01/28/como-instalar-pip-para-python-en-windows-mac-y-linux/>
 - <https://programminghistorian.org/es/lecciones/instalar-modulos-python-pip>
 
-### Parte 2 - Especificaciones Técnicas
+### Parte 2 - Práctica
 
 1. Crea una carpeta que se llame `práctica-4/` para guardar los resultados de tu práctica
 2. Dentro de esa carpeta crea un script llamado `mi-script.py`, el cual lleve a cabo lo siguiente

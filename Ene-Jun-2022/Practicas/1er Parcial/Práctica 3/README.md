@@ -15,7 +15,7 @@ Lee algunos o todos los artículos que se adjuntan a continuación.
 - <https://docs.github.com/es/get-started/writing-on-github>
 - <https://gist.github.com/cuonggt/9b7d08a597b167299f0d>
 
-### Parte 2 - Especificaciones Técnicas
+### Parte 2 - Práctica
 
 1. Crea una carpeta que se llame `práctica-3/` para guardar los resultados de tu práctica
 2. Dentro de esa carpeta crea un archivo llamado `README.md` en el cual te describas un poco de manera introductoria y después contestes a las siguientes preguntas:
