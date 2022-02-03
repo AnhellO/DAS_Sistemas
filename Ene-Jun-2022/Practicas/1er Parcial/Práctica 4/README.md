@@ -1,11 +1,11 @@
-# Práctica 2
+# Práctica 4
 
 ## Objetivo
 
 - Mejorar en el aprendizaje y conocimiento sobre `Python`
-  - Aprender sobre el uso de módulos en Python
-  - Aprender sobre el manejo de archivos en Python
-  - Aprender sobre el uso del manejador de paquetes de `Python`: `pip`
+  - Uso de módulos en Python
+  - Manejo de archivos en Python
+  - Uso del manejador de paquetes de `Python`: `pip`
 
 ## Especificaciones
 
@@ -33,13 +33,13 @@ Lee algunos o todos los artículos que se adjuntan a continuación.
 
 ### Parte 2 - Especificaciones Técnicas
 
-1. Crea una carpeta que se llame `práctica-2/` para guardar los resultados de tu práctica
+1. Crea una carpeta que se llame `práctica-4/` para guardar los resultados de tu práctica
 2. Dentro de esa carpeta crea un script llamado `mi-script.py`, el cual lleve a cabo lo siguiente
    1. Importar la librería [`faker`](https://faker.readthedocs.io/en/master/)
-   2. Leer este archivo markdown con las especificaciones de la práctica
+   2. Leer este archivo markdown con las especificaciones de la práctica por medio del manejo de archivos de `Python`
    3. Remplazar todas las incidencias de la palabra `Python` o `python` en el documento por nombres falsos generados por medio de la librería `faker`
    4. Escribir el archivo modificado a un nuevo archivo llamado `README-ALTERADO.md`
 
 ## Deadline
 
-- `Martes 8 de Febrero a las 11:59pm`
+- `Domingo 13 de Febrero a las 11:59pm`

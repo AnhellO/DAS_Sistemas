@@ -17,15 +17,15 @@ Lee algunos o todos los artículos que se adjuntan a continuación.
 
 ### Parte 2 - Especificaciones Técnicas
 
-1. Crea una carpeta que se llame `práctica-2/` para guardar los resultados de tu práctica
+1. Crea una carpeta que se llame `práctica-3/` para guardar los resultados de tu práctica
 2. Dentro de esa carpeta crea un archivo llamado `README.md` en el cual te describas un poco de manera introductoria y después contestes a las siguientes preguntas:
    1. ¿Cuáles son tus hobbies?
    2. ¿Por qué estás estudiando la carrera de Ingeniería en Sistemas?
-   3. ¿Querías estudiar otra carrera que no fuera Ingeniería en Sistemas?, si es así, ¿cuáles?
-   4. ¿Te gusta programar? ¿Por qué sí o por qué no?
-   5. ¿Te gustaría aprender a programar de verdad?
+   3. ¿Querías estudiar alguna otra carrera que no fuera Ingeniería en Sistemas?, si es así, ¿cuáles eran tus otras opciones?
+   4. ¿Te gusta programar?, ¿por qué sí o por qué no?
+   5. ¿Te gustaría aprender a programar de verdad?, ¿por qué?
    6. ¿Cuál es tu lenguaje de programación preferido?
-   7. ¿Qué has aprendido fuera de lo visto en las materias y de lo que se te enseña en la carrera pero que te beneficie para la misma?
+   7. ¿Qué has aprendido por tu propia cuenta fuera de lo visto en las materias y de lo que se te enseña en la carrera universitaria pero que te beneficie para la misma?
    8. ¿Qué algoritmos famosos de programación conoces?
    9. ¿Te gustaría ejercer tu carrera profesionalmente?
    10. ¿Te gustaría trabajar desarrollando software y/o en el ámbito relacionado al software?
@@ -39,4 +39,4 @@ Punto importante a destacar es que tu archivo debe de seguir los lineamientos de
 
 ## Deadline
 
-- `Sábado 12 de Febrero a las 11:59pm`
+- `Domingo 13 de Febrero a las 11:59pm`
