@@ -1,0 +1,4 @@
+In Python you can modelling objects.
+In Python you can open files.
+In Python you can make functions
+In Python you can create classes.
