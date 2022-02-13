@@ -1,0 +1,4 @@
+Aprendi en Python a orientar problemas y situaciones del dia a dia en codigo
+Aprendi en Python sobre librerias y funciones del lenguaje
+Aprendi en Python a conectar distintos archivos .py
+Aprendi en Python a modelar situaciones del mundo real
