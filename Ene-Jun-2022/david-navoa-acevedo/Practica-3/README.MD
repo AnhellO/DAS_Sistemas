@@ -9,10 +9,14 @@ I'm a strong team worker, self-thaugh person and good at comunicating.
 > ## Common Profesional Questions
 
 ### **What are your hobbies?**
-- Playing videogames like everyone else, and check new information on how to design them.
+- Playing videogames like everyone else. 
+- Check new information on how to design them.
 
 ### ***Why are you studying Systems Engineer?***
 - Because it was the career that i was most interested to study.
+
+### ***Did you want to study other career that was not Systems Engineer? if yes, why?***
+- No
 
 ### ***You like programming? And why?***
 - I like programming, that's one of the things that i like the most of my career hehe. More than writing code i enjoy seeing the results of the code i wrote.
@@ -27,7 +31,10 @@ I'm a strong team worker, self-thaugh person and good at comunicating.
 - That's hard to say... I had very impresive teachers that always teach me new things... The knowladge that i've gained is that impressive and useful for the work that they do...
 
 ### ***What famous programming algorithms do you know?***
-- I'm not sure if it count as one or as many but "Deep Learning" algorithm its one i've recently checked, also "Neural Networks", i'm checking those lately, but what is a real famous algorithm is Evolutionary Algorythm (https://github.com/Garve/Evolutionary-Algorithm), but that's not a programming one... i think the most famous one is the bubble sort hahaha, but i like the rabbit and turtle one too haha.
+- I'm not sure if it count as one or as many but "Deep Learning" algorithm its one i've recently checked, 
+- also "Neural Networks", i'm checking those lately, but what is a real famous algorithm is Evolutionary Algorythm (https://github.com/Garve/Evolutionary-Algorithm), but that's not a programming one... 
+- i think the most famous one is the bubble sort hahaha, 
+- but i like the rabbit and turtle one too haha.
 
 ### ***Would you like to persue your career professionaly?***
 - I'd' like to, but i'm afraid of what's outside... after seeing the level of some teachers and some class mates, i know that i lack the level to do it...
@@ -39,7 +46,10 @@ I'm a strong team worker, self-thaugh person and good at comunicating.
 - I know something about how microservices works, but i would prefer to work for a videogame company hehe.
 
 ### ***What other famous technologies companies do you know?***
-- Well, Microsoft is a very famous one, Sony, Tencent as the big big one of china, IBM too, and others that are not as famous.
+- Well, Microsoft is a very famous one,
+- Sony, 
+- Tencent as the big big one of china,
+- IBM too.
 
 ### ***What do you know about the "Start Up" ecosystem?***
 - What i know is that i have seen in Shark Tank, and is not that much, but i think that Marcus Dantus have one of the bigest company in mexico.
