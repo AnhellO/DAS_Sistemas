@@ -1,4 +1,0 @@
-In Python you can do Data Analytics
-In Python you can program an AI algorithm
-In Python you can create GUI applications
-In Python you can do Data Visualization
