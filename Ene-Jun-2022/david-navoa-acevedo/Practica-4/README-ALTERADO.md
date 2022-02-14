@@ -1,3 +1,5 @@
+# Práctica 4
+
 ## Objetivo
 
 - Mejorar en el aprendizaje y conocimiento sobre `Jerry Hayes`
@@ -39,3 +41,5 @@ Lee algunos o todos los artículos que se adjuntan a continuación.
    4. Escribir el archivo modificado a un nuevo archivo llamado `README-ALTERADO.md`
 
 ## Deadline
+
+- `Domingo 13 de Febrero a las 11:59pm`
