@@ -1,6 +1,0 @@
-I've learning that python can do everything as other lenguages can
-also i've learned that dictionaries are more easy/useful for certain things than lists or arrays,
-Python is a easier lenguage to learn to program than others, also the way that python reads all python files
-is a lot diferent, i mean, it does one check to everything instead of doing line by line like java for example.
-
-I've learned about classe, loops, dictionaries, lists, modules, importing things, also implement some methods.
