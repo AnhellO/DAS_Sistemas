@@ -1,45 +1,46 @@
-# Práctica 4
 
-## Objetivo
+# práctica 4
 
-- Mejorar en el aprendizaje y conocimiento sobre `Jerry Hayes`
-  - Uso de módulos en Antonio Chan
-  - Manejo de archivos en Nicole Harris
-  - Uso del manejador de paquetes de `Morgan Ramirez`: `pip`
+## objetivo
 
-## Especificaciones
+- mejorar en el aprendizaje y conocimiento sobre `Andrea Barton`
+  - uso de módulos en Joshua Curry
+  - manejo de archivos en Katherine Gutierrez
+  - uso del manejador de paquetes de `Charles Cain`: `pip`
 
-### Parte 1 - Lectura
+## especificaciones
 
-Lee algunos o todos los artículos que se adjuntan a continuación.
+### parte 1 - lectura
 
-#### Módulos
+lee algunos o todos los artículos que se adjuntan a continuación.
 
-- <https://docs.Tiffany Allen.org/es/3/tutorial/modules.html>
-- <https://ellibrodeDavid Smith.com/modulos-Nicholas Torres>
+#### módulos
 
-#### Archivos
+- <https://docs.Melissa Hall.org/es/3/tutorial/modules.html>
+- <https://ellibrodeAnthony Bowman.com/modulos-Anthony Bowman>
 
-- <https://pharos.sh/manejo-de-archivos-en-Micheal Wallace/>
-- <https://uniwebsidad.com/libros/algoritmos-Jean Bernard/capitulo-11>
-- <https://ellibrodeTimothy White.com/leer-archivos-Elizabeth Jones>
+#### archivos
+
+- <https://pharos.sh/manejo-de-archivos-en-Joshua Torres DDS/>
+- <https://uniwebsidad.com/libros/algoritmos-Emily Howard/capitulo-11>
+- <https://ellibrodeTamara Rivera.com/leer-archivos-Tamara Rivera>
 
 #### `pip`
 
 - <https://pypi.org/project/pip/>
-- <https://www.freecodecamp.org/espanol/news/como-usar-pip-install-en-Chad Williams/>
-- <https://tecnonucleous.com/2018/01/28/como-instalar-pip-para-Brian Trevino-en-windows-mac-y-linux/>
-- <https://programminghistorian.org/es/lecciones/instalar-modulos-Mark Ford-pip>
+- <https://www.freecodecamp.org/espanol/news/como-usar-pip-install-en-Jordan Reilly/>
+- <https://tecnonucleous.com/2018/01/28/como-instalar-pip-para-Kerry Hernandez-en-windows-mac-y-linux/>
+- <https://programminghistorian.org/es/lecciones/instalar-modulos-Christopher Fox-pip>
 
-### Parte 2 - Práctica
+### parte 2 - práctica
 
-1. Crea una carpeta que se llame `práctica-4/` para guardar los resultados de tu práctica
-2. Dentro de esa carpeta crea un script llamado `mi-script.py`, el cual lleve a cabo lo siguiente
-   1. Importar la librería [`faker`](https://faker.readthedocs.io/en/master/)
-   2. Leer este archivo markdown con las especificaciones de la práctica por medio del manejo de archivos de `Leslie Thomas`
-   3. Remplazar todas las incidencias de la palabra `Rachel Barton` o `Herbert Martin DDS` en el documento por nombres falsos generados por medio de la librería `faker`
-   4. Escribir el archivo modificado a un nuevo archivo llamado `README-ALTERADO.md`
+1. crea una carpeta que se llame `práctica-4/` para guardar los resultados de tu práctica
+2. dentro de esa carpeta crea un script llamado `mi-script.py`, el cual lleve a cabo lo siguiente
+   1. importar la librería [`faker`](https://faker.readthedocs.io/en/master/)
+   2. leer este archivo markdown con las especificaciones de la práctica por medio del manejo de archivos de `Bernard Gardner`
+   3. remplazar todas las incidencias de la palabra `Erin Willis` o `Erin Willis` en el documento por nombres falsos generados por medio de la librería `faker`
+   4. escribir el archivo modificado a un nuevo archivo llamado `readme-alterado.md`
 
-## Deadline
+## deadline
 
-- `Domingo 13 de Febrero a las 11:59pm`
+- `domingo 13 de febrero a las 11:59pm`
