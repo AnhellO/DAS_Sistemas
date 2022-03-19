@@ -2,9 +2,7 @@
 
 ## Objetivo
 
-- Aprender sobre los diferentes formatos de serialización y deserialización de archivos
-- Uso del manejador de paquetes de `Python`: `pip`
-- Uso de nuevos paquetes externos
+- Aprender sobre las diferentes técnicas de refactorización vistas en clase.
 
 ## Especificaciones
 
@@ -12,4 +10,4 @@
 
 ## Deadline
 
-- `Domingo 13 de Marzo a las 11:59pm`
+- `Domingo 20 de Marzo a las 11:59pm`
