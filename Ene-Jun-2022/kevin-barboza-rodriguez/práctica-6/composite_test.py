@@ -11,7 +11,7 @@ class ElementoLeafTest(unittest.TestCase):
         hoja = ElementoLeaf('kevin', 'user')
         self.assertEqual(hoja.get_nombre(),'kevin')
 
-    def test_get_nombre(self):
+    def test_get_tipo(self):
         hoja = ElementoLeaf('kevin', 'user')
         self.assertEqual(hoja.get_tipo(),'user')
 
