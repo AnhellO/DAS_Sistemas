@@ -37,12 +37,6 @@ Implementa el patrón de diseño `Templated Method` para el siguiente diagrama U
 
 ### Ejercicio 4
 
-**Visitor Pattern:** <https://refactoring.guru/es/design-patterns/visitor>.
-
-...
-
-### Ejercicio 5
-
 **Factory Method Pattern:** <https://refactoring.guru/es/design-patterns/factory-method>.
 
 Implementa el patrón de diseño `Factory Method` para el diagrama UML propuesto en la sección de "_Pseudocódigo_" de la página de Refactoring Guru.
