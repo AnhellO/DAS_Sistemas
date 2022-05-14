@@ -16,6 +16,8 @@ Lee, investiga y aprende sobre el formato `XML`:
 - <https://support.microsoft.com/es-es/office/xml-para-no-iniciados-a87d234d-4c2e-4409-9cbc-45e4eb857d44>
 - <https://openwebinars.net/blog/que-es-xml-y-para-que-se-usa/>
 
+
+
 ### Ejercicio 2
 
 Lee, investiga y aprende sobre el formato `JSON`:
