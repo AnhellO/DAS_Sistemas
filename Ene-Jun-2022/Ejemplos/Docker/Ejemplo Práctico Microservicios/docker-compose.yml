@@ -1,0 +1,43 @@
+version: "3.2"
+services:
+  db:
+    image: mongo
+    container_name: mongo_compose
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ejemplo123
+  dbms:
+    image: mongo-express
+    container_name: mexpress_compose
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: DASistemas
+      ME_CONFIG_BASICAUTH_PASSWORD: ex-especial567
+      ME_CONFIG_MONGODB_SERVER: mongo_compose
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ejemplo123
+  processor:
+    build: ./processor
+    container_name: py_processor
+    depends_on:
+      - db
+    restart: on-failure
+    volumes:
+      - type: bind
+        source: ./processor
+        target: /usr/src/app
+  api:
+    build: ./api
+    container_name: py_api
+    depends_on:
+      - db
+    ports:
+      - 5000:5000
+    restart: on-failure
+    volumes:
+      - type: bind
+        source: ./api
+        target: /usr/src/app
