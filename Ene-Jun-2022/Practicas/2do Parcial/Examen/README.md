@@ -13,12 +13,12 @@
 
 * Crea un archivo `docker-compose.yml` por medio del cual instancies cuatro contenedores:
   * **Contenedor A**
-    * Ejecutará un script en python el cual se encargué de obtener una lista de todos los issues existentes en el repositorio de Flask a través de la API de GitHub:
+    * Ejecutará un script en python el cual se encargué de obtener una lista de todos los issues existentes (abiertos y cerrados) en el repositorio de Flask a través de la API de GitHub:
       * API GitHub: <https://docs.github.com/es/rest>
-      * Repositorio Flask: <https://github.com/pallets/flask/issues>
+      * Repositorio de Flask: <https://github.com/pallets/flask/>
     * Los items deberán de guardarse en la base de datos que correrá dentro del contenedor `B`
   * **Contenedor B**
-    * Se encargará de alojar una base de datos en `MongoDB` o en `Redis`, la cual almacenará los datos obtenidos de la API, y de la cual se obtendrán los datos que se mostrarán en el contenedor `D`
+    * Se encargará de alojar una base de datos en `MongoDB` o en `Redis` (tu decides cuál utilizar), la cual almacenará los datos obtenidos de la API, y de la cual se obtendrán los datos que se mostrarán en el contenedor `D`
   * **Contenedor C**
     * Este contenedor ejecutará una instalación de un DBMS que tendrá como host a la base de datos que vive dentro del contenedor `B`. Deberías poder analizar y revisar tus datos desde la interfaz que provee ese DBMS
   * **Contenedor D**
@@ -32,8 +32,8 @@
 
 ## Hints
 
-* No es necesario publicar la imagen en https://hub.docker.com/
-* Ten en cuenta que la API de GitHub tiene un límite de peticiones por hora y por día. Te toca a ti investigarla y tener cuidado de no superar ese límite diaria :wink:
+* No es necesario publicar la imagen en <https://hub.docker.com/>
+* Ten en cuenta que la API de GitHub tiene un límite de peticiones por hora y por día. Te toca a ti investigar cual es este límite y tener cuidado de no superarlo :wink:
 
 ## Deadline
 
