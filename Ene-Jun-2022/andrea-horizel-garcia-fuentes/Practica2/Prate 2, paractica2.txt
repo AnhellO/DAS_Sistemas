@@ -1,0 +1,28 @@
+¿Qué busca solucionar esta arquitectura?
+Mas que nada para poder entender toda la importancia de la arquitectura de software, y tambien como de controlar las herramientas.
+
+¿Qué es la "regla de dependencia" o "dependency rule"?
+Nos dice que la arquitectura no depende de la existencia de alguna
+biblioteca de software, en pocas palabras que  import el lenguje de programación que
+usemos se pueden usar los principos.
+
+¿Qué abarca la capa de Entidades o Entities?
+Estan encargadas de encapsulan las reglas generales de alto nivel.
+Son las que estan menos propensas a cambiar cuando algo aparte cambia.
+
+¿Qué abarca la capa de Casos de Uso o Use Cases?
+Las reglas comerciales especificas de la aplicación que tamnbien puede encaplusar y puede añadir todos los casos del sistema y no se espera que los cambios afecten
+a las identidades.
+
+¿Qué abarca la capa de Adaptadores o Interface Adapters?
+Esta capa abarca poseer los controladores, presentadores y puntos
+de entrada.
+
+¿Qué abarca la capa de Frameworks o Frameworks and Drivers?
+Es una capa externa y van los detalles y su base de datos es un detalle etc.
+
+¿Puede haber más de 4 capas? 
+Si.
+¿Qué son los "boundaries"?
+Es la  separación que se puede definir en nuestra arquitectura para que podamos dividir los componentes y tambien se pueda las 
+definir dependencias.
