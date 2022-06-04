@@ -1,0 +1,2 @@
+· Conclusiones
+Mediante el docker compose se levantaron los contenedores de PostgreSQL, y se creo un servidor siguiendo los pasos propuestos en las imagenes, una ves establecida la conexion mediante la interfaz se poblaron un poco la base de datos para probar, por ultimo con el mismo docker-compose se detuvo y elimino todo.
