@@ -16,11 +16,17 @@ Vamos a partir de la solución propuesta, pero aplicando algunos cambios menores
 
 - Procedemos a ejecutar el contenedor de `Mongo Express` con el siguiente comando: `docker run -d --name moexpress --network lab6 -e ME_CONFIG_MONGODB_SERVER=m1 -e ME_CONFIG_BASICAUTH_USERNAME=admin -e ME_CONFIG_BASICAUTH_PASSWORD=karlitabb -p 8081:8081 mongo-express`
 
-  
+  ![image](https://user-images.githubusercontent.com/71090472/172038750-3893cb87-cfb6-43a5-897c-5314fe08f87c.png)
 
-  - Puedes visitar el cliente DBMS en la URL <http://0.0.0.0:8081/>
+  - Puedes visitar el cliente DBMS en la URL <http://localhost:8081//>
+
+    ![image](https://user-images.githubusercontent.com/71090472/172038759-52882ee2-5ffe-4a98-b3be-9a25b508a432.png)
+
 - Después de tener nuestros dos contenedores iniciales de `Mongo` y del cliente de `Mongo Express` en ejecución, vamos a construir una imagen taggeada específicamente para este laboratorio con la cual ejecutaremos la solución propuesta en `GO` para que se conecté con el contenedor de mongo, pero ahora por medio de la docker network custom que hemos creado
   - Construimos la imagen con el comando `docker build -t lab6 .`
+
+    
+
   - Instanciamos un contenedor de la imagen construída previamente con el comando `docker run -d --network lab6 --name mongogo lab6`
   - Visita el cliente de `Mongo Express` para poder ver los cambios reflejados
 
