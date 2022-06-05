@@ -25,10 +25,15 @@ Vamos a partir de la solución propuesta, pero aplicando algunos cambios menores
 - Después de tener nuestros dos contenedores iniciales de `Mongo` y del cliente de `Mongo Express` en ejecución, vamos a construir una imagen taggeada específicamente para este laboratorio con la cual ejecutaremos la solución propuesta en `GO` para que se conecté con el contenedor de mongo, pero ahora por medio de la docker network custom que hemos creado
   - Construimos la imagen con el comando `docker build -t lab6 .`
 
-    
+    ![image](https://user-images.githubusercontent.com/71090472/172039289-f94c4e19-1067-445e-896a-8c52336e5b6f.png)
 
   - Instanciamos un contenedor de la imagen construída previamente con el comando `docker run -d --network lab6 --name mongogo lab6`
+
+    ![image](https://user-images.githubusercontent.com/71090472/172039317-e81ffb74-ad83-45a9-9805-c4f6eee19477.png)
+
   - Visita el cliente de `Mongo Express` para poder ver los cambios reflejados
+
+    ![image](https://user-images.githubusercontent.com/71090472/172039387-5c137bc9-21ac-4e54-ba0d-bcedae8411f0.png)
 
 ## Recursos
 
