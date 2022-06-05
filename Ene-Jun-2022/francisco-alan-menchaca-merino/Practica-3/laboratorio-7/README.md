@@ -32,11 +32,15 @@ Esta guía pretende mostrar un ejemplo sencillo de `docker networks` pero ahora 
 
 6. El nuevo container de Python debe de haber ejecutado el script correctamente. Para verificar esto puedes revisar los logs del contenedor con `docker logs redispy`. Deberías de ser capaz de ver los `print()` statements del script de `./app/app.py`, y entre en ellos algunos "fake emails" que se crearon gracias al paquete `faker` instalado dentro del contenedor de Python
 
-
+   ![image](https://user-images.githubusercontent.com/71090472/172040498-accd7a05-74b3-46fd-92a4-862a08ed856e.png)
 
 7. Si quieres dar un paso más allá y verificar que los cambios se guardaron en tu contenedor de Redis, entonces puedes llevar a cabo alguno de los siguientes pasos:
    1. Instalar el [cliente CLI de redis](https://redis.io/topics/rediscli) en tu máquina local, y conectarte a tu instancia de Redis por medio de `redis-cli -h 0.0.0.0 -p 6379`. Ya dentro prueba a jugar con algunos comandos como `KEYS *` y luego `GET algun-hash-key` utilizando alguno de los hash values que salieron en el primer comando como parámetro, en vez de `algun-hash-key`
    2. O bien, puedes conectarte al contenedor de `Redis` en ejecución con el comando `docker exec -it redis /bin/bash`, y ya dentro del mismo utilizar el comando `redis-cli` para conectarte a la instancia de Redis en ejecución. Intenta los mismos comandos propuestos en la 1er alternativa para verificarlo
+
+   ![image](https://user-images.githubusercontent.com/71090472/172041206-74aea25f-6d0b-4318-91f2-6d36c3d40140.png)
+
+   ![image](https://user-images.githubusercontent.com/71090472/172041292-5b523144-61c2-4eaf-872b-586653e9cfd0.png)
 
 ## Recursos
 
