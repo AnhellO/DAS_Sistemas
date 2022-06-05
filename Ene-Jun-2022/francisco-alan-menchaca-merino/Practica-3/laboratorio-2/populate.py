@@ -33,5 +33,14 @@ print(db.pet.insert_many([
         "owner": "jorge",
         "specie": "cuyo"
     },
+	{
+        "name": "max",
+        "owner": "Alan Turing",
+        "specie": "perro"
+    },
+	{
+        "name": "rocky",
+        "owner": "Ada Lovelace",
+        "specie": "gato"
+    },
 ]))
-
