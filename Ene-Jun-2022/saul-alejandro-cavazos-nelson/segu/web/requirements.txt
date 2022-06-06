@@ -1,0 +1,2 @@
+pymongo==4.*
+Flask==2.*
