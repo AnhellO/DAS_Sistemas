@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+       <th>Id</th>
+        <th>Title</th>
+        <th>Url</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for issue in issues %}
+        <tr>
+          <td>{{ issue['_id'] }}</td>
+          <td>{{ issue['title'] }}</td>  
+          <td><a href="http://127.0.0.1:5000/{{ issue['_id'] }}">127.0.0.1:5000/{{ issue['_id'] }}</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#data').DataTable({
+        columns: [
+        {orderable: true, searchable: true},
+        {searchable: true},
+        null
+        ],
+      });
+    });
+  </script>
+{% endblock %}
