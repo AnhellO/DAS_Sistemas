@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github</title>
+    <style>
+        #hr{
+            box-shadow: 2px 2px 50px 15px rgb(255, 255, 255);
+            height:3px;
+            border-width:0;
+            color:gray;
+            background-color:rgb(0, 153, 255);
+        }
+        #bienvenida{
+            color: white;
+        }
+        img{
+            width: 80px;
+            height: 80px;
+        }
+        /******* Body *******/
+        body{
+            background: url(imagenes/docker2.png);
+            background-color: cornflowerblue;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            
+        }
+        /******* Carta *******/
+        .carta{
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+            
+            border: 1px solid lightgray;
+            box-shadow: 2px 2px 30px 10px #d3d3d3d1;
+            border-radius:15px;
+            font-family: sans-serif;
+            /*-----------------------*/
+            height: 600px;
+            margin-top:50px;
+            /*margin-left:100px;*/
+            scroll-behavior: smooth;
+        }
+        .left{
+            margin-left:50px;
+        }
+        .pie{
+            background-color: rgba(5, 105, 97, 0.336);
+            color: white;
+            height: 600px;
+            overflow: auto;
+            text-align:justify;
+        }
+    </style>
+</head>
+<body>
+    <div id="bienvenida">
+        <center>
+            <h1>Bienvenido</h1>
+            <IMG SRC="{{diccionario['avatar_url']}}">
+            <h2>{{diccionario['login']}}</h2>
+            <button onclick="window.location='http://localhost:5000/'" type="submit">
+                Regresar
+            </button>
+        </center>
+    </div>
+    <hr id="hr" >
+    <div class="contenedor">
+        <div class="carta">
+            <div class="pie">
+                <div class="left">
+                    <table border="1px">
+                        <tr>
+                            <th>url</th>
+                            <th>repository_url</th>
+                            <th>labels_url</th>
+                            <th>comments_url</th>
+                            <th>events_url</th>
+                            <th>html_url</th>
+                            <th>id</th>
+                            <th>node_id</th>
+                            <th>number</th>
+                            <th>title</th>
+                            <th>login</th>
+                            <th>id</th>
+                            <th>node_id</th>
+                            <th>avatar_url</th>
+                            <th>gravatar_id</th>
+                            <th>url</th>
+                            <th>html_url</th>
+                            <th>followers_url</th>
+                            <th>following_url</th>
+                            <th>gists_url</th>
+                            <th>starred_url</th>
+                            <th>subscriptions_url</th>
+                            <th>organizations_url</th>
+                            <th>repos_url</th>
+                            <th>events_url</th>
+                            <th>received_events_url</th>
+                            <th>type</th>
+                            <th>site_admin</th>
+                            <th>labels</th>
+                            <th>state</th>
+                            <th>locked</th>
+                            <th>assignee</th>
+                            <th>assignees</th>
+                            <th>milestone</th>
+                            <th>comments</th>
+                            <th>created_at</th>
+                            <th>updated_at</th>
+                            <th>closed_at</th>
+                            <th>author_association</th>
+                            <th>active_lock_reason</th>
+                            <th>draft</th>
+                            <th>url</th>
+                            <th>html_url</th>
+                            <th>diff_url</th>
+                            <th>patch_url</th>
+                            <th>merged_at</th>
+                            <th>body</th>
+                            <th>url</th>
+                            <th>total_count</th>
+                            <th>+1</th>
+                            <th>-1</th>
+                            <th>laugh</th>
+                            <th>hooray</th>
+                            <th>confused</th>
+                            <th>heart</th>
+                            <th>rocket</th>
+                            <th>eyes</th>
+                            <th>timeline_url</th>
+                            <th>performed_via_github_app</th>
+                            <th>state_reason</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>{{diccionario['url']}}</td>
+                            <td>{{diccionario['repository_url']}}</td>
+                            <td>{{diccionario['labels_url']}}</td>
+                            <td>{{diccionario['comments_url']}}</td>
+                            <td>{{diccionario['events_url']}}</td>
+                            <td>{{diccionario['html_url']}}</td>
+                            <td>{{diccionario['id']}}</td>
+                            <td>{{diccionario['node_id']}}</td>
+                            <td>{{diccionario['number']}}</td>
+                            <td>{{diccionario['title']}}</td>
+                            <td>{{diccionario['login']}}</td>
+                            <td>{{diccionario['id']}}</td>
+                            <td>{{diccionario['node_id']}}</td>
+                            <td>{{diccionario['avatar_url']}}</td>
+                            <td>{{diccionario['gravatar_id']}}</td>
+                            <td>{{diccionario['url']}}</td>
+                            <td>{{diccionario['html_url']}}</td>
+                            <td>{{diccionario['followers_url']}}</td>
+                            <td>{{diccionario['following_url']}}</td>
+                            <td>{{diccionario['gists_url']}}</td>
+                            <td>{{diccionario['starred_url']}}</td>
+                            <td>{{diccionario['subscriptions_url']}}</td>
+                            <td>{{diccionario['organizations_url']}}</td>
+                            <td>{{diccionario['repos_url']}}</td>
+                            <td>{{diccionario['events_url']}}</td>
+                            <td>{{diccionario['received_events_url']}}</td>
+                            <td>{{diccionario['type']}}</td>
+                            <td>{{diccionario['site_admin']}}</td>
+                            <td>{{diccionario['labels']}}</td>
+                            <td>{{diccionario['state']}}</td>
+                            <td>{{diccionario['locked']}}</td>
+                            <td>{{diccionario['assignee']}}</td>
+                            <td>{{diccionario['assignees']}}</td>
+                            <td>{{diccionario['milestone']}}</td>
+                            <td>{{diccionario['comments']}}</td>
+                            <td>{{diccionario['created_at']}}</td>
+                            <td>{{diccionario['updated_at']}}</td>
+                            <td>{{diccionario['closed_at']}}</td>
+                            <td>{{diccionario['author_association']}}</td>
+                            <td>{{diccionario['active_lock_reason']}}</td>
+                            <td>{{diccionario['draft']}}</td>
+                            <td>{{diccionario['url']}}</td>
+                            <td>{{diccionario['html_url']}}</td>
+                            <td>{{diccionario['diff_url']}}</td>
+                            <td>{{diccionario['patch_url']}}</td>
+                            <td>{{diccionario['merged_at']}}</td>
+                            <td>{{diccionario['body']}}</td>
+                            <td>{{diccionario['url']}}</td>
+                            <td>{{diccionario['total_count']}}</td>
+                            <td>{{diccionario['+1']}}</td>
+                            <td>{{diccionario['-1']}}</td>
+                            <td>{{diccionario['laugh']}}</td>
+                            <td>{{diccionario['hooray']}}</td>
+                            <td>{{diccionario['confused']}}</td>
+                            <td>{{diccionario['heart']}}</td>
+                            <td>{{diccionario['rocket']}}</td>
+                            <td>{{diccionario['eyes']}}</td>
+                            <td>{{diccionario['timeline_url']}}</td>
+                            <td>{{diccionario['performed_via_github_app']}}</td>
+                            <td>{{diccionario['state_reason']}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
