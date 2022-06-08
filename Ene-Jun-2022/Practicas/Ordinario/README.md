@@ -1,15 +1,5 @@
 # Proyecto Ordinario - Microservices Architecture
 
-## Tema
-
-El proyecto consistirá en crear un [CRUD](https://developer.mozilla.org/es/docs/Glossary/CRUD) de personas y sus mascotas. La relación entre personas y mascotas deberá de ser de 1-N, es decir, una persona puede tener 0 o más mascotas.
-
-La mascota elegida para este equipo son los perros :dog:: <https://dog.ceo/dog-api/>. Cada mascota debe estar bautizada con un nombre :wink:.
-
-Las personas deberán de tener un nombre, apellido e imágen, y se obtendrán aleatoriamente desde el API <https://random-data-api.com/>.
-
-**Microservices Architecture:** Implementa el proyecto siguiendo los lineamientos y requisitos del patrón de arquitectura de microservicios.
-
 ## Especificaciones
 
 ### Inicio
