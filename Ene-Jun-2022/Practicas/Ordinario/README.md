@@ -97,7 +97,7 @@ Dado el siguiente ejemplo de entrada de datos:
 ]
 ```
 
-1. Queremos ser capaces de ver un resumen que nos muestre el `inflow` y `outflow` total por usuario. Ejemplo:
+1.- Queremos ser capaces de ver un resumen que nos muestre el `inflow` y `outflow` total por usuario. Ejemplo:
 
 ```json
 GET /transactions?group_by=type
@@ -116,7 +116,7 @@ GET /transactions?group_by=type
 ]
 ```
 
-2. Queremos poder ver un resumen de usuario por categoría que muestre la suma de cantidades por categoría de transacción. Ejemplo:
+2.- Queremos poder ver un resumen de usuario por categoría que muestre la suma de cantidades por categoría de transacción. Ejemplo:
 
 ```json
 GET /transactions/{user_email}/summary
@@ -142,14 +142,16 @@ GET /transactions/{user_email}/summary
 * Optimiza en función del tiempo disponible y no del rendimiento de la aplicación
 * Dockeriza tu aplicación en base a lo visto en clase :wink:
 * Utiliza [`Flask`](https://flask.palletsprojects.com/en/2.1.x/) (y [`flask-restful`](https://flask-restful.readthedocs.io/en/latest/)), [`FastApi`](https://fastapi.tiangolo.com/) o [`Django`](https://www.djangoproject.com/) (y [`DRF`](https://www.django-rest-framework.org/)) como alguno de los frameworks para tu API
+* La base de datos es libre
 
 #### Opcional - Puntos Extra
 
-Los siguientes puntos son opcionales, sin embargo implementarlos provee **1** punto extra por cada uno sobre la **calificación total final**.
+Los siguientes puntos son opcionales, sin embargo implementarlos provee **3** puntos extra por cada uno sobre la **calificación total final**.
 
 * Utilizar [Swagger](https://swagger.io/) en tu proyecto y agregar un contenedor nuevo con el [`Swagger UI`](https://hub.docker.com/r/swaggerapi/swagger-ui) de la aplicación
 * Agregar [RabbitMQ](https://www.rabbitmq.com/) para alguna o todas las operaciones CRUD de la aplicación
-* Agregar un contenedor extra que provea un frontend (GUI) que consuma la API que creaste en tu contenedor. Acá puedes utilizar tecnologías como `HTML`, `CSS`, `Javascript`, `Bootstrap`, `Vue`, `Angular` o `ReactJS` para hacer más rápido este proceso. Queda a tu criterio, imaginación y creatividad el cómo luzca la interfaz final :wink:
+* Agregar un contenedor extra que provea un frontend (GUI) que consuma la API que creaste. Acá puedes utilizar tecnologías como `HTML`, `CSS`, `Javascript`, `Bootstrap`, `Vue`, `Angular` o `ReactJS` para hacer más rápido este proceso. Queda a tu criterio, imaginación y creatividad el cómo luzca la interfaz final :wink:
+* Agregar testing y/o automatización de pruebas por medio de <https://github.com/testcontainers/testcontainers-python>
 
 ### Conclusión
 
