@@ -1,0 +1,2 @@
+· Conclusiones
+Se creo una imagen de postgres para despues ejecutar un contenedor con base en la imagen, despues se instalo lo necesario para poblar mediante el archivo de python, indagamos un poco en el contenedor ejecutandolo y usando una query para ver los datos de la base
