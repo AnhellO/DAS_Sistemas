@@ -1,0 +1,75 @@
+¿Qué lenguaje de programación utiliza el equipo de Netflix?
+JAVA WEB
+
+¿Qué sucedía con la base de datos de Oracle del monolito de Netflix?
+Pues si cae, todo el sistema tambien se cae.
+
+¿Cuál fue una de las principales desventajas que el equipo de Netflix tuvo con la arquitectura monolítica?
+Lleva tiempo en poder aregar los cambios, tambien en poder encontrar errores y poder porbarlo nuevamente y que funcione bien. 
+
+¿A qué autor cita el ponente cuando da el concepto de un microservicio?
+Martin Fowler.
+
+¿Cuáles son las 3 principales ventajas que el ponente cita sobre los microservicios?
+La Separación de procesos, Escalabilida y Virtualizació.
+
+¿Qué analogía se utiliza para comparar los microservicios con la vida real?
+ Los rganos y cada uno de los organos tiene una funcion, y se forma de un sistema que funciona en conjunto. 
+
+Describe al menos 3 diferentes tipos de servicios que Netflix tenía en su arquitectura en aquel entonces
+La API= Funciona para peticiones de los usuarios.
+NCCP= Son para los dispositivos modernos.
+Zuul= Una capa dinamica.
+
+¿Cuáles son las áreas primarias que se proponen para los retos y soluciones de utilizar microservicios?
+Dependencia.
+Varianza,escala y varianza.
+
+¿Qué es el falló en cascada?
+Cuando el  servicio falla y todos esos servicios que están conectados entre ellos mismo van fallando y asi es como se hace el efecto cascada.
+
+¿Qué es Hystrix?
+El sistema que se encrga de maneja los tiempos y los reintentos, hace que en lugar de que se vea un error el cliente pueda seguir con el uso de la aplicación.
+
+¿Qué analogía utiliza el ponente para comparar las librerias de cliente con la vida real?
+Como una piedra que se va atravesando y va provocando los fallos que no se pueden ver a prioridad solo cuando es mas grande el fallo. 
+
+¿De qué manera el equipo de Netflix manejo el problema de la persistencia en microservicios?
+Se puede manejar con el Teorema de CAP.
+
+¿Cuál fue la estrategia de Netflix después de que sufrieron la caída del 24 de Diciembre del 2012?
+Estrategia multiregión.
+
+¿Cuáles son los 3 escenarios/casos que se plantean para la parte de escalamiento?
+Stateless services.
+Stateful services.
+Hybrid services.
+
+¿De qué manera se describe un "stateless service" en el video?
+No tener cacher y que no se pueda guardar en una base de datos. 
+
+¿Qué es Chaos Monkey?
+Cuando el nodo muere pero todo el sistema sigue funcionando.
+
+¿Qué es un microservicio híbrido?
+Que funciona con stateless y stateful.
+
+¿Cómo solucionó el equipo de Netflix el problema con el anti-patrón de carga excesiva?
+particionamiento del trabajo.
+almacenamiento del caché a nivel de solicitud y respaldo de token.
+
+¿Qué tecnologías nuevas integró el equipo de Netflix cuando comenzó a manejar contenedores?
+ nodos jS, docker y phtyon 
+
+¿Cuáles fueron algunos de los principales costos de varianza del equipo de Netflix?
+Gestion de nodos, herramientas de productividad,Fragancia de la imagen base y
+Curva de aprendizaje.
+
+¿Qué es Spinnaker?
+Es una plataforma de entrega automatizada. 
+
+¿Cómo manejo Netflix el problema de las arquitecturas híbridas?
+Pensar en el cliente para sus solucines y mejorar su arquitectura.
+
+¿Qué es "chaos engineering" o "ingeniería del caos"?
+Las pruebas hacen en un sistema para ver la capacidad en diferentes escenarios complicados.
