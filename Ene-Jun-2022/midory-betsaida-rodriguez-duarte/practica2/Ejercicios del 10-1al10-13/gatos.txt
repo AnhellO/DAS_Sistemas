@@ -1,0 +1,3 @@
+gato=coco
+gato2=gaspeado
+gato3=rodichi
