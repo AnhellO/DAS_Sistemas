@@ -1,0 +1,5 @@
+Yo he apredido de python, que las funciones me ayudan a hacer una operación y tiene sus parametros,
+aprendi que los parametros y los argumentos no son iguales, parametros son tipo variable 
+y los argumentos es la informacion que tiene variable y sobre las clases que tener funciones las que sean
+y que el titulo de cada clase se empiza siempre con mayuscula, y que en las clases se requieren objetos, en 
+los cuales para imprimir se debe llamar junto con la clase.

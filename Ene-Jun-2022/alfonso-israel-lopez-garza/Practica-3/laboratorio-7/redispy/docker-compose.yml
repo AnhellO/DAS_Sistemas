@@ -1,0 +1,17 @@
+version: "3.2"
+services:
+  app:
+    build: ./app
+    container_name: redispy_app
+    depends_on:
+      - redis
+    volumes:
+      - type: bind
+        source: ./app
+        target: /usr/src/app
+  redis:
+    image: redis:latest
+    container_name: redispy_redis
+    ports:
+      - 6379:6379
+    command: ["redis-server"]

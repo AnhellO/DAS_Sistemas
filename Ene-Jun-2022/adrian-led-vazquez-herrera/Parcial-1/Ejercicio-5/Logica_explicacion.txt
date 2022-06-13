@@ -1,0 +1,7 @@
+¿Qué pasaría con esa escalera if-elif y en específico con la clase Animal si vamos agregando más especies de animales?
+	- Al aumentar el tamaño de la escalera if-elif el tiempo de ejecución se dispara. En cuanto a la clase "Animal" estaríamos llamándola demasiadas veces para hacer cosas diferentes entre sí, además si necesitáramos cambiar alguna funcionalidad única de algún animal, tendríamos que cambiar la clase y eso afectaría a las demás instancias.
+
+Decidí tomar el ocp y usar el método "Factory" para poder tener una forma sencilla de hacer más animales con características que pudiesen ser usadas en otros animales y poder editar cada variante de animal sin tener que modificar la clase padre para nada.
+
+Ejemplos de esto están en la clase "Tiger" que comparte el sonido con el león y la clase "Shark" que tiene un mensaje de 'No sound' y es la única clase con movimiento, el cual se le asignó sin tener que editar la clase base.
+

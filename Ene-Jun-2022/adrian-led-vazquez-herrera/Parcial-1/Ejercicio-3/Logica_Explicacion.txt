@@ -1,0 +1,9 @@
+--- Interface_instances.py ---	
+	Se genera la interfaz de los polígonos, el método "__init__" tiene una configuración por default porque no sabía si se podía dejar el "__init__" así nomás solo.
+	Se hacen las instancias de la interfaz de acuerdo a lo que viene en el diagrama UML
+
+--- Factory.py ---
+	Se hace la fábrica y agregamos una opción para polígonos no existentes en la fábrica
+
+--- Main.py --- 
+	Se hacen las pruebas, incluyendo una donde encontremos el mensaje de que el polígono no existe
