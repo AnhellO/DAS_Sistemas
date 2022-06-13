@@ -1,0 +1,4 @@
+peewee
+Faker
+psycopg2-binary
+
