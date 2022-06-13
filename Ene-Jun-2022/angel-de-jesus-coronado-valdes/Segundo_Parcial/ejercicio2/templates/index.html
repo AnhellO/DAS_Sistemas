@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker</title>
+    <style>
+        #hr{
+            box-shadow: 2px 2px 50px 15px rgb(255, 255, 255);
+            height:3px;
+            border-width:0;
+            color:gray;
+            background-color:rgb(0, 153, 255);
+        }
+        #bienvenida{
+            color: white;
+        }
+        /******* textbutton ********/
+        #divbuton{
+            background:none; 
+            border:none;
+            color: white;
+            font-family: sans-serif;
+        }
+        #divbuton:hover{
+            background-color: green;
+            /*cursor: pointer;*/
+        }
+        img{
+            width: 80px;
+            height: 80px;
+        }
+        .textitle{
+            float: right;
+            margin-right: 800px;
+            color: black;
+            size: 10px;
+        }
+        .info{
+            float: right;
+            color: white;
+        }
+        .buton{
+            float: right;
+        }
+        #inputbuton{
+            width: 80px;
+            height: 80px;
+        }
+        /******* Body *******/
+        body{
+            background: url(imagenes/docker.png);
+            background-color:rgb(5, 58, 88);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        /******* Carta *******/
+        .carta{
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+            /*width:500px;*/
+            border: 1px solid lightgray;
+            box-shadow: 2px 2px 30px 10px #d3d3d3d1;
+            border-radius:15px;
+            font-family: sans-serif;
+            /*-----------------------*/
+            height: 600px;
+            margin-top:50px;
+            scroll-behavior: smooth;
+        }
+        .pie{
+            background-color: rgba(5, 105, 97, 0.336);
+            color: white;
+            height: 600px;
+            overflow: auto;
+            text-align:justify;
+        }
+    </style>
+</head>
+<body>
+    <div id="bienvenida">
+        <center>
+            <h1>Bienvenido</h1>
+            <h2>Prueba del API Git, Listar issues</h2>
+        </center>
+    </div>
+    <hr id="hr" >
+    <div class="contenedor">
+        <div class="carta">
+            <div class="pie">
+                {% for dic in diccionario %}
+                    <!--onclick="window.location='http://localhost:5000/layout'"-->
+                    <form action="/" method="POST">
+                        <div id="divbuton" type="submit">
+                            <div class="buton">
+                                <input id="inputbuton" type="submit">
+                            </div>
+                            <input type="hidden" name="h2" value="{{dic['number']}}">
+                                <IMG SRC="{{dic['avatar_url']}}">
+                                <div class="textitle">
+                                    <div>
+                                       TITLE:<div class="info">{{dic['title']}}</div>
+                                    </div>
+                                    <div>
+                                        LOGIN: <div class="info">{{dic['login']}}</div>
+                                    </div>
+                                    <div>
+                                        NUMBER: <div class="info">{{dic['number']}}</div>
+                                    </div>
+                                    <div>
+                                        ID: <div class="info">{{dic['_id']}}</div>
+                                    </div>
+                                </div>
+                            </input>
+                            <hr>
+                        </div>
+                    </form>
+                {% endfor %}      
+            </div>
+        </div>
+    </div>
+</body>
+</html>
