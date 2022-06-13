@@ -1,8 +1,0 @@
-En python tu puedes crear funciones.
-En python tu puedes declarar valores por default en funciones.
-En python tu puedes crear clases.
-En python tu puedes crear instancia de las clases.
-En python puedes importar distintos modulos.
-En python tu puedes heredar clases de un modulo a otro.
-En python tu puedes crear diccionarios.
-En python tu puedes crear listas.
