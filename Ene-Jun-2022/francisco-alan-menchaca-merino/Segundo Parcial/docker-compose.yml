@@ -1,0 +1,84 @@
+# docker-compose up --build -d
+version: '3.1'
+
+services:
+  # CONTENEDOR A
+  # Contenedor que contiene un script en python que carga una
+  # lista de todos los issues existentes (abiertos/cerrados) en
+  # el repositorio de Flask a través de la API de GitHub, el script
+  # guarda en una base de datos llamada flask_issues todas las issues
+  # del repositorio de Flask.
+  python-script:
+    build: .
+    container_name: python-script
+    depends_on:
+      - mongodb
+    links:
+      - mongodb
+    networks: # Conectamos nuestro contenedor a nuestra Network
+      - mongo-network    
+
+  # CONTENEDOR B
+  # Este contenedor se encarga de alojar un base de datos en MongoDB
+  # (MongoDB es una base de datos no relacional basada en documentos), 
+  # la cual almacenará los datos (las issues) obtenidos con la ayuda
+  # de la API de GitHub.
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: mongo    
+    networks: # Conectamos nuestro contenedor a nuestra Network
+      - mongo-network
+
+  # CONTENEDOR C
+  # Este contenedor ejecuta un instalación de un DBMS (mongo-express
+  # en este caso) que tiene como host la base de datos (mongodb) que
+  # nosotros definimos en el Contenedor B.
+  mongo-express:
+    image: mongo-express:latest
+    container_name: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: mongo
+      ME_CONFIG_BASICAUTH_USERNAME: root
+      ME_CONFIG_BASICAUTH_PASSWORD: mongo-express      
+      ME_CONFIG_MONGODB_SERVER: mongodb
+    depends_on:
+      - mongodb
+    networks: # Conectamos nuestro contenedor a nuestra Network
+      - mongo-network
+
+  # CONTENEDOR D
+  # Este contenedor contiene una pequeña aplicación que funciona con Flask
+  # y python. La app tiene una página principal que contiene una tabla donde
+  # muestra una lista de todos los issues obtenidos del repositorio de Flask
+  # y cada issue tiene la página de todos sus datos, este contenedor es el
+  # resultado de utilizar la base de datos definida en el Contenedor B y
+  # el script de python incorporado en el contenedor A.
+  flask-app:
+    build: ./app
+    container_name: flask-app
+    ports:
+      - 5000:5000
+    depends_on:
+      - python-script
+    links:
+      - python-script
+    networks: # Conectamos nuestro contenedor a nuestra Network
+      - mongo-network    
+
+# Definimos una Network personalizada donde podamos conectar todos
+# nuestro contenedores, para que de esta manera todos nuestros contenedores
+# puedan comunicarse entre sí.
+networks: 
+    mongo-network:
+      name: mongo-network
+      driver: bridge

@@ -1,0 +1,57 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Flask Repository - List of Issues</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/css/bootstrap-editable.css"
+    rel="stylesheet">
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/js/bootstrap-editable.js"></script>
+  <script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+      var dataTable = $('#sample_data').DataTable()
+    });</script>
+</head>
+
+<body>
+  <div class="container">
+    <h3 align="center">Flask Repository - List of Issues</h3>
+    <br />
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="table-responsive">
+          <table id="sample_data" class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Number</th>
+                <th>Title</th>
+                <th>User</th>
+                <th>State</th>
+                <th>Url</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in issue %}
+              <tr>
+                <td data-name="number" class="number" data-type="text" data-pk="{{row.id}}">{{row.number}}</td>
+                <td data-name="title" class="title" data-type="text" data-pk="{{row.id}}">{{row.title}}</td>
+                <td data-name="user" class="user" data-type="text" data-pk="{{row.id}}">{{row.user}}</td>
+                <td data-name="state" class="state" data-type="text" data-pk="{{row.id}}">{{row.state}}</td>
+                <td data-name="url" class="url" data-type="text" data-pk="{{row.id}}">{{row.url}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
