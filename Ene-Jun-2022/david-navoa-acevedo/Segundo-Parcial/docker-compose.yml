@@ -1,0 +1,33 @@
+version: "3.2"
+services:
+  db:
+    image: mongo:4.4
+    ports: 
+      - 27017:27017
+    container_name: mongo_compose
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Persona4
+  dbms:
+    image: mongo-express
+    container_name: mexpress_compose
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: David
+      ME_CONFIG_BASICAUTH_PASSWORD: P3rs0n44
+      ME_CONFIG_MONGODB_SERVER: mongo_compose
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: Persona4
+  proceso:
+        build: ./Ejercicio-1
+        container_name: proceso_py
+        depends_on:
+          - db
+        restart: on-failure
+        volumes:
+          - type: bind
+            source: ./Ejercicio-1
+            target: /usr/src/app
