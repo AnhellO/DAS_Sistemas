@@ -1,3 +1,0 @@
-ruffus
-fido
-solovino
