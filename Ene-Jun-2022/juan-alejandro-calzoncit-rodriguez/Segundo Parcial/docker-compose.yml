@@ -1,0 +1,43 @@
+version: "3.2"
+services:
+  processor:     # Contenedor A
+    build: ./procesarIssues
+    container_name: py_procesar
+    depends_on:
+      - db
+    restart: on-failure
+    volumes:
+      - type: bind
+        source: ./procesarIssues
+        target: /usr/src/app
+  db:          # Contenedor B
+    image: mongo
+    container_name: mongo_compose
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: contrasena123
+  dbms:       # Contenedor C
+    image: mongo-express
+    container_name: mgexpress_compose
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: JuanExprss
+      ME_CONFIG_BASICAUTH_PASSWORD: pasemeProf
+      ME_CONFIG_MONGODB_SERVER: mongo_compose
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: contrasena123
+  api:       # Contenedor D
+    build: ./api
+    container_name: py_api
+    depends_on:
+      - db
+    ports:
+      - 5000:5000
+    restart: on-failure
+    volumes:
+      - type: bind
+        source: ./api
+        target: /usr/src/app
