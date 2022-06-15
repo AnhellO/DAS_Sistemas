@@ -1,0 +1,5 @@
+##### ¿que paso debes de seguir para hacer funcionar mi examen?
+**R** tener instalado docker y docker compose, los paso que hice yo fue abrrir la carpeta llamada segu en la terminal una ves dentro de la carpeta segu ejecutar el comando docker-compose up -d --build (asegurese que esten los archivso de docker-compose.yml y las carpetas sp(en esta carpeta hay tres archivos un Dockerfile, un requirements.txt y un scipt.py) y web (en esta carpeta hay tres archivos un Dockerfile, un requirements.txt y un app.py)) ya con eso todo deveria funcionar correcta mente o asi me funciono a mi
+
+##### ¿que url contirne?
+**r** usa las url de http://localhost:8081/ (usario: examen, contraseña: ex-especial567), tambien usa http://localhost:5000, http://localhost:5000/1, http://localhost:5000/2, http://localhost:5000/3, http://localhost:5000/4, http://localhost:5000/5, http://localhost:5000/6, http://localhost:5000/7 http://localhost:5000/8, http://localhost:5000/9, http://localhost:5000/10, http://localhost:5000/11, http://localhost:5000/12, http://localhost:5000/13 y ya son todas 
