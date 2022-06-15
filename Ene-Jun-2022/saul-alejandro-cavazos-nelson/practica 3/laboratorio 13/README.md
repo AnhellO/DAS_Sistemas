@@ -1,0 +1,1 @@
+no supe cual era la contraseña  ni el usuario para entrar 

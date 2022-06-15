@@ -1,0 +1,1 @@
+no me sirvieron los scrips los trate de hacer yo per igual me daban errro
